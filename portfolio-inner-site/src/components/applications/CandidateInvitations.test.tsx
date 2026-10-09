@@ -1,10 +1,11 @@
 import React from 'react';
-import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ApiError } from '../../api';
 import {
     CandidateInvitation,
     CandidateInvitationsData,
+    dismissCandidateInvitationsAlert,
     fetchCandidateInvitations,
     generateCandidateInvitations,
     markCandidateInvitationRead,
@@ -22,6 +23,7 @@ jest.mock('../../api', () => ({
 }));
 jest.mock('../../candidateInvitations', () => ({
     ...jest.requireActual('../../candidateInvitations'),
+    dismissCandidateInvitationsAlert: jest.fn(),
     fetchCandidateInvitations: jest.fn(),
     generateCandidateInvitations: jest.fn(),
     markCandidateInvitationRead: jest.fn(),
@@ -32,6 +34,7 @@ const listRequest = fetchCandidateInvitations as jest.MockedFunction<typeof fetc
 const readRequest = markCandidateInvitationRead as jest.MockedFunction<typeof markCandidateInvitationRead>;
 const respondRequest = respondToCandidateInvitation as jest.MockedFunction<typeof respondToCandidateInvitation>;
 const generationRequest = generateCandidateInvitations as jest.MockedFunction<typeof generateCandidateInvitations>;
+const dismissRequest = dismissCandidateInvitationsAlert as jest.MockedFunction<typeof dismissCandidateInvitationsAlert>;
 const GENERATE = 'Сгенерировать тестовые приглашения';
 const incomingType = 'От рекрутера кандидату';
 const outgoingType = 'От кандидата рекрутеру';
@@ -109,6 +112,7 @@ beforeEach(() => {
     });
     respondRequest.mockReset();
     generationRequest.mockReset();
+    dismissRequest.mockReset().mockImplementation(async (_, shown) => ({ dismissed: shown.length, alert: null }));
 });
 
 test('оба уровня вкладок считают входящие приглашения и отклики отдельно, включая статусы с нулём', async () => {
@@ -121,7 +125,7 @@ test('оба уровня вкладок считают входящие при�
 
     expect(await screen.findByRole('tab', { name: 'Приглашения (3)' })).toHaveAttribute('aria-selected', 'true');
     expect(directionTab('Отклики')).toHaveTextContent('Отклики (1)');
-    expect(statusTab('sent')).toHaveTextContent('Принято (2)');
+    expect(statusTab('sent')).toHaveTextContent('Получено (2)');
     expect(statusTab('read')).toHaveTextContent('(0)');
     expect(statusTab('accepted')).toHaveTextContent('(1)');
     expect(statusTab('declined')).toHaveTextContent('(0)');
@@ -151,11 +155,62 @@ test('просмотр обычного приглашения обновляе�
     await waitFor(() => expect(statusTab('read')).toHaveTextContent('(1)'));
     expect(statusTab('sent')).toHaveTextContent('(0)');
     expect(readRequest).toHaveBeenCalledWith('candidate-test', 'plain', 1);
-    expect(alertsChanged).toHaveBeenCalledTimes(2); // initial list and acknowledged view
+    expect(alertsChanged).toHaveBeenCalledTimes(3); // initial list, entering the window and acknowledged view
     expect(screen.getByRole('button', { name: 'Принять' })).toBeEnabled();
     expect(screen.getByRole('button', { name: 'Отклонить' })).toBeEnabled();
     expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
     expect(screen.getAllByText('Просмотрено').length).toBeGreaterThan(0);
+});
+
+test('вход в окно гасит восклицательный знак для показанных версий, записи остаются новыми до просмотра', async () => {
+    const fresh = invitation('fresh');
+    const changedStatus = { ...changed(invitation('changed'), 'accepted'), unseen: true };
+    const seen = changed(invitation('seen'), 'read');
+    listRequest.mockResolvedValue(data([fresh, changedStatus, seen]));
+    const alertsChanged = renderApp();
+
+    await waitFor(() => expect(dismissRequest).toHaveBeenCalledTimes(1));
+    expect(dismissRequest).toHaveBeenCalledWith('candidate-test', [{ id: 'fresh', revision: 1 }, { id: 'changed', revision: 2 }]);
+    await waitFor(() => expect(alertsChanged).toHaveBeenCalledTimes(2)); // initial list and entering the window
+    expect(screen.getAllByText('Новое')).toHaveLength(1);
+    expect(readRequest).not.toHaveBeenCalled();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Обновить' }));
+    await waitFor(() => expect(listRequest).toHaveBeenCalledTimes(2));
+    expect(dismissRequest).toHaveBeenCalledTimes(1);
+});
+
+test('без новых версий вход в окно ничего не отправляет, ошибка гашения знака не мешает работе', async () => {
+    listRequest.mockResolvedValueOnce(data([changed(invitation('seen'), 'read')]));
+    renderApp();
+    await screen.findByRole('tab', { name: 'Приглашения (1)' });
+    expect(dismissRequest).not.toHaveBeenCalled();
+    cleanup();
+
+    listRequest.mockResolvedValue(data([invitation('fresh')]));
+    dismissRequest.mockRejectedValue(new ApiError('Сервер не отвечает', 0));
+    const alertsChanged = renderApp();
+    await waitFor(() => expect(dismissRequest).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(alertsChanged).toHaveBeenCalledTimes(2));
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Вакансия fresh/ })).toBeEnabled();
+});
+
+test('возврат в свёрнутое окно загружает список и гасит знак для появившихся за это время версий', async () => {
+    const first = invitation('first');
+    const later = invitation('later');
+    listRequest.mockResolvedValueOnce(data([first])).mockResolvedValue(data([later, first]));
+    const props = { title: 'Приглашения', onAlertsChange: jest.fn(), onClose: jest.fn(), onMinimize: jest.fn(), onInteract: jest.fn() };
+    const { rerender } = render(<CandidateInvitations {...props} minimized={false} />);
+    await waitFor(() => expect(dismissRequest).toHaveBeenCalledWith('candidate-test', [{ id: 'first', revision: 1 }]));
+
+    rerender(<CandidateInvitations {...props} minimized />);
+    expect(listRequest).toHaveBeenCalledTimes(1);
+    rerender(<CandidateInvitations {...props} minimized={false} />);
+    await waitFor(() => expect(dismissRequest).toHaveBeenCalledTimes(2));
+    expect(dismissRequest).toHaveBeenLastCalledWith('candidate-test', [{ id: 'later', revision: 1 }, { id: 'first', revision: 1 }]);
+    expect(listRequest).toHaveBeenCalledTimes(2);
+    expect(await screen.findByRole('tab', { name: 'Приглашения (2)' })).toBeInTheDocument();
 });
 
 test.each([['accept', 'Принять', 'accepted'], ['decline', 'Отклонить', 'declined']] as const)

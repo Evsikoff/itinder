@@ -132,6 +132,8 @@ API (только с этой же страницы). Ошибка — код 4x
         наборы статусов и справочники (app/tools/applicant_invitations.py).
     POST /api/applicant/invitations/read {"user_id", "invitation_id", "expected_revision"}
         — просмотр выбранного приглашения и подтверждение уведомления.
+    POST /api/applicant/invitations/dismiss-alert {"user_id", "shown": [{"id", "revision"}]}
+        — вход в окно: гасит восклицательный знак значка 4 для показанных версий.
     POST /api/applicant/invitations/respond {"user_id", "invitation_id", "action",
         "answers"?, "expected_revision"} — accept или decline входящего приглашения;
         с заданиями accept отправляет заполненные answers на проверку.
@@ -487,6 +489,12 @@ def api_applicant_invitations_read(body):
     return 200, result, f"Приглашение {result['id']} просмотрено соискателем: {result['status']}"
 
 
+def api_applicant_invitations_dismiss_alert(body):
+    data = json_body(body)
+    result = applicant_invitations.dismiss_alert(data.get("user_id"), data.get("shown"))
+    return 200, result, f"Соискатель {data.get('user_id')} открыл приглашения: погашено версий {result['dismissed']}"
+
+
 def api_applicant_invitations_respond(body):
     data = json_body(body)
     result = applicant_invitations.respond(data.get("user_id"), data.get("invitation_id"),
@@ -534,6 +542,7 @@ API = {
     "/api/projects/delete": ("application/json", MAX_JSON, api_projects_delete),
     "/api/invitations": ("application/json", MAX_JSON, api_invitations),
     "/api/applicant/invitations/read": ("application/json", MAX_JSON, api_applicant_invitations_read),
+    "/api/applicant/invitations/dismiss-alert": ("application/json", applicant_invitations.MAX_BODY, api_applicant_invitations_dismiss_alert),
     "/api/applicant/invitations/respond": ("application/json", applicant_invitations.MAX_BODY, api_applicant_invitations_respond),
     "/api/applicant/invitations/test-data": ("application/json", MAX_JSON, api_test_invitations),
     "/api/applicants/test-projects": ("application/json", MAX_JSON, api_test_projects),
