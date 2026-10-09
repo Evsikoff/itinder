@@ -1,0 +1,12 @@
+{
+  "id": "762546ca-c6e3-487d-afdd-c188ac00b56c",
+  "user_id": "b249321e-374d-481d-bd5f-8e74aa3cf882",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "QA/Junior/fintech_transfers:8549/state_transitions_untested",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-08T20:36:27.269505+00:00"
+}

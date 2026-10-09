@@ -1,0 +1,12 @@
+{
+  "id": "516bbd1d-cfba-47c5-85b4-03733f961fef",
+  "user_id": "d0dbbe7e-45d7-472f-918a-92fc3441ac58",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/enterprise_crm:ops_event_log/filter_hides_selection@filters+table,table_rerender_all@table",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-25T06:42:48.697289+00:00"
+}

@@ -13,7 +13,106 @@ from unittest.mock import patch
 
 TOOLS = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(TOOLS))
+import data_paths
 import serve
+
+
+class SeedDataInitialization(unittest.TestCase):
+    def setUp(self):
+        self.folder = tempfile.TemporaryDirectory()
+        self.addCleanup(self.folder.cleanup)
+        self.static = Path(self.folder.name) / "image-db"
+        self.persistent = Path(self.folder.name) / "data"
+        for name in data_paths.MUTABLE_NAMES:
+            (self.static / name).mkdir(parents=True)
+            (self.static / name / "seed.json").write_text('{"source":"local"}', encoding="utf-8")
+        self.static_patch = patch.object(data_paths, "STATIC_DB", self.static)
+        self.data_patch = patch.object(data_paths, "DATA_DB", self.persistent)
+        self.static_patch.start()
+        self.data_patch.start()
+        self.addCleanup(self.static_patch.stop)
+        self.addCleanup(self.data_patch.stop)
+        self.ledger = self.persistent / data_paths.SEED_LEDGER_NAME
+
+    def test_imports_all_mutable_json_records_and_preserves_server_records(self):
+        (self.static / "static-catalog.json").write_text("{}", encoding="utf-8")
+        for name in data_paths.MUTABLE_NAMES:
+            directory = self.persistent / name
+            directory.mkdir(parents=True)
+            (directory / "seed.json").write_text('{"source":"server"}', encoding="utf-8")
+            (directory / "remote.json").write_text('{"source":"remote"}', encoding="utf-8")
+            (self.static / name / "additional.json").write_text('{"source":"local"}', encoding="utf-8")
+            (self.static / name / "ignored.txt").write_text("ignore", encoding="utf-8")
+
+        data_paths.initialize_data()
+
+        for name in data_paths.MUTABLE_NAMES:
+            directory = self.persistent / name
+            self.assertEqual(json.loads((directory / "seed.json").read_text())['source'], "server")
+            self.assertEqual(json.loads((directory / "remote.json").read_text())['source'], "remote")
+            self.assertEqual(json.loads((directory / "additional.json").read_text())['source'], "local")
+            self.assertFalse((directory / "ignored.txt").exists())
+        self.assertFalse((self.persistent / "static-catalog.json").exists())
+        self.assertEqual(
+            set(json.loads(self.ledger.read_text())["imported"]),
+            {f"{name}/{file}" for name in data_paths.MUTABLE_NAMES for file in ("seed.json", "additional.json")},
+        )
+
+    def test_restarts_preserve_deletions_and_import_new_seed_records(self):
+        data_paths.initialize_data()
+        for name in data_paths.MUTABLE_NAMES:
+            (self.persistent / name / "seed.json").unlink()
+            (self.static / name / "seed.json").write_text('{"source":"updated"}', encoding="utf-8")
+            (self.static / name / "new.json").write_text('{"source":"new"}', encoding="utf-8")
+
+        data_paths.initialize_data()
+        data_paths.initialize_data()
+
+        for name in data_paths.MUTABLE_NAMES:
+            self.assertFalse((self.persistent / name / "seed.json").exists())
+            self.assertEqual(json.loads((self.persistent / name / "new.json").read_text())['source'], "new")
+
+    def test_failed_copy_aborts_without_publishing_partial_records(self):
+        def failed_copy(original, destination):
+            destination.write(b"partial")
+            raise OSError("Simulated copy failure")
+
+        with patch.object(data_paths.shutil, "copyfileobj", side_effect=failed_copy):
+            with self.assertRaises(OSError):
+                data_paths.initialize_data()
+        self.assertFalse(self.ledger.exists())
+        self.assertEqual(list(self.persistent.rglob("*.*")), [])
+
+        data_paths.initialize_data()
+        for name in data_paths.MUTABLE_NAMES:
+            self.assertEqual(json.loads((self.persistent / name / "seed.json").read_text())['source'], "local")
+
+    def test_failed_ledger_save_preserves_previous_ledger_and_retries_safely(self):
+        data_paths.initialize_data()
+        previous = self.ledger.read_bytes()
+        (self.static / "users" / "new.json").write_text('{"source":"new"}', encoding="utf-8")
+        with patch.object(data_paths.os, "replace", side_effect=OSError("Simulated ledger failure")):
+            with self.assertRaises(OSError):
+                data_paths.initialize_data()
+        self.assertEqual(self.ledger.read_bytes(), previous)
+        self.assertEqual(sorted(path.name for path in self.persistent.iterdir() if path.is_file()), [self.ledger.name])
+
+        record = self.persistent / "users" / "new.json"
+        record.write_text('{"source":"server"}', encoding="utf-8")
+        data_paths.initialize_data()
+        self.assertEqual(json.loads(record.read_text())['source'], "server")
+        self.assertIn("users/new.json", json.loads(self.ledger.read_text())["imported"])
+
+    def test_corrupt_ledger_aborts_instead_of_reimporting_deleted_records(self):
+        data_paths.initialize_data()
+        record = self.persistent / "users" / "seed.json"
+        record.unlink()
+        for invalid in ("invalid json", '{"version":2,"imported":[]}', '{"version":1,"imported":[123]}'):
+            with self.subTest(invalid=invalid):
+                self.ledger.write_text(invalid, encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    data_paths.initialize_data()
+                self.assertFalse(record.exists())
 
 
 class Deployment(unittest.TestCase):
@@ -73,7 +172,8 @@ class Deployment(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             environment = {**os.environ, "APP_DATA_DIR": folder, "PYTHONPATH": str(TOOLS)}
             setup = (
-                "from data_paths import initialize_data; initialize_data(); "
+                "import data_paths; data_paths.STATIC_DB=data_paths.DATA_DB/'empty-seeds'; "
+                "data_paths.initialize_data(); "
                 "from users import create_user; create_user('deployment@example.com', 'test-password')"
             )
             subprocess.run([sys.executable, "-c", setup], check=True, env=environment, capture_output=True)

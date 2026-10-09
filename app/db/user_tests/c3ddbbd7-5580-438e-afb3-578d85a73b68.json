@@ -1,0 +1,12 @@
+{
+  "id": "c3ddbbd7-5580-438e-afb3-578d85a73b68",
+  "user_id": "b67a43f6-71fc-43cb-bebf-dae6550a6ff1",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/enterprise_crm:crm_pick_items/table_rerender_all@table,double_scroll@table+modal",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-28T14:50:39.905186+00:00"
+}

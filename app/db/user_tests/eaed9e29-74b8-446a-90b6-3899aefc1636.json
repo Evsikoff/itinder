@@ -1,0 +1,15 @@
+{
+  "id": "eaed9e29-74b8-446a-90b6-3899aefc1636",
+  "user_id": "5b72fcc5-491b-4117-8a89-cf794b983f0b",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Senior/ai_nlp/parser_abuse,retry_storm,repeated_computation,pool_exhaustion",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-30T15:31:10.607115+00:00"
+}

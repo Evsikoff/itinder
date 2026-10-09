@@ -1,0 +1,12 @@
+{
+  "id": "faeb16bd-0412-49ff-a247-6ba10e024823",
+  "user_id": "bea757ef-6e76-4f28-82d6-eea9867b08eb",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/filter_request_spam@filters,filter_page_race@filters+table",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-27T21:34:49.940986+00:00"
+}

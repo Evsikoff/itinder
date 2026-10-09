@@ -1,0 +1,13 @@
+{
+  "id": "8b47fab1-0865-4f66-bf62-40ed22e24f97",
+  "user_id": "beb36948-38d5-4c46-8e21-dbece3e40667",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "QA/Senior/fintech_transfers:3808/prod_data_in_test,flaky_tests_ignored,no_quality_gates,late_qa_no_shift_left",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "65a20021-a8b2-4fe0-9a5f-e93f8a337495",
+  "created_at": "2026-09-02T16:07:45.194882+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "1d224f16-5067-45ab-b03c-0b962c93fbdc",
+  "user_id": "0f45d3ca-014f-4b7b-809c-6c94c3bf0f1e",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Junior/b2b_graphql/n_plus_one",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-02T10:28:40.020739+00:00"
+}

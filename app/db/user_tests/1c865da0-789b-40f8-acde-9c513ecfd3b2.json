@@ -1,0 +1,12 @@
+{
+  "id": "1c865da0-789b-40f8-acde-9c513ecfd3b2",
+  "user_id": "764e6939-e8e1-496f-8897-d694fa52b8b2",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/ops_dashboard:crm_pick_items/filter_keeps_page@search+table,request_spam@search",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-13T12:17:42.435694+00:00"
+}

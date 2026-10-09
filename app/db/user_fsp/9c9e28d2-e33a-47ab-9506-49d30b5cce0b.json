@@ -1,0 +1,190 @@
+{
+  "user_id": "9c9e28d2-e33a-47ab-9506-49d30b5cce0b",
+  "fsp_id": "FSP-7757-3193",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-07-30T06:17:32.516245+00:00",
+  "seed": 177627511,
+  "competitions": [
+    {
+      "competition_id": "tsifrovoy_reglament_2024",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "file_exchange",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-07-30T06:17:32.516245+00:00"
+    },
+    {
+      "competition_id": "strezhen_2025",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-07-30T06:17:32.516245+00:00"
+    },
+    {
+      "competition_id": "strezhen_2026",
+      "role_id": "frontend",
+      "result": "win",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "websocket",
+          "kafka"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-07-30T06:17:32.516245+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "frontend",
+      "result": "win",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-07-31T23:34:50.465845+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-07-30T17:39:53.319901+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 15,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "strezhen_2025",
+        "strezhen_2026",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 15,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "strezhen_2025",
+        "strezhen_2026",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 9,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 8,
+      "competitions": [
+        "strezhen_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 5,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 4,
+      "competitions": [
+        "strezhen_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 3,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "strezhen_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 2,
+      "competitions": [
+        "strezhen_2025"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-07-31T23:34:50.465845+00:00"
+}

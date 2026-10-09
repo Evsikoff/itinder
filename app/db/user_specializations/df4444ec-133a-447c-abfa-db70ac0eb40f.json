@@ -1,0 +1,12 @@
+{
+  "id": "df4444ec-133a-447c-abfa-db70ac0eb40f",
+  "user_id": "1bc36a6f-a8c3-405b-9deb-5344bf7df123",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "created_at": "2026-09-02T21:17:48.095759+00:00",
+  "source": {
+    "type": "LLM",
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  }
+}

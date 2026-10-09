@@ -1,0 +1,15 @@
+{
+  "id": "8afa73ac-23bb-45be-a505-51d78bf4d380",
+  "user_id": "98abf308-3e7b-476a-b60d-e9b6ff977fed",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/parser_abuse,slow_scraping",
+  "language": "Java",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-06T14:40:52.246786+00:00"
+}

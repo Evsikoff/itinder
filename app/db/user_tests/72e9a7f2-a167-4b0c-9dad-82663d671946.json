@@ -1,0 +1,15 @@
+{
+  "id": "72e9a7f2-a167-4b0c-9dad-82663d671946",
+  "user_id": "a051fb40-b973-4bda-977d-9645cb42ee12",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/response_built_in_memory,pool_exhaustion",
+  "language": "Go",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-10T03:45:12.752131+00:00"
+}

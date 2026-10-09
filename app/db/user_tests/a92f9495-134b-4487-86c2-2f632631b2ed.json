@@ -1,0 +1,15 @@
+{
+  "id": "a92f9495-134b-4487-86c2-2f632631b2ed",
+  "user_id": "4edec1b3-b2a6-46cc-bb20-d272095352cf",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/ai_nlp/repeated_computation,parser_abuse",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-23T18:26:08.815939+00:00"
+}

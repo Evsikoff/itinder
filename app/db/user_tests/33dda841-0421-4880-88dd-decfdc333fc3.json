@@ -1,0 +1,12 @@
+{
+  "id": "33dda841-0421-4880-88dd-decfdc333fc3",
+  "user_id": "f375cd96-3214-43a1-960b-4b869e78c89a",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/ecommerce_checkout:7493/invalid_classes_missing",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-04T10:00:28.790183+00:00"
+}

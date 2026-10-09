@@ -1,0 +1,15 @@
+{
+  "id": "2b398df1-d17d-485e-a1ba-d81aa20fdb9b",
+  "user_id": "8353e6ce-c713-4ad1-993d-856082299dd2",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/gov_portal:gov_application/tab_state_lost@steps,popup_clipped@office+steps,select_not_accessible@office,early_validation@form",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-13T02:34:30.548550+00:00"
+}

@@ -1,0 +1,200 @@
+{
+  "user_id": "2e46b9c0-2469-4876-b56a-b9c67029484c",
+  "fsp_id": "FSP-2019-0668",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-10-04T05:27:00.105384+00:00",
+  "seed": 3700058933,
+  "competitions": [
+    {
+      "competition_id": "polyarny_kod_2023",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "soap",
+          "file_exchange"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-04T05:27:00.105384+00:00"
+    },
+    {
+      "competition_id": "kod_urala_2024",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "integrations": [
+          "rest",
+          "rabbitmq",
+          "cdc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-04T05:27:00.105384+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2025",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "integrations": [
+          "rest",
+          "polling",
+          "websocket"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-04T05:27:00.105384+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-10-06T02:42:42.714498+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-10-05T10:21:16.225763+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 5,
+      "competitions": [
+        "kod_urala_2024",
+        "polyarny_kod_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 4,
+      "competitions": [
+        "polyarny_kod_2023",
+        "polyarny_kod_2026",
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 9,
+      "competitions": [
+        "polyarny_kod_2023",
+        "kod_urala_2024",
+        "polyarny_kod_2025",
+        "polyarny_kod_2026",
+        "sessiya_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "cdc",
+      "points": 3,
+      "competitions": [
+        "kod_urala_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 3,
+      "competitions": [
+        "polyarny_kod_2023",
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "rabbitmq",
+      "points": 3,
+      "competitions": [
+        "kod_urala_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "polling",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 1,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 1,
+      "competitions": [
+        "polyarny_kod_2023"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-10-06T02:42:42.714498+00:00"
+}

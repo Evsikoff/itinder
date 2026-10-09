@@ -1,0 +1,21 @@
+{
+  "id": "2650b3a1-2bb9-4bd8-a33f-2d7fde9330e5",
+  "user_id": "ab86bd7d-93b6-4dc2-9df6-bd280291bf4d",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "created_at": "2026-10-07T15:38:47.545752+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 15,
+        "title": "Backend"
+      },
+      {
+        "id": 20,
+        "title": "Middle"
+      }
+    ]
+  }
+}

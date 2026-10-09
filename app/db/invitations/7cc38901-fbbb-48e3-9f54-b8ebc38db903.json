@@ -1,0 +1,114 @@
+{
+  "id": "7cc38901-fbbb-48e3-9f54-b8ebc38db903",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "033ac927-1ca4-4a7c-978b-63afee508888",
+  "project_id": "06c12d8c-bc7b-42d8-8cfb-9347908f963f",
+  "vacancy_id": "7145b9df-e1f1-4dd4-b7b5-6164ecdb8af2",
+  "vacancy": {
+    "id": "7145b9df-e1f1-4dd4-b7b5-6164ecdb8af2",
+    "title": "Фронтенд-разработчик (веб) (Middle)",
+    "position": "frontend_web",
+    "position_name": "Фронтенд-разработчик (веб)",
+    "role_id": "frontend",
+    "specialization": "Frontend",
+    "grade": "Middle",
+    "count": 1,
+    "task": "Создать веб-панель с фильтрами отчётов и графиками, подключить API и обновление показателей.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 170000,
+      "to": 240000,
+      "currency": "RUB"
+    },
+    "notes": "Тестовая вакансия. Данные и зарплатная вилка приведены для демонстрации.",
+    "project_id": "06c12d8c-bc7b-42d8-8cfb-9347908f963f",
+    "company": {
+      "id": "5a5f7e99-42d9-473a-9461-cd87ba543360",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: платформа аналитики",
+      "summary": "Платформа сбора событий и отчётов: загрузка данных, показатели и веб-панель аналитики.",
+      "domain": "internal",
+      "stage": "active",
+      "duration": "6to12",
+      "start_date": null,
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T20:01:24.388854+00:00"
+  },
+  "relevance": 21.0,
+  "source": "vacancy",
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.575311+00:00"
+    },
+    {
+      "status": "accepted",
+      "at": "2026-10-09T20:43:38.575312+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.575311+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "applicant_seen": {
+    "status": "accepted",
+    "at": "2026-10-09T20:43:38.575312+00:00",
+    "revision": 2
+  },
+  "recruiter_seen": {
+    "status": "accepted",
+    "at": "2026-10-09T20:43:38.575312+00:00",
+    "revision": 2
+  }
+}

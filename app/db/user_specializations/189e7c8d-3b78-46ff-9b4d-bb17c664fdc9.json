@@ -1,0 +1,21 @@
+{
+  "id": "189e7c8d-3b78-46ff-9b4d-bb17c664fdc9",
+  "user_id": "1eb7c9fe-7a6e-4a82-9570-28c7f8f2bfa7",
+  "specialization": "QA",
+  "grade": "Senior",
+  "created_at": "2026-07-23T16:30:28.828801+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 17,
+        "title": "QA"
+      },
+      {
+        "id": 27,
+        "title": "Senior"
+      }
+    ]
+  }
+}

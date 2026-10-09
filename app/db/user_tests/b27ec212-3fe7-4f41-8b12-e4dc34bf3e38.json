@@ -1,0 +1,12 @@
+{
+  "id": "b27ec212-3fe7-4f41-8b12-e4dc34bf3e38",
+  "user_id": "1183b30a-2de7-42d3-b391-bcb82a89ca2d",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/mobile_banking:bank_templates/footer_unreachable@feed,filter_not_in_url@search+feed",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-30T08:37:34.711569+00:00"
+}

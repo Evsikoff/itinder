@@ -1,0 +1,12 @@
+{
+  "id": "857fadef-8a64-4a12-98c5-76d73bd1efc5",
+  "user_id": "8a0fda43-97c4-45d8-a99f-e30d4b86bbf9",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/fintech_transfers:7985/localize_frontend",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-13T02:33:50.997647+00:00"
+}

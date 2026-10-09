@@ -1,0 +1,15 @@
+{
+  "id": "60c84312-c3e8-4194-9656-6db09efda7c9",
+  "user_id": "f375cd96-3214-43a1-960b-4b869e78c89a",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/ai_nlp/repeated_computation,parser_abuse",
+  "language": "PHP",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-04T04:27:34.827809+00:00"
+}

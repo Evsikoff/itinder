@@ -1,0 +1,15 @@
+{
+  "id": "0dd71139-9cbc-4c21-bf02-00c6b68e21be",
+  "user_id": "5edf54b3-cb43-4ea0-91c9-bee709431e4b",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_client_card/focus_not_restored@panel,scroll_chaining@confirm,popup_clipped@date+panel,data_loss_navigation@form",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-12T10:12:38.896995+00:00"
+}

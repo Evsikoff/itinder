@@ -1,0 +1,13 @@
+{
+  "id": "606b2581-b3f6-4b22-b9e5-8369ba8b9eba",
+  "user_id": "55450379-0206-4d7f-82be-f363c25ed9df",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/data_analytics/slow_scraping,oversized_payload",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "017a1f61-278a-4880-a1bf-d4d20e992b0f",
+  "created_at": "2026-08-18T12:59:05.390061+00:00"
+}

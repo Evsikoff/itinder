@@ -1,0 +1,12 @@
+{
+  "id": "e7c5d28f-1972-4eab-96ed-751a4213f530",
+  "user_id": "373a9346-e0ca-4f83-acc9-159facfa8570",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/data_analytics/bot_traffic,gateway_timeout_duplicates",
+  "language": "TypeScript",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-04T22:42:10.003771+00:00"
+}

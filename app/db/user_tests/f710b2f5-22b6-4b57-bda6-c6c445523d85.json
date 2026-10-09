@@ -1,0 +1,15 @@
+{
+  "id": "f710b2f5-22b6-4b57-bda6-c6c445523d85",
+  "user_id": "f8274e8a-3547-478c-b223-c6c1b3de8ab8",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Syst. Analyst/Senior/b2b_graphql/repeated_computation,pool_exhaustion,heavy_egress,n_plus_one",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-07-20T16:16:54.289089+00:00"
+}

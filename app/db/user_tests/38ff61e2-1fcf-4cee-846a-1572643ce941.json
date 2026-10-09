@@ -1,0 +1,12 @@
+{
+  "id": "38ff61e2-1fcf-4cee-846a-1572643ce941",
+  "user_id": "bfa0d5fc-ef4a-4dc4-a124-0d33d438acea",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Backend/Junior/ai_nlp/hanging_dependency",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-30T18:30:10.075041+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "22c8b668-ccd1-44c5-88e3-e353db941843",
+  "user_id": "db7adafe-8e0a-4a86-9fde-a4244d193e20",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/mobile_banking:bank_history/offset_duplicates@feed,filter_not_in_url@filters+feed",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-25T17:54:14.389286+00:00"
+}

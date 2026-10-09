@@ -1,0 +1,12 @@
+{
+  "id": "1e14db19-2e21-400b-af31-f1ff8af26582",
+  "user_id": "ed5de5b7-11e8-4579-8b91-01ae40d89763",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/fintech_transfers:3399/shared_stage_collisions,flaky_time_dependency",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-22T01:49:31.956392+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "c31cbc2d-2758-4641-8873-30cc845e2f13",
+  "user_id": "12015348-52b4-4a79-89a5-5e772c54ea99",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/bulk_update_locks,bot_traffic",
+  "language": "JavaScript",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-15T00:40:16.297584+00:00"
+}

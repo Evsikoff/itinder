@@ -1,0 +1,15 @@
+{
+  "id": "e9f5f15e-62b8-4515-90ea-062302324629",
+  "user_id": "219bc1cd-c40b-420a-893d-6818bd6cf96c",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/bot_traffic",
+  "language": "PHP",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-15T15:02:27.980624+00:00"
+}

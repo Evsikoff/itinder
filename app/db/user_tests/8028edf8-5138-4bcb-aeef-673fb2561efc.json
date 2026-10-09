@@ -1,0 +1,15 @@
+{
+  "id": "8028edf8-5138-4bcb-aeef-673fb2561efc",
+  "user_id": "9197f107-7890-433b-83fb-18a2d562149c",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/mobile_banking:bank_transfer/popup_shifted_by_transform@recipient+sheet,blur_before_click@recipient,toast_flood@toasts,request_spam@recipient",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-10-09T01:57:45.853228+00:00"
+}

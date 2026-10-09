@@ -1,0 +1,12 @@
+{
+  "id": "cc0db9af-4cd4-4104-8009-af6a6f227b7c",
+  "user_id": "e73763ed-24c1-4ebf-8536-910eadd183e2",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/index_keys@table,filter_hides_selection@filters+table",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-25T16:34:10.533511+00:00"
+}

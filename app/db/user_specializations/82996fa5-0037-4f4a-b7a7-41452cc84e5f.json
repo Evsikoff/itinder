@@ -1,0 +1,21 @@
+{
+  "id": "82996fa5-0037-4f4a-b7a7-41452cc84e5f",
+  "user_id": "00f8e32f-e6f4-4f24-a711-5d4adda094e1",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "created_at": "2026-09-24T17:12:11.727416+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 15,
+        "title": "Backend"
+      },
+      {
+        "id": 19,
+        "title": "Junior"
+      }
+    ]
+  }
+}

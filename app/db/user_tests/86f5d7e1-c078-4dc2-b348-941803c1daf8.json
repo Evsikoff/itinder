@@ -1,0 +1,15 @@
+{
+  "id": "86f5d7e1-c078-4dc2-b348-941803c1daf8",
+  "user_id": "7b852c93-0860-4651-b0c6-74cdcb04925f",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/data_analytics/pool_exhaustion,heavy_egress,repeated_computation,expensive_queries",
+  "language": "C#",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-21T19:52:35.785968+00:00"
+}

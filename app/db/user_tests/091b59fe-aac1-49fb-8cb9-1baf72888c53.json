@@ -1,0 +1,12 @@
+{
+  "id": "091b59fe-aac1-49fb-8cb9-1baf72888c53",
+  "user_id": "1aeb50c8-06ce-4aae-a262-d5bf51838415",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Frontend/Junior/marketplace:select/blur_before_click@select",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-30T03:07:46.472736+00:00"
+}

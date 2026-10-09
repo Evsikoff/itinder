@@ -1,0 +1,12 @@
+{
+  "id": "b6fe3f33-2549-4c72-9312-a6cde66f0182",
+  "user_id": "8d2292de-9b55-4bf0-a6e8-ffda3065cf75",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "QA/Junior/fintech_transfers:124/severity_priority_mixup",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-19T15:52:30.584139+00:00"
+}

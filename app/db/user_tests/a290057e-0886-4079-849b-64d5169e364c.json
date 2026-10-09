@@ -1,0 +1,15 @@
+{
+  "id": "a290057e-0886-4079-849b-64d5169e364c",
+  "user_id": "befe6e97-9476-4e74-80d5-7f151671b941",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/slow_scraping,bot_traffic",
+  "language": "C++",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-29T12:35:05.211580+00:00"
+}

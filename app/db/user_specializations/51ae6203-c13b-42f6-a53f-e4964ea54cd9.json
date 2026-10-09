@@ -1,0 +1,21 @@
+{
+  "id": "51ae6203-c13b-42f6-a53f-e4964ea54cd9",
+  "user_id": "8a00922e-4393-4e45-89d7-6daf5c1eb845",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "created_at": "2026-09-05T22:31:01.960076+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 16,
+        "title": "Frontend"
+      },
+      {
+        "id": 23,
+        "title": "Middle"
+      }
+    ]
+  }
+}

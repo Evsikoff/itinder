@@ -1,0 +1,12 @@
+{
+  "id": "34c499f1-f0c4-442f-838e-0869ed220fc5",
+  "user_id": "913aa037-90f2-41e5-a41e-51fa6bd2941b",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/iot_smart_home:7415/state_transitions_untested",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-24T17:01:52.989249+00:00"
+}

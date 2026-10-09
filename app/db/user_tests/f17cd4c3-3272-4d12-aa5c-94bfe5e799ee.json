@@ -1,0 +1,12 @@
+{
+  "id": "f17cd4c3-3272-4d12-aa5c-94bfe5e799ee",
+  "user_id": "95f6fe44-5ef3-46fc-9375-36e4b8cecd12",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Frontend/Junior/marketplace:modal_window/modal_100vh@modal_window",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-09T12:06:02.652367+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "31747c84-58a0-45ab-b480-263ef9a4be60",
+  "user_id": "b6b75843-697d-4309-b11f-3576d5d29611",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "created_at": "2026-10-07T23:51:16.381697+00:00",
+  "source": {
+    "type": "LLM",
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  }
+}

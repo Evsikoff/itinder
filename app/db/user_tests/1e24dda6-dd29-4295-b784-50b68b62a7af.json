@@ -1,0 +1,12 @@
+{
+  "id": "1e24dda6-dd29-4295-b784-50b68b62a7af",
+  "user_id": "9dc5f31d-f7ce-4a35-b2a3-a2c94b609a66",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/ops_dashboard:crm_pick_items/filter_page_race@search+table,backdrop_select_close@modal",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-09T06:03:05.314439+00:00"
+}

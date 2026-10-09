@@ -1,0 +1,110 @@
+{
+  "id": "35791714-e1f4-4001-ba7a-ced4497d8d18",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "a0d9c78e-6d91-44de-8f71-38caeb71b922",
+  "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+  "vacancy_id": "e1c5b3a1-4e61-4a65-8154-ab209f5ed127",
+  "vacancy": {
+    "id": "e1c5b3a1-4e61-4a65-8154-ab209f5ed127",
+    "title": "Фронтенд-разработчик (веб) (Middle)",
+    "position": "frontend_web",
+    "position_name": "Фронтенд-разработчик (веб)",
+    "role_id": "frontend",
+    "specialization": "Frontend",
+    "grade": "Middle",
+    "count": 1,
+    "task": "Веб-интерфейс продукта: экраны и формы, состояния загрузки и ошибок, вход пользователя",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Язык веб-интерфейса"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Как интерфейс получает данные с сервера",
+          "Открытый API для чужих систем"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Вход через внешний провайдер"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 200000,
+      "to": 300000,
+      "currency": "RUB"
+    },
+    "notes": null,
+    "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+    "company": {
+      "id": "91d54fe2-069b-4739-8fc6-afe2195fffb4",
+      "name": "Московский зоопарк"
+    },
+    "project": {
+      "name": "Система управления зоопарком",
+      "summary": "ERP-система зоопарка",
+      "domain": "internal",
+      "stage": "new",
+      "duration": "gt12",
+      "start_date": "2026-10-29",
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "free",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T17:42:27.701697+00:00"
+  },
+  "relevance": 55.2,
+  "source": "search",
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T18:01:14.632313+00:00"
+    },
+    {
+      "status": "read",
+      "at": "2026-10-09T19:39:27.070484+00:00"
+    },
+    {
+      "status": "accepted",
+      "at": "2026-10-09T19:40:38.329257+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T18:01:14.632313+00:00",
+  "applicant_seen": {
+    "status": "accepted",
+    "at": "2026-10-09T19:40:38.329257+00:00",
+    "revision": 3
+  }
+}

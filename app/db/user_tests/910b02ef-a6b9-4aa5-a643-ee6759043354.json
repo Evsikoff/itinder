@@ -1,0 +1,15 @@
+{
+  "id": "910b02ef-a6b9-4aa5-a643-ee6759043354",
+  "user_id": "419cea46-71ea-4cdb-8b47-b694ee99c8b3",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/ai_nlp/bot_traffic,request_bursts",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-31T20:01:02.136484+00:00"
+}

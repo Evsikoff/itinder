@@ -15,14 +15,3 @@ data
 *.pdf
 portfolio-inner-site/build
 resume3/public
-app/db/users
-app/db/user_specializations
-app/db/user_names
-app/db/user_tests
-app/db/user_fsp
-app/db/user_project_company
-app/db/projects_jobopenings
-app/db/invitations
-app/db/companies
-app/db/user_blocks
-app/db/fsp

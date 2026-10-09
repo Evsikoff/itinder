@@ -1,0 +1,12 @@
+{
+  "id": "77c968c2-8ab7-455e-b9f0-d3e923b4504c",
+  "user_id": "c06e6b1e-edd9-49ad-9916-6bfa59897411",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Syst. Analyst/Junior/b2b_graphql/parser_abuse",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-12T15:42:26.507553+00:00"
+}

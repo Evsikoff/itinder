@@ -1,0 +1,13 @@
+{
+  "id": "7510c361-2b89-4b4b-8dfe-3a6513737a12",
+  "user_id": "1aeb50c8-06ce-4aae-a262-d5bf51838415",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/gateway_timeout_duplicates,oversized_payload",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "06bb72f7-9491-4337-bc3a-3d5ddd1706f5",
+  "created_at": "2026-08-02T23:28:38.320163+00:00"
+}

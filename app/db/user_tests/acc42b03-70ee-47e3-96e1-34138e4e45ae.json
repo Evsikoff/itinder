@@ -1,0 +1,12 @@
+{
+  "id": "acc42b03-70ee-47e3-96e1-34138e4e45ae",
+  "user_id": "1aeb50c8-06ce-4aae-a262-d5bf51838415",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/ops_dashboard:toast/toast_flood@toast",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-09T08:56:52.267373+00:00"
+}

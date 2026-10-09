@@ -1,0 +1,12 @@
+{
+  "id": "f567282a-33a1-4fa0-99b4-6b750f6260c8",
+  "user_id": "dd6a60f1-9d70-46a5-a021-9ec1d22615b4",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/data_analytics/parser_abuse,gateway_timeout_duplicates",
+  "language": "TypeScript",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-08T02:43:59.853671+00:00"
+}

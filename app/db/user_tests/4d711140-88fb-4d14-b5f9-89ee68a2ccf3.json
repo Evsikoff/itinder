@@ -1,0 +1,15 @@
+{
+  "id": "4d711140-88fb-4d14-b5f9-89ee68a2ccf3",
+  "user_id": "db7adafe-8e0a-4a86-9fde-a4244d193e20",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/heavy_egress",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-27T10:10:53.633483+00:00"
+}

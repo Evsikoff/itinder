@@ -1,0 +1,15 @@
+{
+  "id": "8590f48f-791e-423f-8569-867a4aff8c03",
+  "user_id": "6eb8363d-0fdb-4846-a9f8-a790077585bc",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/b2b_graphql/bot_traffic,expensive_queries,pool_exhaustion,heavy_egress",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-22T09:41:18.754596+00:00"
+}

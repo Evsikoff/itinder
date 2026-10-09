@@ -1,0 +1,12 @@
+{
+  "id": "6dd319b9-adfe-4ca5-ba1e-59f0b9d5ccec",
+  "user_id": "51a4d1eb-0d62-4a55-a73f-bf132f0f52c7",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/mobile_banking:bank_history/filter_request_spam@filters,filter_not_in_url@filters+feed",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-15T16:18:20.284855+00:00"
+}

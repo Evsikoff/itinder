@@ -1,0 +1,13 @@
+{
+  "id": "3564a070-c4e3-49fb-9fac-e66007d8269a",
+  "user_id": "b6c605b8-a506-46b0-9ad0-1228385d61e0",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/iot_smart_home:4533/async_effect_unchecked,flaky_fixed_sleep",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "0c1639ec-6a20-439c-9626-21143b6e76f0",
+  "created_at": "2026-09-21T09:10:38.255717+00:00"
+}

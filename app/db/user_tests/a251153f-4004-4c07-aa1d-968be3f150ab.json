@@ -1,0 +1,12 @@
+{
+  "id": "a251153f-4004-4c07-aa1d-968be3f150ab",
+  "user_id": "75d79626-6178-464e-a604-777cf8177543",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/focus_not_restored@details,filter_not_in_url@filters+table",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-28T16:56:17.865325+00:00"
+}

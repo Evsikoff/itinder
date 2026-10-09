@@ -1,0 +1,15 @@
+{
+  "id": "32af3d38-453c-424e-b406-e536d02489b2",
+  "user_id": "5c8056c1-c49c-4332-acc3-510220576777",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/retry_storm,heavy_reads_on_primary",
+  "language": "Kotlin",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-08T16:21:03.081559+00:00"
+}

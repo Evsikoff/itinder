@@ -1,0 +1,15 @@
+{
+  "id": "289dac7e-3103-4679-8a3d-12c81ef939dd",
+  "user_id": "439e3d7a-5943-4a25-baf2-bac095d84898",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/gov_portal:gov_application/popup_clipped@birth+steps,toast_not_announced@toasts,toast_flood@toasts,tab_state_lost@steps",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-03T18:30:08.068744+00:00"
+}

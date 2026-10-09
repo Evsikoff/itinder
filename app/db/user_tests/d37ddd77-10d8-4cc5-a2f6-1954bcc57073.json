@@ -1,0 +1,13 @@
+{
+  "id": "d37ddd77-10d8-4cc5-a2f6-1954bcc57073",
+  "user_id": "10d38f3a-08b4-4515-9210-ab6cdc1c35b6",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/ai_nlp/slow_scraping,gateway_timeout_duplicates,pool_exhaustion,oversized_payload",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "cec7a78d-1de7-42f2-9235-8118402916b9",
+  "created_at": "2026-08-14T22:51:05.166056+00:00"
+}

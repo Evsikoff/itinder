@@ -1,0 +1,15 @@
+{
+  "id": "57046223-16fa-4834-b7de-a0a1d6da89ca",
+  "user_id": "f9f07c7b-d1a7-4187-847e-fbf7e6dcff1b",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/mobile_banking:bank_transfer/no_status_states@recipient,backdrop_select_close@sheet,popup_shifted_by_transform@recipient+sheet,stale_response@recipient",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-10-05T21:47:46.436801+00:00"
+}

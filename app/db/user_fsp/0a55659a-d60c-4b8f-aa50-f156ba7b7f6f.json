@@ -1,0 +1,280 @@
+{
+  "user_id": "0a55659a-d60c-4b8f-aa50-f156ba7b7f6f",
+  "fsp_id": "FSP-0586-4975",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "linked_at": "2026-10-08T02:09:31.398259+00:00",
+  "seed": 927107671,
+  "competitions": [
+    {
+      "competition_id": "tsifrovoy_reglament_2024",
+      "role_id": "backend",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "java",
+          "sql"
+        ],
+        "databases": [
+          "postgres_pro"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "file_exchange",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-08T02:09:31.398259+00:00"
+    },
+    {
+      "competition_id": "kubok_sibiri_2024",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "kotlin",
+          "sql"
+        ],
+        "databases": [
+          "mongodb"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "rabbitmq"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-08T02:09:31.398259+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2025",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "csharp"
+        ],
+        "databases": [
+          "ydb"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-08T02:09:31.398259+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "backend",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "databases": [
+          "sqlite"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-10-08T23:07:50.271933+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "java"
+        ],
+        "databases": [
+          "mongodb"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-10-08T06:48:07.289484+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "java",
+      "points": 5,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 5,
+      "competitions": [
+        "kubok_sibiri_2024",
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "sql",
+      "points": 4,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "kubok_sibiri_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "csharp",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "mongodb",
+      "points": 5,
+      "competitions": [
+        "kubok_sibiri_2024",
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "sqlite",
+      "points": 3,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "ydb",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "postgres_pro",
+      "points": 2,
+      "competitions": [
+        "tsifrovoy_reglament_2024"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 13,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "kubok_sibiri_2024",
+        "kontrakt_2025",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 8,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 5,
+      "competitions": [
+        "kubok_sibiri_2024",
+        "kontrakt_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 5,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "kontrakt_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 5,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "rabbitmq",
+      "points": 2,
+      "competitions": [
+        "kubok_sibiri_2024"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-10-08T23:07:50.271933+00:00"
+}

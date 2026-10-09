@@ -1,0 +1,12 @@
+{
+  "id": "0f8cfb82-167d-4c86-a85b-fe2b1c6daf84",
+  "user_id": "3d3307af-6d23-46d0-829a-891e044656f2",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/iot_smart_home:5175/brittle_locators,flaky_fixed_sleep",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-15T21:06:04.077253+00:00"
+}

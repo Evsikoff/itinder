@@ -1,0 +1,12 @@
+{
+  "id": "373299f9-0bd7-467b-ab49-7c6bf694ebf3",
+  "user_id": "8d467f89-e936-4678-b454-84a656fc8d92",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/client_sort_paged@table,filter_hides_selection@filters+table",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-17T03:14:50.861215+00:00"
+}

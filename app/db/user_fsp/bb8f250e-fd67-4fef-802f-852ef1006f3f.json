@@ -1,0 +1,101 @@
+{
+  "user_id": "bb8f250e-fd67-4fef-802f-852ef1006f3f",
+  "fsp_id": "FSP-9483-1690",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-09-09T21:06:16.143515+00:00",
+  "seed": 2876800119,
+  "competitions": [
+    {
+      "competition_id": "polyarny_kod_2023",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "integrations": [
+          "rest",
+          "soap",
+          "file_exchange"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-09T21:06:16.143515+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-11T17:24:10.652854+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "karavan_2027",
+      "declined_at": "2026-09-11T21:31:06.355455+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 3,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2023"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 5,
+      "competitions": [
+        "polyarny_kod_2023",
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 5,
+      "competitions": [
+        "polyarny_kod_2023",
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2023"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-09-11T21:31:06.355455+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "a82dcf63-50de-4105-9a05-23427abcefd8",
+  "user_id": "72923b15-f974-4af6-9456-6d1399c1b1ab",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/repeated_computation",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-07T07:54:32.999153+00:00"
+}

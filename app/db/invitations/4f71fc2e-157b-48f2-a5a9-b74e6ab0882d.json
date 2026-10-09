@@ -1,0 +1,113 @@
+{
+  "id": "4f71fc2e-157b-48f2-a5a9-b74e6ab0882d",
+  "type": "От рекрутера кандидату",
+  "applicant_id": "a0d9c78e-6d91-44de-8f71-38caeb71b922",
+  "recruiter_id": "65376784-795c-488d-aa0f-7a8fc08bbae0",
+  "project_id": "b342ffb7-bf07-4d13-a0d8-abb2c2a10f79",
+  "vacancy_id": "1d8cfb64-fec1-4f21-be0f-2d3eec8d5b58",
+  "vacancy": {
+    "id": "1d8cfb64-fec1-4f21-be0f-2d3eec8d5b58",
+    "title": "[Тест] Фронтенд-разработчик (веб) (Middle)",
+    "position": "frontend_web",
+    "position_name": "Фронтенд-разработчик (веб)",
+    "role_id": "frontend",
+    "specialization": "Frontend",
+    "grade": "Middle",
+    "count": 1,
+    "task": "Создать веб-панель с фильтрами отчётов и графиками, подключить API и обновление показателей.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [
+      "Опишите план решения задачи по позиции «Фронтенд-разработчик (веб)»: Создать веб-панель с фильтрами отчётов и графиками, подключить API и обновление показателей.",
+      "Перечислите граничные случаи и обработку ошибок. Объясните, как проверить результат."
+    ],
+    "salary": {
+      "from": 170000,
+      "to": 240000,
+      "currency": "RUB"
+    },
+    "notes": "Демонстрационная вакансия. Снимок предназначен для проверки приглашений и откликов.",
+    "project_id": "b342ffb7-bf07-4d13-a0d8-abb2c2a10f79",
+    "company": {
+      "id": "6565ce0f-50dc-45e7-aafb-6efc44c9ce93",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: платформа аналитики",
+      "summary": "Платформа сбора событий и отчётов: загрузка данных, показатели и веб-панель аналитики.",
+      "domain": "internal",
+      "stage": "active",
+      "duration": "6to12",
+      "work_format": "remote"
+    },
+    "status": "ready",
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "approved_at": "2026-10-09T18:51:14.009890+00:00"
+  },
+  "flow": "assignment",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T18:51:14.009890+00:00"
+    },
+    {
+      "status": "declined",
+      "at": "2026-10-09T18:52:14.009890+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T18:51:14.009890+00:00",
+  "source": "search",
+  "relevance": null,
+  "test_generation": {
+    "version": 1,
+    "batch_id": "a4b17c9b-e538-4a98-8114-6e81d31f0120",
+    "scenario": "incoming:assignment:declined",
+    "template": "analytics",
+    "recruiter_name": "Михаил Соколов (тест)"
+  },
+  "applicant_seen": {
+    "status": "declined",
+    "at": "2026-10-09T18:52:14.009890+00:00",
+    "revision": 2
+  }
+}

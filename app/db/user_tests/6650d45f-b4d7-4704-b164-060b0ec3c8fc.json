@@ -1,0 +1,12 @@
+{
+  "id": "6650d45f-b4d7-4704-b164-060b0ec3c8fc",
+  "user_id": "28d49851-1407-4b29-bba9-fa0570d142f6",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/memory_leak@table,filter_keeps_page@filters+table",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-26T06:43:18.484185+00:00"
+}

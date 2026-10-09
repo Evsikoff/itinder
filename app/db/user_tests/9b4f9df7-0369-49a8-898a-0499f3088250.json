@@ -1,0 +1,12 @@
+{
+  "id": "9b4f9df7-0369-49a8-898a-0499f3088250",
+  "user_id": "272df0f4-40b8-4ba3-ab16-6fb5dfb69b2d",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Frontend/Junior/enterprise_crm:form/double_submit@form",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-11T08:36:29.653348+00:00"
+}

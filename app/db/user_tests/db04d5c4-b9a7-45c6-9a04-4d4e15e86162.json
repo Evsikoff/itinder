@@ -1,0 +1,15 @@
+{
+  "id": "db04d5c4-b9a7-45c6-9a04-4d4e15e86162",
+  "user_id": "75d79626-6178-464e-a604-777cf8177543",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/mobile_banking:bank_transfer/focus_escapes@sheet,toast_under_overlay@sheet+toasts,keyboard_covers_popup@recipient+sheet,stale_response@recipient",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-28T17:54:32.106657+00:00"
+}

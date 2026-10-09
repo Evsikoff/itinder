@@ -1,0 +1,12 @@
+{
+  "id": "aea6845c-cff3-4ee6-b869-4e3cafdf5785",
+  "user_id": "b5f2adc1-78a2-4679-9303-3972e4fac93b",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/ecommerce_checkout:5439/ambiguous_requirement",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-25T06:19:27.793374+00:00"
+}

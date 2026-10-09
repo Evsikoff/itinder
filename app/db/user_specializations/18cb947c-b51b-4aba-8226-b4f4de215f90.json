@@ -1,0 +1,21 @@
+{
+  "id": "18cb947c-b51b-4aba-8226-b4f4de215f90",
+  "user_id": "24035d99-4fc6-47ba-85b7-6af2bead6618",
+  "specialization": "QA",
+  "grade": "Middle",
+  "created_at": "2026-09-13T22:00:26.456931+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 17,
+        "title": "QA"
+      },
+      {
+        "id": 26,
+        "title": "Middle"
+      }
+    ]
+  }
+}

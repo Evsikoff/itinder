@@ -1,0 +1,15 @@
+{
+  "id": "13546aa7-08f8-4e57-bab9-4c09cd37e8bd",
+  "user_id": "36dc79a0-df97-4541-a372-64e037d85241",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/heavy_egress,parser_abuse",
+  "language": "Python",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-28T14:19:57.033032+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "0fb61a15-0725-4a94-9d9f-0297f9bcd263",
+  "user_id": "bfa0d5fc-ef4a-4dc4-a124-0d33d438acea",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/data_analytics/pool_exhaustion,parser_abuse",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-30T18:40:13.236509+00:00"
+}

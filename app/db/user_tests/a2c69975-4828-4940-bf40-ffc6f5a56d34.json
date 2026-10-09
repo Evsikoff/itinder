@@ -1,0 +1,15 @@
+{
+  "id": "a2c69975-4828-4940-bf40-ffc6f5a56d34",
+  "user_id": "4edec1b3-b2a6-46cc-bb20-d272095352cf",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/pool_exhaustion,heavy_egress",
+  "language": "Go",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-20T08:54:29.457210+00:00"
+}

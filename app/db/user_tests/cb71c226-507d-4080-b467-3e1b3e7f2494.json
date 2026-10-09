@@ -1,0 +1,15 @@
+{
+  "id": "cb71c226-507d-4080-b467-3e1b3e7f2494",
+  "user_id": "31365c43-f4c2-429a-9ede-9b0f1ef1ee13",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "QA/Senior/health_booking:6923/prod_data_in_test,late_qa_no_shift_left,no_quality_gates,manual_regression_bottleneck",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-10-03T14:14:01.618697+00:00"
+}

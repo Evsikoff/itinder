@@ -1,0 +1,217 @@
+{
+  "user_id": "8a9d7374-4f7e-44c3-bb46-540b5eeba34a",
+  "fsp_id": "FSP-8710-5766",
+  "role_id": "qa",
+  "specialization": "QA",
+  "linked_at": "2026-09-24T08:28:34.272301+00:00",
+  "seed": 794163442,
+  "competitions": [
+    {
+      "competition_id": "okhota_na_bagi_2024",
+      "role_id": "qa",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "python",
+          "sql"
+        ],
+        "testing": [
+          "test_design",
+          "exploratory",
+          "postman",
+          "pytest",
+          "playwright",
+          "sql_checks",
+          "allure"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-24T08:28:34.272301+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "qa",
+      "result": "win",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "javascript"
+        ],
+        "testing": [
+          "test_design",
+          "postman",
+          "cypress"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-25T03:46:43.347792+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "qa",
+      "result": "prize",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "testing": [
+          "test_design",
+          "rest_assured",
+          "wiremock",
+          "pact"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-26T00:38:54.723431+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "okhota_na_bagi_2027",
+      "declined_at": "2026-09-26T01:31:44.029404+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 4,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "javascript",
+      "points": 3,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "python",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "sql",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "test_design",
+      "points": 10,
+      "competitions": [
+        "okhota_na_bagi_2024",
+        "sessiya_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "postman",
+      "points": 6,
+      "competitions": [
+        "okhota_na_bagi_2024",
+        "sessiya_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "pact",
+      "points": 4,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "rest_assured",
+      "points": 4,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "wiremock",
+      "points": 4,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "allure",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "cypress",
+      "points": 3,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "exploratory",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "playwright",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "pytest",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "sql_checks",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2024"
+      ],
+      "degree": 2
+    }
+  ],
+  "updated_at": "2026-09-26T01:31:44.029404+00:00"
+}

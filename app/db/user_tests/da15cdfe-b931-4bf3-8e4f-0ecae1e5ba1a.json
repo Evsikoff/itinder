@@ -1,0 +1,15 @@
+{
+  "id": "da15cdfe-b931-4bf3-8e4f-0ecae1e5ba1a",
+  "user_id": "b2990cb5-3fb4-49ee-aa1e-db990eeb9b00",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/data_analytics/oversized_payload,bot_traffic,pool_exhaustion,slow_scraping",
+  "language": "Kotlin",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-29T06:34:14.078929+00:00"
+}

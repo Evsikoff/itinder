@@ -1,0 +1,12 @@
+{
+  "id": "af3a0999-3ba9-4bab-9078-75f80c210bfa",
+  "user_id": "3b2ac443-a8e5-416d-9128-c1603e4d9a4c",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/column_jump@table,realtime_wrong_record@table+details",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-15T16:18:42.119936+00:00"
+}

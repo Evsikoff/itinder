@@ -1,0 +1,15 @@
+{
+  "id": "2361e306-9729-4ae8-93fa-b3fad0392de9",
+  "user_id": "f135bf20-d244-47e4-9ae3-99897e004ec4",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/oversized_payload",
+  "language": "JavaScript",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-13T17:02:26.372842+00:00"
+}

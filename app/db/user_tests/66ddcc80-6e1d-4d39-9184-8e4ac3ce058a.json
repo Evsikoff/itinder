@@ -1,0 +1,12 @@
+{
+  "id": "66ddcc80-6e1d-4d39-9184-8e4ac3ce058a",
+  "user_id": "71c4122b-12e6-4d5b-8bf2-eadecc3fddc8",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/health_booking:8932/state_transitions_untested",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-24T03:22:53.823322+00:00"
+}

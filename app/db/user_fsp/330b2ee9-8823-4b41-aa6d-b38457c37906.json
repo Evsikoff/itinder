@@ -1,0 +1,214 @@
+{
+  "user_id": "330b2ee9-8823-4b41-aa6d-b38457c37906",
+  "fsp_id": "FSP-8417-7619",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-08-27T09:14:06.025449+00:00",
+  "seed": 1985841015,
+  "competitions": [
+    {
+      "competition_id": "tsifrovoy_reglament_2024",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "file_exchange",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-27T09:14:06.025449+00:00"
+    },
+    {
+      "competition_id": "kubok_sibiri_2024",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "rabbitmq"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-27T09:14:06.025449+00:00"
+    },
+    {
+      "competition_id": "strezhen_2026",
+      "role_id": "frontend",
+      "result": "win",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "websocket",
+          "kafka"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-27T09:14:06.025449+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "dart"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-28T09:37:35.418441+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "frontend",
+      "result": "win",
+      "points": 5,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-29T08:19:55.786412+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 11,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "strezhen_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 3,
+      "competitions": [
+        "kubok_sibiri_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "dart",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 16,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "kubok_sibiri_2024",
+        "strezhen_2026",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 9,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 9,
+      "competitions": [
+        "strezhen_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 7,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 4,
+      "competitions": [
+        "strezhen_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 3,
+      "competitions": [
+        "kubok_sibiri_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "rabbitmq",
+      "points": 3,
+      "competitions": [
+        "kubok_sibiri_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 2,
+      "competitions": [
+        "tsifrovoy_reglament_2024"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-08-29T08:19:55.786412+00:00"
+}

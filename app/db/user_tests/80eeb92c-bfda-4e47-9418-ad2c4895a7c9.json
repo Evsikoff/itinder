@@ -1,0 +1,12 @@
+{
+  "id": "80eeb92c-bfda-4e47-9418-ad2c4895a7c9",
+  "user_id": "b5f2adc1-78a2-4679-9303-3972e4fac93b",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/health_booking:7281/api_asserts_status_only,flaky_time_dependency",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-25T06:51:13.824897+00:00"
+}

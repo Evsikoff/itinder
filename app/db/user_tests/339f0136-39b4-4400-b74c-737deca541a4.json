@@ -1,0 +1,15 @@
+{
+  "id": "339f0136-39b4-4400-b74c-737deca541a4",
+  "user_id": "472c31fb-ecfb-406b-8b12-57fc95a9b6fe",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Senior/data_analytics/parser_abuse,slow_scraping,heavy_reads_on_primary,bot_traffic",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-28T00:53:38.027418+00:00"
+}

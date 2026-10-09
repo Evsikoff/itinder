@@ -1,0 +1,15 @@
+{
+  "id": "9aab72c2-ca3a-44d5-a470-1b81712babac",
+  "user_id": "42da36c0-8577-4fbd-9e25-9925fd19eba5",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/gov_portal:gov_application/toast_not_announced@toasts,early_validation@form,double_submit@form,popup_clipped@birth+steps",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-07-31T05:49:30.900255+00:00"
+}

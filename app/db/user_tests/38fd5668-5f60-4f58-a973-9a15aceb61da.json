@@ -1,0 +1,12 @@
+{
+  "id": "38fd5668-5f60-4f58-a973-9a15aceb61da",
+  "user_id": "3c1e1eff-06fc-4ec9-a57e-1ee391f96e31",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/enterprise_crm:crm_pick_items/index_keys@table,filter_keeps_page@search+table",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-01T10:37:03.677228+00:00"
+}

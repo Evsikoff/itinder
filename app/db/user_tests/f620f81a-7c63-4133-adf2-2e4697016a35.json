@@ -1,0 +1,15 @@
+{
+  "id": "f620f81a-7c63-4133-adf2-2e4697016a35",
+  "user_id": "a051fb40-b973-4bda-977d-9645cb42ee12",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/oversized_payload,slow_scraping",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-08T13:03:23.194046+00:00"
+}

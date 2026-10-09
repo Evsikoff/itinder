@@ -1,0 +1,12 @@
+{
+  "id": "b76bf58f-2e30-42a4-b262-be366b90dda5",
+  "user_id": "8e38ce17-8073-41a1-a5b3-3e5579e99e9b",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/n_plus_one,oversized_payload",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-24T03:58:26.278920+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "4f78bbfc-5c0c-45b6-b724-22302f2725b3",
+  "user_id": "01ee5090-7d02-4b2e-a530-6e406adbd952",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_client_card/data_loss_navigation@form,esc_closes_parent@date+panel,scroll_chaining@confirm,early_validation@form",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-07-11T14:55:46.184175+00:00"
+}

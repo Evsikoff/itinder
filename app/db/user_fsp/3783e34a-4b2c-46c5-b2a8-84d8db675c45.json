@@ -1,0 +1,244 @@
+{
+  "user_id": "3783e34a-4b2c-46c5-b2a8-84d8db675c45",
+  "fsp_id": "FSP-9838-3777",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "linked_at": "2026-09-09T00:40:43.195330+00:00",
+  "seed": 337454056,
+  "competitions": [
+    {
+      "competition_id": "tikhookeansky_sprint_2025",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "databases": [
+          "sqlite"
+        ],
+        "integrations": [
+          "rest",
+          "graphql",
+          "webhook"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-09T00:40:43.195330+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "go"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-09T19:32:36.802617+00:00"
+    },
+    {
+      "competition_id": "okhota_na_bagi_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin",
+          "sql"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "kafka",
+          "websocket"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-09T23:49:21.363701+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "java"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-11T00:50:05.255590+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 5,
+      "competitions": [
+        "tikhookeansky_sprint_2025",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "go",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "java",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "sql",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "postgresql",
+      "points": 9,
+      "competitions": [
+        "kontrakt_2027",
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "databases",
+      "id": "sqlite",
+      "points": 2,
+      "competitions": [
+        "tikhookeansky_sprint_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 11,
+      "competitions": [
+        "tikhookeansky_sprint_2025",
+        "kontrakt_2027",
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 6,
+      "competitions": [
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 5,
+      "competitions": [
+        "tikhookeansky_sprint_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "graphql",
+      "points": 2,
+      "competitions": [
+        "tikhookeansky_sprint_2025"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-09-11T00:50:05.255590+00:00"
+}

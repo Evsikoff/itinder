@@ -1,0 +1,15 @@
+{
+  "id": "907b12b7-73d2-4d5b-ac2c-fc18871340d0",
+  "user_id": "65f71bd5-5d7f-4476-bd37-cd94498079bf",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/heavy_egress,heavy_reads_on_primary",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-15T16:03:17.056616+00:00"
+}

@@ -1,0 +1,132 @@
+{
+  "id": "46204287-5f3d-4b94-aff9-c681b5bcf778",
+  "type": "От кандидата рекрутеру",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "0261accf-e1d9-489d-87e2-012d3ff3b4f2",
+  "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+  "vacancy_id": "68ff1cb0-006a-40d6-add8-01b008d4e981",
+  "vacancy": {
+    "id": "68ff1cb0-006a-40d6-add8-01b008d4e981",
+    "title": "Тестировщик (Middle)",
+    "position": "qa",
+    "position_name": "Тестировщик",
+    "role_id": "qa",
+    "specialization": "QA",
+    "grade": "Middle",
+    "count": 1,
+    "task": "Проверка продукта: тест-дизайн по требованиям, ручные проверки и автотесты, баг-репорты",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript",
+          "python"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pact"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "API не должен ломаться у тех, кто к нему подключён"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Проверки по требованиям"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Поиск дефектов и баг-репорты"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "postman"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Проверка бизнес-логики через API"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 150000,
+      "to": 200000,
+      "currency": "RUB"
+    },
+    "notes": null,
+    "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+    "company": {
+      "id": "91d54fe2-069b-4739-8fc6-afe2195fffb4",
+      "name": "Московский зоопарк"
+    },
+    "project": {
+      "name": "Система управления зоопарком",
+      "summary": "ERP-система зоопарка",
+      "domain": "internal",
+      "stage": "new",
+      "duration": "gt12",
+      "start_date": "2026-10-29",
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "free",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T17:42:27.701697+00:00"
+  },
+  "relevance": 83.4,
+  "source": "vacancy",
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.643842+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.643842+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "applicant_seen": {
+    "status": "sent",
+    "at": "2026-10-09T20:43:38.643842+00:00",
+    "revision": 1
+  }
+}

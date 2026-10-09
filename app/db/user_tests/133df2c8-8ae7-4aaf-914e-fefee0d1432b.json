@@ -1,0 +1,12 @@
+{
+  "id": "133df2c8-8ae7-4aaf-914e-fefee0d1432b",
+  "user_id": "dc8cf426-cd2a-4e80-9cf6-dac967ce913e",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/data_analytics/response_built_in_memory,heavy_egress",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-24T03:45:48.946120+00:00"
+}

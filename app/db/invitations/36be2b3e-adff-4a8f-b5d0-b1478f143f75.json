@@ -1,0 +1,114 @@
+{
+  "id": "36be2b3e-adff-4a8f-b5d0-b1478f143f75",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "06eb6f38-f6a0-4719-ac6c-22417a56985c",
+  "project_id": "e11cdc08-0c98-4e3d-a547-01e1f8663ce5",
+  "vacancy_id": "c1865b2b-a2f3-47bd-9506-f3597b55d643",
+  "vacancy": {
+    "id": "c1865b2b-a2f3-47bd-9506-f3597b55d643",
+    "title": "Системный аналитик (Middle)",
+    "position": "analyst",
+    "position_name": "Системный аналитик",
+    "role_id": "analyst",
+    "specialization": "Syst. Analyst",
+    "grade": "Middle",
+    "count": 1,
+    "task": "Описать жизненный цикл заказа, модель данных и контракт API для команды разработки.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 130000,
+      "to": 190000,
+      "currency": "RUB"
+    },
+    "notes": "Тестовая вакансия. Данные и зарплатная вилка приведены для демонстрации.",
+    "project_id": "e11cdc08-0c98-4e3d-a547-01e1f8663ce5",
+    "company": {
+      "id": "5a5f7e99-42d9-473a-9461-cd87ba543360",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: интернет-магазин",
+      "summary": "Веб-магазин: каталог товаров, корзина, оформление заказа и кабинет покупателя.",
+      "domain": "retail",
+      "stage": "active",
+      "duration": "3to6",
+      "start_date": null,
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T20:01:24.184951+00:00"
+  },
+  "relevance": 100.0,
+  "source": "vacancy",
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.667441+00:00"
+    },
+    {
+      "status": "accepted",
+      "at": "2026-10-09T20:43:38.667442+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.667441+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "applicant_seen": {
+    "status": "accepted",
+    "at": "2026-10-09T20:43:38.667442+00:00",
+    "revision": 2
+  },
+  "recruiter_seen": {
+    "status": "accepted",
+    "at": "2026-10-09T20:43:38.667442+00:00",
+    "revision": 2
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "5557fd7f-c835-414a-b67c-fb69931f2190",
+  "user_id": "d5b3ac1a-bbd3-4ba8-9161-0027c4616242",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Senior/data_analytics/expensive_queries,heavy_egress,bot_traffic,parser_abuse",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-04T19:42:47.801510+00:00"
+}

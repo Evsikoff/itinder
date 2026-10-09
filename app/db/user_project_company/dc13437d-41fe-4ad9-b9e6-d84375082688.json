@@ -1,0 +1,345 @@
+{
+  "id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+  "user_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "company_id": "91d54fe2-069b-4739-8fc6-afe2195fffb4",
+  "name": "Система управления зоопарком",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "ERP-система зоопарка",
+    "domain": "internal",
+    "stage": "new",
+    "duration": "gt12",
+    "start_date": "2026-10-29",
+    "work_format": "remote",
+    "clients": [
+      "web"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "data_kinds": [
+      "records",
+      "flexible"
+    ],
+    "load": "medium",
+    "realtime": "no",
+    "background_jobs": "yes",
+    "events_fanout": "yes",
+    "auth": "sso",
+    "third_party_api": "yes",
+    "scheduled_files": "no",
+    "ml_features": "no",
+    "one_language": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "data"
+    ],
+    "requirements_state": "idea",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "market_choices[languages:python,java,kotlin,go,csharp,php,rust,cpp,javascript,typescript].choice": [
+      "python"
+    ],
+    "market_choices[languages:typescript,javascript].choice": [
+      "typescript"
+    ],
+    "market_choices[integrations:rest,graphql].choice": [
+      "rest"
+    ],
+    "market_choices[databases:postgresql,postgres_pro,mysql,mssql,ydb].choice": [
+      "postgresql"
+    ],
+    "market_choices[databases:mongodb,postgresql].choice": [
+      "postgresql"
+    ],
+    "market_choices[integrations:rabbitmq,kafka].choice": [
+      "kafka"
+    ],
+    "market_choices[testing:postman,pytest].choice": [
+      "postman"
+    ]
+  },
+  "summary": {
+    "stack_mode": "free",
+    "kind_mode": {
+      "languages": "free",
+      "databases": "free",
+      "integrations": "free",
+      "testing": "free"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [],
+    "choices": [
+      {
+        "kind": "languages",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Основной язык серверной части"
+        ],
+        "candidates": [
+          "python",
+          "typescript",
+          "kotlin",
+          "java",
+          "go",
+          "csharp",
+          "php",
+          "rust",
+          "javascript",
+          "cpp"
+        ],
+        "chosen": [
+          "python"
+        ],
+        "recommended": "python"
+      },
+      {
+        "kind": "languages",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Язык веб-интерфейса"
+        ],
+        "candidates": [
+          "typescript",
+          "javascript"
+        ],
+        "chosen": [
+          "typescript"
+        ],
+        "recommended": "typescript"
+      },
+      {
+        "kind": "integrations",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Как интерфейс получает данные с сервера",
+          "Открытый API для чужих систем"
+        ],
+        "candidates": [
+          "rest",
+          "graphql"
+        ],
+        "chosen": [
+          "rest"
+        ],
+        "recommended": "rest"
+      },
+      {
+        "kind": "databases",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Основная база данных"
+        ],
+        "candidates": [
+          "postgresql",
+          "ydb",
+          "postgres_pro",
+          "mysql",
+          "mssql"
+        ],
+        "chosen": [
+          "postgresql"
+        ],
+        "recommended": "postgresql"
+      },
+      {
+        "kind": "databases",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Данные с гибкой структурой"
+        ],
+        "candidates": [
+          "postgresql",
+          "mongodb"
+        ],
+        "chosen": [
+          "postgresql"
+        ],
+        "recommended": "postgresql"
+      },
+      {
+        "kind": "integrations",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Очередь фоновых задач",
+          "Рассылка событий между частями системы"
+        ],
+        "candidates": [
+          "kafka",
+          "rabbitmq"
+        ],
+        "chosen": [
+          "kafka"
+        ],
+        "recommended": "kafka"
+      },
+      {
+        "kind": "integrations",
+        "positions": [
+          "backend_main",
+          "frontend_web"
+        ],
+        "reasons": [
+          "Вход через внешний провайдер"
+        ],
+        "candidates": [
+          "oidc"
+        ],
+        "chosen": [
+          "oidc"
+        ],
+        "recommended": "oidc"
+      },
+      {
+        "kind": "testing",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "API не должен ломаться у тех, кто к нему подключён"
+        ],
+        "candidates": [
+          "pact"
+        ],
+        "chosen": [
+          "pact"
+        ],
+        "recommended": "pact"
+      },
+      {
+        "kind": "testing",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Проверки по требованиям"
+        ],
+        "candidates": [
+          "test_design"
+        ],
+        "chosen": [
+          "test_design"
+        ],
+        "recommended": "test_design"
+      },
+      {
+        "kind": "testing",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Поиск дефектов и баг-репорты"
+        ],
+        "candidates": [
+          "exploratory"
+        ],
+        "chosen": [
+          "exploratory"
+        ],
+        "recommended": "exploratory"
+      },
+      {
+        "kind": "testing",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Проверка бизнес-логики через API"
+        ],
+        "candidates": [
+          "postman",
+          "pytest"
+        ],
+        "chosen": [
+          "postman"
+        ],
+        "recommended": "postman"
+      }
+    ],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "5de7e421-9613-47d8-9419-c6d528c471bf",
+    "a28e9fc1-8c86-4179-8e7d-16ec736ef473",
+    "e1c5b3a1-4e61-4a65-8154-ab209f5ed127",
+    "68ff1cb0-006a-40d6-add8-01b008d4e981",
+    "579dc2ab-b029-4041-bb57-e3929db7dcba"
+  ],
+  "approved_at": "2026-10-09T17:42:27.701697+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-10-09T17:40:12.539705+00:00",
+  "updated_at": "2026-10-09T17:42:27.701697+00:00"
+}

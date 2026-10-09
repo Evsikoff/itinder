@@ -1,0 +1,293 @@
+{
+  "user_id": "3a6b0f17-5d4c-43aa-ac56-02f2f28d101a",
+  "fsp_id": "FSP-2551-3275",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "linked_at": "2026-09-20T03:50:34.051502+00:00",
+  "seed": 2683307404,
+  "competitions": [
+    {
+      "competition_id": "kod_urala_2023",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "cpp"
+        ],
+        "databases": [
+          "tarantool"
+        ],
+        "integrations": [
+          "kafka",
+          "websocket",
+          "rest"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-20T03:50:34.051502+00:00"
+    },
+    {
+      "competition_id": "strezhen_2024",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "python"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "webhook"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-20T03:50:34.051502+00:00"
+    },
+    {
+      "competition_id": "tikhookeansky_sprint_2025",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "python"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "graphql",
+          "webhook"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-20T03:50:34.051502+00:00"
+    },
+    {
+      "competition_id": "strezhen_2025",
+      "role_id": "backend",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "python"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-20T03:50:34.051502+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "backend",
+      "result": "win",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "python"
+        ],
+        "databases": [
+          "redis"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-20T23:54:09.409130+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "java"
+        ],
+        "databases": [
+          "mongodb"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-20T06:58:50.076725+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "kontrakt_2027",
+      "declined_at": "2026-09-22T00:24:47.221680+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "python",
+      "points": 10,
+      "competitions": [
+        "strezhen_2024",
+        "tikhookeansky_sprint_2025",
+        "strezhen_2025",
+        "sessiya_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "java",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "cpp",
+      "points": 2,
+      "competitions": [
+        "kod_urala_2023"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "databases",
+      "id": "postgresql",
+      "points": 7,
+      "competitions": [
+        "strezhen_2024",
+        "tikhookeansky_sprint_2025",
+        "strezhen_2025"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "databases",
+      "id": "mongodb",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "redis",
+      "points": 3,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "tarantool",
+      "points": 2,
+      "competitions": [
+        "kod_urala_2023"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 15,
+      "competitions": [
+        "kod_urala_2023",
+        "strezhen_2024",
+        "tikhookeansky_sprint_2025",
+        "strezhen_2025",
+        "sessiya_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 7,
+      "competitions": [
+        "strezhen_2024",
+        "tikhookeansky_sprint_2025",
+        "strezhen_2025"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 6,
+      "competitions": [
+        "strezhen_2025",
+        "sessiya_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 5,
+      "competitions": [
+        "kod_urala_2023",
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "graphql",
+      "points": 2,
+      "competitions": [
+        "tikhookeansky_sprint_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 2,
+      "competitions": [
+        "kod_urala_2023"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-09-22T00:24:47.221680+00:00"
+}

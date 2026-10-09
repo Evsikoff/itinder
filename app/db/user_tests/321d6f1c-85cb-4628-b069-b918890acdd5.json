@@ -1,0 +1,12 @@
+{
+  "id": "321d6f1c-85cb-4628-b069-b918890acdd5",
+  "user_id": "d38e2641-a621-4698-9166-53c2ab20d486",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/ops_dashboard:crm_pick_items/double_scroll@table+modal,combobox_not_accessible@search",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-05T21:28:13.089461+00:00"
+}

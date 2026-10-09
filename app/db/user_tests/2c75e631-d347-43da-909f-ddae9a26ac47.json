@@ -1,0 +1,15 @@
+{
+  "id": "2c75e631-d347-43da-909f-ddae9a26ac47",
+  "user_id": "befe6e97-9476-4e74-80d5-7f151671b941",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/heavy_reads_on_primary",
+  "language": "C++",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-29T05:17:13.110832+00:00"
+}

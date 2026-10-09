@@ -1,0 +1,305 @@
+{
+  "user_id": "efea62dc-d92e-489c-bc2e-ad2aa83beb74",
+  "fsp_id": "FSP-3839-2429",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "linked_at": "2026-08-14T02:07:27.926306+00:00",
+  "seed": 2745445668,
+  "competitions": [
+    {
+      "competition_id": "strezhen_2024",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "databases": [
+          "redis"
+        ],
+        "integrations": [
+          "rest",
+          "webhook"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-14T02:07:27.926306+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2025",
+      "role_id": "backend",
+      "result": "prize",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "databases": [
+          "ydb"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-14T02:07:27.926306+00:00"
+    },
+    {
+      "competition_id": "strezhen_2026",
+      "role_id": "backend",
+      "result": "win",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "websocket",
+          "kafka"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-14T02:07:27.926306+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "go"
+        ],
+        "databases": [
+          "sqlite"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-14T18:31:16.674279+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-14T08:22:53.468935+00:00"
+    },
+    {
+      "competition_id": "okhota_na_bagi_2027",
+      "role_id": "backend",
+      "result": "win",
+      "points": 5,
+      "competencies": {
+        "languages": [
+          "kotlin",
+          "sql"
+        ],
+        "databases": [
+          "clickhouse"
+        ],
+        "integrations": [
+          "rest",
+          "kafka",
+          "websocket"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-14T18:12:18.371815+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "karavan_2027",
+      "declined_at": "2026-08-15T03:37:59.421884+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 12,
+      "competitions": [
+        "kontrakt_2025",
+        "kontrakt_2027",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 6,
+      "competitions": [
+        "strezhen_2024",
+        "strezhen_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "sql",
+      "points": 5,
+      "competitions": [
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "go",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "databases",
+      "id": "postgresql",
+      "points": 7,
+      "competitions": [
+        "strezhen_2026",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "databases",
+      "id": "clickhouse",
+      "points": 5,
+      "competitions": [
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "ydb",
+      "points": 4,
+      "competitions": [
+        "kontrakt_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "redis",
+      "points": 2,
+      "competitions": [
+        "strezhen_2024"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "databases",
+      "id": "sqlite",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 20,
+      "competitions": [
+        "strezhen_2024",
+        "kontrakt_2025",
+        "strezhen_2026",
+        "polyarny_kod_2026",
+        "kontrakt_2027",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 9,
+      "competitions": [
+        "strezhen_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 9,
+      "competitions": [
+        "strezhen_2024",
+        "kontrakt_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 9,
+      "competitions": [
+        "strezhen_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 7,
+      "competitions": [
+        "kontrakt_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 7,
+      "competitions": [
+        "kontrakt_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-08-15T03:37:59.421884+00:00"
+}

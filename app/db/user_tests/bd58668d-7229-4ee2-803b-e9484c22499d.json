@@ -1,0 +1,15 @@
+{
+  "id": "bd58668d-7229-4ee2-803b-e9484c22499d",
+  "user_id": "2dfcdeaf-9101-4706-be6d-44a6ae1e66a7",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/marketplace:market_quick_view/scroll_chaining@modal,popup_shifted_by_transform@size+modal,hover_only@hint,toast_under_overlay@modal+toasts",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-29T07:55:58.948197+00:00"
+}

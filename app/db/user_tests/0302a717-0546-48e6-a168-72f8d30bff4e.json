@@ -1,0 +1,15 @@
+{
+  "id": "0302a717-0546-48e6-a168-72f8d30bff4e",
+  "user_id": "4edec1b3-b2a6-46cc-bb20-d272095352cf",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/bot_traffic",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-22T18:22:13.375121+00:00"
+}

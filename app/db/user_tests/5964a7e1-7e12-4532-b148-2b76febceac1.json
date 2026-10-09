@@ -1,0 +1,12 @@
+{
+  "id": "5964a7e1-7e12-4532-b148-2b76febceac1",
+  "user_id": "beb36948-38d5-4c46-8e21-dbece3e40667",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/fintech_transfers:9216/brittle_locators,data_leftovers",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-02T06:11:36.476515+00:00"
+}

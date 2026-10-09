@@ -1,0 +1,15 @@
+{
+  "id": "141d8499-7062-4278-892c-6ac436231dbe",
+  "user_id": "d0dbbe7e-45d7-472f-918a-92fc3441ac58",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/mobile_banking:bank_transfer/focus_not_restored@sheet,request_spam@recipient,toast_under_overlay@sheet+toasts,data_loss_navigation@form",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-19T08:28:25.068313+00:00"
+}

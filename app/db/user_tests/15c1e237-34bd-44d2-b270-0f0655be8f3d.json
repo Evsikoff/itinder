@@ -1,0 +1,15 @@
+{
+  "id": "15c1e237-34bd-44d2-b270-0f0655be8f3d",
+  "user_id": "15769b10-d850-4fa5-875e-2e9e3d3667cc",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Senior/ai_nlp/slow_scraping,pool_exhaustion,oversized_payload,repeated_computation",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-01T09:35:51.093812+00:00"
+}

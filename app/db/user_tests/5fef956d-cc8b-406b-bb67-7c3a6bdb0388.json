@@ -1,0 +1,15 @@
+{
+  "id": "5fef956d-cc8b-406b-bb67-7c3a6bdb0388",
+  "user_id": "f5d8a35c-3ff2-4f19-ba5b-6cbfa4ecf075",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/hanging_dependency,heavy_reads_on_primary",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-05T07:18:33.604185+00:00"
+}

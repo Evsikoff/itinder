@@ -1,0 +1,12 @@
+{
+  "id": "cb3dcda9-aa8b-41a9-8d6c-987c286de89a",
+  "user_id": "8a9d7374-4f7e-44c3-bb46-540b5eeba34a",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/ecommerce_checkout:9129/bva_missing_boundaries",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-14T04:21:36.719951+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "797615be-4947-45cc-a108-0b764554f196",
+  "user_id": "ab40939c-ac9a-4b61-b613-eecf803c2e71",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/hanging_dependency,retry_storm",
+  "language": "C#",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-06T09:49:11.311430+00:00"
+}

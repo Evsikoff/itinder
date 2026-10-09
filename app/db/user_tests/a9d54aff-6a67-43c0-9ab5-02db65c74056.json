@@ -1,0 +1,15 @@
+{
+  "id": "a9d54aff-6a67-43c0-9ab5-02db65c74056",
+  "user_id": "7dc325c1-f960-4f18-a02e-3803b2d92fe1",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/ai_nlp/oversized_payload,request_bursts",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-19T22:29:54.690289+00:00"
+}

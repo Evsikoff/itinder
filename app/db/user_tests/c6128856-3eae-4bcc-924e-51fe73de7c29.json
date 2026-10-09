@@ -1,0 +1,12 @@
+{
+  "id": "c6128856-3eae-4bcc-924e-51fe73de7c29",
+  "user_id": "7c9ca1b5-7b93-402a-aa7e-f4e54123395e",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "QA/Junior/health_booking:8316/localize_backend",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-06T00:23:08.653986+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "7e9ce713-ccc6-44ef-a531-c540d61db188",
+  "user_id": "1771d019-18dd-429c-8791-ab3a7f3ce50b",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/enterprise_crm:filter_panel/filter_request_spam@filter_panel",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-03T12:31:06.572614+00:00"
+}

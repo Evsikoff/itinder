@@ -1,0 +1,12 @@
+{
+  "id": "78883a8f-4cec-44cb-8b13-e62d504f1c8b",
+  "user_id": "eed65510-03b9-42d5-a8fc-06bea8ffa980",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/mobile_banking:bank_templates/filter_not_in_url@search+feed,blur_before_click@search",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-13T11:23:54.934209+00:00"
+}

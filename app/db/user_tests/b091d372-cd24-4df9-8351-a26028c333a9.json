@@ -1,0 +1,15 @@
+{
+  "id": "b091d372-cd24-4df9-8351-a26028c333a9",
+  "user_id": "dcb4f6ca-c53a-4eb3-81a5-250506235012",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/data_analytics/parser_abuse,slow_scraping,gateway_timeout_duplicates,pool_exhaustion",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-28T05:01:05.733388+00:00"
+}

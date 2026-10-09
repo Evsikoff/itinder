@@ -1,0 +1,12 @@
+{
+  "id": "eb8b2e30-fc24-4cac-9af0-45a08487dd3b",
+  "user_id": "b273b1f0-5cc0-4355-88fc-6caf723fa049",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/health_booking:257/invalid_classes_missing",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-15T19:15:59.663024+00:00"
+}

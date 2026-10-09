@@ -1,0 +1,15 @@
+{
+  "id": "5da55414-e058-4a2e-abe8-f14845a9c847",
+  "user_id": "0ef96502-fadf-466f-a8c7-6897f1253ef9",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "QA/Senior/health_booking:3391/slow_pr_pipeline,flaky_tests_ignored,manual_regression_bottleneck,prod_data_in_test",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-09T10:03:51.411008+00:00"
+}

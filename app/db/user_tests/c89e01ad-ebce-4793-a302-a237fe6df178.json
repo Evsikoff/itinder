@@ -1,0 +1,15 @@
+{
+  "id": "c89e01ad-ebce-4793-a302-a237fe6df178",
+  "user_id": "98b263bc-6814-49a3-a5ce-7abb0f65cbbe",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Senior/data_analytics/bot_traffic,gateway_timeout_duplicates,heavy_reads_on_primary,hanging_dependency",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-07-17T20:46:21.930749+00:00"
+}

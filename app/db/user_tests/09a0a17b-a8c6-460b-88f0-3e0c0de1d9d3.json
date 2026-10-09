@@ -1,0 +1,15 @@
+{
+  "id": "09a0a17b-a8c6-460b-88f0-3e0c0de1d9d3",
+  "user_id": "434281c3-25ee-449b-b104-212fba0c1cac",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/ai_nlp/request_bursts,repeated_computation",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-08T15:39:26.656068+00:00"
+}

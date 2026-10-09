@@ -1,0 +1,120 @@
+{
+  "id": "e2b94b23-2db7-41db-86df-7194fb14dedd",
+  "type": "От кандидата рекрутеру",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "0261accf-e1d9-489d-87e2-012d3ff3b4f2",
+  "project_id": "318ba3e5-41ac-4bb7-96f6-117dc4966ed0",
+  "vacancy_id": "77664612-5d13-40a8-b711-4083052fa87c",
+  "vacancy": {
+    "id": "77664612-5d13-40a8-b711-4083052fa87c",
+    "title": "Тестировщик (Junior)",
+    "position": "qa",
+    "position_name": "Тестировщик",
+    "role_id": "qa",
+    "specialization": "QA",
+    "grade": "Junior",
+    "count": 1,
+    "task": "Проверить оформление заказа, подготовить граничные сценарии и автотесты API.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [
+      "Составьте пять проверок оформления заказа, включая граничные и негативные случаи."
+    ],
+    "salary": {
+      "from": 70000,
+      "to": 110000,
+      "currency": "RUB"
+    },
+    "notes": "Тестовая вакансия. Данные и зарплатная вилка приведены для демонстрации.",
+    "project_id": "318ba3e5-41ac-4bb7-96f6-117dc4966ed0",
+    "company": {
+      "id": "5a5f7e99-42d9-473a-9461-cd87ba543360",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: интернет-магазин",
+      "summary": "Веб-магазин: каталог товаров, корзина, оформление заказа и кабинет покупателя.",
+      "domain": "retail",
+      "stage": "active",
+      "duration": "3to6",
+      "start_date": null,
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T18:51:29.502772+00:00"
+  },
+  "relevance": 49.0,
+  "source": "vacancy",
+  "flow": "assignment",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.598396+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.598396+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "applicant_seen": {
+    "status": "sent",
+    "at": "2026-10-09T20:43:38.598396+00:00",
+    "revision": 1
+  }
+}

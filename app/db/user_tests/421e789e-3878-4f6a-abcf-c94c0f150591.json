@@ -1,0 +1,12 @@
+{
+  "id": "421e789e-3878-4f6a-abcf-c94c0f150591",
+  "user_id": "e934af16-05ee-4782-89f6-8ca2d7b80e82",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/ecommerce_checkout:6186/external_sandbox,flaky_shared_data",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-18T17:19:34.910808+00:00"
+}

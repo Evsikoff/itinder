@@ -1,0 +1,15 @@
+{
+  "id": "76c76567-7772-4353-b02b-16e96985b8db",
+  "user_id": "e534a43a-aa32-428f-bdf2-3618e2480552",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/b2b_graphql/retry_storm,n_plus_one,repeated_computation,hanging_dependency",
+  "language": "Java",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-10-08T09:33:34.520232+00:00"
+}

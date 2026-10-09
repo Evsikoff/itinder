@@ -1,0 +1,12 @@
+{
+  "id": "bc9e5f3e-67cc-4078-859f-94549ffd15c3",
+  "user_id": "c06e6b1e-edd9-49ad-9916-6bfa59897411",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Syst. Analyst/Junior/b2b_graphql/slow_scraping",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-12T16:19:15.240105+00:00"
+}

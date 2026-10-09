@@ -1,0 +1,122 @@
+{
+  "id": "9c2b24cf-61da-4ef2-8159-e4992e5ee740",
+  "type": "От кандидата рекрутеру",
+  "applicant_id": "a0d9c78e-6d91-44de-8f71-38caeb71b922",
+  "recruiter_id": "5cb022b2-15da-4789-8a93-415eb8bc13b4",
+  "project_id": "b342ffb7-bf07-4d13-a0d8-abb2c2a10f79",
+  "vacancy_id": "bade4815-717a-402a-8bd6-4613b7f8972e",
+  "vacancy": {
+    "id": "bade4815-717a-402a-8bd6-4613b7f8972e",
+    "title": "[Тест] Бэкенд-разработчик (Senior)",
+    "position": "backend_main",
+    "position_name": "Бэкенд-разработчик",
+    "role_id": "backend",
+    "specialization": "Backend",
+    "grade": "Senior",
+    "count": 1,
+    "task": "Спроектировать приём событий через Kafka, хранение данных и надёжное API отчётов.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 250000,
+      "to": 350000,
+      "currency": "RUB"
+    },
+    "notes": "Демонстрационная вакансия. Снимок предназначен для проверки приглашений и откликов.",
+    "project_id": "b342ffb7-bf07-4d13-a0d8-abb2c2a10f79",
+    "company": {
+      "id": "6565ce0f-50dc-45e7-aafb-6efc44c9ce93",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: платформа аналитики",
+      "summary": "Платформа сбора событий и отчётов: загрузка данных, показатели и веб-панель аналитики.",
+      "domain": "internal",
+      "stage": "active",
+      "duration": "6to12",
+      "work_format": "remote"
+    },
+    "status": "ready",
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "approved_at": "2026-10-09T19:05:14.009890+00:00"
+  },
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T19:05:14.009890+00:00"
+    },
+    {
+      "status": "read",
+      "at": "2026-10-09T19:06:14.009890+00:00"
+    },
+    {
+      "status": "accepted",
+      "at": "2026-10-09T19:07:14.009890+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T19:05:14.009890+00:00",
+  "source": "search",
+  "relevance": null,
+  "test_generation": {
+    "version": 1,
+    "batch_id": "a4b17c9b-e538-4a98-8114-6e81d31f0120",
+    "scenario": "outgoing:plain:accepted",
+    "template": "analytics",
+    "recruiter_name": "Анна Миронова (тест)"
+  }
+}

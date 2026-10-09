@@ -1,0 +1,109 @@
+{
+  "id": "3dacad39-a283-4c92-ad2f-422cae835c3d",
+  "type": "От кандидата рекрутеру",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "0399b2c8-7e51-41be-bb28-ab53885bb5d9",
+  "project_id": "6e3bc32b-0795-4203-8e35-aac2138f8c50",
+  "vacancy_id": "68d25d16-68f3-4915-8bb6-5cd9498b2e77",
+  "vacancy": {
+    "id": "68d25d16-68f3-4915-8bb6-5cd9498b2e77",
+    "title": "Системный аналитик (Senior)",
+    "position": "analyst",
+    "position_name": "Системный аналитик",
+    "role_id": "analyst",
+    "specialization": "Syst. Analyst",
+    "grade": "Senior",
+    "count": 1,
+    "task": "Согласовать бизнес-показатели, структуру событий и модель аналитических данных с заказчиком.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 210000,
+      "to": 290000,
+      "currency": "RUB"
+    },
+    "notes": "Тестовая вакансия. Данные и зарплатная вилка приведены для демонстрации.",
+    "project_id": "6e3bc32b-0795-4203-8e35-aac2138f8c50",
+    "company": {
+      "id": "5a5f7e99-42d9-473a-9461-cd87ba543360",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: платформа аналитики",
+      "summary": "Платформа сбора событий и отчётов: загрузка данных, показатели и веб-панель аналитики.",
+      "domain": "internal",
+      "stage": "active",
+      "duration": "6to12",
+      "start_date": null,
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T18:50:14.304146+00:00"
+  },
+  "relevance": 0.0,
+  "source": "vacancy",
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.627693+00:00"
+    },
+    {
+      "status": "accepted",
+      "at": "2026-10-09T21:59:07.573328+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.627693+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "applicant_seen": {
+    "status": "sent",
+    "at": "2026-10-09T20:43:38.627693+00:00",
+    "revision": 1
+  }
+}

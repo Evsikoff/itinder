@@ -1,0 +1,12 @@
+{
+  "id": "3c954c12-7815-4696-9b60-d1ff5941770b",
+  "user_id": "b08668c6-46ce-43ff-a7cd-9b211f054c82",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/mobile_banking:tooltip/hover_only@tooltip",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-25T02:23:39.897238+00:00"
+}

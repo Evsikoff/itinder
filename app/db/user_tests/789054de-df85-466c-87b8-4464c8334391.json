@@ -1,0 +1,12 @@
+{
+  "id": "789054de-df85-466c-87b8-4464c8334391",
+  "user_id": "8a00922e-4393-4e45-89d7-6daf5c1eb845",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/gov_portal:gov_office_search/focus_escapes@modal,popup_shifted_by_transform@hint+modal",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-10T05:04:13.292813+00:00"
+}

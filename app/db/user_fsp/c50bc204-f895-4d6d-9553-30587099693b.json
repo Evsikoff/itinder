@@ -1,0 +1,205 @@
+{
+  "user_id": "c50bc204-f895-4d6d-9553-30587099693b",
+  "fsp_id": "FSP-2644-4007",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "linked_at": "2026-08-22T15:44:26.702226+00:00",
+  "seed": 300772435,
+  "competitions": [
+    {
+      "competition_id": "strezhen_2025",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "databases": [
+          "redis"
+        ],
+        "integrations": [
+          "rest",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-22T15:44:26.702226+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2027",
+      "role_id": "backend",
+      "result": "win",
+      "points": 5,
+      "competencies": {
+        "languages": [
+          "java"
+        ],
+        "databases": [
+          "ydb"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-23T04:21:03.567707+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "csharp"
+        ],
+        "databases": [
+          "mongodb"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-22T21:54:59.277007+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "sessiya_2026",
+      "declined_at": "2026-08-24T15:05:28.744401+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "java",
+      "points": 5,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "csharp",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 2,
+      "competitions": [
+        "strezhen_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "databases",
+      "id": "ydb",
+      "points": 5,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "mongodb",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "redis",
+      "points": 2,
+      "competitions": [
+        "strezhen_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 10,
+      "competitions": [
+        "strezhen_2025",
+        "kontrakt_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 7,
+      "competitions": [
+        "strezhen_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 7,
+      "competitions": [
+        "strezhen_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 5,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    }
+  ],
+  "updated_at": "2026-08-24T15:05:28.744401+00:00"
+}

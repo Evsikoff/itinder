@@ -1,0 +1,15 @@
+{
+  "id": "c040f806-7038-4e85-a0cb-d78cc8aca2d8",
+  "user_id": "5c8056c1-c49c-4332-acc3-510220576777",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/parser_abuse,bulk_update_locks",
+  "language": "Kotlin",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-08T19:05:54.817469+00:00"
+}

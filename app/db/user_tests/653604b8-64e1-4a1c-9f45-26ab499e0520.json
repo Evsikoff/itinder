@@ -1,0 +1,12 @@
+{
+  "id": "653604b8-64e1-4a1c-9f45-26ab499e0520",
+  "user_id": "3d3307af-6d23-46d0-829a-891e044656f2",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/ecommerce_checkout:1085/flaky_time_dependency,env_drift",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-16T00:32:29.010930+00:00"
+}

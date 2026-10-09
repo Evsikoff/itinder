@@ -1,0 +1,12 @@
+{
+  "id": "79f1e89d-6ad6-4131-89ac-1d989f470aad",
+  "user_id": "8fe3d90d-7837-4e6b-85eb-e88d190531b6",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/filter_hides_selection@filters+table,focus_not_restored@details",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-04T08:36:47.151210+00:00"
+}

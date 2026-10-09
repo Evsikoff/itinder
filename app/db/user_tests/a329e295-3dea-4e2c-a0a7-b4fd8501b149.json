@@ -1,0 +1,15 @@
+{
+  "id": "a329e295-3dea-4e2c-a0a7-b4fd8501b149",
+  "user_id": "e7e9c4b6-56b1-46e3-acc7-36785a2150d2",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "QA/Senior/ecommerce_checkout:9512/no_quality_gates,slow_pr_pipeline,no_load_testing,manual_regression_bottleneck",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-03T05:31:52.393402+00:00"
+}

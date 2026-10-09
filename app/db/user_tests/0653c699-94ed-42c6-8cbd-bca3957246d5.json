@@ -1,0 +1,15 @@
+{
+  "id": "0653c699-94ed-42c6-8cbd-bca3957246d5",
+  "user_id": "f1e1760c-7dee-497b-9059-5d478c507e1e",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_deals/toast_flood@toasts,filter_not_in_url@search+table,focus_not_restored@modal,stale_response@search",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-24T14:29:08.900917+00:00"
+}

@@ -1,0 +1,156 @@
+{
+  "id": "dce53257-46b7-4416-a285-0427b59cdbeb",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "01ee5090-7d02-4b2e-a530-6e406adbd952",
+  "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+  "vacancy_id": "5de7e421-9613-47d8-9419-c6d528c471bf",
+  "vacancy": {
+    "id": "5de7e421-9613-47d8-9419-c6d528c471bf",
+    "title": "Бэкенд-разработчик (Middle)",
+    "position": "backend_main",
+    "position_name": "Бэкенд-разработчик",
+    "role_id": "backend",
+    "specialization": "Backend",
+    "grade": "Middle",
+    "count": 1,
+    "task": "Серверная часть продукта: API, бизнес-логика, схема базы данных, интеграции с другими системами",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Основной язык серверной части"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Основная база данных",
+          "Данные с гибкой структурой"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Как интерфейс получает данные с сервера",
+          "Открытый API для чужих систем"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Очередь фоновых задач",
+          "Рассылка событий между частями системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Вход через внешний провайдер"
+        ]
+      }
+    ],
+    "assignments": [
+      "Нарисуй слона"
+    ],
+    "salary": {
+      "from": 150000,
+      "to": 222000,
+      "currency": "RUB"
+    },
+    "notes": null,
+    "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+    "company": {
+      "id": "91d54fe2-069b-4739-8fc6-afe2195fffb4",
+      "name": "Московский зоопарк"
+    },
+    "project": {
+      "name": "Система управления зоопарком",
+      "summary": "ERP-система зоопарка",
+      "domain": "internal",
+      "stage": "new",
+      "duration": "gt12",
+      "start_date": "2026-10-29",
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "free",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T17:42:27.701697+00:00"
+  },
+  "relevance": 21.0,
+  "source": "vacancy",
+  "flow": "assignment",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.636845+00:00"
+    },
+    {
+      "status": "task_sent_for_review",
+      "at": "2026-10-09T20:43:38.636846+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.636845+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "assignment_answers": [
+    "Тестовое решение задания 1:\nНарисуй слона\n\nПлан решения: уточнить условия, подготовить реализацию и проверить результат.\nПроверки: основной сценарий, граничные значения и обработка ошибок."
+  ],
+  "applicant_seen": {
+    "status": "task_sent_for_review",
+    "at": "2026-10-09T20:43:38.636846+00:00",
+    "revision": 2
+  }
+}

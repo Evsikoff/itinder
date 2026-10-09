@@ -1,0 +1,15 @@
+{
+  "id": "efbe3389-2550-4b79-8dcd-02c52efa7d44",
+  "user_id": "472c31fb-ecfb-406b-8b12-57fc95a9b6fe",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Syst. Analyst/Senior/ai_nlp/hanging_dependency,gateway_timeout_duplicates,request_bursts,oversized_payload",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-30T16:15:14.531370+00:00"
+}

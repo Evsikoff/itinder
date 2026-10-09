@@ -1,0 +1,15 @@
+{
+  "id": "6d116d55-fabd-4d3f-b67f-bb55672fe34e",
+  "user_id": "72923b15-f974-4af6-9456-6d1399c1b1ab",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Syst. Analyst/Senior/b2b_graphql/slow_scraping,request_bursts,bulk_update_locks,expensive_queries",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-10-07T11:33:40.669246+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "2ba0aa4f-103d-4dd2-acdb-84fb943f7ed7",
+  "user_id": "9197f107-7890-433b-83fb-18a2d562149c",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_deals/table_rerender_all@table,popup_clipped@search+table,filter_keeps_page@search+table,data_loss_navigation@form",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-10-08T09:00:27.642632+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "0bcee563-d1eb-452c-929b-17ba4121af5d",
+  "user_id": "f82da07d-8fb3-4016-b3d8-953e48a5fac8",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/repeated_computation,bot_traffic",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-14T12:46:41.394976+00:00"
+}

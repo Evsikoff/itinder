@@ -1,0 +1,12 @@
+{
+  "id": "1fe14dc8-dd07-488b-8205-54d850442791",
+  "user_id": "15772dc3-41ed-46f8-ab45-c0a0c62f5418",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/heavy_egress,pool_exhaustion",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-31T22:31:25.061405+00:00"
+}

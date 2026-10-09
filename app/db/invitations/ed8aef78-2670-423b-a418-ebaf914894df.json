@@ -1,0 +1,142 @@
+{
+  "id": "ed8aef78-2670-423b-a418-ebaf914894df",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "01ee5090-7d02-4b2e-a530-6e406adbd952",
+  "project_id": "06c12d8c-bc7b-42d8-8cfb-9347908f963f",
+  "vacancy_id": "d2b60f2c-b317-4229-bbfb-b0afddf76991",
+  "vacancy": {
+    "id": "d2b60f2c-b317-4229-bbfb-b0afddf76991",
+    "title": "Бэкенд-разработчик (Senior)",
+    "position": "backend_main",
+    "position_name": "Бэкенд-разработчик",
+    "role_id": "backend",
+    "specialization": "Backend",
+    "grade": "Senior",
+    "count": 1,
+    "task": "Спроектировать приём событий через Kafka, хранение данных и надёжное API отчётов.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [
+      "Опишите, как обработать повторную доставку события и восстановить обработку после сбоя."
+    ],
+    "salary": {
+      "from": 250000,
+      "to": 350000,
+      "currency": "RUB"
+    },
+    "notes": "Тестовая вакансия. Данные и зарплатная вилка приведены для демонстрации.",
+    "project_id": "06c12d8c-bc7b-42d8-8cfb-9347908f963f",
+    "company": {
+      "id": "5a5f7e99-42d9-473a-9461-cd87ba543360",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: платформа аналитики",
+      "summary": "Платформа сбора событий и отчётов: загрузка данных, показатели и веб-панель аналитики.",
+      "domain": "internal",
+      "stage": "active",
+      "duration": "6to12",
+      "start_date": null,
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T20:01:24.388854+00:00"
+  },
+  "relevance": 35.0,
+  "source": "vacancy",
+  "flow": "assignment",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.569789+00:00"
+    },
+    {
+      "status": "task_sent_for_review",
+      "at": "2026-10-09T20:43:38.569790+00:00"
+    },
+    {
+      "status": "task_needs_review",
+      "at": "2026-10-09T21:37:29.535296+00:00"
+    },
+    {
+      "status": "solution_rejected",
+      "at": "2026-10-09T21:37:34.872656+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.569789+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "assignment_answers": [
+    "Тестовое решение задания 1:\nОпишите, как обработать повторную доставку события и восстановить обработку после сбоя.\n\nПлан решения: уточнить условия, подготовить реализацию и проверить результат.\nПроверки: основной сценарий, граничные значения и обработка ошибок."
+  ],
+  "applicant_seen": {
+    "status": "task_sent_for_review",
+    "at": "2026-10-09T20:43:38.569790+00:00",
+    "revision": 2
+  },
+  "expert_review": {
+    "email": "gsmevsikov@gmail.com",
+    "sent_at": "2026-10-09T21:37:29.535296+00:00",
+    "simulated": true,
+    "decision": "reject",
+    "decision_at": "2026-10-09T21:37:34.872656+00:00"
+  }
+}

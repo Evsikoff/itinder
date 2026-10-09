@@ -1,0 +1,15 @@
+{
+  "id": "bdc1cc52-4409-4e9e-9d78-851e8ae7dbe4",
+  "user_id": "2ffe4744-899f-4e20-958c-f19ba8accf54",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/data_analytics/parser_abuse,gateway_timeout_duplicates,bot_traffic,expensive_queries",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-09T20:49:40.926639+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "289fc158-1cbc-4ac6-af90-983d1f53b926",
+  "user_id": "f8274e8a-3547-478c-b223-c6c1b3de8ab8",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/request_bursts,parser_abuse",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-15T03:07:36.359752+00:00"
+}

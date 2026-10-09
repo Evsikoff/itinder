@@ -1,0 +1,12 @@
+{
+  "id": "3ddd3dd5-9ef6-40ac-a3cc-bf1986e3add1",
+  "user_id": "322acd22-6961-4a28-a0f7-48a0a49ce1ea",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/ecommerce_checkout:5031/api_asserts_status_only,flaky_fixed_sleep",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-16T19:54:26.899971+00:00"
+}

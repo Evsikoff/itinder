@@ -1,0 +1,15 @@
+{
+  "id": "c17148d7-47d6-441e-91f1-039829c835f6",
+  "user_id": "472c31fb-ecfb-406b-8b12-57fc95a9b6fe",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Senior/ai_nlp/retry_storm,bot_traffic,slow_scraping,pool_exhaustion",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-30T21:52:04.237861+00:00"
+}

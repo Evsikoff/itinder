@@ -1,0 +1,12 @@
+{
+  "id": "4bb7c7f8-037e-49c7-8b4a-13bedd52a3d5",
+  "user_id": "53a02dbe-c456-4a02-b459-d8e00dfc87e7",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/ops_dashboard:crm_pick_items/double_scroll@table+modal,esc_closes_parent@search+modal",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-21T10:57:55.167895+00:00"
+}

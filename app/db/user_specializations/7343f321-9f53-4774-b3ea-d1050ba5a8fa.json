@@ -1,0 +1,12 @@
+{
+  "id": "7343f321-9f53-4774-b3ea-d1050ba5a8fa",
+  "user_id": "1cea3def-0966-4d21-b883-84ae7a0c67dd",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "created_at": "2026-09-15T04:44:30.623562+00:00",
+  "source": {
+    "type": "LLM",
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  }
+}

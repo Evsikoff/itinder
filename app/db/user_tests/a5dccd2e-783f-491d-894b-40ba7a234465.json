@@ -1,0 +1,15 @@
+{
+  "id": "a5dccd2e-783f-491d-894b-40ba7a234465",
+  "user_id": "580febf7-e7da-4ca4-9aec-5ef9f6900083",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/data_analytics/expensive_queries,response_built_in_memory,heavy_egress,gateway_timeout_duplicates",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-02T12:56:23.073266+00:00"
+}

@@ -1,0 +1,371 @@
+{
+  "user_id": "32eea4cf-19e6-4b25-a90f-982c123fa87f",
+  "fsp_id": "FSP-7506-2046",
+  "role_id": "qa",
+  "specialization": "QA",
+  "linked_at": "2026-09-05T22:55:00.853654+00:00",
+  "seed": 1637289346,
+  "competitions": [
+    {
+      "competition_id": "kod_urala_2023",
+      "role_id": "qa",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "testing": [
+          "locust",
+          "testcontainers"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-05T22:55:00.853654+00:00"
+    },
+    {
+      "competition_id": "tikhookeansky_sprint_2025",
+      "role_id": "qa",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "testing": [
+          "test_design",
+          "pytest",
+          "appium"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-05T22:55:00.853654+00:00"
+    },
+    {
+      "competition_id": "karavan_2025",
+      "role_id": "qa",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "testing": [
+          "test_design",
+          "rest_assured",
+          "wiremock"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-05T22:55:00.853654+00:00"
+    },
+    {
+      "competition_id": "sessiya_2025",
+      "role_id": "qa",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "python"
+        ],
+        "testing": [
+          "test_design",
+          "postman"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-05T22:55:00.853654+00:00"
+    },
+    {
+      "competition_id": "strezhen_2026",
+      "role_id": "qa",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "python"
+        ],
+        "testing": [
+          "playwright",
+          "k6",
+          "allure"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-05T22:55:00.853654+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "qa",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "languages": [
+          "python"
+        ],
+        "testing": [
+          "test_design",
+          "postman",
+          "cypress"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-06T04:56:33.301920+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2027",
+      "role_id": "qa",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "java"
+        ],
+        "testing": [
+          "postman",
+          "pact",
+          "jmeter"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-07T01:51:02.959754+00:00"
+    },
+    {
+      "competition_id": "okhota_na_bagi_2027",
+      "role_id": "qa",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "python",
+          "sql"
+        ],
+        "testing": [
+          "test_design",
+          "exploratory",
+          "appium",
+          "pytest",
+          "playwright",
+          "k6",
+          "sql_checks",
+          "allure"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-06T06:59:19.808775+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "polyarny_kod_2026",
+      "declined_at": "2026-09-06T14:30:18.595715+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "python",
+      "points": 8,
+      "competitions": [
+        "sessiya_2025",
+        "strezhen_2026",
+        "sessiya_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 5,
+      "competitions": [
+        "kod_urala_2023",
+        "karavan_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "java",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 3,
+      "competitions": [
+        "tikhookeansky_sprint_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "sql",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "test_design",
+      "points": 12,
+      "competitions": [
+        "tikhookeansky_sprint_2025",
+        "karavan_2025",
+        "sessiya_2025",
+        "sessiya_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "appium",
+      "points": 6,
+      "competitions": [
+        "tikhookeansky_sprint_2025",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "postman",
+      "points": 6,
+      "competitions": [
+        "sessiya_2025",
+        "sessiya_2026",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "pytest",
+      "points": 6,
+      "competitions": [
+        "tikhookeansky_sprint_2025",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "allure",
+      "points": 5,
+      "competitions": [
+        "strezhen_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "k6",
+      "points": 5,
+      "competitions": [
+        "strezhen_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "playwright",
+      "points": 5,
+      "competitions": [
+        "strezhen_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "exploratory",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "jmeter",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "pact",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "rest_assured",
+      "points": 3,
+      "competitions": [
+        "karavan_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "sql_checks",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "wiremock",
+      "points": 3,
+      "competitions": [
+        "karavan_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "locust",
+      "points": 2,
+      "competitions": [
+        "kod_urala_2023"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "testing",
+      "id": "testcontainers",
+      "points": 2,
+      "competitions": [
+        "kod_urala_2023"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "testing",
+      "id": "cypress",
+      "points": 1,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-09-07T01:51:02.959754+00:00"
+}

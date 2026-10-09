@@ -1,0 +1,12 @@
+{
+  "id": "38e8ea7d-13b8-4226-bf21-71c34798f4d3",
+  "user_id": "5ce44adf-e559-4ec8-9855-eaa9b831c160",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/repeated_computation,n_plus_one",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-09T05:58:00.627627+00:00"
+}

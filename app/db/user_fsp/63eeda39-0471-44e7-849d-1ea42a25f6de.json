@@ -1,0 +1,172 @@
+{
+  "user_id": "63eeda39-0471-44e7-849d-1ea42a25f6de",
+  "fsp_id": "FSP-5855-5798",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-08-07T19:59:57.305509+00:00",
+  "seed": 594167508,
+  "competitions": [
+    {
+      "competition_id": "tsifrovoy_reglament_2024",
+      "role_id": "frontend",
+      "result": "win",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "file_exchange",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-07T19:59:57.305509+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2025",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "integrations": [
+          "rest",
+          "polling",
+          "websocket"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-07T19:59:57.305509+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "frontend",
+      "result": "win",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "dart"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-08T12:01:15.706187+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-08T09:52:36.609613+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 5,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "dart",
+      "points": 4,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 11,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "polyarny_kod_2025",
+        "polyarny_kod_2026",
+        "sessiya_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 7,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "polyarny_kod_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 5,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 3,
+      "competitions": [
+        "tsifrovoy_reglament_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "polling",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-08-08T12:01:15.706187+00:00"
+}

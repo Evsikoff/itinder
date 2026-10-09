@@ -1,0 +1,12 @@
+{
+  "id": "746e05ce-dee4-42c1-9ef2-1d31a56347ba",
+  "user_id": "44dc254b-6184-402b-8213-c4af51c62375",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/fintech_transfers:3861/ambiguous_requirement",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-05T07:56:57.188039+00:00"
+}

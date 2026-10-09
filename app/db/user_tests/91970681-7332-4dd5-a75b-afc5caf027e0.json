@@ -1,0 +1,12 @@
+{
+  "id": "91970681-7332-4dd5-a75b-afc5caf027e0",
+  "user_id": "54af063d-024c-4972-8e9d-b52105c65392",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/enterprise_crm:ops_event_log/focus_escapes@details,modal_stale_after_save@table+details",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-20T09:43:30.977063+00:00"
+}

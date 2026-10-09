@@ -1,0 +1,12 @@
+{
+  "id": "3bef397a-1b60-4c70-b5c9-ceb3e34442b6",
+  "user_id": "e791f860-ad63-4cc6-8701-e18fabdea07e",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Syst. Analyst/Junior/ai_nlp/retry_storm",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-02T04:59:30.828349+00:00"
+}

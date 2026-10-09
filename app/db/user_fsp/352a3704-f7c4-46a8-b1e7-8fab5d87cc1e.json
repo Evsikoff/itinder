@@ -1,0 +1,296 @@
+{
+  "user_id": "352a3704-f7c4-46a8-b1e7-8fab5d87cc1e",
+  "fsp_id": "FSP-1710-0037",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "linked_at": "2026-09-18T14:20:49.420575+00:00",
+  "seed": 4114535987,
+  "competitions": [
+    {
+      "competition_id": "strezhen_2024",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "webhook"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-18T14:20:49.420575+00:00"
+    },
+    {
+      "competition_id": "uchet_bez_bumagi_2024",
+      "role_id": "analyst",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "sql"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-18T14:20:49.420575+00:00"
+    },
+    {
+      "competition_id": "sessiya_2025",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "databases": [
+          "mysql"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-18T14:20:49.420575+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "databases": [
+          "sqlite"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-19T17:09:14.323682+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "analyst",
+      "result": "win",
+      "points": 3,
+      "competencies": {
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-19T01:08:31.946529+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2027",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "databases": [
+          "redis"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-20T09:54:33.906748+00:00"
+    },
+    {
+      "competition_id": "okhota_na_bagi_2027",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "sql"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "kafka",
+          "websocket"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-19T02:38:29.138742+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-19T04:00:46.342796+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "sql",
+      "points": 5,
+      "competitions": [
+        "uchet_bez_bumagi_2024",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "postgresql",
+      "points": 13,
+      "competitions": [
+        "strezhen_2024",
+        "uchet_bez_bumagi_2024",
+        "sessiya_2026",
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "databases",
+      "id": "redis",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "sqlite",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "databases",
+      "id": "mysql",
+      "points": 1,
+      "competitions": [
+        "sessiya_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 19,
+      "competitions": [
+        "strezhen_2024",
+        "uchet_bez_bumagi_2024",
+        "sessiya_2025",
+        "polyarny_kod_2026",
+        "sessiya_2026",
+        "kontrakt_2027",
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 7,
+      "competitions": [
+        "uchet_bez_bumagi_2024",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 7,
+      "competitions": [
+        "sessiya_2025",
+        "sessiya_2026",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 6,
+      "competitions": [
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 5,
+      "competitions": [
+        "strezhen_2024",
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 3,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 3,
+      "competitions": [
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    }
+  ],
+  "updated_at": "2026-09-20T09:54:33.906748+00:00"
+}

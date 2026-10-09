@@ -1,0 +1,15 @@
+{
+  "id": "1205d372-d70e-4da6-8f5f-894db41270d0",
+  "user_id": "c1a229d6-d565-4de6-962e-a93d35d1109b",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/n_plus_one,heavy_reads_on_primary",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-06T09:25:22.409332+00:00"
+}

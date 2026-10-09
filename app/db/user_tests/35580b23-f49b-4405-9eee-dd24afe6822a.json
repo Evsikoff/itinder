@@ -1,0 +1,12 @@
+{
+  "id": "35580b23-f49b-4405-9eee-dd24afe6822a",
+  "user_id": "8e38ce17-8073-41a1-a5b3-3e5579e99e9b",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/ai_nlp/request_bursts,parser_abuse",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-24T03:27:44.923727+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "bab0691b-84fb-4d51-bfd9-7e7411213d78",
+  "user_id": "afe6fb40-a190-480f-90ae-eb697f309c78",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/ops_dashboard:crm_pick_items/esc_closes_parent@search+modal,scroll_chaining@modal",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-13T14:24:10.951852+00:00"
+}

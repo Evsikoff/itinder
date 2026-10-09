@@ -1,0 +1,12 @@
+{
+  "id": "5c855100-b576-4dec-8d84-e66e9b985cd3",
+  "user_id": "a0d9c78e-6d91-44de-8f71-38caeb71b922",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/scroll_chaining@details,filter_hides_selection@filters+table",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-09T11:52:42.719988+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "42819a89-494c-49dd-b267-7fd6ae4e8008",
+  "user_id": "187b92ca-5a67-46a9-ad34-bb19aa7350c7",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/slow_scraping,bot_traffic",
+  "language": "Go",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-25T02:45:14.253711+00:00"
+}

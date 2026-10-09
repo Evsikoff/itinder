@@ -1,0 +1,15 @@
+{
+  "id": "a1b0c36c-692c-48d4-ac77-118d8240f21e",
+  "user_id": "3a23b1c6-b4f1-4b53-819e-5f5831680cb8",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/b2b_graphql/bot_traffic",
+  "language": "Kotlin",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-10T17:02:18.145657+00:00"
+}

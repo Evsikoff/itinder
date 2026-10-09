@@ -1,0 +1,139 @@
+{
+  "id": "1db73368-a495-4b8c-a878-43fac9396a6f",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "01ee5090-7d02-4b2e-a530-6e406adbd952",
+  "project_id": "6e3bc32b-0795-4203-8e35-aac2138f8c50",
+  "vacancy_id": "89b943d5-3c2c-4582-a339-3f4a05c0167b",
+  "vacancy": {
+    "id": "89b943d5-3c2c-4582-a339-3f4a05c0167b",
+    "title": "Бэкенд-разработчик (Senior)",
+    "position": "backend_main",
+    "position_name": "Бэкенд-разработчик",
+    "role_id": "backend",
+    "specialization": "Backend",
+    "grade": "Senior",
+    "count": 1,
+    "task": "Спроектировать приём событий через Kafka, хранение данных и надёжное API отчётов.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [
+      "Опишите, как обработать повторную доставку события и восстановить обработку после сбоя."
+    ],
+    "salary": {
+      "from": 250000,
+      "to": 350000,
+      "currency": "RUB"
+    },
+    "notes": "Тестовая вакансия. Данные и зарплатная вилка приведены для демонстрации.",
+    "project_id": "6e3bc32b-0795-4203-8e35-aac2138f8c50",
+    "company": {
+      "id": "5a5f7e99-42d9-473a-9461-cd87ba543360",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: платформа аналитики",
+      "summary": "Платформа сбора событий и отчётов: загрузка данных, показатели и веб-панель аналитики.",
+      "domain": "internal",
+      "stage": "active",
+      "duration": "6to12",
+      "start_date": null,
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T18:50:14.304146+00:00"
+  },
+  "relevance": 35.0,
+  "source": "vacancy",
+  "flow": "assignment",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.614011+00:00"
+    },
+    {
+      "status": "task_sent_for_review",
+      "at": "2026-10-09T20:43:38.614012+00:00"
+    },
+    {
+      "status": "task_needs_review",
+      "at": "2026-10-09T20:43:38.614013+00:00"
+    },
+    {
+      "status": "accepted",
+      "at": "2026-10-09T21:30:13.898382+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.614011+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "assignment_answers": [
+    "Тестовое решение задания 1:\nОпишите, как обработать повторную доставку события и восстановить обработку после сбоя.\n\nПлан решения: уточнить условия, подготовить реализацию и проверить результат.\nПроверки: основной сценарий, граничные значения и обработка ошибок."
+  ],
+  "applicant_seen": {
+    "status": "task_sent_for_review",
+    "at": "2026-10-09T20:43:38.614012+00:00",
+    "revision": 2
+  },
+  "expert_review": {
+    "decision": "approve",
+    "decision_at": "2026-10-09T21:30:13.898382+00:00"
+  }
+}

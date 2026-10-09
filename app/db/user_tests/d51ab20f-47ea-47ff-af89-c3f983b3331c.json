@@ -1,0 +1,12 @@
+{
+  "id": "d51ab20f-47ea-47ff-af89-c3f983b3331c",
+  "user_id": "6eb8363d-0fdb-4846-a9f8-a790077585bc",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Junior/ai_nlp/request_bursts",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-15T09:49:55.472344+00:00"
+}

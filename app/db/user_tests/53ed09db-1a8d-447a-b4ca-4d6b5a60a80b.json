@@ -1,0 +1,15 @@
+{
+  "id": "53ed09db-1a8d-447a-b4ca-4d6b5a60a80b",
+  "user_id": "696d11cd-20d9-4ca1-a9cf-387ae9724fc9",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/ai_nlp/gateway_timeout_duplicates,hanging_dependency,oversized_payload,bot_traffic",
+  "language": "PHP",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-25T02:50:40.540829+00:00"
+}

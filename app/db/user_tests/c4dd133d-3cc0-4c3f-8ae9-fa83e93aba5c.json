@@ -1,0 +1,12 @@
+{
+  "id": "c4dd133d-3cc0-4c3f-8ae9-fa83e93aba5c",
+  "user_id": "8a9d7374-4f7e-44c3-bb46-540b5eeba34a",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/gov_portal:gov_office_search/no_status_states@search,popup_clipped@hint+modal",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-19T11:08:23.699764+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "dd68959a-d9c3-4a85-9b4c-6cd9c19f43bd",
+  "user_id": "352a3704-f7c4-46a8-b1e7-8fab5d87cc1e",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/ai_nlp/retry_storm,parser_abuse",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-20T13:04:37.738198+00:00"
+}

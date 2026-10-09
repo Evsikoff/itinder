@@ -1,0 +1,15 @@
+{
+  "id": "93ef1690-1530-43b7-a23d-3925e04de64c",
+  "user_id": "1756930d-2185-4bdd-b27e-2001c0eb1633",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/ai_nlp/hanging_dependency,parser_abuse",
+  "language": "JavaScript",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-14T16:43:35.377397+00:00"
+}

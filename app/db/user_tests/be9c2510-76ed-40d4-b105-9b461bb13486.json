@@ -1,0 +1,15 @@
+{
+  "id": "be9c2510-76ed-40d4-b105-9b461bb13486",
+  "user_id": "02d3898a-a205-4fb6-9721-12f91f9f8d04",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/data_analytics/slow_scraping,repeated_computation,hanging_dependency,heavy_reads_on_primary",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-28T01:46:37.534388+00:00"
+}

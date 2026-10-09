@@ -1,0 +1,12 @@
+{
+  "id": "04895ff7-c777-45f0-ab2b-8b08462054d2",
+  "user_id": "801e6964-48f0-4fa6-9b03-a7f1b73b7f06",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/data_analytics/bot_traffic,repeated_computation",
+  "language": "JavaScript",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-31T02:31:47.894976+00:00"
+}

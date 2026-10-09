@@ -1,0 +1,12 @@
+{
+  "id": "22ca76ea-5ece-4144-8538-ba15c1813284",
+  "user_id": "53a02dbe-c456-4a02-b459-d8e00dfc87e7",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/ops_dashboard:form/early_validation@form",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-21T08:55:50.868144+00:00"
+}

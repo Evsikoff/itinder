@@ -1,0 +1,12 @@
+{
+  "id": "cfac9c7d-9fb7-4b67-923e-1e4e276e745a",
+  "user_id": "8d81353e-29ee-448c-98b0-1f4a9e84a617",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/iot_smart_home:3531/bug_report_unreproducible",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-29T21:05:56.789748+00:00"
+}

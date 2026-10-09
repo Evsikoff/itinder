@@ -1,0 +1,15 @@
+{
+  "id": "30405153-2d1c-4a41-848b-dd912560470e",
+  "user_id": "71c4122b-12e6-4d5b-8bf2-eadecc3fddc8",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "QA/Senior/health_booking:3323/no_quality_gates,no_shift_right,no_contract_tests,manual_regression_bottleneck",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-24T20:15:29.329151+00:00"
+}

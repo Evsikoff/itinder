@@ -1,0 +1,12 @@
+{
+  "id": "f42212c8-93fb-4212-94a7-6e3a20cffe68",
+  "user_id": "d38e2641-a621-4698-9166-53c2ab20d486",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/ops_dashboard:live_search/request_spam@live_search",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-05T21:17:21.331049+00:00"
+}

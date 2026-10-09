@@ -1,0 +1,13 @@
+{
+  "id": "f18b7c95-94a5-4d85-8002-4367a443b1d5",
+  "user_id": "4745fb4c-7994-4eb8-bd7e-d79125542f15",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_deals/early_validation@form,filter_keeps_page@search+table,column_jump@table,request_spam@search",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "f6a22d67-a1a0-4a6c-b62d-715b97c0e149",
+  "created_at": "2026-09-01T19:09:59.245792+00:00"
+}

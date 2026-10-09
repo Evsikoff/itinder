@@ -1,0 +1,190 @@
+{
+  "user_id": "31859855-5ba3-4d74-9a79-9217575ba625",
+  "fsp_id": "FSP-5072-9225",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-09-22T17:28:19.957117+00:00",
+  "seed": 299042179,
+  "competitions": [
+    {
+      "competition_id": "kubok_sibiri_2024",
+      "role_id": "frontend",
+      "result": "win",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "rabbitmq"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-22T17:28:19.957117+00:00"
+    },
+    {
+      "competition_id": "uchet_bez_bumagi_2024",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-22T17:28:19.957117+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2025",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "dart"
+        ],
+        "integrations": [
+          "rest",
+          "polling",
+          "websocket"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-22T17:28:19.957117+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "dart"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-24T01:54:22.825144+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "frontend",
+      "result": "win",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-24T08:20:21.378293+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 8,
+      "competitions": [
+        "kubok_sibiri_2024",
+        "uchet_bez_bumagi_2024",
+        "sessiya_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "dart",
+      "points": 5,
+      "competitions": [
+        "polyarny_kod_2025",
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 13,
+      "competitions": [
+        "kubok_sibiri_2024",
+        "uchet_bez_bumagi_2024",
+        "polyarny_kod_2025",
+        "polyarny_kod_2026",
+        "sessiya_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 4,
+      "competitions": [
+        "uchet_bez_bumagi_2024",
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 4,
+      "competitions": [
+        "kubok_sibiri_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "rabbitmq",
+      "points": 4,
+      "competitions": [
+        "kubok_sibiri_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 3,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "polling",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-09-24T08:20:21.378293+00:00"
+}

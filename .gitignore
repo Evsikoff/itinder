@@ -10,14 +10,3 @@ Thumbs.db
 tmp/
 output/
 data/
-app/db/companies/
-app/db/user_blocks/
-app/db/fsp/
-app/db/users/
-app/db/user_specializations/
-app/db/user_names/
-app/db/user_tests/
-app/db/user_fsp/
-app/db/user_project_company/
-app/db/projects_jobopenings/
-app/db/invitations/

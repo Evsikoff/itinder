@@ -1,0 +1,15 @@
+{
+  "id": "b06f5a48-a184-4ae9-903c-efcaa0e862ce",
+  "user_id": "764e6939-e8e1-496f-8897-d694fa52b8b2",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_client_card/focus_not_restored@confirm,backdrop_select_close@panel,focus_escapes@confirm,popup_shifted_by_transform@date+panel",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-13T05:26:04.782219+00:00"
+}

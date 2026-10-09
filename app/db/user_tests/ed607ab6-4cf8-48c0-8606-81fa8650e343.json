@@ -1,0 +1,15 @@
+{
+  "id": "ed607ab6-4cf8-48c0-8606-81fa8650e343",
+  "user_id": "1bbfdb2c-7440-4183-90eb-fbaea29aa01c",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/b2b_graphql/bot_traffic",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-09T00:48:21.169707+00:00"
+}

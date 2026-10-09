@@ -1,0 +1,12 @@
+{
+  "id": "dfddf29a-97d7-406d-9cfc-74f113800b3d",
+  "user_id": "28d49851-1407-4b29-bba9-fa0570d142f6",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/mobile_banking:bank_history/footer_unreachable@feed,filter_not_in_url@filters+feed",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-20T15:46:57.248188+00:00"
+}

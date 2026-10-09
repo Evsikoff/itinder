@@ -1,0 +1,13 @@
+{
+  "id": "89e9a4f6-0fcd-473e-8e67-d94b0b217ef9",
+  "user_id": "a545b9a0-70f5-4d88-8ecf-1fe5f1a19388",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/hanging_dependency",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "ddb422c3-4f64-4d3d-a0ed-e82088ae7fa0",
+  "created_at": "2026-09-12T08:07:05.557382+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "fde3dd18-3186-4581-9ae5-7fd7a350dde5",
+  "user_id": "f21dc5e6-08f5-4faf-98c7-c13214f0e921",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/b2b_graphql/oversized_payload",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-12T10:42:45.630688+00:00"
+}

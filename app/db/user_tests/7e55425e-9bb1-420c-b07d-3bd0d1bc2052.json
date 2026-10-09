@@ -1,0 +1,15 @@
+{
+  "id": "7e55425e-9bb1-420c-b07d-3bd0d1bc2052",
+  "user_id": "8f6aaa8f-8e9c-4449-b5df-1ae2dc1efa37",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/gateway_timeout_duplicates",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-28T08:10:54.217963+00:00"
+}

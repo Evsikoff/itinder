@@ -1,0 +1,12 @@
+{
+  "id": "e1378fee-270e-404d-aa66-7c5b19a76c62",
+  "user_id": "083ef9de-0ef1-4d52-9956-bd380bc777dd",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/ai_nlp/request_bursts,slow_scraping",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-26T17:36:51.574342+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "f50c2f74-d184-459d-9ed9-5e1269fa6646",
+  "user_id": "b5f2adc1-78a2-4679-9303-3972e4fac93b",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/ops_dashboard:crm_pick_items/focus_not_restored@modal,esc_closes_parent@search+modal",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-01T16:57:51.665560+00:00"
+}

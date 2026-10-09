@@ -1,0 +1,15 @@
+{
+  "id": "0f626125-31cc-4f55-989e-3bfd7efebc73",
+  "user_id": "1b18885c-9b94-4dc3-860a-77289577eb7f",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "QA/Senior/fintech_transfers:6292/no_contract_tests,slow_pr_pipeline,prod_data_in_test,no_shift_right",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-09T16:14:09.819360+00:00"
+}

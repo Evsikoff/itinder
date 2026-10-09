@@ -1,0 +1,12 @@
+{
+  "id": "d11be64c-23c3-4eb7-9a8b-e460b646106f",
+  "user_id": "352a3704-f7c4-46a8-b1e7-8fab5d87cc1e",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/bot_traffic,pool_exhaustion",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-16T12:07:09.330583+00:00"
+}

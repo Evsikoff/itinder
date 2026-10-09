@@ -1,0 +1,12 @@
+{
+  "id": "94bec374-87b7-4e46-ae84-f1a7cc05c4bb",
+  "user_id": "1b18885c-9b94-4dc3-860a-77289577eb7f",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/iot_smart_home:3652/flaky_time_dependency,flaky_shared_data",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-10T10:07:35.922949+00:00"
+}

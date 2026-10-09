@@ -1,0 +1,15 @@
+{
+  "id": "80bd7ca3-6e66-4b2f-9a77-1ef5b1c3c111",
+  "user_id": "472c31fb-ecfb-406b-8b12-57fc95a9b6fe",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "QA/Senior/iot_smart_home:8227/no_quality_gates,manual_regression_bottleneck,no_load_testing,late_qa_no_shift_left",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-23T18:53:17.566089+00:00"
+}

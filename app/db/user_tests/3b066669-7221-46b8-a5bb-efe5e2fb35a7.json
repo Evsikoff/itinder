@@ -1,0 +1,15 @@
+{
+  "id": "3b066669-7221-46b8-a5bb-efe5e2fb35a7",
+  "user_id": "801e6964-48f0-4fa6-9b03-a7f1b73b7f06",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/ai_nlp/oversized_payload,gateway_timeout_duplicates",
+  "language": "JavaScript",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-31T11:58:23.722880+00:00"
+}

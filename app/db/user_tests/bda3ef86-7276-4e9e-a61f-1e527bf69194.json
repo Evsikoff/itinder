@@ -1,0 +1,12 @@
+{
+  "id": "bda3ef86-7276-4e9e-a61f-1e527bf69194",
+  "user_id": "3d0b3d27-5772-478e-a537-403c1d31549a",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/iot_smart_home:6667/bva_missing_boundaries",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-14T18:14:54.123036+00:00"
+}

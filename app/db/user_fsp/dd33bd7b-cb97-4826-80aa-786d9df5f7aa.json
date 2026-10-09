@@ -1,0 +1,322 @@
+{
+  "user_id": "dd33bd7b-cb97-4826-80aa-786d9df5f7aa",
+  "fsp_id": "FSP-4986-9438",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "linked_at": "2026-09-18T05:54:59.440487+00:00",
+  "seed": 2597562996,
+  "competitions": [
+    {
+      "competition_id": "strezhen_2024",
+      "role_id": "backend",
+      "result": "win",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "javascript"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "webhook"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-18T05:54:59.440487+00:00"
+    },
+    {
+      "competition_id": "strezhen_2025",
+      "role_id": "backend",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-18T05:54:59.440487+00:00"
+    },
+    {
+      "competition_id": "kubok_sibiri_2025",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript",
+          "sql"
+        ],
+        "databases": [
+          "elasticsearch"
+        ],
+        "integrations": [
+          "rest",
+          "websocket",
+          "kafka",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-18T05:54:59.440487+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2025",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "python"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "polling",
+          "websocket"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-18T05:54:59.440487+00:00"
+    },
+    {
+      "competition_id": "strezhen_2026",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "websocket",
+          "kafka"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-18T05:54:59.440487+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "databases": [
+          "redis"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-19T16:02:39.218587+00:00"
+    },
+    {
+      "competition_id": "okhota_na_bagi_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "python",
+          "sql"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "kafka",
+          "websocket"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-18T15:24:10.081127+00:00"
+    }
+  ],
+  "declined": [],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 6,
+      "competitions": [
+        "strezhen_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "python",
+      "points": 5,
+      "competitions": [
+        "polyarny_kod_2025",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "sql",
+      "points": 5,
+      "competitions": [
+        "kubok_sibiri_2025",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "javascript",
+      "points": 4,
+      "competitions": [
+        "strezhen_2024"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 4,
+      "competitions": [
+        "kubok_sibiri_2025",
+        "strezhen_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "postgresql",
+      "points": 14,
+      "competitions": [
+        "strezhen_2024",
+        "strezhen_2025",
+        "polyarny_kod_2025",
+        "strezhen_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "databases",
+      "id": "redis",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "elasticsearch",
+      "points": 2,
+      "competitions": [
+        "kubok_sibiri_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 19,
+      "competitions": [
+        "strezhen_2024",
+        "strezhen_2025",
+        "kubok_sibiri_2025",
+        "polyarny_kod_2025",
+        "strezhen_2026",
+        "kontrakt_2027",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 10,
+      "competitions": [
+        "strezhen_2024",
+        "strezhen_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 9,
+      "competitions": [
+        "kubok_sibiri_2025",
+        "polyarny_kod_2025",
+        "strezhen_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 8,
+      "competitions": [
+        "strezhen_2025",
+        "kubok_sibiri_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 7,
+      "competitions": [
+        "kubok_sibiri_2025",
+        "strezhen_2026",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "polling",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-09-19T16:02:39.218587+00:00"
+}

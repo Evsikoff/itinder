@@ -1,0 +1,12 @@
+{
+  "id": "e61e36b7-c378-4f35-b0a7-074c0f969c03",
+  "user_id": "1eb7c9fe-7a6e-4a82-9570-28c7f8f2bfa7",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/ecommerce_checkout:2943/api_asserts_status_only,brittle_locators",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-23T19:57:27.959495+00:00"
+}

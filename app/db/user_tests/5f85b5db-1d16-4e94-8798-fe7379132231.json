@@ -1,0 +1,12 @@
+{
+  "id": "5f85b5db-1d16-4e94-8798-fe7379132231",
+  "user_id": "fe61314b-430c-43dd-901d-d86b54d28b51",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/health_booking:9155/async_effect_unchecked,env_drift",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-19T10:47:32.843645+00:00"
+}

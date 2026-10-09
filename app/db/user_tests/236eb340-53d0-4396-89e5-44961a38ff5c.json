@@ -1,0 +1,12 @@
+{
+  "id": "236eb340-53d0-4396-89e5-44961a38ff5c",
+  "user_id": "28d49851-1407-4b29-bba9-fa0570d142f6",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Frontend/Junior/marketplace:tooltip/hover_only@tooltip",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-26T12:53:12.035238+00:00"
+}

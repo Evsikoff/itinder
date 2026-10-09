@@ -1,0 +1,15 @@
+{
+  "id": "af59f2da-4c48-4dbc-bd3a-b76188496116",
+  "user_id": "24035d99-4fc6-47ba-85b7-6af2bead6618",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/ai_nlp/gateway_timeout_duplicates,bot_traffic",
+  "language": "Java",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-17T20:30:26.566836+00:00"
+}

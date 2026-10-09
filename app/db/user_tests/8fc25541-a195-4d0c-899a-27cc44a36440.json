@@ -1,0 +1,12 @@
+{
+  "id": "8fc25541-a195-4d0c-899a-27cc44a36440",
+  "user_id": "a5334da3-fb74-4079-b79d-201c03187f04",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/expensive_queries,retry_storm",
+  "language": "Python",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-05T13:40:37.136251+00:00"
+}

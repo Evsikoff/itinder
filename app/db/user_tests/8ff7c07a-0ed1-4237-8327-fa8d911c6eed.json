@@ -1,0 +1,15 @@
+{
+  "id": "8ff7c07a-0ed1-4237-8327-fa8d911c6eed",
+  "user_id": "098f326c-254f-4cab-833e-0c0d00e2b781",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/marketplace:market_catalog/filter_request_spam@filters,filter_page_race@filters+grid,request_spam@search,lazy_lcp@grid",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-24T19:29:24.869131+00:00"
+}

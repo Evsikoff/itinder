@@ -1,0 +1,21 @@
+{
+  "id": "2b259875-eb8e-4a2b-96c0-807ff12f2d8c",
+  "user_id": "28525d9b-039a-4190-9836-aecf830e481e",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "created_at": "2026-07-14T21:21:06.705144+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 18,
+        "title": "Syst. Analyst"
+      },
+      {
+        "id": 29,
+        "title": "Middle"
+      }
+    ]
+  }
+}

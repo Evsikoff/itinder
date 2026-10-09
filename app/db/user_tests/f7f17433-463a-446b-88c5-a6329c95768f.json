@@ -1,0 +1,12 @@
+{
+  "id": "f7f17433-463a-446b-88c5-a6329c95768f",
+  "user_id": "219bc1cd-c40b-420a-893d-6818bd6cf96c",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/gov_portal:select/select_not_accessible@select",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-11T07:45:38.344591+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "1d293e9d-6b8d-4827-abc3-f84a150e1f23",
+  "user_id": "12015348-52b4-4a79-89a5-5e772c54ea99",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/ai_nlp/gateway_timeout_duplicates,bot_traffic,pool_exhaustion,parser_abuse",
+  "language": "JavaScript",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-19T16:19:37.228743+00:00"
+}

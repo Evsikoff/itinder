@@ -1,0 +1,12 @@
+{
+  "id": "a98bc038-3106-4e79-b5c5-d34f40fe7987",
+  "user_id": "24035d99-4fc6-47ba-85b7-6af2bead6618",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/health_booking:7154/localize_frontend",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-14T01:04:54.758152+00:00"
+}

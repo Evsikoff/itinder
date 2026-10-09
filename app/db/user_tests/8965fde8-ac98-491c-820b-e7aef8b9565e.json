@@ -1,0 +1,12 @@
+{
+  "id": "8965fde8-ac98-491c-820b-e7aef8b9565e",
+  "user_id": "2d12d80d-72be-4096-b9e4-a4e40440a9e3",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/ai_nlp/request_bursts,bot_traffic",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-29T02:43:31.954548+00:00"
+}

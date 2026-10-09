@@ -1,0 +1,12 @@
+{
+  "id": "8bb9c912-2286-4c53-b000-e394b870e4e1",
+  "user_id": "f71bd135-ec06-43b1-b3f2-9c6a4242c225",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/bot_traffic,parser_abuse",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-03T14:04:33.001257+00:00"
+}

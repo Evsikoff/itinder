@@ -1,0 +1,12 @@
+{
+  "id": "c897b436-a105-464b-ab58-d9585a988c7a",
+  "user_id": "f82da07d-8fb3-4016-b3d8-953e48a5fac8",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/ai_nlp/parser_abuse,bot_traffic",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-08T08:54:16.971628+00:00"
+}

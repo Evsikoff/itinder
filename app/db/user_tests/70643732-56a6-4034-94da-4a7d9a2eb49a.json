@@ -1,0 +1,13 @@
+{
+  "id": "70643732-56a6-4034-94da-4a7d9a2eb49a",
+  "user_id": "fa36b3e7-0bf2-43da-bcd7-3eea5c5be162",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/enterprise_crm:ops_event_log/modal_stale_after_save@table+details,filter_request_spam@filters",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "0403d06e-00a4-43de-bd0a-0467043f659c",
+  "created_at": "2026-08-11T22:23:12.298901+00:00"
+}

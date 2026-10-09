@@ -1,0 +1,96 @@
+{
+  "id": "400c7fa6-777c-4ee6-a815-28785cd4309d",
+  "title": "Тестировщик (Junior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Проверить оформление заказа, подготовить граничные сценарии и автотесты API.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Стек тестового проекта для демонстрации поиска соискателей"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Стек тестового проекта для демонстрации поиска соискателей"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Стек тестового проекта для демонстрации поиска соискателей"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Стек тестового проекта для демонстрации поиска соискателей"
+      ]
+    }
+  ],
+  "assignments": [
+    "Составьте пять проверок оформления заказа, включая граничные и негативные случаи."
+  ],
+  "salary": {
+    "from": 70000,
+    "to": 110000,
+    "currency": "RUB"
+  },
+  "notes": "Тестовая вакансия. Данные и зарплатная вилка приведены для демонстрации.",
+  "project_id": "e11cdc08-0c98-4e3d-a547-01e1f8663ce5",
+  "user_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "company": {
+    "id": "5a5f7e99-42d9-473a-9461-cd87ba543360",
+    "name": "ITinder — тестовая компания"
+  },
+  "project": {
+    "name": "Тестовый проект: интернет-магазин",
+    "summary": "Веб-магазин: каталог товаров, корзина, оформление заказа и кабинет покупателя.",
+    "domain": "retail",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": null,
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-09T20:01:24.184951+00:00",
+  "created_at": "2026-10-09T20:01:24.184951+00:00",
+  "updated_at": "2026-10-09T20:01:24.184951+00:00"
+}

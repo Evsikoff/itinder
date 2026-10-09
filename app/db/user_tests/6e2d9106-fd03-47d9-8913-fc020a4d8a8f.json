@@ -1,0 +1,12 @@
+{
+  "id": "6e2d9106-fd03-47d9-8913-fc020a4d8a8f",
+  "user_id": "e13514fb-ee2f-48fe-ba2b-e0c257ef844d",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/health_booking:553/decision_table_missing",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-11T14:17:14.906056+00:00"
+}

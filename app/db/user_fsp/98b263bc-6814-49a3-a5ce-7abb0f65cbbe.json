@@ -1,0 +1,275 @@
+{
+  "user_id": "98b263bc-6814-49a3-a5ce-7abb0f65cbbe",
+  "fsp_id": "FSP-1142-1193",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "linked_at": "2026-07-24T10:13:47.585975+00:00",
+  "seed": 1735495788,
+  "competitions": [
+    {
+      "competition_id": "kod_urala_2023",
+      "role_id": "analyst",
+      "result": "win",
+      "points": 4,
+      "competencies": {
+        "databases": [
+          "tarantool"
+        ],
+        "integrations": [
+          "kafka",
+          "websocket",
+          "rest"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-07-24T10:13:47.585975+00:00"
+    },
+    {
+      "competition_id": "tsifrovoy_reglament_2024",
+      "role_id": "analyst",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "sql"
+        ],
+        "databases": [
+          "postgres_pro"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "file_exchange",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-07-24T10:13:47.585975+00:00"
+    },
+    {
+      "competition_id": "kubok_sibiri_2025",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "sql"
+        ],
+        "databases": [
+          "redis"
+        ],
+        "integrations": [
+          "rest",
+          "websocket",
+          "kafka",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-07-24T10:13:47.585975+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "analyst",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-07-25T10:36:01.327506+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "analyst",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "databases": [
+          "redis"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-07-26T04:20:15.555667+00:00"
+    },
+    {
+      "competition_id": "okhota_na_bagi_2027",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "sql"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "kafka",
+          "websocket"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-07-24T20:12:47.564372+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-07-26T06:38:44.556991+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "kontrakt_2027",
+      "declined_at": "2026-07-24T12:57:23.661149+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "sql",
+      "points": 7,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "kubok_sibiri_2025",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "databases",
+      "id": "postgresql",
+      "points": 9,
+      "competitions": [
+        "polyarny_kod_2026",
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "databases",
+      "id": "redis",
+      "points": 4,
+      "competitions": [
+        "kubok_sibiri_2025",
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "tarantool",
+      "points": 4,
+      "competitions": [
+        "kod_urala_2023"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "postgres_pro",
+      "points": 2,
+      "competitions": [
+        "tsifrovoy_reglament_2024"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 19,
+      "competitions": [
+        "kod_urala_2023",
+        "tsifrovoy_reglament_2024",
+        "kubok_sibiri_2025",
+        "polyarny_kod_2026",
+        "sessiya_2026",
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 12,
+      "competitions": [
+        "kod_urala_2023",
+        "kubok_sibiri_2025",
+        "okhota_na_bagi_2027",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 9,
+      "competitions": [
+        "kod_urala_2023",
+        "kubok_sibiri_2025",
+        "okhota_na_bagi_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 8,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "polyarny_kod_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 6,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "kubok_sibiri_2025",
+        "sessiya_2026"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 5,
+      "competitions": [
+        "tsifrovoy_reglament_2024",
+        "karavan_2027"
+      ],
+      "degree": 2
+    }
+  ],
+  "updated_at": "2026-07-26T06:38:44.556991+00:00"
+}

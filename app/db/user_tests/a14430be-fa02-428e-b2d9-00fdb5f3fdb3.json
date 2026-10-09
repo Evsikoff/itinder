@@ -1,0 +1,15 @@
+{
+  "id": "a14430be-fa02-428e-b2d9-00fdb5f3fdb3",
+  "user_id": "8fe3d90d-7837-4e6b-85eb-e88d190531b6",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/gov_portal:gov_application/early_validation@form,date_off_by_one@birth,toast_flood@toasts,popup_clipped@birth+steps",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-10-04T01:47:21.286512+00:00"
+}

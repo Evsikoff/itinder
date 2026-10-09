@@ -1,0 +1,15 @@
+{
+  "id": "bf957674-3836-47c2-b13c-fb8d094eb148",
+  "user_id": "15769b10-d850-4fa5-875e-2e9e3d3667cc",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "QA/Senior/ecommerce_checkout:7219/flaky_tests_ignored,late_qa_no_shift_left,manual_regression_bottleneck,inverted_pyramid",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-04T10:28:58.373085+00:00"
+}

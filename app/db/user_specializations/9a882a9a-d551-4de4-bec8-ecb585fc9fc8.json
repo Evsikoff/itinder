@@ -1,0 +1,21 @@
+{
+  "id": "9a882a9a-d551-4de4-bec8-ecb585fc9fc8",
+  "user_id": "fe61314b-430c-43dd-901d-d86b54d28b51",
+  "specialization": "QA",
+  "grade": "Junior",
+  "created_at": "2026-08-28T18:28:25.881498+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 17,
+        "title": "QA"
+      },
+      {
+        "id": 25,
+        "title": "Junior"
+      }
+    ]
+  }
+}

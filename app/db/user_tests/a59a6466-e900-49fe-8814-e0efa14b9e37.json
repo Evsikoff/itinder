@@ -1,0 +1,12 @@
+{
+  "id": "a59a6466-e900-49fe-8814-e0efa14b9e37",
+  "user_id": "ba320c56-ad73-4cb3-9a28-1142f17169f3",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Frontend/Junior/enterprise_crm:form/early_validation@form",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-06T20:05:28.560981+00:00"
+}

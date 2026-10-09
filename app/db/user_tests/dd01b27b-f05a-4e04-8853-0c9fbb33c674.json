@@ -1,0 +1,12 @@
+{
+  "id": "dd01b27b-f05a-4e04-8853-0c9fbb33c674",
+  "user_id": "3d3307af-6d23-46d0-829a-891e044656f2",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/health_booking:3808/bug_report_unreproducible",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-16T10:08:30.376642+00:00"
+}

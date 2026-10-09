@@ -1,0 +1,111 @@
+{
+  "id": "3d36b701-749a-4a1f-9370-4d18aefef83e",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "06eb6f38-f6a0-4719-ac6c-22417a56985c",
+  "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+  "vacancy_id": "579dc2ab-b029-4041-bb57-e3929db7dcba",
+  "vacancy": {
+    "id": "579dc2ab-b029-4041-bb57-e3929db7dcba",
+    "title": "Системный аналитик (Middle)",
+    "position": "analyst",
+    "position_name": "Системный аналитик",
+    "role_id": "analyst",
+    "specialization": "Syst. Analyst",
+    "grade": "Middle",
+    "count": 1,
+    "task": "Требования к продукту: сценарии пользователей, модель данных, контракты интеграций, согласование с заказчиком",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Основная база данных",
+          "Данные с гибкой структурой"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "market",
+        "reasons": [
+          "Как интерфейс получает данные с сервера",
+          "Открытый API для чужих систем"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 150000,
+      "to": 250000,
+      "currency": "RUB"
+    },
+    "notes": null,
+    "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+    "company": {
+      "id": "91d54fe2-069b-4739-8fc6-afe2195fffb4",
+      "name": "Московский зоопарк"
+    },
+    "project": {
+      "name": "Система управления зоопарком",
+      "summary": "ERP-система зоопарка",
+      "domain": "internal",
+      "stage": "new",
+      "duration": "gt12",
+      "start_date": "2026-10-29",
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "free",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T17:42:27.701697+00:00"
+  },
+  "relevance": 100.0,
+  "source": "team",
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T17:47:42.046503+00:00"
+    },
+    {
+      "status": "accepted",
+      "at": "2026-10-09T20:43:38.648369+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T17:47:42.046503+00:00",
+  "applicant_seen": {
+    "status": "accepted",
+    "at": "2026-10-09T20:43:38.648369+00:00",
+    "revision": 2
+  },
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  }
+}

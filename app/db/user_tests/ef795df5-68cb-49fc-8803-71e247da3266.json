@@ -1,0 +1,12 @@
+{
+  "id": "ef795df5-68cb-49fc-8803-71e247da3266",
+  "user_id": "cdecbb6a-6328-4d89-ba3e-bbb60f3fb03a",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/fintech_transfers:9639/env_drift,api_asserts_status_only",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-28T08:31:01.625412+00:00"
+}

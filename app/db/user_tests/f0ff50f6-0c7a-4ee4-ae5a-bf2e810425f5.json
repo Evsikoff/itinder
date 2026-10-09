@@ -1,0 +1,12 @@
+{
+  "id": "f0ff50f6-0c7a-4ee4-ae5a-bf2e810425f5",
+  "user_id": "3d3307af-6d23-46d0-829a-891e044656f2",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/fintech_transfers:7264/bva_missing_boundaries",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-15T21:27:09.789402+00:00"
+}

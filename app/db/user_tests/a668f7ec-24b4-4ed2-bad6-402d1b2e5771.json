@@ -1,0 +1,12 @@
+{
+  "id": "a668f7ec-24b4-4ed2-bad6-402d1b2e5771",
+  "user_id": "472c31fb-ecfb-406b-8b12-57fc95a9b6fe",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/hanging_dependency,parser_abuse",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-28T02:20:24.103517+00:00"
+}

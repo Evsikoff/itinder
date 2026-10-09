@@ -1,0 +1,15 @@
+{
+  "id": "ae2b0682-a8a3-4f6b-a57d-dcacc1f26432",
+  "user_id": "f82da07d-8fb3-4016-b3d8-953e48a5fac8",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/ai_nlp/oversized_payload,retry_storm,hanging_dependency,bot_traffic",
+  "language": "Java",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-08T13:23:14.861971+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "66d4fdca-98f8-4e5f-8332-4badb0f7a13c",
+  "user_id": "f6b7c55b-72e1-4b15-8050-2ed1e160c7f0",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/ai_nlp/hanging_dependency,oversized_payload",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-04T08:22:12.307732+00:00"
+}

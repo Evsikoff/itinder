@@ -1,0 +1,12 @@
+{
+  "id": "817ecbbf-98bb-4f01-8f08-c3d66f418a8f",
+  "user_id": "fe43bc92-147a-4180-aeb9-fe26d8d8f32d",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Junior/ai_nlp/slow_scraping",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-12T15:55:20.980443+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "d46d3467-dd6d-4a36-b996-9cfc2e053e5f",
+  "user_id": "7b852c93-0860-4651-b0c6-74cdcb04925f",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/b2b_graphql/request_bursts,hanging_dependency,bulk_update_locks,oversized_payload",
+  "language": "C#",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-21T20:28:40.111001+00:00"
+}

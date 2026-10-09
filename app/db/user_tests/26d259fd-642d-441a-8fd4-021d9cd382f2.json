@@ -1,0 +1,12 @@
+{
+  "id": "26d259fd-642d-441a-8fd4-021d9cd382f2",
+  "user_id": "befe6e97-9476-4e74-80d5-7f151671b941",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/parser_abuse,hanging_dependency",
+  "language": "C++",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-27T21:40:01.227169+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "b2bdefd8-9432-4b8a-bad3-8f58a548d028",
+  "user_id": "95b9c3cb-84f4-413f-aee4-805436079152",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_deals/double_submit@form,focus_escapes@modal,no_status_states@search,filter_not_in_url@search+table",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-07-22T05:01:43.701790+00:00"
+}

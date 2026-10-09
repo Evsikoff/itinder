@@ -1,0 +1,15 @@
+{
+  "id": "f593a495-6138-49cf-8ac3-ee94bb154225",
+  "user_id": "e534a43a-aa32-428f-bdf2-3618e2480552",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/gateway_timeout_duplicates,heavy_reads_on_primary",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-08T10:56:39.979166+00:00"
+}

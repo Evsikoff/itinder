@@ -1,0 +1,12 @@
+{
+  "id": "437ccafb-71c7-4b67-9de5-6d3ad757944c",
+  "user_id": "5b72fcc5-491b-4117-8a89-cf794b983f0b",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/n_plus_one,bot_traffic",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-02T20:15:44.622099+00:00"
+}

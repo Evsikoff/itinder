@@ -1,0 +1,15 @@
+{
+  "id": "ff8bbcd6-47ba-4b8c-81d0-6548d1cfcb28",
+  "user_id": "80cc03c1-593b-4123-9f9f-4d72a71397cf",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/expensive_queries",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-09T08:58:50.393048+00:00"
+}

@@ -1,0 +1,159 @@
+{
+  "user_id": "db7adafe-8e0a-4a86-9fde-a4244d193e20",
+  "fsp_id": "FSP-6398-0714",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-07-24T18:12:30.906947+00:00",
+  "seed": 1949694223,
+  "competitions": [
+    {
+      "competition_id": "tikhookeansky_sprint_2025",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "swift"
+        ],
+        "integrations": [
+          "rest",
+          "graphql",
+          "webhook"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-07-24T18:12:30.906947+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2025",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "integrations": [
+          "rest",
+          "polling",
+          "websocket"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-07-24T18:12:30.906947+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-07-26T16:56:59.079260+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "polyarny_kod_2026",
+      "declined_at": "2026-07-24T18:44:37.842186+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "declined_at": "2026-07-25T05:01:47.167250+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "languages",
+      "id": "swift",
+      "points": 2,
+      "competitions": [
+        "tikhookeansky_sprint_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 1,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 5,
+      "competitions": [
+        "tikhookeansky_sprint_2025",
+        "polyarny_kod_2025",
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "graphql",
+      "points": 2,
+      "competitions": [
+        "tikhookeansky_sprint_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "polling",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 2,
+      "competitions": [
+        "tikhookeansky_sprint_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 1,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-07-26T16:56:59.079260+00:00"
+}

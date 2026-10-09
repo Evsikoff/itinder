@@ -1,0 +1,12 @@
+{
+  "id": "e395ab3c-a8ea-4aa2-b740-566b9d5ebb46",
+  "user_id": "352a3704-f7c4-46a8-b1e7-8fab5d87cc1e",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Syst. Analyst/Junior/data_analytics/gateway_timeout_duplicates",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-20T08:12:25.268695+00:00"
+}

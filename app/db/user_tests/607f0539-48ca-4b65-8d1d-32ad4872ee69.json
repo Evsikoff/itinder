@@ -1,0 +1,15 @@
+{
+  "id": "607f0539-48ca-4b65-8d1d-32ad4872ee69",
+  "user_id": "ffa7ca16-7828-4aed-beca-79024e07ab21",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/oversized_payload,repeated_computation",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-02T04:49:53.399190+00:00"
+}

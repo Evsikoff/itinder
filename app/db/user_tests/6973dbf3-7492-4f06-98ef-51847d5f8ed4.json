@@ -1,0 +1,15 @@
+{
+  "id": "6973dbf3-7492-4f06-98ef-51847d5f8ed4",
+  "user_id": "96c0715f-4462-4300-a32b-9d983cd6d1ce",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/pool_exhaustion",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-05T18:29:27.595650+00:00"
+}

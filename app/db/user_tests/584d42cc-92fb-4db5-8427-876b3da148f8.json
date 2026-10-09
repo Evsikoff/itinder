@@ -1,0 +1,15 @@
+{
+  "id": "584d42cc-92fb-4db5-8427-876b3da148f8",
+  "user_id": "e86a49d4-05dd-49cd-9f07-7a85dbe3de4b",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/slow_scraping,pool_exhaustion",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-20T00:23:38.835478+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "b56427a7-aef5-474b-ab91-037943f6f9e8",
+  "user_id": "fe61314b-430c-43dd-901d-d86b54d28b51",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/iot_smart_home:4700/ambiguous_requirement",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-03T21:16:01.963007+00:00"
+}

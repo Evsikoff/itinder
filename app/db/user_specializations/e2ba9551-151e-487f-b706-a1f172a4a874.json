@@ -1,0 +1,12 @@
+{
+  "id": "e2ba9551-151e-487f-b706-a1f172a4a874",
+  "user_id": "3a23b1c6-b4f1-4b53-819e-5f5831680cb8",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "created_at": "2026-08-05T07:34:25.079630+00:00",
+  "source": {
+    "type": "LLM",
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  }
+}

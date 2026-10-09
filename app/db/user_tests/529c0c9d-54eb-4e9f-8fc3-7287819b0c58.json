@@ -1,0 +1,12 @@
+{
+  "id": "529c0c9d-54eb-4e9f-8fc3-7287819b0c58",
+  "user_id": "5b72fcc5-491b-4117-8a89-cf794b983f0b",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/ai_nlp/parser_abuse,bot_traffic",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-30T23:17:57.502147+00:00"
+}

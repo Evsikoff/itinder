@@ -1,0 +1,12 @@
+{
+  "id": "6f9ec8d1-cbe2-4fec-9539-cf038f1ddeb7",
+  "user_id": "2a675a44-ac23-4876-86e5-bdf7b9ce696a",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/ecommerce_checkout:7914/localize_frontend",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-28T23:13:51.683035+00:00"
+}

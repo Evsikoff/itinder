@@ -1,0 +1,12 @@
+{
+  "id": "3460a1c1-559a-4dc1-a6bc-77fc99f641a9",
+  "user_id": "bfecadab-3b24-4797-bbbb-50db1af17ef8",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "QA/Junior/iot_smart_home:2073/decision_table_missing",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-03T02:58:16.940334+00:00"
+}

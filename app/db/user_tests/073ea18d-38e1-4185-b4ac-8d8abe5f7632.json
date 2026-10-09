@@ -1,0 +1,15 @@
+{
+  "id": "073ea18d-38e1-4185-b4ac-8d8abe5f7632",
+  "user_id": "bfa0d5fc-ef4a-4dc4-a124-0d33d438acea",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/ai_nlp/bot_traffic,gateway_timeout_duplicates",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-30T23:58:11.363400+00:00"
+}

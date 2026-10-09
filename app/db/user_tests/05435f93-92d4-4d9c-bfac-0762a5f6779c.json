@@ -1,0 +1,15 @@
+{
+  "id": "05435f93-92d4-4d9c-bfac-0762a5f6779c",
+  "user_id": "2ffe4744-899f-4e20-958c-f19ba8accf54",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/slow_scraping,request_bursts",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-09T11:23:31.749377+00:00"
+}

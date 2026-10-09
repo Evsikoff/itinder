@@ -1,0 +1,12 @@
+{
+  "id": "fbf7f117-7256-4f1b-9362-3d25f8027699",
+  "user_id": "a389c196-4080-4b59-a92a-82becad8b3d9",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/ai_nlp/retry_storm,oversized_payload",
+  "language": "C#",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-16T23:42:48.816322+00:00"
+}

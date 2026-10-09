@@ -1,0 +1,12 @@
+{
+  "id": "e471c9b0-28c2-4561-88cc-b59f1d582b5e",
+  "user_id": "eed65510-03b9-42d5-a8fc-06bea8ffa980",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Frontend/Junior/enterprise_crm:select/select_not_accessible@select",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-18T21:27:06.034041+00:00"
+}

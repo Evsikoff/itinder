@@ -1,0 +1,133 @@
+{
+  "id": "e1c1e56e-e86a-4e67-b1a4-f0a4228881e7",
+  "type": "От кандидата рекрутеру",
+  "applicant_id": "a0d9c78e-6d91-44de-8f71-38caeb71b922",
+  "recruiter_id": "5cb022b2-15da-4789-8a93-415eb8bc13b4",
+  "project_id": "b33b0de9-1fe6-46a8-bf3d-ce194dcf9836",
+  "vacancy_id": "4bdaebc4-1d9e-4ca8-a5e7-22dad2b13d11",
+  "vacancy": {
+    "id": "4bdaebc4-1d9e-4ca8-a5e7-22dad2b13d11",
+    "title": "[Тест] Тестировщик (Junior)",
+    "position": "qa",
+    "position_name": "Тестировщик",
+    "role_id": "qa",
+    "specialization": "QA",
+    "grade": "Junior",
+    "count": 1,
+    "task": "Проверить оформление заказа, подготовить граничные сценарии и автотесты API.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [
+      "Опишите план решения задачи по позиции «Тестировщик»: Проверить оформление заказа, подготовить граничные сценарии и автотесты API.",
+      "Перечислите граничные случаи и обработку ошибок. Объясните, как проверить результат."
+    ],
+    "salary": {
+      "from": 70000,
+      "to": 110000,
+      "currency": "RUB"
+    },
+    "notes": "Демонстрационная вакансия. Снимок предназначен для проверки приглашений и откликов.",
+    "project_id": "b33b0de9-1fe6-46a8-bf3d-ce194dcf9836",
+    "company": {
+      "id": "e9561095-3c11-4f42-8c33-83d2756531c4",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: интернет-магазин",
+      "summary": "Веб-магазин: каталог товаров, корзина, оформление заказа и кабинет покупателя.",
+      "domain": "retail",
+      "stage": "active",
+      "duration": "3to6",
+      "work_format": "remote"
+    },
+    "status": "ready",
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "approved_at": "2026-10-09T19:17:14.009890+00:00"
+  },
+  "flow": "assignment",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T19:17:14.009890+00:00"
+    },
+    {
+      "status": "task_sent_for_review",
+      "at": "2026-10-09T19:18:14.009890+00:00"
+    },
+    {
+      "status": "task_needs_review",
+      "at": "2026-10-09T19:19:14.009890+00:00"
+    },
+    {
+      "status": "solution_rejected",
+      "at": "2026-10-09T19:20:14.009890+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T19:17:14.009890+00:00",
+  "source": "search",
+  "relevance": null,
+  "test_generation": {
+    "version": 1,
+    "batch_id": "a4b17c9b-e538-4a98-8114-6e81d31f0120",
+    "scenario": "outgoing:assignment:solution_rejected",
+    "template": "store",
+    "recruiter_name": "Анна Миронова (тест)"
+  },
+  "assignment_answers": [
+    "Демонстрационный ответ на задание 1.\nПлан: уточнить условия, подготовить решение и проверить граничные случаи.\nРезультат и ограничения описаны для проверки интерфейса.",
+    "Демонстрационный ответ на задание 2.\nПлан: уточнить условия, подготовить решение и проверить граничные случаи.\nРезультат и ограничения описаны для проверки интерфейса."
+  ]
+}

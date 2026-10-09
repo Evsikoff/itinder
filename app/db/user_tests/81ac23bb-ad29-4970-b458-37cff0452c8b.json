@@ -1,0 +1,12 @@
+{
+  "id": "81ac23bb-ad29-4970-b458-37cff0452c8b",
+  "user_id": "ffe57932-6171-42aa-84c3-7b7b48900f89",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/data_analytics/heavy_egress,bot_traffic",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-01T12:48:33.350888+00:00"
+}

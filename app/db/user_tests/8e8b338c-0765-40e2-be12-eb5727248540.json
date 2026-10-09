@@ -1,0 +1,15 @@
+{
+  "id": "8e8b338c-0765-40e2-be12-eb5727248540",
+  "user_id": "098f326c-254f-4cab-833e-0c0d00e2b781",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_client_card/data_loss_navigation@form,popup_clipped@date+panel,backdrop_select_close@confirm,date_off_by_one@date",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-24T19:24:24.248378+00:00"
+}

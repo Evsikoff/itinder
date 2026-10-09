@@ -1,0 +1,12 @@
+{
+  "id": "da6304a6-b3b8-405a-bf27-d3ec044ed248",
+  "user_id": "187b92ca-5a67-46a9-ad34-bb19aa7350c7",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Backend/Junior/ai_nlp/bot_traffic",
+  "language": "Go",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-01T09:01:57.811037+00:00"
+}

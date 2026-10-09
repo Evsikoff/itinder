@@ -1,0 +1,13 @@
+{
+  "id": "75db2310-3b1d-4fbe-a109-ffc983f2f285",
+  "user_id": "b5f2adc1-78a2-4679-9303-3972e4fac93b",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/ops_dashboard:modal_window/backdrop_select_close@modal_window",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "ce6333bc-4220-4e3b-9855-86eeeb55c77d",
+  "created_at": "2026-07-27T01:06:59.617823+00:00"
+}

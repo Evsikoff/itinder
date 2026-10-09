@@ -1,0 +1,12 @@
+{
+  "id": "465c63b5-1750-43d6-aded-1ae6b2fcdddb",
+  "user_id": "28525d9b-039a-4190-9836-aecf830e481e",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/expensive_queries,request_bursts",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-14T22:44:29.973320+00:00"
+}

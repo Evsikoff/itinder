@@ -1,0 +1,15 @@
+{
+  "id": "c6f5eaaf-d712-4c92-aa14-a578d73f94cf",
+  "user_id": "55450379-0206-4d7f-82be-f363c25ed9df",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "QA/Senior/ecommerce_checkout:8321/manual_regression_bottleneck,prod_data_in_test,no_contract_tests,no_load_testing",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-21T17:27:01.141711+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "096fd988-1dca-413a-bda9-3499dcce3936",
+  "user_id": "0ef96502-fadf-466f-a8c7-6897f1253ef9",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/ecommerce_checkout:1546/async_effect_unchecked,api_asserts_status_only",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-09T00:11:58.908679+00:00"
+}

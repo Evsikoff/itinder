@@ -1,0 +1,12 @@
+{
+  "id": "8c25d655-214a-419c-b14f-bd5e35d4268c",
+  "user_id": "f34a8fdb-6147-436c-96ba-ec6406f7f34b",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/marketplace:modal_window/scroll_chaining@modal_window",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-19T05:43:10.334613+00:00"
+}

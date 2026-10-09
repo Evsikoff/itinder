@@ -1,0 +1,12 @@
+{
+  "id": "e519a0eb-1b00-46dc-919c-5968be1cbc1d",
+  "user_id": "c9c8003a-9f6b-4be3-b953-c87eae28102a",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Junior/ai_nlp/parser_abuse",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-04T08:08:02.006304+00:00"
+}

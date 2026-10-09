@@ -1,0 +1,15 @@
+{
+  "id": "75822d5c-80af-47fb-ae86-3d811ba12045",
+  "user_id": "6eb8363d-0fdb-4846-a9f8-a790077585bc",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/b2b_graphql/retry_storm",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-20T03:52:53.244526+00:00"
+}

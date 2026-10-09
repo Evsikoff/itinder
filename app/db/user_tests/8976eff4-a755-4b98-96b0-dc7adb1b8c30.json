@@ -1,0 +1,15 @@
+{
+  "id": "8976eff4-a755-4b98-96b0-dc7adb1b8c30",
+  "user_id": "fe5e5b84-9662-48ff-bb8f-c8704a60ecff",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/marketplace:market_catalog/filter_not_in_url@search+grid,stale_response@search,toast_flood@toasts,lazy_lcp@grid",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-03T02:37:11.669358+00:00"
+}

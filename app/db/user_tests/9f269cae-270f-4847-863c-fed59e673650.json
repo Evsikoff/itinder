@@ -1,0 +1,15 @@
+{
+  "id": "9f269cae-270f-4847-863c-fed59e673650",
+  "user_id": "1bbfdb2c-7440-4183-90eb-fbaea29aa01c",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/b2b_graphql/pool_exhaustion,retry_storm,bulk_update_locks,parser_abuse",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-09T15:16:31.447881+00:00"
+}

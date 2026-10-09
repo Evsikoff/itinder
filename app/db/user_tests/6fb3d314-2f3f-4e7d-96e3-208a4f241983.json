@@ -1,0 +1,12 @@
+{
+  "id": "6fb3d314-2f3f-4e7d-96e3-208a4f241983",
+  "user_id": "eed65510-03b9-42d5-a8fc-06bea8ffa980",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/marketplace:image_grid/offset_duplicates@image_grid",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-09T06:46:36.218600+00:00"
+}

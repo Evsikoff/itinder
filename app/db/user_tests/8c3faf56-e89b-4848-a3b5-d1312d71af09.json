@@ -1,0 +1,12 @@
+{
+  "id": "8c3faf56-e89b-4848-a3b5-d1312d71af09",
+  "user_id": "72123100-4a2f-419c-883e-21c24d8c4118",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/iot_smart_home:813/env_drift,async_effect_unchecked",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-15T04:24:13.269975+00:00"
+}

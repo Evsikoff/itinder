@@ -1,0 +1,12 @@
+{
+  "id": "52ecfdc8-0920-4cf9-8e5c-e058d09d9f45",
+  "user_id": "8f6aaa8f-8e9c-4449-b5df-1ae2dc1efa37",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/ai_nlp/retry_storm,pool_exhaustion",
+  "language": "Python",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-28T14:21:10.359241+00:00"
+}

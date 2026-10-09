@@ -1,0 +1,12 @@
+{
+  "id": "51bbeac8-6f98-4254-a17e-5b2dac4a7c29",
+  "user_id": "da4fb53d-bf85-449b-ac56-d7a209b2e20b",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/retry_storm,heavy_reads_on_primary",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-08T13:52:46.220938+00:00"
+}

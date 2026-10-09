@@ -1,0 +1,15 @@
+{
+  "id": "15dafdd9-9dcb-4d67-9fe6-604d83a9a493",
+  "user_id": "4caa7491-4da2-488d-9723-5c2d271578c3",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/ai_nlp/retry_storm",
+  "language": "TypeScript",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-10T19:41:39.912859+00:00"
+}

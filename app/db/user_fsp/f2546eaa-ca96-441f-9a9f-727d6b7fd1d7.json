@@ -1,0 +1,189 @@
+{
+  "user_id": "f2546eaa-ca96-441f-9a9f-727d6b7fd1d7",
+  "fsp_id": "FSP-5337-5509",
+  "role_id": "qa",
+  "specialization": "QA",
+  "linked_at": "2026-10-01T10:58:30.074364+00:00",
+  "seed": 2038571671,
+  "competitions": [
+    {
+      "competition_id": "karavan_2025",
+      "role_id": "qa",
+      "result": "win",
+      "points": 5,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "testing": [
+          "test_design",
+          "rest_assured",
+          "wiremock"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-01T10:58:30.074364+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "qa",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "testing": [
+          "test_design",
+          "testcontainers",
+          "appium"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-10-02T01:48:19.248879+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "qa",
+      "result": "win",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "testing": [
+          "test_design",
+          "postman",
+          "cypress"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-10-01T20:35:45.721464+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "qa",
+      "result": "prize",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "testing": [
+          "test_design",
+          "rest_assured",
+          "wiremock",
+          "pact"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-10-01T22:32:20.942050+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "okhota_na_bagi_2027",
+      "declined_at": "2026-10-02T22:05:32.789330+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 9,
+      "competitions": [
+        "karavan_2025",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 5,
+      "competitions": [
+        "polyarny_kod_2026",
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "test_design",
+      "points": 14,
+      "competitions": [
+        "karavan_2025",
+        "polyarny_kod_2026",
+        "sessiya_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "rest_assured",
+      "points": 9,
+      "competitions": [
+        "karavan_2025",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "wiremock",
+      "points": 9,
+      "competitions": [
+        "karavan_2025",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "testing",
+      "id": "pact",
+      "points": 4,
+      "competitions": [
+        "karavan_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "cypress",
+      "points": 3,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "postman",
+      "points": 3,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "testing",
+      "id": "appium",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "testing",
+      "id": "testcontainers",
+      "points": 2,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-10-02T22:05:32.789330+00:00"
+}

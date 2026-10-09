@@ -1,0 +1,15 @@
+{
+  "id": "73a167cf-2d50-474d-9a30-e10dbcd9d515",
+  "user_id": "1f7ad86c-fc53-4399-8595-c1cc2132f082",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/ai_nlp/hanging_dependency",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-05T22:42:26.215285+00:00"
+}

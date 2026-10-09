@@ -1,0 +1,12 @@
+{
+  "id": "2f76710a-a8a4-452d-a339-08db67882271",
+  "user_id": "cd469477-8fe6-4906-aae7-2b9b0bff1aaa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/fintech_transfers:5655/api_asserts_status_only,brittle_locators",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-13T17:41:33.689534+00:00"
+}

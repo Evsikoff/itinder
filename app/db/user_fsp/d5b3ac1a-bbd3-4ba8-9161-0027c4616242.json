@@ -1,0 +1,139 @@
+{
+  "user_id": "d5b3ac1a-bbd3-4ba8-9161-0027c4616242",
+  "fsp_id": "FSP-1523-2623",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "linked_at": "2026-09-24T03:24:00.433471+00:00",
+  "seed": 2949084190,
+  "competitions": [
+    {
+      "competition_id": "sessiya_2025",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "databases": [
+          "sqlite"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-09-24T03:24:00.433471+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "analyst",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "databases": [
+          "redis"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-24T14:25:21.852244+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2027",
+      "role_id": "analyst",
+      "result": "prize",
+      "points": 4,
+      "competencies": {
+        "databases": [
+          "ydb"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-09-26T00:30:14.837486+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "polyarny_kod_2026",
+      "declined_at": "2026-09-25T07:15:16.711431+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "databases",
+      "id": "ydb",
+      "points": 4,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "redis",
+      "points": 1,
+      "competitions": [
+        "sessiya_2026"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "databases",
+      "id": "sqlite",
+      "points": 1,
+      "competitions": [
+        "sessiya_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 6,
+      "competitions": [
+        "sessiya_2025",
+        "sessiya_2026",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 6,
+      "competitions": [
+        "sessiya_2025",
+        "sessiya_2026",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 4,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 4,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    }
+  ],
+  "updated_at": "2026-09-26T00:30:14.837486+00:00"
+}

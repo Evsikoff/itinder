@@ -1,0 +1,12 @@
+{
+  "id": "b1513c6b-2c8d-448f-896f-9c90c37863bd",
+  "user_id": "fe43bc92-147a-4180-aeb9-fe26d8d8f32d",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/data_analytics/heavy_reads_on_primary,slow_scraping",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-13T22:24:20.904936+00:00"
+}

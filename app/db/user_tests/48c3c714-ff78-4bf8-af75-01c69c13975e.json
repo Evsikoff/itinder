@@ -1,0 +1,12 @@
+{
+  "id": "48c3c714-ff78-4bf8-af75-01c69c13975e",
+  "user_id": "c5ccfdec-a205-410f-9087-37b0eab64502",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/data_analytics/slow_scraping,hanging_dependency",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-16T07:49:24.967313+00:00"
+}

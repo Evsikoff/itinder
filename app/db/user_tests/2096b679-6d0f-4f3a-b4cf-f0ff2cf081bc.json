@@ -1,0 +1,12 @@
+{
+  "id": "2096b679-6d0f-4f3a-b4cf-f0ff2cf081bc",
+  "user_id": "c06e6b1e-edd9-49ad-9916-6bfa59897411",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/slow_scraping,repeated_computation",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-12T15:15:49.053285+00:00"
+}

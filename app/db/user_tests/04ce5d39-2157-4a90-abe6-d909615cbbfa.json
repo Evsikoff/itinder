@@ -1,0 +1,12 @@
+{
+  "id": "04ce5d39-2157-4a90-abe6-d909615cbbfa",
+  "user_id": "154f108c-a5b4-4ac1-9fae-6f921143cc70",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/ecommerce_checkout:2763/decision_table_missing",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-03T21:37:18.442413+00:00"
+}

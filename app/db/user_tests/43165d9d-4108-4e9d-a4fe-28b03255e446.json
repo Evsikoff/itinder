@@ -1,0 +1,13 @@
+{
+  "id": "43165d9d-4108-4e9d-a4fe-28b03255e446",
+  "user_id": "1f7ad86c-fc53-4399-8595-c1cc2132f082",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/ai_nlp/gateway_timeout_duplicates,bot_traffic,pool_exhaustion,slow_scraping",
+  "language": "Go",
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "ebdfa1ce-46c5-465e-b366-d3896e7d768e",
+  "created_at": "2026-09-15T21:47:02.357921+00:00"
+}

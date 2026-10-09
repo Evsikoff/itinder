@@ -1,0 +1,15 @@
+{
+  "id": "42efc66a-11e4-4889-9556-cb00e16bd616",
+  "user_id": "cdecbb6a-6328-4d89-ba3e-bbb60f3fb03a",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "QA/Senior/fintech_transfers:7388/no_quality_gates,inverted_pyramid,no_contract_tests,no_load_testing",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-28T08:04:01.493673+00:00"
+}

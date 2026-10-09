@@ -1,0 +1,13 @@
+{
+  "id": "82aa452e-23e1-4562-8597-0e17cd31b242",
+  "user_id": "a82ded85-360f-4b60-8bab-08e07e71cae0",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/ai_nlp/slow_scraping,bot_traffic,repeated_computation,oversized_payload",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "0a26b986-3eb5-4fd5-aacf-63281a2be455",
+  "created_at": "2026-09-25T00:18:58.591506+00:00"
+}

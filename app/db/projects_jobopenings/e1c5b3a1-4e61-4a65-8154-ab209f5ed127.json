@@ -1,0 +1,82 @@
+{
+  "id": "e1c5b3a1-4e61-4a65-8154-ab209f5ed127",
+  "title": "Фронтенд-разработчик (веб) (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Веб-интерфейс продукта: экраны и формы, состояния загрузки и ошибок, вход пользователя",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "market",
+      "reasons": [
+        "Язык веб-интерфейса"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "market",
+      "reasons": [
+        "Как интерфейс получает данные с сервера",
+        "Открытый API для чужих систем"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "market",
+      "reasons": [
+        "Вход через внешний провайдер"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 200000,
+    "to": 300000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+  "user_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "company": {
+    "id": "91d54fe2-069b-4739-8fc6-afe2195fffb4",
+    "name": "Московский зоопарк"
+  },
+  "project": {
+    "name": "Система управления зоопарком",
+    "summary": "ERP-система зоопарка",
+    "domain": "internal",
+    "stage": "new",
+    "duration": "gt12",
+    "start_date": "2026-10-29",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "free",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-09T17:42:27.701697+00:00",
+  "created_at": "2026-10-09T17:42:27.701697+00:00",
+  "updated_at": "2026-10-09T17:42:27.701697+00:00"
+}

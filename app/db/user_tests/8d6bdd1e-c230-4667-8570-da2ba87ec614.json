@@ -1,0 +1,12 @@
+{
+  "id": "8d6bdd1e-c230-4667-8570-da2ba87ec614",
+  "user_id": "af32eebf-f230-4a22-881d-a82f6acaee53",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Syst. Analyst/Middle/data_analytics/repeated_computation,heavy_egress",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-09T04:47:34.143414+00:00"
+}

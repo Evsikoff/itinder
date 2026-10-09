@@ -1,0 +1,15 @@
+{
+  "id": "1e4ba347-fb04-4272-927e-af3646fc7b35",
+  "user_id": "e934af16-05ee-4782-89f6-8ca2d7b80e82",
+  "specialization": "QA",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "QA/Senior/ecommerce_checkout:3226/manual_regression_bottleneck,no_quality_gates,flaky_tests_ignored,late_qa_no_shift_left",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-18T16:48:50.000094+00:00"
+}

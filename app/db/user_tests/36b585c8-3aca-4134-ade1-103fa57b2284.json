@@ -1,0 +1,15 @@
+{
+  "id": "36b585c8-3aca-4134-ade1-103fa57b2284",
+  "user_id": "bfa0d5fc-ef4a-4dc4-a124-0d33d438acea",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/parser_abuse,expensive_queries",
+  "language": "Java",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-30T18:22:33.301052+00:00"
+}

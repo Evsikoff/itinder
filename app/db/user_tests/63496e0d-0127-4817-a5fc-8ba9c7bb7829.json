@@ -1,0 +1,12 @@
+{
+  "id": "63496e0d-0127-4817-a5fc-8ba9c7bb7829",
+  "user_id": "b08668c6-46ce-43ff-a7cd-9b211f054c82",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/ops_dashboard:drawer/focus_not_restored@drawer",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-25T01:37:04.654425+00:00"
+}

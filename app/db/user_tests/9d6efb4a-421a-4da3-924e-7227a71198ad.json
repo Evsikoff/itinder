@@ -1,0 +1,15 @@
+{
+  "id": "9d6efb4a-421a-4da3-924e-7227a71198ad",
+  "user_id": "8d467f89-e936-4678-b454-84a656fc8d92",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/marketplace:market_quick_view/backdrop_select_close@modal,popup_shifted_by_transform@size+modal,blur_before_click@size,toast_under_overlay@modal+toasts",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-07-23T09:16:25.626166+00:00"
+}

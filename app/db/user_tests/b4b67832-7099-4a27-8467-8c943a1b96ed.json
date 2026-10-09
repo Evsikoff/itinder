@@ -1,0 +1,15 @@
+{
+  "id": "b4b67832-7099-4a27-8467-8c943a1b96ed",
+  "user_id": "9197f107-7890-433b-83fb-18a2d562149c",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_client_card/date_off_by_one@date,popup_clipped@date+panel,focus_not_restored@panel,esc_closes_parent@date+panel",
+  "language": null,
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-10-09T02:30:22.837144+00:00"
+}

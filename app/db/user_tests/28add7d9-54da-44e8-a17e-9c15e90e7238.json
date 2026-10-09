@@ -1,0 +1,13 @@
+{
+  "id": "28add7d9-54da-44e8-a17e-9c15e90e7238",
+  "user_id": "1bbfdb2c-7440-4183-90eb-fbaea29aa01c",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/ai_nlp/retry_storm,repeated_computation,parser_abuse,slow_scraping",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "c868fa13-6f11-45fb-82b2-2f79c16b8264",
+  "created_at": "2026-08-12T08:31:54.075168+00:00"
+}

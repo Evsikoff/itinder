@@ -1,0 +1,12 @@
+{
+  "id": "f80ee986-d5de-4797-b4df-bb1251485d88",
+  "user_id": "787dc2b2-9822-4181-9b9f-3caa18dd85a6",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Backend/Junior/data_analytics/expensive_queries",
+  "language": "C#",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-19T22:41:14.678663+00:00"
+}

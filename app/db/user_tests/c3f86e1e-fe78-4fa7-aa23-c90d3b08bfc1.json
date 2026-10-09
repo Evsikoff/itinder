@@ -1,0 +1,12 @@
+{
+  "id": "c3f86e1e-fe78-4fa7-aa23-c90d3b08bfc1",
+  "user_id": "2a675a44-ac23-4876-86e5-bdf7b9ce696a",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/fintech_transfers:2960/flaky_shared_data,brittle_locators",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-28T23:07:17.275882+00:00"
+}

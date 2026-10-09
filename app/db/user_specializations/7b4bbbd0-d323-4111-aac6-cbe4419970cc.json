@@ -1,0 +1,21 @@
+{
+  "id": "7b4bbbd0-d323-4111-aac6-cbe4419970cc",
+  "user_id": "c9c8003a-9f6b-4be3-b953-c87eae28102a",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "created_at": "2026-09-27T09:29:21.222678+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 18,
+        "title": "Syst. Analyst"
+      },
+      {
+        "id": 28,
+        "title": "Junior"
+      }
+    ]
+  }
+}

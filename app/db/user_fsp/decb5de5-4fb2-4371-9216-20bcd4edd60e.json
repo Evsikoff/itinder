@@ -1,0 +1,209 @@
+{
+  "user_id": "decb5de5-4fb2-4371-9216-20bcd4edd60e",
+  "fsp_id": "FSP-4435-5779",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "linked_at": "2026-10-08T07:41:47.683801+00:00",
+  "seed": 3068302732,
+  "competitions": [
+    {
+      "competition_id": "karavan_2025",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "databases": [
+          "neo4j"
+        ],
+        "integrations": [
+          "kafka",
+          "soap",
+          "file_exchange",
+          "webhook",
+          "rest"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-08T07:41:47.683801+00:00"
+    },
+    {
+      "competition_id": "sessiya_2025",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "languages": [
+          "php"
+        ],
+        "databases": [
+          "sqlite"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-10-08T07:41:47.683801+00:00"
+    },
+    {
+      "competition_id": "kontrakt_2027",
+      "role_id": "backend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "rust"
+        ],
+        "databases": [
+          "postgresql"
+        ],
+        "integrations": [
+          "rest",
+          "grpc",
+          "webhook",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-10-08T15:34:00.095889+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "sessiya_2026",
+      "declined_at": "2026-10-08T15:13:20.224448+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "declined_at": "2026-10-08T09:13:48.353073+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "rust",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 3,
+      "competitions": [
+        "karavan_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "php",
+      "points": 1,
+      "competitions": [
+        "sessiya_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "databases",
+      "id": "neo4j",
+      "points": 3,
+      "competitions": [
+        "karavan_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "postgresql",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "databases",
+      "id": "sqlite",
+      "points": 1,
+      "competitions": [
+        "sessiya_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 7,
+      "competitions": [
+        "karavan_2025",
+        "sessiya_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 6,
+      "competitions": [
+        "karavan_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 4,
+      "competitions": [
+        "sessiya_2025",
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 3,
+      "competitions": [
+        "karavan_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "grpc",
+      "points": 3,
+      "competitions": [
+        "kontrakt_2027"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 3,
+      "competitions": [
+        "karavan_2025"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 3,
+      "competitions": [
+        "karavan_2025"
+      ],
+      "degree": 2
+    }
+  ],
+  "updated_at": "2026-10-08T15:34:00.095889+00:00"
+}

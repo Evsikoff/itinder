@@ -1,0 +1,13 @@
+{
+  "id": "8cb4f81a-dec6-4615-b0ce-40ff3c627cde",
+  "user_id": "d0dbbe7e-45d7-472f-918a-92fc3441ac58",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/enterprise_crm:crm_pick_items/combobox_not_accessible@search,filter_hides_selection@search+table",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "13050196-07c5-4f6c-850e-12b36e1b4211",
+  "created_at": "2026-09-19T08:22:10.076683+00:00"
+}

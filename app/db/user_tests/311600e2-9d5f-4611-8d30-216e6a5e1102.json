@@ -1,0 +1,15 @@
+{
+  "id": "311600e2-9d5f-4611-8d30-216e6a5e1102",
+  "user_id": "df71cbca-4266-47af-bbdc-6b415f17ca73",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/ai_nlp/hanging_dependency,request_bursts,repeated_computation,parser_abuse",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-27T21:47:09.944685+00:00"
+}

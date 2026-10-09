@@ -1,0 +1,15 @@
+{
+  "id": "cae6e29f-a938-4f16-99e2-1004b29c14d5",
+  "user_id": "580febf7-e7da-4ca4-9aec-5ef9f6900083",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/parser_abuse,pool_exhaustion",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-02T19:13:31.424737+00:00"
+}

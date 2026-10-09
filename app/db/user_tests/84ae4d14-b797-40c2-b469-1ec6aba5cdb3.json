@@ -1,0 +1,15 @@
+{
+  "id": "84ae4d14-b797-40c2-b469-1ec6aba5cdb3",
+  "user_id": "02d3898a-a205-4fb6-9721-12f91f9f8d04",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/ai_nlp/repeated_computation,hanging_dependency",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-28T04:17:47.375154+00:00"
+}

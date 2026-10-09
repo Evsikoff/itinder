@@ -1,0 +1,15 @@
+{
+  "id": "e73c0ef8-8862-4a82-8713-02ec90e96d5b",
+  "user_id": "2068f3c6-3617-49f2-83a5-b3655de6d353",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/ai_nlp/parser_abuse",
+  "language": "JavaScript",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-05T15:02:24.749050+00:00"
+}

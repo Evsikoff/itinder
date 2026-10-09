@@ -1,0 +1,12 @@
+{
+  "id": "0c69d76d-10cd-41a9-b2cd-6f08e0c02867",
+  "user_id": "72123100-4a2f-419c-883e-21c24d8c4118",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "QA/Junior/iot_smart_home:2028/localize_frontend",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-15T03:47:06.124870+00:00"
+}

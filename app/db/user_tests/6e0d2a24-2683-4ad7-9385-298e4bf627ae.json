@@ -1,0 +1,15 @@
+{
+  "id": "6e0d2a24-2683-4ad7-9385-298e4bf627ae",
+  "user_id": "97197450-f1ed-4bb0-aaad-3d6a8296d65b",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Backend/Senior/b2b_graphql/bulk_update_locks,slow_scraping,n_plus_one,bot_traffic",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-01T05:32:43.614735+00:00"
+}

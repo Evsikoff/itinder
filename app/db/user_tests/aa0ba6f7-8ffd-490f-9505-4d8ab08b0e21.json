@@ -1,0 +1,12 @@
+{
+  "id": "aa0ba6f7-8ffd-490f-9505-4d8ab08b0e21",
+  "user_id": "72923b15-f974-4af6-9456-6d1399c1b1ab",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Syst. Analyst/Middle/b2b_graphql/pool_exhaustion,parser_abuse",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-07T11:23:01.868316+00:00"
+}

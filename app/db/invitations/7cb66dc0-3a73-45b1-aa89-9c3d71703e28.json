@@ -1,0 +1,114 @@
+{
+  "id": "7cb66dc0-3a73-45b1-aa89-9c3d71703e28",
+  "type": "От рекрутера кандидату",
+  "applicant_id": "a0d9c78e-6d91-44de-8f71-38caeb71b922",
+  "recruiter_id": "65376784-795c-488d-aa0f-7a8fc08bbae0",
+  "project_id": "b33b0de9-1fe6-46a8-bf3d-ce194dcf9836",
+  "vacancy_id": "c5a1d38c-cc13-4733-84aa-b8ba81513088",
+  "vacancy": {
+    "id": "c5a1d38c-cc13-4733-84aa-b8ba81513088",
+    "title": "[Тест] Системный аналитик (Middle)",
+    "position": "analyst",
+    "position_name": "Системный аналитик",
+    "role_id": "analyst",
+    "specialization": "Syst. Analyst",
+    "grade": "Middle",
+    "count": 1,
+    "task": "Описать жизненный цикл заказа, модель данных и контракт API для команды разработки.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 130000,
+      "to": 190000,
+      "currency": "RUB"
+    },
+    "notes": "Демонстрационная вакансия. Снимок предназначен для проверки приглашений и откликов.",
+    "project_id": "b33b0de9-1fe6-46a8-bf3d-ce194dcf9836",
+    "company": {
+      "id": "e9561095-3c11-4f42-8c33-83d2756531c4",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: интернет-магазин",
+      "summary": "Веб-магазин: каталог товаров, корзина, оформление заказа и кабинет покупателя.",
+      "domain": "retail",
+      "stage": "active",
+      "duration": "3to6",
+      "work_format": "remote"
+    },
+    "status": "ready",
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "approved_at": "2026-10-09T18:47:14.009890+00:00"
+  },
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T18:47:14.009890+00:00"
+    },
+    {
+      "status": "read",
+      "at": "2026-10-09T18:48:14.009890+00:00"
+    },
+    {
+      "status": "declined",
+      "at": "2026-10-09T18:49:14.009890+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T18:47:14.009890+00:00",
+  "source": "search",
+  "relevance": null,
+  "test_generation": {
+    "version": 1,
+    "batch_id": "a4b17c9b-e538-4a98-8114-6e81d31f0120",
+    "scenario": "incoming:plain:declined",
+    "template": "store",
+    "recruiter_name": "Михаил Соколов (тест)"
+  },
+  "applicant_seen": {
+    "status": "declined",
+    "at": "2026-10-09T18:49:14.009890+00:00",
+    "revision": 3
+  }
+}

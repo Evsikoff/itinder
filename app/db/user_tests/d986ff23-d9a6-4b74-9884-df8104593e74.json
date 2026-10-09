@@ -1,0 +1,12 @@
+{
+  "id": "d986ff23-d9a6-4b74-9884-df8104593e74",
+  "user_id": "2cfa03a8-271b-456a-a4b1-e9c3e57e2ff7",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Frontend/Junior/mobile_banking:live_search/stale_response@live_search",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-14T15:28:48.548267+00:00"
+}

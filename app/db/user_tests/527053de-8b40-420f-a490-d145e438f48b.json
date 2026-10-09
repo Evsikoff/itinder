@@ -1,0 +1,12 @@
+{
+  "id": "527053de-8b40-420f-a490-d145e438f48b",
+  "user_id": "1771d019-18dd-429c-8791-ab3a7f3ce50b",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Frontend/Middle/ops_dashboard:ops_event_log/filter_keeps_page@filters+table,realtime_wrong_record@table+details",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-29T20:25:22.872606+00:00"
+}

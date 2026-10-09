@@ -1,0 +1,12 @@
+{
+  "id": "f17b0429-fcbe-4ae2-95ce-00f4f107655f",
+  "user_id": "9197f107-7890-433b-83fb-18a2d562149c",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Frontend/Middle/ops_dashboard:crm_pick_items/filter_keeps_page@search+table,scroll_chaining@modal",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-08T18:28:43.738702+00:00"
+}

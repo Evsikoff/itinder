@@ -1,0 +1,12 @@
+{
+  "id": "06b3678f-174b-420f-87a9-98618b5ed4e4",
+  "user_id": "a1fb808b-a373-46c7-a133-34d41055574f",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "Syst. Analyst/Junior/data_analytics/oversized_payload",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-03T14:17:57.845178+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "5db8d62a-60df-43e0-9311-83a06e066e48",
+  "user_id": "31365c43-f4c2-429a-9ede-9b0f1ef1ee13",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/ecommerce_checkout:5616/api_asserts_status_only,shared_stage_collisions",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-03T14:06:21.340603+00:00"
+}

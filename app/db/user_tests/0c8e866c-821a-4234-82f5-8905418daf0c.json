@@ -1,0 +1,12 @@
+{
+  "id": "0c8e866c-821a-4234-82f5-8905418daf0c",
+  "user_id": "eafe60b4-3596-4071-88cd-5a05f13de7b7",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/ecommerce_checkout:1906/flaky_fixed_sleep,flaky_time_dependency",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-17T00:40:51.310186+00:00"
+}

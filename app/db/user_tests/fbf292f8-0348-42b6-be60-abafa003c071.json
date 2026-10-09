@@ -1,0 +1,15 @@
+{
+  "id": "fbf292f8-0348-42b6-be60-abafa003c071",
+  "user_id": "4e1032ca-0fa7-4727-beef-850dc1576b9e",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/bot_traffic,pool_exhaustion",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-01T09:53:28.389521+00:00"
+}

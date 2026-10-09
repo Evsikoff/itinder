@@ -1,0 +1,12 @@
+{
+  "id": "26d17da2-63d2-4ed0-9777-893759e62a4f",
+  "user_id": "24035d99-4fc6-47ba-85b7-6af2bead6618",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/ecommerce_checkout:5824/flaky_shared_data,shared_stage_collisions",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-13T23:39:01.050339+00:00"
+}

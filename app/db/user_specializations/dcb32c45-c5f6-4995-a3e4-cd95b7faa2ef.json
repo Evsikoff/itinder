@@ -1,0 +1,12 @@
+{
+  "id": "dcb32c45-c5f6-4995-a3e4-cd95b7faa2ef",
+  "user_id": "b898d9d2-7da4-4e60-aa81-d184c41e1a98",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "created_at": "2026-08-10T11:41:29.264925+00:00",
+  "source": {
+    "type": "LLM",
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  }
+}

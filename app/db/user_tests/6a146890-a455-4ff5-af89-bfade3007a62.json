@@ -1,0 +1,13 @@
+{
+  "id": "6a146890-a455-4ff5-af89-bfade3007a62",
+  "user_id": "bfa0d5fc-ef4a-4dc4-a124-0d33d438acea",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/pool_exhaustion,parser_abuse",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "0fb61a15-0725-4a94-9d9f-0297f9bcd263",
+  "created_at": "2026-08-30T18:40:27.421978+00:00"
+}

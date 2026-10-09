@@ -1,0 +1,13 @@
+{
+  "id": "b856681a-6525-4e84-b083-1a0a17e2f198",
+  "user_id": "7dc325c1-f960-4f18-a02e-3803b2d92fe1",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/ai_nlp/oversized_payload,request_bursts",
+  "language": "Java",
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "a9d54aff-6a67-43c0-9ab5-02db65c74056",
+  "created_at": "2026-07-19T22:31:03.253921+00:00"
+}

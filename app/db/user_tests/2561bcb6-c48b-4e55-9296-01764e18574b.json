@@ -1,0 +1,12 @@
+{
+  "id": "2561bcb6-c48b-4e55-9296-01764e18574b",
+  "user_id": "44dc254b-6184-402b-8213-c4af51c62375",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/fintech_transfers:1067/external_sandbox,flaky_shared_data",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-08T20:48:59.510116+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "94c96c9f-25d2-4841-8c21-4f025b1893fb",
+  "user_id": "5db2b51b-13fb-46c5-9470-59236e9d90ea",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/iot_smart_home:5783/env_drift,flaky_fixed_sleep",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-31T18:05:02.791708+00:00"
+}

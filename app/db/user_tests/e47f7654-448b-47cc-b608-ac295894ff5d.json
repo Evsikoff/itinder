@@ -1,0 +1,15 @@
+{
+  "id": "e47f7654-448b-47cc-b608-ac295894ff5d",
+  "user_id": "1f7ad86c-fc53-4399-8595-c1cc2132f082",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/data_analytics/slow_scraping,parser_abuse",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-12T14:07:11.731382+00:00"
+}

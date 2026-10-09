@@ -1,0 +1,21 @@
+{
+  "id": "14055ef1-bc41-4b18-8ae9-f68c59aa5f0d",
+  "user_id": "413719d0-2372-405f-b7ae-6d890501a0c2",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "created_at": "2026-09-03T12:24:09.853812+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 5,
+    "elements": [
+      {
+        "id": 16,
+        "title": "Frontend"
+      },
+      {
+        "id": 24,
+        "title": "Senior"
+      }
+    ]
+  }
+}

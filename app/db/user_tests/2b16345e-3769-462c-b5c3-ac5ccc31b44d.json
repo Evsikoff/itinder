@@ -1,0 +1,13 @@
+{
+  "id": "2b16345e-3769-462c-b5c3-ac5ccc31b44d",
+  "user_id": "42da36c0-8577-4fbd-9e25-9925fd19eba5",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/gov_portal:gov_application/toast_not_announced@toasts,early_validation@form,double_submit@form,popup_clipped@birth+steps",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "9aab72c2-ca3a-44d5-a470-1b81712babac",
+  "created_at": "2026-07-31T05:51:22.200846+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ad067ed9-2796-4367-9e92-e91e666cfa19",
+  "user_id": "a6bb15ea-ccfa-45cf-9a21-2051bf815c93",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/data_analytics/repeated_computation,bot_traffic",
+  "language": "Python",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-02T12:29:04.097617+00:00"
+}

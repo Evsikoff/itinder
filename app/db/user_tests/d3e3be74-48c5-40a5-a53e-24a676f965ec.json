@@ -1,0 +1,12 @@
+{
+  "id": "d3e3be74-48c5-40a5-a53e-24a676f965ec",
+  "user_id": "fe61314b-430c-43dd-901d-d86b54d28b51",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/iot_smart_home:3342/api_asserts_status_only,async_effect_unchecked",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-10T05:06:49.983510+00:00"
+}

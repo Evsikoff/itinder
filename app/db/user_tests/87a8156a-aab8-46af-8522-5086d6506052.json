@@ -1,0 +1,12 @@
+{
+  "id": "87a8156a-aab8-46af-8522-5086d6506052",
+  "user_id": "c8460472-15d4-4647-b5d3-cecc5bac106c",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/data_analytics/bot_traffic,oversized_payload",
+  "language": "Go",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-04T09:49:31.902673+00:00"
+}

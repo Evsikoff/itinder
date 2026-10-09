@@ -1,0 +1,15 @@
+{
+  "id": "cec7a78d-1de7-42f2-9235-8118402916b9",
+  "user_id": "10d38f3a-08b4-4515-9210-ab6cdc1c35b6",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/ai_nlp/slow_scraping,gateway_timeout_duplicates,pool_exhaustion,oversized_payload",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-08-14T22:50:36.601763+00:00"
+}

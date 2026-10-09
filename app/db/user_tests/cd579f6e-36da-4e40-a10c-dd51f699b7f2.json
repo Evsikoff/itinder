@@ -1,0 +1,15 @@
+{
+  "id": "cd579f6e-36da-4e40-a10c-dd51f699b7f2",
+  "user_id": "bfa0d5fc-ef4a-4dc4-a124-0d33d438acea",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/b2b_graphql/slow_scraping",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-30T17:57:02.599429+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "0d3e4486-7be8-44dc-adc0-200d0e9c7663",
+  "user_id": "1b18885c-9b94-4dc3-860a-77289577eb7f",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/fintech_transfers:3513/external_sandbox,shared_stage_collisions",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-10T00:37:03.837160+00:00"
+}

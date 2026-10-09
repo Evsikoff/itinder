@@ -1,0 +1,12 @@
+{
+  "id": "e5cf68e0-c91f-44db-9ba1-09a7db2e5d3b",
+  "user_id": "cdecbb6a-6328-4d89-ba3e-bbb60f3fb03a",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/iot_smart_home:9911/external_sandbox,brittle_locators",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-28T07:43:47.781452+00:00"
+}

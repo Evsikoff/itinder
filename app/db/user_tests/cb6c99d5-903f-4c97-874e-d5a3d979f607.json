@@ -1,0 +1,12 @@
+{
+  "id": "cb6c99d5-903f-4c97-874e-d5a3d979f607",
+  "user_id": "8d81353e-29ee-448c-98b0-1f4a9e84a617",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/iot_smart_home:9551/data_leftovers,flaky_time_dependency",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-10-03T19:58:24.321603+00:00"
+}

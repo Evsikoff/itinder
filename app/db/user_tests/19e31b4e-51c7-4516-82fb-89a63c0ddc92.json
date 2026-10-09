@@ -1,0 +1,15 @@
+{
+  "id": "19e31b4e-51c7-4516-82fb-89a63c0ddc92",
+  "user_id": "6eb8363d-0fdb-4846-a9f8-a790077585bc",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/hanging_dependency,expensive_queries",
+  "language": "Java",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-22T06:38:58.706307+00:00"
+}

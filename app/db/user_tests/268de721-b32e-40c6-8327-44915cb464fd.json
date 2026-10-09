@@ -1,0 +1,15 @@
+{
+  "id": "268de721-b32e-40c6-8327-44915cb464fd",
+  "user_id": "2150c669-71e5-4668-bdfe-4d8b750eb6a5",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/data_analytics/repeated_computation",
+  "language": "Java",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-09T04:21:24.930829+00:00"
+}

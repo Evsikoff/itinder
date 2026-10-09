@@ -1,0 +1,223 @@
+{
+  "user_id": "fe7e2ac5-bcf7-402f-81bb-c7a85ba303a3",
+  "fsp_id": "FSP-2400-6591",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-08-15T20:27:45.349352+00:00",
+  "seed": 2449146270,
+  "competitions": [
+    {
+      "competition_id": "kod_urala_2023",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "kafka",
+          "websocket",
+          "rest"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-15T20:27:45.349352+00:00"
+    },
+    {
+      "competition_id": "strezhen_2024",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "webhook"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-15T20:27:45.349352+00:00"
+    },
+    {
+      "competition_id": "karavan_2025",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 4,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "kafka",
+          "soap",
+          "file_exchange",
+          "webhook",
+          "rest"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-15T20:27:45.349352+00:00"
+    },
+    {
+      "competition_id": "sessiya_2025",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "javascript"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-15T20:27:45.349352+00:00"
+    },
+    {
+      "competition_id": "sessiya_2026",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 2,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-16T02:02:00.931033+00:00"
+    },
+    {
+      "competition_id": "karavan_2027",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "typescript"
+        ],
+        "integrations": [
+          "soap",
+          "rest",
+          "kafka",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-16T23:07:26.591543+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "polyarny_kod_2026",
+      "declined_at": "2026-08-17T11:35:42.691755+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "typescript",
+      "points": 13,
+      "competitions": [
+        "kod_urala_2023",
+        "strezhen_2024",
+        "karavan_2025",
+        "sessiya_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "languages",
+      "id": "javascript",
+      "points": 2,
+      "competitions": [
+        "sessiya_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 15,
+      "competitions": [
+        "kod_urala_2023",
+        "strezhen_2024",
+        "karavan_2025",
+        "sessiya_2025",
+        "sessiya_2026",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "kafka",
+      "points": 9,
+      "competitions": [
+        "kod_urala_2023",
+        "karavan_2025",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 7,
+      "competitions": [
+        "karavan_2025",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "soap",
+      "points": 7,
+      "competitions": [
+        "karavan_2025",
+        "karavan_2027"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "webhook",
+      "points": 6,
+      "competitions": [
+        "strezhen_2024",
+        "karavan_2025"
+      ],
+      "degree": 3
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 4,
+      "competitions": [
+        "sessiya_2025",
+        "sessiya_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "websocket",
+      "points": 2,
+      "competitions": [
+        "kod_urala_2023"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-08-17T11:35:42.691755+00:00"
+}

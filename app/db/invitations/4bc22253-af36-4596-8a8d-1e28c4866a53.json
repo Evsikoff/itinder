@@ -1,0 +1,151 @@
+{
+  "id": "4bc22253-af36-4596-8a8d-1e28c4866a53",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "01ee5090-7d02-4b2e-a530-6e406adbd952",
+  "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+  "vacancy_id": "a28e9fc1-8c86-4179-8e7d-16ec736ef473",
+  "vacancy": {
+    "id": "a28e9fc1-8c86-4179-8e7d-16ec736ef473",
+    "title": "Бэкенд-разработчик (Senior)",
+    "position": "backend_main",
+    "position_name": "Бэкенд-разработчик",
+    "role_id": "backend",
+    "specialization": "Backend",
+    "grade": "Senior",
+    "count": 1,
+    "task": "Серверная часть продукта: API, бизнес-логика, схема базы данных, интеграции с другими системами",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "market",
+        "reasons": [
+          "Основной язык серверной части"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "market",
+        "reasons": [
+          "Основная база данных",
+          "Данные с гибкой структурой"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "market",
+        "reasons": [
+          "Как интерфейс получает данные с сервера",
+          "Открытый API для чужих систем"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "market",
+        "reasons": [
+          "Очередь фоновых задач",
+          "Рассылка событий между частями системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "market",
+        "reasons": [
+          "Вход через внешний провайдер"
+        ]
+      }
+    ],
+    "assignments": [],
+    "salary": {
+      "from": 400000,
+      "to": 600000,
+      "currency": "RUB"
+    },
+    "notes": null,
+    "project_id": "dc13437d-41fe-4ad9-b9e6-d84375082688",
+    "company": {
+      "id": "91d54fe2-069b-4739-8fc6-afe2195fffb4",
+      "name": "Московский зоопарк"
+    },
+    "project": {
+      "name": "Система управления зоопарком",
+      "summary": "ERP-система зоопарка",
+      "domain": "internal",
+      "stage": "new",
+      "duration": "gt12",
+      "start_date": "2026-10-29",
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "free",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T17:42:27.701697+00:00"
+  },
+  "relevance": 35.0,
+  "source": "vacancy",
+  "flow": "plain",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T20:43:38.639845+00:00"
+    },
+    {
+      "status": "accepted",
+      "at": "2026-10-09T20:43:38.640852+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T20:43:38.639845+00:00",
+  "test_feedback": {
+    "version": 1,
+    "batch": "7cffbe87-ac5e-4f7a-8766-c3a9bb4c17fa"
+  },
+  "applicant_seen": {
+    "status": "accepted",
+    "at": "2026-10-09T20:43:38.640852+00:00",
+    "revision": 2
+  }
+}

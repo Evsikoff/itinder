@@ -1,0 +1,12 @@
+{
+  "id": "77e81cb3-4415-42b3-a7fa-73035a8c8893",
+  "user_id": "a389c196-4080-4b59-a92a-82becad8b3d9",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/data_analytics/expensive_queries,parser_abuse",
+  "language": "C#",
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-16T18:31:39.396444+00:00"
+}

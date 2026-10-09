@@ -1,0 +1,13 @@
+{
+  "id": "b66b0b7f-4b62-475f-b2f5-3e5cfd2a40c8",
+  "user_id": "2dfcdeaf-9101-4706-be6d-44a6ae1e66a7",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/marketplace:market_quick_view/scroll_chaining@modal,popup_shifted_by_transform@size+modal,hover_only@hint,toast_under_overlay@modal+toasts",
+  "language": null,
+  "llm": null,
+  "procedural_check": false,
+  "credited_from": "bd58668d-7229-4ee2-803b-e9484c22499d",
+  "created_at": "2026-09-29T07:57:06.259409+00:00"
+}

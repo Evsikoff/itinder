@@ -1,0 +1,12 @@
+{
+  "id": "62570d61-1558-4f0a-9eb8-edd83f2ac3b7",
+  "user_id": "3d3307af-6d23-46d0-829a-891e044656f2",
+  "specialization": "QA",
+  "grade": "Junior",
+  "passed": false,
+  "task_key": "QA/Junior/health_booking:9625/severity_priority_mixup",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-16T02:34:26.127070+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "a43a317e-31f1-40f3-9485-26abcb108a93",
+  "user_id": "36dc79a0-df97-4541-a372-64e037d85241",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/data_analytics/bot_traffic,heavy_egress,response_built_in_memory,hanging_dependency",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-09-28T15:20:00.891320+00:00"
+}

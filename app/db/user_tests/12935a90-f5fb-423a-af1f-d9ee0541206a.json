@@ -1,0 +1,15 @@
+{
+  "id": "12935a90-f5fb-423a-af1f-d9ee0541206a",
+  "user_id": "0705bbb9-c082-4865-8c5c-1fe07ed1f19d",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "passed": true,
+  "task_key": "Frontend/Senior/enterprise_crm:crm_deals/modal_stale_after_save@table+modal,select_not_accessible@owner,focus_not_restored@modal,backdrop_select_close@modal",
+  "language": null,
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-07-24T15:58:08.584678+00:00"
+}

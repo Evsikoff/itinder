@@ -1,0 +1,15 @@
+{
+  "id": "4505d986-0ff1-4f34-baa6-40186416d0dc",
+  "user_id": "1f7ad86c-fc53-4399-8595-c1cc2132f082",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/ai_nlp/slow_scraping",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-12T07:04:56.354599+00:00"
+}

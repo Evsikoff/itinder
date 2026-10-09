@@ -1,0 +1,15 @@
+{
+  "id": "83753766-5fb4-4516-9830-aec04d3e18d6",
+  "user_id": "f135bf20-d244-47e4-9ae3-99897e004ec4",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/oversized_payload,bulk_update_locks",
+  "language": "JavaScript",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-14T00:58:48.185929+00:00"
+}

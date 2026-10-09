@@ -1,0 +1,12 @@
+{
+  "id": "69fed067-a740-4703-a740-967cb014f976",
+  "user_id": "f2546eaa-ca96-441f-9a9f-727d6b7fd1d7",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "QA/Middle/fintech_transfers:914/async_effect_unchecked,flaky_fixed_sleep",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-09-28T23:51:42.008274+00:00"
+}

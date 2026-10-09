@@ -1,0 +1,15 @@
+{
+  "id": "7518212e-0db7-48c8-8dbd-d52896616802",
+  "user_id": "1bebaa6f-f710-4ebb-a554-71c54d2eea47",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/ai_nlp/slow_scraping",
+  "language": "TypeScript",
+  "llm": {
+    "llm": "DeepSeek",
+    "model": "deepseek-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-08-04T07:12:55.998707+00:00"
+}

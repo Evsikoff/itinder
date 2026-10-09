@@ -1,0 +1,15 @@
+{
+  "id": "55f4eb16-980d-4ea6-9eba-924ef8c82c9f",
+  "user_id": "cd652b74-de9c-4ee3-8388-cb8685474374",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Backend/Junior/ai_nlp/request_bursts",
+  "language": "Python",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-07-22T03:10:49.053665+00:00"
+}

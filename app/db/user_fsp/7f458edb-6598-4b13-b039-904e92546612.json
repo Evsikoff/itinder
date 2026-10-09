@@ -1,0 +1,99 @@
+{
+  "user_id": "7f458edb-6598-4b13-b039-904e92546612",
+  "fsp_id": "FSP-8374-1635",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "linked_at": "2026-08-25T21:17:52.408612+00:00",
+  "seed": 2678195265,
+  "competitions": [
+    {
+      "competition_id": "sessiya_2025",
+      "role_id": "frontend",
+      "result": "solution",
+      "points": 1,
+      "competencies": {
+        "languages": [
+          "javascript"
+        ],
+        "integrations": [
+          "rest",
+          "oidc"
+        ]
+      },
+      "source": "registry",
+      "added_at": "2026-08-25T21:17:52.408612+00:00"
+    },
+    {
+      "competition_id": "polyarny_kod_2026",
+      "role_id": "frontend",
+      "result": "prize",
+      "points": 3,
+      "competencies": {
+        "languages": [
+          "kotlin"
+        ],
+        "integrations": [
+          "rest",
+          "file_exchange"
+        ]
+      },
+      "source": "after_link",
+      "added_at": "2026-08-27T13:31:06.040698+00:00"
+    }
+  ],
+  "declined": [
+    {
+      "competition_id": "karavan_2027",
+      "declined_at": "2026-08-26T20:04:46.556411+00:00"
+    }
+  ],
+  "competencies": [
+    {
+      "kind": "languages",
+      "id": "kotlin",
+      "points": 3,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "languages",
+      "id": "javascript",
+      "points": 1,
+      "competitions": [
+        "sessiya_2025"
+      ],
+      "degree": 1
+    },
+    {
+      "kind": "integrations",
+      "id": "rest",
+      "points": 4,
+      "competitions": [
+        "sessiya_2025",
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "file_exchange",
+      "points": 3,
+      "competitions": [
+        "polyarny_kod_2026"
+      ],
+      "degree": 2
+    },
+    {
+      "kind": "integrations",
+      "id": "oidc",
+      "points": 1,
+      "competitions": [
+        "sessiya_2025"
+      ],
+      "degree": 1
+    }
+  ],
+  "updated_at": "2026-08-27T13:31:06.040698+00:00"
+}

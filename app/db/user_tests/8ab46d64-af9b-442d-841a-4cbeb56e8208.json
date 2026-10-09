@@ -1,0 +1,15 @@
+{
+  "id": "8ab46d64-af9b-442d-841a-4cbeb56e8208",
+  "user_id": "448006ce-8e4a-4184-b1cd-968f7de0fa07",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "Backend/Middle/b2b_graphql/expensive_queries,heavy_egress",
+  "language": "C#",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-09-22T11:50:32.176634+00:00"
+}

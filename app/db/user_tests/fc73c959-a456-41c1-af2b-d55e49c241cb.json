@@ -1,0 +1,15 @@
+{
+  "id": "fc73c959-a456-41c1-af2b-d55e49c241cb",
+  "user_id": "befe6e97-9476-4e74-80d5-7f151671b941",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "passed": false,
+  "task_key": "Backend/Senior/ai_nlp/repeated_computation,retry_storm,parser_abuse,hanging_dependency",
+  "language": "C++",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": false,
+  "created_at": "2026-07-31T09:12:11.586651+00:00"
+}

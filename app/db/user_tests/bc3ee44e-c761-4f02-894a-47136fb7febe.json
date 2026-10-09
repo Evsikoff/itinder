@@ -1,0 +1,15 @@
+{
+  "id": "bc3ee44e-c761-4f02-894a-47136fb7febe",
+  "user_id": "ec988681-2e32-48e7-a1eb-88dbac0051ea",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "passed": true,
+  "task_key": "Backend/Middle/b2b_graphql/pool_exhaustion,heavy_egress",
+  "language": "Go",
+  "llm": {
+    "llm": "Gemini",
+    "model": "gemini-3.8-flash"
+  },
+  "procedural_check": true,
+  "created_at": "2026-10-03T21:30:18.731434+00:00"
+}

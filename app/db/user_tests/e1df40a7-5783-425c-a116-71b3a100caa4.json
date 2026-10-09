@@ -1,0 +1,12 @@
+{
+  "id": "e1df40a7-5783-425c-a116-71b3a100caa4",
+  "user_id": "d6236401-18f1-4b43-b788-1d44dd321c2b",
+  "specialization": "QA",
+  "grade": "Middle",
+  "passed": false,
+  "task_key": "QA/Middle/fintech_transfers:1991/async_effect_unchecked,env_drift",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-07-30T18:48:30.817822+00:00"
+}

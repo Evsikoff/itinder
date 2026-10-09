@@ -1,0 +1,12 @@
+{
+  "id": "5c38bb77-c3be-435a-b943-01a858f4fa00",
+  "user_id": "23d4a26c-18da-4068-8989-05732f56c8d8",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "passed": true,
+  "task_key": "Frontend/Junior/enterprise_crm:form/data_loss_navigation@form",
+  "language": null,
+  "llm": null,
+  "procedural_check": true,
+  "created_at": "2026-08-20T08:31:52.751807+00:00"
+}

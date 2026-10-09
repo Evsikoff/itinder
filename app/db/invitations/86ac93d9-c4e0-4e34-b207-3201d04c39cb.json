@@ -1,0 +1,110 @@
+{
+  "id": "86ac93d9-c4e0-4e34-b207-3201d04c39cb",
+  "type": "От рекрутера кандидату",
+  "recruiter_id": "5d455226-698c-497c-b8e9-1eec768dbc82",
+  "applicant_id": "a0d9c78e-6d91-44de-8f71-38caeb71b922",
+  "project_id": "318ba3e5-41ac-4bb7-96f6-117dc4966ed0",
+  "vacancy_id": "d78c157b-8ce6-48d7-a161-30420bc2750f",
+  "vacancy": {
+    "id": "d78c157b-8ce6-48d7-a161-30420bc2750f",
+    "title": "Фронтенд-разработчик (веб) (Junior)",
+    "position": "frontend_web",
+    "position_name": "Фронтенд-разработчик (веб)",
+    "role_id": "frontend",
+    "specialization": "Frontend",
+    "grade": "Junior",
+    "count": 1,
+    "task": "Реализовать страницы каталога и корзины, подключить REST API и обработать загрузку и ошибки.",
+    "requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Стек тестового проекта для демонстрации поиска соискателей"
+        ]
+      }
+    ],
+    "assignments": [
+      "48484"
+    ],
+    "salary": {
+      "from": 80000,
+      "to": 120000,
+      "currency": "RUB"
+    },
+    "notes": "Тестовая вакансия. Данные и зарплатная вилка приведены для демонстрации.",
+    "project_id": "318ba3e5-41ac-4bb7-96f6-117dc4966ed0",
+    "company": {
+      "id": "5a5f7e99-42d9-473a-9461-cd87ba543360",
+      "name": "ITinder — тестовая компания"
+    },
+    "project": {
+      "name": "Тестовый проект: интернет-магазин",
+      "summary": "Веб-магазин: каталог товаров, корзина, оформление заказа и кабинет покупателя.",
+      "domain": "retail",
+      "stage": "active",
+      "duration": "3to6",
+      "start_date": null,
+      "work_format": "remote",
+      "city": null
+    },
+    "stack_origin": "fixed",
+    "open_questions": [],
+    "status": "ready",
+    "approved_at": "2026-10-09T18:51:29.502772+00:00"
+  },
+  "relevance": 47.0,
+  "source": "search",
+  "flow": "assignment",
+  "status_history": [
+    {
+      "status": "sent",
+      "at": "2026-10-09T18:51:47.570224+00:00"
+    },
+    {
+      "status": "task_sent_for_review",
+      "at": "2026-10-09T19:39:10.653381+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T18:51:47.570224+00:00",
+  "applicant_seen": {
+    "status": "task_sent_for_review",
+    "at": "2026-10-09T19:39:10.653381+00:00",
+    "revision": 2
+  },
+  "assignment_answers": [
+    "ffgfg"
+  ]
+}
