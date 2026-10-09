@@ -1,0 +1,727 @@
+/* Окно «Соискатели» (Applicants.tsx, TeamGraph.tsx, ApplicantViews.tsx): меню,
+   граф команды, списки кандидатов. Основа — GradeTasks.css и ProjectsVacancies.css.
+   В App.css у всех div display: flex, поэтому направление задаётся явно. */
+
+.applicants .ap-small,
+.applicants .ap-small * {
+    font-size: 14px !important;
+}
+
+/* --- Меню: четыре большие кнопки ------------------------------------------- */
+
+.ap-menu {
+    flex: 1;
+    min-height: 0;
+    padding: 6px 2px;
+}
+
+.applicants .site-button.ap-menu-button {
+    margin: 0 0 12px;
+    padding: 12px 16px;
+    align-items: center;
+    text-align: left;
+    flex-shrink: 0;
+    max-width: 760px;
+}
+
+.applicants .ap-menu-number {
+    width: 34px;
+    height: 34px;
+    margin-right: 14px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background: #0000a3;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.applicants .site-button:disabled .ap-menu-number {
+    background: #86898d;
+    color: #c3c6ca;
+    text-shadow: none;
+}
+
+.ap-menu-text {
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.applicants .site-button:disabled .ap-menu-text span {
+    color: #6d1010 !important;
+    text-shadow: none;
+}
+
+/* --- Выбор проекта и вакансии ------------------------------------------------ */
+
+.ap-pick {
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.ap-pick-row {
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.ap-pick-name {
+    flex: 3;
+    min-width: 0;
+}
+
+.ap-pick-company {
+    flex: 2.4;
+    min-width: 0;
+}
+
+.ap-pick-count {
+    flex: 1.6;
+    min-width: 0;
+    text-align: right;
+}
+
+.applicants .ap-pick-group {
+    padding: 8px 8px 2px;
+    font-weight: bold;
+    flex-shrink: 0;
+    border-bottom: 1px dotted #86898d;
+}
+
+/* --- Граф команды --------------------------------------------------------------- */
+
+/* Поле графа — «миллиметровка»: белый фон с серыми точками. */
+/* Содержимое — своей высоты (flex-start): иначе оно растянется по полю,
+   а высокий столбец вакансий вылезет вверх, куда не прокрутить. */
+.ap-graph {
+    flex: 1;
+    min-height: 0;
+    align-items: flex-start;
+    overflow: auto;
+    position: relative;
+    background-color: #fff;
+    background-image: radial-gradient(#c3c6ca 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+/* Ширина — по полю (чипы переносятся), уже 860px — прокрутка вбок. */
+.ap-graph-content {
+    position: relative;
+    flex-shrink: 0;
+    align-items: center;
+    width: 100%;
+    min-width: 860px;
+    min-height: 100%;
+    padding: 18px 18px 18px 14px;
+    box-sizing: border-box;
+}
+
+.ap-edges {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.ap-edge {
+    fill: none;
+    stroke-width: 2;
+}
+
+.ap-edge-project {
+    stroke: #1b1c21;
+}
+
+.ap-edge-offer {
+    stroke: #0000a3;
+    stroke-dasharray: 6 5;
+}
+
+.ap-edge-invited {
+    stroke: #0000a3;
+    stroke-width: 3;
+}
+
+.ap-edge-accepted {
+    stroke: #008000;
+    stroke-width: 3;
+}
+
+.ap-graph-project-column {
+    flex-shrink: 0;
+    margin-right: 64px;
+    align-self: center;
+}
+
+.ap-graph-groups {
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.ap-graph-group {
+    align-items: center;
+    flex-shrink: 0;
+    padding: 8px 0;
+}
+
+.ap-graph-group + .ap-graph-group {
+    border-top: 1px dashed #c3c6ca;
+}
+
+.ap-graph-candidates {
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.ap-graph-candidates .ap-card + .ap-card {
+    margin-top: 10px;
+}
+
+/* Узел — выпуклая плашка Windows 95. */
+.ap-node {
+    position: relative;
+    background: #c3c6ca;
+    border: 1px solid #000;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    box-shadow: inset -1px -1px #86898d, 3px 3px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.ap-node-project {
+    width: 190px;
+    flex-direction: column;
+    padding: 2px;
+}
+
+.ap-node-title {
+    height: 22px;
+    align-items: center;
+    padding-left: 6px;
+    background: #0000a3;
+}
+
+.applicants .ap-node-title span {
+    color: #fff;
+    font-weight: bold;
+}
+
+.ap-node-body {
+    padding: 8px;
+    flex-direction: column;
+}
+
+.ap-node-vacancy {
+    width: 170px;
+    flex-shrink: 0;
+    margin-right: 56px;
+    padding: 10px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.applicants .ap-vacancy-specialization {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.applicants .ap-vacancy-grade {
+    margin-top: 4px;
+    padding: 0 8px;
+    background: #0000a3;
+    color: #fff;
+    font-size: 14px;
+}
+
+.ap-card {
+    align-items: flex-start;
+    padding: 8px 10px;
+    min-height: 74px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #000;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ap-card-invited {
+    background: #eef0ff;
+}
+
+.ap-card-empty {
+    align-items: center;
+    justify-content: center;
+}
+
+.ap-card-main {
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.ap-card-head {
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.ap-card-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ap-card-side {
+    flex-shrink: 0;
+    align-self: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.ap-graph-empty {
+    padding: 30px;
+}
+
+/* Подписи линий под графом. */
+.ap-legend {
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 2px;
+}
+
+.ap-legend-line {
+    display: inline-block;
+    width: 28px;
+    height: 0;
+    margin: 0 6px 0 12px;
+    border-top: 2px dashed #0000a3;
+    vertical-align: middle;
+}
+
+.ap-legend-line:first-child {
+    margin-left: 0;
+}
+
+.ap-legend-line.ap-edge-invited {
+    border-top: 3px solid #0000a3;
+}
+
+.ap-legend-line.ap-edge-accepted {
+    border-top: 3px solid #008000;
+}
+
+/* --- Части кандидата --------------------------------------------------------- */
+
+/* span не подпадает под общее правило div { display: flex } из App.css. */
+.ap-relevance,
+.ap-chip,
+.ap-have,
+.ap-fsp-none {
+    display: inline-flex;
+}
+
+.ap-requirement-have,
+.ap-row-name,
+.ap-invite-status,
+.ap-menu-number,
+.ap-menu-text {
+    display: flex;
+}
+
+.ap-relevance-bar {
+    display: inline-block;
+}
+
+.ap-relevance-fill {
+    display: block;
+}
+
+.ap-fsp {
+    flex-shrink: 0;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.applicants .ap-fsp-none {
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px dashed #86898d;
+    color: #86898d;
+    font-weight: bold;
+}
+
+.ap-relevance {
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.applicants .ap-relevance-number {
+    min-width: 40px;
+    margin-right: 6px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.ap-relevance-bar {
+    width: 54px;
+    height: 12px;
+    padding: 2px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: var(--border-field);
+}
+
+.ap-relevance-wide .ap-relevance-bar {
+    width: 110px;
+}
+
+.ap-relevance-fill {
+    height: 100%;
+    background: repeating-linear-gradient(90deg, #0000a3 0 5px, transparent 5px 6px);
+}
+
+.applicants .ap-meter {
+    margin: 0 0 0 6px;
+}
+
+.applicants .ap-meter .fsp-meter-cell {
+    width: 8px;
+    height: 8px;
+}
+
+.ap-chips {
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    margin-top: 4px;
+}
+
+.applicants .ap-chip {
+    align-items: center;
+    padding: 0 5px;
+    background: #fff;
+    border: 1px solid #86898d;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Длинные названия («Тест-дизайн: классы эквивалентности…») — в одну строку с многоточием;
+   целиком — в подсказке. */
+.applicants .ap-chip-name {
+    display: inline-block;
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.applicants .ap-chip-plus {
+    border-style: dashed;
+}
+
+.applicants .ap-chip-close {
+    background: #fff4b0;
+}
+
+.applicants .ap-status {
+    margin-right: 0;
+}
+
+.ap-status-sent {
+    background: #dfe3ff;
+}
+
+.ap-status-read {
+    background: #c6d0ff;
+}
+
+.ap-status-review {
+    background: #fff4b0;
+}
+
+.ap-status-accepted {
+    background: #c8f0c8;
+}
+
+.ap-status-rejected {
+    background: #ffc8c8;
+}
+
+.ap-invite-status {
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.applicants .site-button.ap-invite {
+    min-width: 0;
+    margin-left: 8px;
+    padding: 4px 10px;
+    white-space: nowrap;
+}
+
+/* --- Вакансия: напоминание и подробный список -------------------------------- */
+
+.ap-reminder {
+    margin-top: 12px;
+}
+
+.ap-reminder-head {
+    flex-wrap: wrap;
+}
+
+.ap-reminder-facts {
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-top: 4px;
+}
+
+.applicants .ap-badge-spec {
+    background: #0000a3;
+    color: #fff !important;
+    margin-right: 0;
+}
+
+.applicants .ap-summary {
+    margin: 8px 2px 6px;
+    flex-shrink: 0;
+}
+
+.ap-list {
+    padding: 2px 4px 2px 2px;
+}
+
+.ap-list-stale {
+    opacity: 0.55;
+}
+
+.applicants .ap-list-group {
+    align-items: center;
+    flex-shrink: 0;
+    margin: 12px 0 6px;
+    padding: 4px 8px;
+    background: #86898d;
+    color: #fff;
+    font-weight: bold;
+}
+
+.applicants .site-button.ap-more {
+    align-self: center;
+    flex-shrink: 0;
+    margin: 6px 0 10px;
+}
+
+.applicants .site-button.ap-more-inline {
+    min-width: 0;
+    margin-left: 12px;
+    padding: 1px 10px;
+    font-weight: normal;
+}
+
+.ap-detail {
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    background: #fff;
+    border: 1px solid #86898d;
+}
+
+.ap-detail-head {
+    align-items: center;
+}
+
+.applicants .ap-rank {
+    width: 34px;
+    flex-shrink: 0;
+    color: #44474b;
+    text-align: right;
+    margin-right: 4px;
+}
+
+.ap-detail-head .ap-fsp {
+    margin: 0 10px 0 14px;
+}
+
+.ap-detail-name {
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.applicants .ap-detail-why {
+    margin: 6px 0 2px 38px;
+}
+
+.ap-requirements {
+    margin: 4px 0 0 38px;
+    flex-direction: column;
+}
+
+.ap-requirement {
+    align-items: center;
+    flex-shrink: 0;
+    padding: 3px 4px;
+    border-top: 1px dotted #c3c6ca;
+}
+
+.applicants .ap-requirement-sign {
+    width: 22px;
+    flex-shrink: 0;
+    font-weight: bold;
+    color: #86898d;
+}
+
+.applicants .ap-requirement-sign.ap-ok {
+    color: #008000;
+}
+
+.applicants .ap-requirement-sign.ap-bad {
+    color: #c00000;
+}
+
+.ap-requirement-name {
+    flex: 1;
+    min-width: 0;
+    display: block;
+}
+
+.ap-requirement-have {
+    width: 300px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+}
+
+.ap-have {
+    align-items: center;
+}
+
+.ap-have .ap-meter {
+    margin-right: 6px;
+}
+
+.applicants .ap-requirement-score {
+    width: 44px;
+    flex-shrink: 0;
+    text-align: right;
+    color: #44474b;
+}
+
+/* --- Общий поиск: фильтры и строки ------------------------------------------- */
+
+.ap-test-projects,
+.ap-no-vacancies {
+    flex-shrink: 0;
+    padding: 10px 12px;
+    gap: 6px;
+    border: 1px solid #86898d;
+    background: #ffffdf;
+}
+
+.ap-test-projects {
+    max-width: 760px;
+    box-sizing: border-box;
+}
+
+.applicants .ap-test-projects .site-button {
+    align-self: flex-start;
+    margin: 2px 0 0;
+    max-width: 100%;
+    white-space: normal;
+}
+
+.ap-filters {
+    margin-top: 12px;
+}
+
+.ap-filter-row {
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+.ap-filter-row label {
+    align-items: center;
+}
+
+.ap-filter-row .gt-select {
+    margin-left: 8px;
+    min-width: 110px;
+}
+
+.applicants input.ap-filter-text {
+    flex: 1;
+    min-width: 180px;
+}
+
+.ap-row {
+    flex-direction: column;
+    flex-shrink: 0;
+    border-bottom: 1px solid #c3c6ca;
+    background: #fff;
+}
+
+.ap-row-head {
+    align-items: center;
+    padding: 5px 6px 5px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.ap-row-head:hover {
+    background: #eef0ff;
+}
+
+.ap-row-head:focus-visible {
+    outline: 1px dotted #000;
+    outline-offset: -2px;
+}
+
+.ap-row-open .ap-row-head {
+    background: #dfe3ff;
+}
+
+.ap-row-head .ap-fsp {
+    margin: 0 10px 0 12px;
+}
+
+.ap-row-name {
+    width: 250px;
+    flex-shrink: 0;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ap-row-name b {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ap-row-chips {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.ap-row-chips .ap-chips {
+    margin-top: 0;
+    flex-wrap: nowrap;
+}
+
+.ap-row-invited {
+    flex-shrink: 0;
+}
+
+.ap-row-body {
+    flex-direction: column;
+    padding: 4px 10px 10px 50px;
+    background: #f6f6f8;
+}

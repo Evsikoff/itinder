@@ -1,0 +1,635 @@
+/* Окно «Задачи на грейд» (GradeTasks.tsx): элементы Windows 95 —
+   вкладки, список с флажками, рамка группы, индикатор выполнения, окно сообщения.
+   В App.css у всех div display: flex, поэтому направление задаётся явно. */
+
+.grade-tasks {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    padding: 10px 12px 12px;
+    background: #c3c6ca;
+    box-sizing: border-box;
+}
+
+.grade-tasks,
+.grade-tasks p,
+.grade-tasks span,
+.grade-tasks label,
+.grade-tasks li,
+.grade-tasks button,
+.grade-tasks select,
+.grade-tasks legend {
+    font-family: MSSerif, Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+.grade-tasks p {
+    line-height: 1.35;
+}
+
+.grade-tasks b {
+    font-family: MSSerif, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.gt-column {
+    flex-direction: column;
+    min-height: 0;
+}
+
+.gt-grow {
+    flex: 1;
+    min-height: 0;
+}
+
+.gt-muted {
+    color: #44474b !important;
+}
+
+/* Шапка: значок, название теста и как отвечать. */
+.gt-header {
+    align-items: center;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.gt-header img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.gt-title {
+    font-weight: bold;
+}
+
+/* Вкладки: выбранная выше остальных и сливается с панелью. */
+.gt-tabs {
+    padding-left: 4px;
+    align-items: flex-end;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.gt-tab {
+    margin-top: 3px;
+    margin-right: -1px;
+    padding: 3px 14px 4px;
+    background: #c3c6ca;
+    border: 1px solid #000;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset -1px 0 #86898d;
+    cursor: pointer;
+}
+
+.gt-tab-active {
+    margin-top: 0;
+    padding: 4px 16px 7px;
+    margin-bottom: -2px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ответ на вкладке уже есть. */
+.gt-tab-filled::after {
+    content: '\00a0\2022';
+}
+
+.gt-tab:focus-visible {
+    outline: 1px dotted #000;
+    outline-offset: -4px;
+}
+
+.gt-panel {
+    flex: 1;
+    min-height: 0;
+    flex-direction: column;
+    padding: 12px;
+    border: 1px solid #000;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    box-shadow: inset -1px -1px #86898d;
+}
+
+/* Белое углублённое поле — как у полей ввода. */
+.gt-field {
+    background: #fff;
+    box-shadow: var(--border-field);
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.gt-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+/* Рамка группы с подписью. */
+.gt-group {
+    border: 1px solid #86898d;
+    box-shadow: 1px 1px #fff, inset 1px 1px #fff;
+    padding: 14px 10px 10px;
+    margin-top: 10px;
+    position: relative;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.gt-group-label {
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    padding: 0 4px;
+    background: #c3c6ca;
+}
+
+.gt-symptom {
+    padding: 8px 6px;
+    border-bottom: 1px dotted #86898d;
+    flex-shrink: 0;
+}
+
+.gt-symptom:last-child {
+    border-bottom: none;
+}
+
+.gt-symptom-number {
+    width: 28px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.gt-mono {
+    font-family: 'Courier New', Consolas, monospace !important;
+}
+
+/* Документы к наблюдению (QA): ссылки под текстом наблюдения. */
+.gt-attachments {
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 10px;
+    margin-top: 4px;
+}
+
+.gt-attachments span {
+    font-size: 14px !important;
+}
+
+.grade-tasks button.gt-link {
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: #0000a3;
+    text-decoration: underline;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.grade-tasks button.gt-link:focus-visible {
+    outline: 1px dotted #000;
+}
+
+/* Вкладка «Документы»: список слева, открытый документ справа. */
+.gt-docs {
+    min-height: 0;
+}
+
+.gt-doc-list {
+    width: 30%;
+    min-width: 150px;
+    max-width: 250px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.gt-doc-item {
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 4px 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+.gt-doc-item:hover {
+    background: #e9e9e9;
+}
+
+.gt-doc-item:focus-visible {
+    outline: 1px dotted #000;
+    outline-offset: -2px;
+}
+
+/* Выделение в списке Windows 95 — тёмно-синее. */
+.gt-doc-item-active,
+.gt-doc-item-active:hover {
+    background: #0000a3;
+}
+
+.gt-doc-item-active span {
+    color: #fff !important;
+}
+
+.gt-doc-kind {
+    font-size: 13px !important;
+    color: #44474b !important;
+}
+
+.gt-doc-title {
+    font-size: 15px !important;
+    overflow-wrap: anywhere;
+}
+
+.gt-doc-heading {
+    margin-bottom: 6px;
+    flex-shrink: 0;
+}
+
+/* Сам документ: текст можно выделять и копировать. */
+.grade-tasks pre.gt-doc {
+    flex: 1;
+    min-height: 0;
+    margin: 0;
+    padding: 6px 8px;
+    overflow: auto;
+    color: #000;
+    user-select: text;
+    -webkit-user-select: text;
+    outline: none;
+}
+
+.grade-tasks pre.gt-doc-code {
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.35;
+    white-space: pre;
+    tab-size: 4;
+}
+
+.grade-tasks pre.gt-doc-text {
+    font-family: MSSerif, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Список решений с флажками: под названием — описание, щелчок по строке
+   ставит или снимает флажок. */
+.gt-list {
+    flex: 1;
+    min-height: 120px;
+    margin-top: 8px;
+}
+
+.gt-item {
+    align-items: flex-start;
+    padding: 6px 6px 6px 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    outline: none;
+}
+
+.gt-item:hover {
+    background: #e9e9e9;
+}
+
+.gt-item:focus-visible {
+    outline: 1px dotted #000;
+    outline-offset: -2px;
+}
+
+.gt-item-checked {
+    background: #dfe3ff;
+}
+
+.gt-item-checked:hover {
+    background: #d0d6ff;
+}
+
+.gt-check {
+    width: 13px;
+    height: 13px;
+    margin: 3px 10px 0 2px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: var(--border-field);
+}
+
+.gt-item-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.gt-item-text p:last-child {
+    font-size: 14px;
+    color: #44474b;
+}
+
+/* Описание решений и код. */
+.grade-tasks textarea.gt-textarea {
+    flex: 1;
+    min-height: 120px;
+    height: auto;
+    font-family: MSSerif, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.35;
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+.grade-tasks textarea.gt-code {
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 15px;
+    line-height: 1.3;
+    white-space: pre;
+    overflow: auto;
+    tab-size: 4;
+}
+
+.gt-select {
+    border: none;
+    background: #fff;
+    box-shadow: var(--border-field);
+    padding: 3px 6px;
+    min-width: 200px;
+}
+
+.gt-row {
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.gt-counter {
+    margin-left: auto;
+    padding-left: 12px;
+    white-space: nowrap;
+}
+
+/* Нижняя строка: состояние слева, кнопки справа. */
+.gt-footer {
+    align-items: center;
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+.gt-status {
+    flex: 1;
+    min-width: 0;
+}
+
+.grade-tasks .site-button {
+    min-width: 110px;
+    margin-left: 8px;
+    padding: 5px 14px;
+}
+
+/* Кнопка по умолчанию в Windows 95 — с чёрной рамкой. */
+.grade-tasks .gt-default {
+    outline: 1px solid #000;
+}
+
+/* Индикатор выполнения: синие блоки в углублённом поле. */
+.gt-progress {
+    width: 100%;
+    height: 22px;
+    padding: 3px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: var(--border-field);
+}
+
+.gt-progress-fill {
+    height: 100%;
+    background: repeating-linear-gradient(90deg, #0000a3 0 10px, transparent 10px 12px);
+    transition: width 0.4s linear;
+}
+
+/* Значки окна сообщения и итога — нарисованы, как в Windows 95. */
+.gt-sign {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.gt-sign span {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 20px !important;
+}
+
+.gt-sign-ok {
+    background: #008000;
+}
+
+.gt-sign-error {
+    background: #ff0000;
+}
+
+.gt-sign-info {
+    background: #0000a3;
+}
+
+.gt-sign-question {
+    background: #fff;
+}
+
+.gt-sign-question span {
+    color: #0000a3 !important;
+}
+
+/* Итог по проблемам. */
+.gt-result-row {
+    padding: 8px 6px;
+    border-bottom: 1px dotted #86898d;
+    flex-shrink: 0;
+}
+
+.gt-result-row:last-child {
+    border-bottom: none;
+}
+
+.gt-badge {
+    padding: 0 6px;
+    margin-right: 8px;
+    border: 1px solid #000;
+    white-space: nowrap;
+    font-size: 14px !important;
+}
+
+.gt-badge-good {
+    background: #c8f0c8;
+}
+
+.gt-badge-half {
+    background: #fff4b0;
+}
+
+.gt-badge-bad {
+    background: #ffc8c8;
+}
+
+/* Окно сообщения поверх окна теста. */
+.gt-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+.gt-dialog {
+    width: 440px;
+    max-width: calc(100% - 40px);
+    flex-direction: column;
+    padding: 2px;
+    background: #c3c6ca;
+    border: 1px solid #000;
+    border-top-color: #c3c6ca;
+    border-left-color: #c3c6ca;
+    box-shadow: inset 1px 1px #fff, inset -1px -1px #86898d, 4px 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.gt-dialog-title {
+    height: 22px;
+    align-items: center;
+    padding-left: 6px;
+    background: #0000a3;
+}
+
+.gt-dialog-title span {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.gt-dialog-body {
+    padding: 18px 16px 8px;
+    align-items: flex-start;
+}
+
+.gt-dialog-buttons {
+    justify-content: center;
+    padding: 8px 0 12px;
+}
+
+.gt-center {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+/* Список фактов: особенности продукта, прошлые тесты. */
+.grade-tasks ul.gt-facts {
+    margin: 4px 0 0;
+    padding-left: 22px;
+}
+
+.grade-tasks ul.gt-facts li {
+    line-height: 1.35;
+}
+
+/* Выбор теста на стартовом экране: подпись — поле — подпись — поле. */
+.gt-choice {
+    flex-wrap: wrap;
+    margin-top: 10px;
+    row-gap: 8px;
+}
+
+.gt-choice label {
+    margin-right: 8px;
+}
+
+.gt-choice select + label {
+    margin-left: 18px;
+}
+
+.grade-tasks .gt-select-short {
+    min-width: 120px;
+}
+
+/* Недоступная кнопка Windows 95 — серая надпись с белой тенью. */
+.grade-tasks .site-button:disabled {
+    color: #86898d;
+    text-shadow: 1px 1px #fff;
+}
+
+/* Презентация (Presentation.tsx): слайд на чёрном поле, как на экране
+   проектора, под ним полоса речи докладчика и его текст. */
+.gt-presentation {
+    flex-direction: column;
+    outline: none;
+}
+
+.gt-slide {
+    flex: 1;
+    min-height: 120px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background: #000;
+    overflow: hidden;
+}
+
+.gt-slide-active {
+    cursor: pointer;
+}
+
+.gt-slide img,
+.gt-slide video {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: contain;
+    display: block;
+}
+
+.grade-tasks .gt-slide-missing {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.gt-speech-progress {
+    height: 12px;
+    margin-top: 6px;
+    padding: 2px;
+    flex-shrink: 0;
+}
+
+.gt-speaker {
+    margin-top: 16px;
+}
+
+.gt-speaker .gt-scroll {
+    max-height: 112px;
+}
+
+/* Кнопка тестовой версии под итогом: засчитать непройденный тест. */
+.grade-tasks .site-button.gt-credit {
+    margin-left: 0;
+    white-space: normal;
+    text-align: left;
+}

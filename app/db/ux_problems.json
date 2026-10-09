@@ -1,0 +1,1161 @@
+{
+  "tags": [
+    {"id": "touch", "name": "Сенсорные экраны: наведения курсора нет"},
+    {"id": "ios_safari", "name": "Много пользователей iPhone с Safari"},
+    {"id": "slow_network", "name": "Медленная и нестабильная мобильная сеть"},
+    {"id": "keyboard_heavy", "name": "Опытные пользователи работают с клавиатуры"},
+    {"id": "ctrl_f_habit", "name": "Пользователи привыкли искать по странице через Ctrl+F"},
+    {"id": "long_sessions", "name": "Вкладку не закрывают весь рабочий день"},
+    {"id": "seo", "name": "Трафик идёт из поисковиков, скорость загрузки влияет на выдачу"},
+    {"id": "screen_reader", "name": "Сайт обязан быть доступным: часть пользователей — со скринридерами"},
+    {"id": "old_browsers", "name": "Заметная доля старых браузеров на рабочих компьютерах"},
+    {"id": "realtime", "name": "Данные на экране обновляются в реальном времени"}
+  ],
+  "contexts": [
+    {
+      "id": "mobile_banking",
+      "name": "Мобильное веб-приложение банка (PWA)",
+      "description": "Клиенты переводят деньги и смотрят историю операций с телефона, часто в дороге.",
+      "tags": ["touch", "ios_safari", "slow_network"],
+      "rows": 150
+    },
+    {
+      "id": "enterprise_crm",
+      "name": "B2B CRM для отдела продаж (десктоп)",
+      "description": "Менеджеры весь день работают с большими таблицами клиентов и сделок.",
+      "tags": ["keyboard_heavy", "ctrl_f_habit", "long_sessions"],
+      "rows": 20000
+    },
+    {
+      "id": "marketplace",
+      "name": "Маркетплейс: каталог товаров",
+      "description": "Покупатели приходят из поисковиков, большинство — с телефонов.",
+      "tags": ["touch", "seo", "slow_network"],
+      "rows": 1200
+    },
+    {
+      "id": "gov_portal",
+      "name": "Портал государственных услуг",
+      "description": "Заявления заполняют люди любого возраста с любых устройств, в том числе со старых рабочих компьютеров.",
+      "tags": ["screen_reader", "keyboard_heavy", "old_browsers"],
+      "rows": 400
+    },
+    {
+      "id": "ops_dashboard",
+      "name": "Панель дежурного инженера",
+      "description": "Инциденты и события приходят в реальном времени, панель открыта на большом мониторе всю смену.",
+      "tags": ["realtime", "long_sessions", "keyboard_heavy"],
+      "rows": 3000
+    }
+  ],
+  "traits": [
+    {"id": "popup", "name": "Открывает всплывающий слой, привязанный к полю или кнопке"},
+    {"id": "text_input", "name": "Поле ввода текста: на телефоне открывает экранную клавиатуру"},
+    {"id": "filter_source", "name": "Задаёт фильтр для списка"},
+    {"id": "esc_dismiss", "name": "Закрывается по Esc"},
+    {"id": "clips", "name": "Обрезает содержимое по своим границам и прокручивает его (overflow не visible)"},
+    {"id": "stacking", "name": "Содержит закреплённые части или элементы с z-index и transform — контексты наложения"},
+    {"id": "row_list", "name": "Показывает много однотипных записей"},
+    {"id": "selectable", "name": "Записи отмечаются флажками для массовых действий"},
+    {"id": "paged", "name": "Делит записи на страницы с номерами"},
+    {"id": "loads_pages", "name": "Подгружает записи с сервера порциями"},
+    {"id": "overlay", "name": "Перекрывает страницу и затемняет фон"},
+    {"id": "traps_focus", "name": "Удерживает фокус внутри себя"},
+    {"id": "transform_anim", "name": "Появляется с анимацией через transform"},
+    {"id": "notifies", "name": "Показывает всплывающие уведомления"}
+  ],
+  "relations": [
+    {"id": "inside", "name": "A находится внутри B, в том числе через промежуточные элементы"},
+    {"id": "filters", "name": "A фильтрует записи B"},
+    {"id": "opens", "name": "A открывает B"},
+    {"id": "notifies", "name": "A сообщает о результате через B"}
+  ],
+  "components": [
+    {
+      "id": "live_search",
+      "name": "Живой поиск (автокомплит)",
+      "description": "Поле ввода: пока пользователь печатает, под ним появляется список подсказок с сервера.",
+      "traits": ["popup", "text_input", "filter_source", "esc_dismiss"],
+      "forms": {"name": "живой поиск", "gen": "живого поиска", "acc": "живой поиск", "prep": "живом поиске", "layer": "список подсказок", "change": "вводит запрос в поиск"}
+    },
+    {
+      "id": "select",
+      "name": "Выпадающий список выбора",
+      "description": "Кастомный селект: по щелчку открывается список вариантов, из него выбирают один.",
+      "traits": ["popup", "esc_dismiss"],
+      "forms": {"name": "выпадающий список", "gen": "выпадающего списка", "acc": "выпадающий список", "prep": "выпадающем списке", "layer": "список вариантов"}
+    },
+    {
+      "id": "date_picker",
+      "name": "Поле даты с календарём",
+      "description": "Поле, по щелчку на котором открывается календарь для выбора дня.",
+      "traits": ["popup", "esc_dismiss"],
+      "forms": {"name": "поле даты", "gen": "поля даты", "acc": "поле даты", "prep": "поле даты", "layer": "календарь"}
+    },
+    {
+      "id": "tooltip",
+      "name": "Подсказка (тултип)",
+      "description": "Значок «?» рядом с полем или текстом; над ним появляется пояснение.",
+      "traits": ["popup"],
+      "forms": {"name": "подсказка", "gen": "подсказки", "acc": "подсказку", "prep": "подсказке", "layer": "подсказка"}
+    },
+    {
+      "id": "row_menu",
+      "name": "Меню действий строки",
+      "description": "Кнопка «⋯» в строке открывает меню: изменить, дублировать, удалить.",
+      "traits": ["popup", "esc_dismiss"],
+      "forms": {"name": "меню действий", "gen": "меню действий", "acc": "меню действий", "prep": "меню действий", "layer": "меню действий"}
+    },
+    {
+      "id": "data_table",
+      "name": "Таблица данных",
+      "description": "Таблица с сортировкой, страницами и флажками для массовых действий; шапка закреплена при прокрутке, прокрутка — внутри таблицы.",
+      "traits": ["clips", "stacking", "row_list", "selectable", "paged", "loads_pages"],
+      "forms": {"name": "таблица", "gen": "таблицы", "acc": "таблицу", "prep": "таблице", "neighbors": "закреплённой шапкой и соседними строками"}
+    },
+    {
+      "id": "infinite_list",
+      "name": "Лента с бесконечной прокруткой",
+      "description": "Список записей: следующая порция догружается, когда пользователь докручивает до конца.",
+      "traits": ["row_list", "loads_pages"],
+      "forms": {"name": "лента", "gen": "ленты", "acc": "ленту", "prep": "ленте"}
+    },
+    {
+      "id": "image_grid",
+      "name": "Сетка карточек товаров",
+      "description": "Карточки с фото, ценой и кнопкой «В корзину»; при наведении карточка приподнимается; новые карточки догружаются при прокрутке.",
+      "traits": ["row_list", "loads_pages", "stacking"],
+      "forms": {"name": "сетка товаров", "gen": "сетки товаров", "acc": "сетку товаров", "prep": "сетке товаров", "neighbors": "соседними карточками"}
+    },
+    {
+      "id": "filter_panel",
+      "name": "Панель фильтров",
+      "description": "Флажки и диапазоны (тип, период, цена); каждый выбор сразу применяется к списку.",
+      "traits": ["filter_source"],
+      "forms": {"name": "панель фильтров", "gen": "панели фильтров", "acc": "панель фильтров", "prep": "панели фильтров", "change": "меняет фильтр в панели фильтров"}
+    },
+    {
+      "id": "modal_window",
+      "name": "Модальное окно",
+      "description": "Окно поверх страницы с затемнением фона; появляется с анимацией, закрывается крестиком, по Esc и щелчком по затемнению.",
+      "traits": ["overlay", "traps_focus", "clips", "transform_anim", "esc_dismiss"],
+      "forms": {"name": "модальное окно", "gen": "модального окна", "acc": "модальное окно", "prep": "модальном окне"}
+    },
+    {
+      "id": "drawer",
+      "name": "Боковая панель",
+      "description": "Панель выезжает справа поверх страницы с затемнением; закрывается крестиком, по Esc и щелчком по затемнению.",
+      "traits": ["overlay", "traps_focus", "clips", "transform_anim", "esc_dismiss"],
+      "forms": {"name": "боковая панель", "gen": "боковой панели", "acc": "боковую панель", "prep": "боковой панели"}
+    },
+    {
+      "id": "form",
+      "name": "Форма с проверкой полей",
+      "description": "Поля ввода с проверкой формата и кнопка отправки на сервер.",
+      "traits": [],
+      "forms": {"name": "форма", "gen": "формы", "acc": "форму", "prep": "форме"}
+    },
+    {
+      "id": "toast",
+      "name": "Уведомления (тосты)",
+      "description": "Короткие сообщения в углу экрана, исчезают сами через несколько секунд.",
+      "traits": ["notifies"],
+      "forms": {"name": "уведомления", "gen": "уведомлений", "acc": "уведомления", "prep": "уведомлениях"}
+    },
+    {
+      "id": "tabs",
+      "name": "Вкладки",
+      "description": "Переключатель разделов; содержимое вкладки — в панели фиксированной высоты со своей прокруткой.",
+      "traits": ["clips"],
+      "forms": {"name": "панель вкладок", "gen": "панели вкладок", "acc": "панель вкладок", "prep": "панели вкладок"}
+    }
+  ],
+  "screens": [
+    {
+      "id": "crm_deals",
+      "name": "Реестр сделок",
+      "contexts": ["enterprise_crm"],
+      "description": "Таблица сделок на всю ширину экрана, шапка закреплена. В шапке таблицы — живой поиск по клиенту, он фильтрует строки. В каждой строке — меню действий «⋯». Щелчок по строке открывает модальное окно с формой сделки, в форме — выпадающий список выбора ответственного. Об итогах сохранения сообщают уведомления в правом нижнем углу.",
+      "nodes": {"table": "data_table", "search": "live_search", "menu": "row_menu", "modal": "modal_window", "form": "form", "owner": "select", "toasts": "toast"},
+      "edges": [
+        {"a": "search", "rel": "inside", "b": "table"},
+        {"a": "search", "rel": "filters", "b": "table"},
+        {"a": "menu", "rel": "inside", "b": "table"},
+        {"a": "table", "rel": "opens", "b": "modal"},
+        {"a": "form", "rel": "inside", "b": "modal"},
+        {"a": "owner", "rel": "inside", "b": "form"},
+        {"a": "modal", "rel": "notifies", "b": "toasts"}
+      ]
+    },
+    {
+      "id": "crm_client_card",
+      "name": "Карточка клиента",
+      "contexts": ["enterprise_crm"],
+      "description": "Поверх списка клиентов справа выезжает боковая панель с карточкой клиента. В ней форма, среди полей — дата следующего звонка с календарём. Кнопка «Удалить клиента» открывает из панели модальное окно подтверждения.",
+      "nodes": {"panel": "drawer", "form": "form", "date": "date_picker", "confirm": "modal_window"},
+      "edges": [
+        {"a": "form", "rel": "inside", "b": "panel"},
+        {"a": "date", "rel": "inside", "b": "form"},
+        {"a": "panel", "rel": "opens", "b": "confirm"}
+      ]
+    },
+    {
+      "id": "crm_pick_items",
+      "name": "Выбор записей в окне",
+      "contexts": ["enterprise_crm", "ops_dashboard"],
+      "description": "Модальное окно выбора записей: таблица с флажками, над ней — живой поиск по названию, он фильтрует таблицу. Кнопка «Добавить отмеченные» переносит записи туда, откуда открыто окно.",
+      "nodes": {"modal": "modal_window", "search": "live_search", "table": "data_table"},
+      "edges": [
+        {"a": "search", "rel": "inside", "b": "modal"},
+        {"a": "table", "rel": "inside", "b": "modal"},
+        {"a": "search", "rel": "filters", "b": "table"}
+      ]
+    },
+    {
+      "id": "bank_transfer",
+      "name": "Перевод по номеру телефона",
+      "contexts": ["mobile_banking"],
+      "description": "Шторка (модальное окно) выезжает снизу поверх главного экрана. В ней поле получателя с живым поиском по контактам и форма с суммой и кнопкой «Перевести». Об итоге перевода сообщает уведомление.",
+      "nodes": {"sheet": "modal_window", "recipient": "live_search", "form": "form", "toasts": "toast"},
+      "edges": [
+        {"a": "recipient", "rel": "inside", "b": "sheet"},
+        {"a": "form", "rel": "inside", "b": "sheet"},
+        {"a": "sheet", "rel": "notifies", "b": "toasts"}
+      ]
+    },
+    {
+      "id": "bank_history",
+      "name": "История операций",
+      "contexts": ["mobile_banking"],
+      "description": "Лента операций догружается при прокрутке. Над ней — панель фильтров по типу операции и периоду, фильтр применяется сразу. У комиссии в операции — значок «?» с подсказкой.",
+      "nodes": {"filters": "filter_panel", "feed": "infinite_list", "hint": "tooltip"},
+      "edges": [
+        {"a": "filters", "rel": "filters", "b": "feed"},
+        {"a": "hint", "rel": "inside", "b": "feed"}
+      ]
+    },
+    {
+      "id": "bank_templates",
+      "name": "Шаблоны платежей",
+      "contexts": ["mobile_banking"],
+      "description": "Лента шаблонов платежей догружается при прокрутке, над ней — живой поиск по названию шаблона. Нажатие на шаблон открывает шторку (модальное окно) с формой платежа.",
+      "nodes": {"search": "live_search", "feed": "infinite_list", "sheet": "modal_window"},
+      "edges": [
+        {"a": "search", "rel": "filters", "b": "feed"},
+        {"a": "feed", "rel": "opens", "b": "sheet"}
+      ]
+    },
+    {
+      "id": "market_catalog",
+      "name": "Каталог товаров",
+      "contexts": ["marketplace"],
+      "description": "Сетка карточек товаров догружается при прокрутке. Сверху — строка поиска с подсказками, слева — панель фильтров; и то и другое сразу меняет выдачу. На карточке — значок с подсказкой «Доставка завтра». После нажатия «В корзину» появляется уведомление.",
+      "nodes": {"search": "live_search", "filters": "filter_panel", "grid": "image_grid", "hint": "tooltip", "toasts": "toast"},
+      "edges": [
+        {"a": "search", "rel": "filters", "b": "grid"},
+        {"a": "filters", "rel": "filters", "b": "grid"},
+        {"a": "hint", "rel": "inside", "b": "grid"},
+        {"a": "grid", "rel": "notifies", "b": "toasts"}
+      ]
+    },
+    {
+      "id": "market_quick_view",
+      "name": "Быстрый просмотр товара",
+      "contexts": ["marketplace"],
+      "description": "Модальное окно поверх каталога появляется с анимацией: фото, выбор размера в выпадающем списке, значок «?» с подсказкой о доставке и кнопка «В корзину». После добавления в корзину — уведомление.",
+      "nodes": {"modal": "modal_window", "size": "select", "hint": "tooltip", "toasts": "toast"},
+      "edges": [
+        {"a": "size", "rel": "inside", "b": "modal"},
+        {"a": "hint", "rel": "inside", "b": "modal"},
+        {"a": "modal", "rel": "notifies", "b": "toasts"}
+      ]
+    },
+    {
+      "id": "gov_application",
+      "name": "Заявление на услугу",
+      "contexts": ["gov_portal"],
+      "description": "Многошаговая форма на вкладках «Заявитель», «Документы», «Отделение»; содержимое вкладки прокручивается внутри панели фиксированной высоты. В форме — дата рождения с календарём, выпадающий список выбора отделения и значки «?» с подсказками у сложных полей. О результате отправки сообщает уведомление.",
+      "nodes": {"steps": "tabs", "form": "form", "birth": "date_picker", "office": "select", "hint": "tooltip", "toasts": "toast"},
+      "edges": [
+        {"a": "form", "rel": "inside", "b": "steps"},
+        {"a": "birth", "rel": "inside", "b": "form"},
+        {"a": "office", "rel": "inside", "b": "form"},
+        {"a": "hint", "rel": "inside", "b": "form"},
+        {"a": "form", "rel": "notifies", "b": "toasts"}
+      ]
+    },
+    {
+      "id": "gov_office_search",
+      "name": "Выбор отделения",
+      "contexts": ["gov_portal"],
+      "description": "Модальное окно выбора отделения появляется с анимацией. В нём живой поиск по адресу и значок «?» с подсказкой о часах работы.",
+      "nodes": {"modal": "modal_window", "search": "live_search", "hint": "tooltip"},
+      "edges": [
+        {"a": "search", "rel": "inside", "b": "modal"},
+        {"a": "hint", "rel": "inside", "b": "modal"}
+      ]
+    },
+    {
+      "id": "ops_incidents",
+      "name": "Лента инцидентов",
+      "contexts": ["ops_dashboard"],
+      "description": "Таблица инцидентов на весь монитор. Над таблицей — живой поиск по сервису. В строке — меню действий «⋯». Щелчок по строке открывает модальное окно с карточкой инцидента и формой комментария. О результатах действий сообщают уведомления.",
+      "nodes": {"table": "data_table", "search": "live_search", "menu": "row_menu", "modal": "modal_window", "form": "form", "toasts": "toast"},
+      "edges": [
+        {"a": "search", "rel": "filters", "b": "table"},
+        {"a": "menu", "rel": "inside", "b": "table"},
+        {"a": "table", "rel": "opens", "b": "modal"},
+        {"a": "form", "rel": "inside", "b": "modal"},
+        {"a": "modal", "rel": "notifies", "b": "toasts"}
+      ]
+    },
+    {
+      "id": "ops_event_log",
+      "name": "Журнал событий",
+      "contexts": ["ops_dashboard", "enterprise_crm"],
+      "description": "Таблица событий с панелью фильтров слева: уровень, сервис, период. Щелчок по строке открывает боковую панель с подробностями и полем для правки.",
+      "nodes": {"filters": "filter_panel", "table": "data_table", "details": "drawer"},
+      "edges": [
+        {"a": "filters", "rel": "filters", "b": "table"},
+        {"a": "table", "rel": "opens", "b": "details"}
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "id": "debounce_input",
+      "name": "Debounce ввода",
+      "description": "Отправлять запрос только после паузы в наборе или выборе, например 300 мс.",
+      "side_effects": [{"problem": "debounce_stale_enter", "when": {"tags_any": ["keyboard_heavy"]}}]
+    },
+    {"id": "min_query_length", "name": "Минимальная длина запроса", "description": "Не отправлять поиск, пока не введено хотя бы 2–3 символа."},
+    {"id": "response_cache", "name": "Кэш ответов на клиенте", "description": "Запоминать ответы по строке запроса или набору фильтров и не запрашивать их повторно."},
+    {"id": "apply_filters_button", "name": "Кнопка «Показать» для фильтров", "description": "Применять фильтры по нажатию кнопки, а не на каждый отмеченный флажок."},
+    {
+      "id": "abort_previous",
+      "name": "Отмена предыдущего запроса",
+      "description": "При новом запросе отменять незавершённый прежний через AbortController (в RxJS — switchMap).",
+      "side_effects": [{"problem": "abort_error_toast", "when": {"screen_trait": "notifies"}}]
+    },
+    {"id": "request_sequence", "name": "Проверка номера запроса", "description": "Нумеровать запросы и отбрасывать ответ, если после него уже отправлен более новый."},
+    {"id": "ignore_abort_error", "name": "Отдельная обработка отмены", "description": "Распознавать AbortError и не показывать отменённый запрос как ошибку."},
+    {"id": "flush_on_submit", "name": "Немедленный запрос по Enter", "description": "По Enter и по выбору пункта выполнять отложенный запрос сразу (flush), не дожидаясь паузы."},
+    {"id": "status_states", "name": "Состояния загрузки, пустого результата и ошибки", "description": "Показывать отдельно: идёт загрузка, ничего не найдено, запрос не удался — с кнопкой повтора."},
+    {"id": "cache_invalidation", "name": "Инвалидация кэша запросов после сохранения", "description": "После успешного сохранения пометить устаревшими запросы с этими данными (React Query, SWR, RTK Query) — они перезапросятся сами."},
+    {"id": "callback_refetch", "name": "Колбэк после сохранения", "description": "Передать в окно функцию onSaved, которая перезапрашивает данные списка."},
+    {"id": "optimistic_update", "name": "Оптимистичное обновление", "description": "Сразу показать новое значение в списке и откатить его, если сервер ответит ошибкой."},
+    {
+      "id": "global_store",
+      "name": "Глобальный стор",
+      "description": "Вынести данные в Redux, Zustand или Pinia: окна меняют их там, списки читают оттуда же.",
+      "side_effects": [{"problem": "store_rerenders_table", "when": {"screen_trait": "row_list", "rows_min": 300}}]
+    },
+    {"id": "granular_selectors", "name": "Точечные подписки на стор", "description": "Компонент подписывается только на свой кусок данных: селекторы по id со сравнением результата."},
+    {"id": "frequent_polling", "name": "Частый опрос сервера", "description": "Перезапрашивать данные каждые 2–3 секунды.", "bad_in": ["slow_network"]},
+    {
+      "id": "full_reload",
+      "name": "Перезагрузка страницы после сохранения",
+      "description": "Вызывать location.reload() после успешного ответа сервера.",
+      "side_effects": [{"problem": "reload_loses_state"}]
+    },
+    {"id": "disable_while_pending", "name": "Блокировка кнопки на время запроса", "description": "Делать кнопку отправки неактивной от первого нажатия до ответа сервера."},
+    {"id": "idempotency_key", "name": "Ключ идемпотентности", "description": "Генерировать на клиенте ключ операции и отправлять его с запросом: сервер не выполняет одну операцию дважды."},
+    {"id": "cursor_pagination", "name": "Пагинация по курсору", "description": "Запрашивать следующую порцию «после записи с id X», а не «со смещения N»."},
+    {"id": "dedupe_by_id", "name": "Удаление дублей при склейке", "description": "При догрузке выбрасывать записи, id которых уже есть в списке."},
+    {"id": "reset_page_on_filter", "name": "Сброс страницы при смене фильтра", "description": "Любое изменение фильтра или поискового запроса возвращает на первую страницу."},
+    {"id": "clear_selection_on_filter", "name": "Сброс отметок при смене фильтра", "description": "Снимать отметки со строк, которые фильтр скрыл."},
+    {"id": "hidden_selection_counter", "name": "Счётчик скрытых отметок", "description": "Показывать «Отмечено 12, из них 9 скрыты фильтром» и называть это число в подтверждении массового действия."},
+    {"id": "confirm_bulk_action", "name": "Подтверждение массового действия", "description": "Перед массовым действием спрашивать «Применить к отмеченным записям?».", "distracts": ["filter_hides_selection"]},
+    {"id": "url_state", "name": "Состояние фильтров в URL", "description": "Записывать фильтры, сортировку и страницу в query-параметры адреса и читать их при загрузке."},
+    {"id": "reference_by_id", "name": "Ссылка на запись по id", "description": "Открывать окно по id записи и сохранять по id, а не по номеру строки на экране."},
+    {"id": "pause_updates_while_editing", "name": "Пауза обновлений во время правки", "description": "Пока запись открыта на редактирование, не перестраивать список и предупреждать, если запись изменилась на сервере."},
+    {"id": "server_sort", "name": "Сортировка на сервере", "description": "Передавать поле и направление сортировки в запрос: сервер сортирует все записи и отдаёт нужную страницу."},
+    {"id": "load_more_button", "name": "Кнопка «Показать ещё»", "description": "Догружать следующую порцию по нажатию кнопки (или автоматически только первые 2–3 раза)."},
+    {"id": "scroll_state_restore", "name": "Восстановление списка при возврате", "description": "При уходе сохранять загруженные порции и позицию прокрутки (кэш запросов, history.scrollRestoration = manual) и восстанавливать их по «Назад»."},
+    {"id": "cleanup_subscriptions", "name": "Отписка при размонтировании", "description": "Снимать слушатели, таймеры, интервалы и подписки в cleanup-функции эффекта (в Vue — onUnmounted)."},
+    {"id": "memo_rows", "name": "Мемоизация строк", "description": "Обернуть строку в React.memo (в Vue — компонент с узкими пропсами), передавать ей стабильные колбэки и неизменяемые данные: строка перерисовывается, только когда меняются её данные."},
+    {
+      "id": "virtualization",
+      "name": "Виртуализация списка",
+      "description": "Рендерить только видимые строки и небольшой запас вокруг, остальное заменять пустыми отступами нужной высоты.",
+      "side_effects": [
+        {"problem": "ctrl_f_broken", "when": {"tags_any": ["ctrl_f_habit"]}},
+        {"problem": "virtual_focus_lost", "when": {"tags_any": ["keyboard_heavy", "screen_reader"]}},
+        {"problem": "virtual_popup_orphaned", "when": {"contains_trait": "popup"}}
+      ]
+    },
+    {
+      "id": "server_pagination",
+      "name": "Серверная пагинация",
+      "description": "Загружать и рендерить по 50–100 строк, следующие — по переходу на другую страницу.",
+      "side_effects": [{"problem": "ctrl_f_broken", "when": {"tags_any": ["ctrl_f_habit"]}}]
+    },
+    {"id": "content_visibility", "name": "content-visibility: auto", "description": "Браузер пропускает отрисовку строк за пределами экрана, но они остаются в DOM и находятся поиском по странице.", "bad_in": ["old_browsers"]},
+    {"id": "own_search", "name": "Собственный поиск по всем данным", "description": "Поле поиска по всему набору данных, а не только по отрисованным строкам, с прокруткой к найденной строке; Ctrl+F перехватывается и открывает его."},
+    {"id": "virtual_focus_keep", "name": "Удержание строки с фокусом", "description": "В виртуальном списке не размонтировать строку с фокусом при прокрутке, у таблицы проставлять aria-rowcount и aria-rowindex."},
+    {"id": "close_layers_on_scroll", "name": "Закрытие слоёв строки при прокрутке", "description": "При прокрутке списка закрывать меню и выпадающие списки, открытые из строк, а незавершённый ввод в ячейке сохранять в состоянии таблицы."},
+    {"id": "key_by_id", "name": "Ключи элементов по id записи", "description": "key={row.id} вместо номера элемента в массиве."},
+    {"id": "table_layout_fixed", "name": "Фиксированная ширина колонок", "description": "table-layout: fixed и заданная ширина колонок: она не пересчитывается по содержимому."},
+    {"id": "skeletons", "name": "Скелетоны размера контента", "description": "На время загрузки показывать заглушки той же высоты и ширины, что и будущий контент."},
+    {"id": "image_dimensions", "name": "Размеры картинок в разметке", "description": "Указывать у картинок width и height или aspect-ratio: место под них резервируется до загрузки."},
+    {"id": "lazy_images", "name": "Ленивая загрузка картинок", "description": "Атрибут loading=lazy у всех картинок списка.", "distracts": ["images_cls", "lazy_lcp"]},
+    {"id": "eager_hero_images", "name": "Приоритетная загрузка первых картинок", "description": "Картинки первого экрана — без ленивой загрузки, с fetchpriority=high и прямо в разметке, а не после выполнения JS."},
+    {"id": "responsive_images", "name": "Картинки нужного размера и формата", "description": "srcset и sizes, форматы AVIF и WebP: браузер качает картинку под размер экрана."},
+    {
+      "id": "portal_to_body",
+      "name": "Портал в <body>",
+      "description": "Рендерить слой в конце <body> (createPortal, Teleport) и позиционировать по getBoundingClientRect() поля.",
+      "side_effects": [
+        {"problem": "portal_vs_focus_trap", "when": {"ancestor_trait": "traps_focus"}},
+        {"problem": "portal_detached", "when": {"ancestor_trait": "clips"}}
+      ]
+    },
+    {
+      "id": "popover_top_layer",
+      "name": "Popover API",
+      "description": "Атрибут popover: браузер выводит слой в top layer поверх всей страницы, независимо от overflow и z-index предков; позицию задаёт скрипт.",
+      "bad_in": ["old_browsers"],
+      "side_effects": [{"problem": "portal_detached", "when": {"ancestor_trait": "clips"}}]
+    },
+    {"id": "floating_reposition", "name": "Слежение за положением поля", "description": "Пересчитывать позицию слоя при прокрутке любого предка и изменении размеров окна (Floating UI, autoUpdate)."},
+    {
+      "id": "remove_overflow",
+      "name": "Снять overflow с контейнера",
+      "description": "Убрать overflow у контейнера, а прокрутку отдать странице.",
+      "side_effects": [{"problem": "container_lost_scroll"}]
+    },
+    {"id": "open_upwards", "name": "Открытие вверх у нижнего края", "description": "Если места под полем не хватает, открывать слой над полем."},
+    {"id": "raise_z_index", "name": "Поднять z-index слоя", "description": "Задать всплывающему слою z-index: 9999.", "distracts": ["popup_under_stacking", "popup_clipped", "toast_under_overlay"]},
+    {"id": "remove_stacking_context", "name": "Убрать контекст наложения у предка", "description": "Снять с предка свойства, которые замыкают z-index потомков внутри него: transform, opacity меньше 1, filter, z-index у позиционированного блока."},
+    {"id": "layer_scale", "name": "Единая шкала слоёв", "description": "Общие значения z-index для всего приложения: уведомления выше модальных окон, модальные окна выше выпадающих списков."},
+    {"id": "toast_top_layer", "name": "Уведомления в top layer", "description": "Показывать уведомления через popover: они поверх модальных окон, в том числе открытых через showModal().", "bad_in": ["old_browsers"]},
+    {"id": "no_transform_after_anim", "name": "Сброс transform после анимации", "description": "По окончании анимации появления снимать transform или анимировать opacity и top вместо transform."},
+    {"id": "dvh_units", "name": "Единицы dvh и svh", "description": "Высота окна через 100dvh или 100svh вместо 100vh, которая на мобильных включает область под панелью браузера."},
+    {"id": "inner_scroll_modal", "name": "Прокрутка внутри окна", "description": "Ограничить высоту окна и прокручивать его тело, а кнопки держать в закреплённом подвале."},
+    {"id": "visual_viewport", "name": "Учёт экранной клавиатуры", "description": "Следить за window.visualViewport и ограничивать слой видимой над клавиатурой частью экрана."},
+    {"id": "single_scroll_area", "name": "Одна прокручиваемая область", "description": "Таблица растягивается на высоту окна (flex: 1; min-height: 0), прокрутка — только у неё, у самого окна прокрутки нет."},
+    {"id": "overscroll_contain", "name": "overscroll-behavior: contain", "description": "Прокрутка внутри контейнера не передаётся странице, когда доходит до края."},
+    {
+      "id": "body_scroll_lock",
+      "name": "Блокировка прокрутки страницы",
+      "description": "overflow: hidden у <html>, пока открыто окно.",
+      "side_effects": [
+        {"problem": "scrollbar_shift", "when": {"tags_none": ["touch"]}},
+        {"problem": "nested_lock_release", "when": {"screen_min": {"overlay": 2}}}
+      ]
+    },
+    {"id": "scrollbar_gutter", "name": "Резерв места под полосу прокрутки", "description": "scrollbar-gutter: stable или компенсирующий padding-right: ширина страницы не меняется, когда полоса прокрутки исчезает."},
+    {"id": "refcount_scroll_lock", "name": "Счётчик блокировок прокрутки", "description": "Каждое открытое окно увеличивает счётчик, закрытие уменьшает; прокрутка возвращается, только когда закрыто последнее окно."},
+    {"id": "focus_trap", "name": "Ловушка фокуса", "description": "Зациклить Tab и Shift+Tab на элементах внутри окна."},
+    {
+      "id": "inert_background",
+      "name": "Атрибут inert для фона",
+      "description": "Всё вне окна помечать атрибутом inert: туда не попасть ни фокусом, ни щелчком, ни скринридером.",
+      "side_effects": [{"problem": "portal_outside_modal_layer", "with": "portal_to_body", "when": {"contains_trait": "popup"}}]
+    },
+    {
+      "id": "native_dialog",
+      "name": "Нативный <dialog> и showModal()",
+      "description": "Браузер сам делает фон инертным, закрывает окно по Esc, возвращает фокус и выводит окно в top layer.",
+      "bad_in": ["old_browsers"],
+      "side_effects": [
+        {"problem": "portal_outside_modal_layer", "with": "portal_to_body", "when": {"contains_trait": "popup"}},
+        {"problem": "toast_hidden_by_top_layer", "when": {"screen_trait": "notifies"}}
+      ]
+    },
+    {"id": "restore_focus", "name": "Возврат фокуса на кнопку открытия", "description": "При открытии запоминать document.activeElement, при закрытии возвращать на него фокус."},
+    {"id": "popup_in_modal_root", "name": "Портал в корень окна", "description": "Выводить слой не в <body>, а в корневой контейнер самого окна — за пределами его прокручиваемой части."},
+    {"id": "trap_allowlist", "name": "Внешние слои — часть окна", "description": "Передать ловушке фокуса и обработчику «щелчок снаружи» контейнеры слоёв, открытых из окна: они считаются его частью."},
+    {"id": "layered_dismiss", "name": "Стек закрываемых слоёв", "description": "Esc и щелчок снаружи закрывают только верхний открытый слой; обработанное событие дальше не передаётся."},
+    {"id": "confirm_dirty_close", "name": "Подтверждение закрытия с несохранёнными данными", "description": "Если в окне есть изменения, при закрытии спрашивать «Закрыть без сохранения?»."},
+    {"id": "backdrop_press_check", "name": "Закрытие по затемнению, только если нажатие началось на нём", "description": "Запоминать, где был mousedown, и закрывать окно, только если и нажатие, и отпускание пришлись на затемнение."},
+    {"id": "mousedown_prevent", "name": "preventDefault на mousedown в списке", "description": "Нажатие на пункт не забирает фокус у поля, поэтому blur не закрывает список раньше щелчка."},
+    {"id": "related_target_check", "name": "Проверка relatedTarget при blur", "description": "Не закрывать список, если фокус переходит внутрь самого списка."},
+    {"id": "blur_close_delay", "name": "Задержка закрытия по blur", "description": "Закрывать список по blur через 200 мс, чтобы щелчок успел сработать."},
+    {"id": "combobox_aria", "name": "ARIA-паттерн combobox", "description": "Роли combobox и listbox, aria-expanded и aria-activedescendant; стрелки двигают выбор по списку, Enter выбирает."},
+    {"id": "native_select", "name": "Нативный <select>", "description": "Заменить кастомный список нативным элементом <select>: клавиатуру и доступность обеспечивает браузер."},
+    {"id": "aria_live_region", "name": "Живая область aria-live", "description": "Выводить уведомления в контейнер с role=status, который есть на странице заранее: скринридер зачитывает новый текст."},
+    {"id": "longer_toasts", "name": "Показывать уведомление дольше", "description": "Увеличить время показа уведомления до 10 секунд."},
+    {"id": "toast_grouping", "name": "Группировка и очередь уведомлений", "description": "Однотипные уведомления объединять («Удалено 20 записей»), одновременно показывать не больше трёх, остальные — в очереди."},
+    {"id": "tooltip_focus_tap", "name": "Открытие по нажатию и по фокусу", "description": "Подсказку и действия открывать по нажатию и при фокусе с клавиатуры, а не только при наведении курсора; подсказку связывать с полем через aria-describedby."},
+    {"id": "hover_delay", "name": "Задержка перед показом по наведению", "description": "Показывать подсказку после 300 мс наведения, чтобы она не мигала.", "distracts": ["hover_only"]},
+    {"id": "validate_on_blur", "name": "Проверка поля после ухода с него", "description": "Показывать ошибку после blur или попытки отправки; когда пользователь исправляет поле, снимать ошибку сразу."},
+    {"id": "draft_autosave", "name": "Автосохранение черновика", "description": "Сохранять введённое в sessionStorage или на сервер и восстанавливать при возврате."},
+    {"id": "leave_warning", "name": "Предупреждение при уходе со страницы", "description": "Событие beforeunload и блокировка перехода в роутере, если в форме есть несохранённые изменения.", "bad_in": ["ios_safari"]},
+    {"id": "plain_date_string", "name": "Календарная дата строкой YYYY-MM-DD", "description": "Дату без времени хранить и передавать строкой (или Temporal.PlainDate), а не объектом Date с полуночью в поясе браузера."},
+    {"id": "utc_iso", "name": "Дата через toISOString()", "description": "Перед отправкой переводить выбранную дату в UTC вызовом toISOString().", "distracts": ["date_off_by_one"]},
+    {"id": "date_library", "name": "Библиотека дат", "description": "Подключить date-fns или dayjs и форматировать даты через неё.", "distracts": ["date_off_by_one"]},
+    {"id": "lift_tab_state", "name": "Состояние вкладки выше вкладок", "description": "Поля, фильтры, прокрутку и отметки вкладки хранить в общем состоянии или в URL, чтобы они переживали размонтирование."},
+    {"id": "keep_tabs_mounted", "name": "Не размонтировать неактивные вкладки", "description": "Скрывать неактивные вкладки атрибутом hidden, а не удалять их из дерева."}
+  ],
+  "problems": [
+    {
+      "id": "request_spam",
+      "scope": "component",
+      "category": "network",
+      "name": "Запрос на каждое нажатие клавиши: лишняя нагрузка на API и на рендер",
+      "symptoms": {
+        "live_search": "На один набранный запрос «Петров» в логах API приходится шесть запросов подряд с интервалом около 100 мс: «П», «Пе», «Пет»… Пока пользователь печатает, список подсказок перерисовывается на каждую букву и мигает."
+      },
+      "fixes": ["debounce_input"],
+      "mitigates": ["min_query_length", "response_cache"],
+      "confusable_with": ["stale_response"]
+    },
+    {
+      "id": "filter_request_spam",
+      "scope": "component",
+      "category": "network",
+      "name": "Запрос и перерисовка списка на каждый отмеченный фильтр",
+      "symptoms": {
+        "filter_panel": "Пользователь отмечает подряд пять флажков — список перезагружается пять раз, мигает и прыгает, а в логах API пять запросов за две секунды."
+      },
+      "fixes": ["debounce_input", "apply_filters_button"],
+      "mitigates": ["response_cache"],
+      "confusable_with": ["stale_response"]
+    },
+    {
+      "id": "stale_response",
+      "scope": "component",
+      "category": "network",
+      "name": "Ответы на старые запросы приходят позже новых (гонка ответов)",
+      "symptoms": {
+        "live_search": "Пользователь быстро набирает «Иванов», на мгновение видит подходящие подсказки, а через полсекунды список сменяется подсказками по «Ива». Воспроизводится не каждый раз, чаще на медленной сети.",
+        "filter_panel": "Пользователь быстро отмечает «Пополнения», а затем «Списания» — в списке остаются только пополнения, хотя отмечены оба флажка. Через раз всё верно."
+      },
+      "fixes": ["abort_previous", "request_sequence"],
+      "mitigates": ["debounce_input"],
+      "confusable_with": ["request_spam", "filter_request_spam", "filter_page_race"]
+    },
+    {
+      "id": "blur_before_click",
+      "scope": "component",
+      "category": "focus",
+      "name": "Список закрывается по blur раньше, чем срабатывает щелчок по пункту",
+      "symptoms": {
+        "live_search": "Щелчок мышью по подсказке ничего не выбирает: список просто исчезает, в поле остаётся набранный текст. Стрелками и Enter выбрать можно.",
+        "select": "Щелчок по варианту в выпадающем списке закрывает его, но значение не меняется. С клавиатуры выбор работает."
+      },
+      "fixes": ["mousedown_prevent", "related_target_check"],
+      "mitigates": ["blur_close_delay"],
+      "confusable_with": []
+    },
+    {
+      "id": "combobox_not_accessible",
+      "scope": "component",
+      "category": "a11y",
+      "name": "Подсказки автокомплита недоступны скринридеру и клавиатуре",
+      "when": {"tags_any": ["screen_reader", "keyboard_heavy"]},
+      "symptoms": {
+        "live_search": "Пользователь скринридера слышит только «поле редактирования»: что появились подсказки, сколько их и какая выделена, не объявляется. Стрелки вверх и вниз двигают курсор в тексте, а не по списку."
+      },
+      "fixes": ["combobox_aria"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "select_not_accessible",
+      "scope": "component",
+      "category": "a11y",
+      "name": "Кастомный выпадающий список недоступен с клавиатуры и для скринридера",
+      "when": {"tags_any": ["screen_reader", "keyboard_heavy"]},
+      "symptoms": {
+        "select": "Выпадающий список не открывается с клавиатуры: Tab проскакивает его, Enter и пробел ничего не делают. Скринридер не называет ни поле, ни выбранное значение."
+      },
+      "fixes": ["combobox_aria", "native_select"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "no_status_states",
+      "scope": "component",
+      "category": "network",
+      "name": "Нет состояний загрузки, пустого результата и ошибки",
+      "symptoms": {
+        "live_search": "Пользователи пишут: «ввожу фамилию — список пустой, непонятно, ищет он ещё или ничего нет». По записям сессий при ошибке сервера список выглядит так же — просто пустой.",
+        "infinite_list": "Долистав до конца, пользователь видит, что лента просто остановилась: непонятно, записей больше нет, они ещё грузятся или пропала сеть. Многие обновляют страницу и листают заново."
+      },
+      "fixes": ["status_states"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "table_rerender_all",
+      "scope": "component",
+      "category": "rendering",
+      "name": "Изменение одной строки перерисовывает все строки таблицы",
+      "when": {"rows_min": 300},
+      "symptoms": {
+        "data_table": "В таблице {rows} строк. Щелчок по флажку в одной строке отзывается с задержкой в полсекунды. Профилировщик React показывает один долгий коммит, в котором заново отрисованы компоненты всех строк."
+      },
+      "fixes": ["memo_rows"],
+      "mitigates": ["virtualization", "server_pagination"],
+      "confusable_with": ["dom_too_large"]
+    },
+    {
+      "id": "dom_too_large",
+      "scope": "component",
+      "category": "rendering",
+      "name": "Таблица рендерит все строки сразу: слишком много DOM-узлов",
+      "when": {"rows_min": 5000},
+      "symptoms": {
+        "data_table": "Раздел с таблицей на {rows} строк открывается 6–8 секунд, прокрутка идёт рывками, вкладка занимает больше 1,5 ГБ памяти. В DevTools на странице больше миллиона DOM-узлов."
+      },
+      "fixes": ["virtualization", "server_pagination"],
+      "mitigates": ["content_visibility", "memo_rows"],
+      "confusable_with": ["table_rerender_all"]
+    },
+    {
+      "id": "index_keys",
+      "scope": "component",
+      "category": "rendering",
+      "name": "Ключи элементов по индексу массива: состояние уезжает на соседнюю запись",
+      "symptoms": {
+        "data_table": "Пользователь отметил флажком строку «ООО Ромашка» и удалил строку над ней — флажок теперь стоит у соседней строки, а у «Ромашки» его нет. Раскрытые строки и незаконченный ввод в ячейках «переезжают» так же.",
+        "infinite_list": "Пользователь начал писать комментарий к записи, тут сверху в ленту добавилась новая — и введённый текст оказался под соседней записью."
+      },
+      "fixes": ["key_by_id"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "column_jump",
+      "scope": "component",
+      "category": "layout",
+      "name": "Ширина колонок пересчитывается по содержимому",
+      "symptoms": {
+        "data_table": "Когда приходят данные и при переходе между страницами колонки таблицы меняют ширину: заголовки прыгают, кнопка в последней колонке уезжает из-под курсора."
+      },
+      "fixes": ["table_layout_fixed"],
+      "mitigates": ["skeletons"],
+      "confusable_with": []
+    },
+    {
+      "id": "client_sort_paged",
+      "scope": "component",
+      "category": "state",
+      "name": "Сортируется только загруженная страница, а не все записи",
+      "symptoms": {
+        "data_table": "Пользователь сортирует таблицу по сумме по убыванию — первой стоит запись на 900 тыс., хотя он точно знает о записи на 12 млн. На второй странице порядок снова начинается с крупных сумм."
+      },
+      "fixes": ["server_sort"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "scroll_chaining",
+      "scope": "component",
+      "category": "layout",
+      "name": "Прокрутка окна передаётся странице под ним",
+      "symptoms": {
+        "modal_window": "Пользователь прокручивает длинное содержимое модального окна; дойдя до конца, крутит дальше — и начинает прокручиваться страница под затемнением. После закрытия окна он оказывается в другом месте страницы.",
+        "drawer": "Пользователь прокручивает боковую панель до конца, крутит дальше — и уезжает страница под затемнением. Закрыв панель, он не находит строку, из которой её открыл."
+      },
+      "fixes": ["overscroll_contain", "body_scroll_lock"],
+      "mitigates": [],
+      "confusable_with": ["double_scroll"]
+    },
+    {
+      "id": "focus_escapes",
+      "scope": "component",
+      "category": "focus",
+      "name": "Фокус уходит из окна на страницу под ним",
+      "symptoms": {
+        "modal_window": "Пользователь клавиатуры жмёт Tab: после последней кнопки модального окна фокус уходит на ссылки страницы под затемнением, и Enter нажимает невидимые кнопки.",
+        "drawer": "Пользователь клавиатуры жмёт Tab: после последнего поля боковой панели фокус уходит на страницу под затемнением, и Enter открывает запись, которую не видно."
+      },
+      "fixes": ["focus_trap", "inert_background", "native_dialog"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "focus_not_restored",
+      "scope": "component",
+      "category": "focus",
+      "name": "После закрытия окна фокус не возвращается на элемент, который его открыл",
+      "symptoms": {
+        "modal_window": "Закрыв модальное окно по Esc, пользователь клавиатуры оказывается в самом начале страницы и заново проходит Tab-ом сорок элементов до таблицы. Скринридер после закрытия ничего не объявляет.",
+        "drawer": "Закрыв боковую панель, пользователь клавиатуры оказывается в начале страницы, а не на строке, из которой открыл панель. Скринридер после закрытия молчит."
+      },
+      "fixes": ["restore_focus", "native_dialog"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "backdrop_select_close",
+      "scope": "component",
+      "category": "focus",
+      "name": "Выделение текста, законченное на затемнении, закрывает окно",
+      "symptoms": {
+        "modal_window": "Пользователь выделяет мышью текст в поле модального окна и отпускает кнопку чуть за его краем — окно закрывается, введённое пропадает.",
+        "drawer": "Пользователь выделяет мышью текст в поле боковой панели, отпускает кнопку левее панели — панель закрывается вместе с несохранёнными правками."
+      },
+      "fixes": ["backdrop_press_check"],
+      "mitigates": ["confirm_dirty_close"],
+      "confusable_with": ["esc_closes_parent"]
+    },
+    {
+      "id": "modal_100vh",
+      "scope": "component",
+      "category": "layout",
+      "name": "Высота окна 100vh: на мобильных низ окна скрыт под панелью браузера",
+      "when": {"tags_any": ["touch"]},
+      "symptoms": {
+        "modal_window": "На телефонах кнопка «Сохранить» внизу модального окна не видна: она под нижней панелью браузера, и прокрутить до неё нельзя. На компьютере всё в порядке.",
+        "drawer": "На телефонах нижние поля и кнопка «Готово» боковой панели скрыты под панелью браузера, прокрутить до них нельзя. На компьютере всё в порядке."
+      },
+      "fixes": ["dvh_units"],
+      "mitigates": ["inner_scroll_modal"],
+      "confusable_with": []
+    },
+    {
+      "id": "double_submit",
+      "scope": "component",
+      "category": "forms",
+      "name": "Повторное нажатие отправляет форму дважды",
+      "symptoms": {
+        "form": "Поддержка получает жалобы на двойные заявки и платежи. В логах — два одинаковых POST от одного пользователя с разницей 150–300 мс, чаще на медленной сети."
+      },
+      "fixes": ["disable_while_pending", "idempotency_key"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "early_validation",
+      "scope": "component",
+      "category": "forms",
+      "name": "Ошибки проверки показываются на каждое нажатие клавиши",
+      "symptoms": {
+        "form": "Едва пользователь вводит первую цифру телефона, поле краснеет с ошибкой «Неверный формат». По записям сессий многие останавливаются, стирают введённое и начинают заново."
+      },
+      "fixes": ["validate_on_blur"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "data_loss_navigation",
+      "scope": "component",
+      "category": "forms",
+      "name": "Несохранённые данные формы теряются при уходе со страницы",
+      "symptoms": {
+        "form": "Пользователь заполнил длинную форму, случайно нажал «Назад» или ссылку в меню — всё введённое пропало без предупреждения."
+      },
+      "fixes": ["draft_autosave", "leave_warning"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "date_off_by_one",
+      "scope": "component",
+      "category": "state",
+      "name": "Календарная дата сдвигается на день из-за часового пояса",
+      "symptoms": {
+        "date_picker": "Пользователь выбирает в календаре 10 марта, а в сохранённой записи стоит 9 марта. У сотрудников в Москве и Новосибирске так всегда, у разработчика с часовым поясом UTC — всё верно."
+      },
+      "fixes": ["plain_date_string"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "hover_only",
+      "scope": "component",
+      "category": "a11y",
+      "name": "Элемент открывается только наведением курсора",
+      "when": {"tags_any": ["touch", "keyboard_heavy", "screen_reader"]},
+      "symptoms": {
+        "tooltip": "Пояснения к полям не открыть ни на телефоне, ни с клавиатуры: значок «?» не реагирует на нажатие и на фокус, подсказка появляется только при наведении мыши.",
+        "row_menu": "Кнопка «⋯» с действиями появляется в строке только при наведении мыши: на сенсорном экране и при работе с клавиатуры действий со строкой не найти."
+      },
+      "fixes": ["tooltip_focus_tap"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "toast_not_announced",
+      "scope": "component",
+      "category": "a11y",
+      "name": "Уведомления не объявляются скринридером и исчезают слишком быстро",
+      "when": {"tags_any": ["screen_reader"]},
+      "symptoms": {
+        "toast": "Незрячий пользователь не узнаёт, что заявление отправлено: уведомление «Заявление принято» висит три секунды, скринридер его не зачитывает, и человек отправляет форму повторно."
+      },
+      "fixes": ["aria_live_region"],
+      "mitigates": ["longer_toasts"],
+      "confusable_with": []
+    },
+    {
+      "id": "toast_flood",
+      "scope": "component",
+      "category": "layout",
+      "name": "Лавина уведомлений перекрывает интерфейс",
+      "symptoms": {
+        "toast": "После массового действия над 20 записями появляются 20 уведомлений: они наслаиваются друг на друга, закрывают кнопки в правом нижнем углу и исчезают по одному почти минуту."
+      },
+      "fixes": ["toast_grouping"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "offset_duplicates",
+      "scope": "component",
+      "category": "network",
+      "name": "Догрузка по смещению даёт дубли и пропуски, когда данные меняются",
+      "symptoms": {
+        "infinite_list": "При прокрутке ленты некоторые записи показываются дважды, а иногда какие-то пропадают. Чаще всего — когда в это время появляются новые записи.",
+        "image_grid": "Листая каталог, покупатели видят одни и те же товары по два раза, а некоторые не попадаются вовсе. Особенно днём, когда продавцы активно добавляют товары."
+      },
+      "fixes": ["cursor_pagination"],
+      "mitigates": ["dedupe_by_id"],
+      "confusable_with": []
+    },
+    {
+      "id": "scroll_restoration",
+      "scope": "component",
+      "category": "state",
+      "name": "Позиция и догруженные порции теряются при возврате назад",
+      "symptoms": {
+        "infinite_list": "Пользователь долистал ленту до записей прошлого месяца, открыл одну и вернулся назад — лента снова с начала, листать приходится заново.",
+        "image_grid": "Покупатель долистал каталог до трёхсотого товара, открыл карточку и нажал «Назад» — каталог снова с начала, догруженные товары пропали."
+      },
+      "fixes": ["scroll_state_restore"],
+      "mitigates": ["url_state"],
+      "confusable_with": ["filter_not_in_url"]
+    },
+    {
+      "id": "footer_unreachable",
+      "scope": "component",
+      "category": "layout",
+      "name": "Бесконечная прокрутка не пускает к подвалу страницы",
+      "symptoms": {
+        "infinite_list": "Пользователи не могут добраться до подвала с контактами и документами: стоит докрутить до него, как подгружается новая порция и подвал уезжает вниз.",
+        "image_grid": "Покупатели не могут добраться до подвала с контактами и офертой: стоит докрутить до него, как подгружаются новые товары и подвал уезжает вниз."
+      },
+      "fixes": ["load_more_button"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "memory_leak",
+      "scope": "component",
+      "category": "rendering",
+      "name": "Утечка памяти: слушатели, таймеры и подписки не снимаются",
+      "when": {"tags_any": ["long_sessions"]},
+      "symptoms": {
+        "data_table": "Вкладку с таблицей не закрывают всю смену: к вечеру она занимает 3 ГБ памяти и тормозит, после перезагрузки снова работает быстро. Снимок памяти растёт после каждого перехода между разделами."
+      },
+      "fixes": ["cleanup_subscriptions"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "tab_state_lost",
+      "scope": "component",
+      "category": "state",
+      "name": "Состояние вкладки теряется при переключении",
+      "symptoms": {
+        "tabs": "Пользователь заполнил поля на вкладке «Документы», переключился на «Заявитель» и вернулся — поля пустые, прокрутка сброшена."
+      },
+      "fixes": ["lift_tab_state"],
+      "mitigates": ["keep_tabs_mounted"],
+      "confusable_with": []
+    },
+    {
+      "id": "images_cls",
+      "scope": "component",
+      "category": "media",
+      "name": "Картинки без заданного размера сдвигают вёрстку при загрузке",
+      "symptoms": {
+        "image_grid": "Пока грузятся фото, карточки и кнопки «В корзину» прыгают вниз; покупатели жалуются, что добавляют в корзину не тот товар. Lighthouse: CLS 0,38."
+      },
+      "fixes": ["image_dimensions"],
+      "mitigates": ["skeletons"],
+      "confusable_with": []
+    },
+    {
+      "id": "lazy_lcp",
+      "scope": "component",
+      "category": "media",
+      "name": "Главная картинка первого экрана грузится поздно",
+      "when": {"tags_any": ["seo"]},
+      "symptoms": {
+        "image_grid": "Lighthouse на мобильном профиле: LCP 4,8 с, крупнейший элемент — фото первого товара. В водопаде запросов оно начинает загружаться только после выполнения всего JS."
+      },
+      "fixes": ["eager_hero_images"],
+      "mitigates": ["responsive_images"],
+      "confusable_with": []
+    },
+    {
+      "id": "popup_clipped",
+      "scope": "link",
+      "category": "layout",
+      "name": "Всплывающий слой обрезается контейнером с overflow",
+      "applies": {"a": ["popup"], "rel": "inside", "b": ["clips"]},
+      "symptom": "{a[Layer]} обрезается по краю {b[gen]}: видна только верхняя часть, остальное прячется, а у {b[gen]} появляется своя полоса прокрутки.",
+      "fixes": ["portal_to_body", "popover_top_layer", "remove_overflow"],
+      "mitigates": ["open_upwards"],
+      "confusable_with": ["popup_under_stacking", "popup_shifted_by_transform", "keyboard_covers_popup"]
+    },
+    {
+      "id": "popup_under_stacking",
+      "scope": "link",
+      "category": "layout",
+      "name": "Всплывающий слой заперт в контексте наложения предка и уходит под соседей",
+      "applies": {"a": ["popup"], "rel": "inside", "b": ["stacking"]},
+      "symptom": "{a[Layer]} открывается, но оказывается под {b[neighbors]}: они видны поверх слоя и перехватывают щелчки. По краю {b[gen]} слой не обрезан.",
+      "fixes": ["portal_to_body", "popover_top_layer", "remove_stacking_context"],
+      "mitigates": [],
+      "confusable_with": ["popup_clipped", "popup_shifted_by_transform"]
+    },
+    {
+      "id": "popup_shifted_by_transform",
+      "scope": "link",
+      "category": "layout",
+      "name": "position: fixed внутри предка с transform отсчитывается от предка, а не от окна",
+      "applies": {"a": ["popup"], "rel": "inside", "b": ["transform_anim"]},
+      "symptom": "{a[Layer]} открывается не рядом со своим полем или кнопкой, а со сдвигом — ровно на столько, на сколько {b[name]} отстоит от левого верхнего угла экрана. Сдвиг появился, когда {b[acc]} стали показывать с анимацией выезда.",
+      "fixes": ["no_transform_after_anim", "portal_to_body", "popover_top_layer"],
+      "mitigates": [],
+      "confusable_with": ["popup_clipped", "popup_under_stacking"]
+    },
+    {
+      "id": "keyboard_covers_popup",
+      "scope": "link",
+      "category": "layout",
+      "name": "Экранная клавиатура закрывает слой внутри окна",
+      "applies": {"a": ["popup", "text_input"], "rel": "inside", "b": ["overlay"]},
+      "when": {"tags_any": ["touch"]},
+      "symptom": "На телефоне {a[layer]} внутри {b[gen]} закрывает экранная клавиатура: видна одна строка, остальные под клавиатурой, и прокрутить {b[acc]} так, чтобы они показались, нельзя.",
+      "fixes": ["visual_viewport"],
+      "mitigates": ["open_upwards"],
+      "confusable_with": ["popup_clipped"]
+    },
+    {
+      "id": "esc_closes_parent",
+      "scope": "link",
+      "category": "focus",
+      "name": "Esc закрывает не только верхний слой, но и окно под ним",
+      "applies": {"a": ["popup", "esc_dismiss"], "rel": "inside", "b": ["overlay", "esc_dismiss"]},
+      "when": {"tags_none": ["touch"]},
+      "symptom": "Пользователь открывает {a[layer]} внутри {b[gen]} и нажимает Esc. Esc закрывает не только {a[layer]}, но и {b[acc]} целиком — вместе с введёнными данными.",
+      "fixes": ["layered_dismiss"],
+      "mitigates": ["confirm_dirty_close"],
+      "confusable_with": ["backdrop_select_close"]
+    },
+    {
+      "id": "double_scroll",
+      "scope": "link",
+      "category": "layout",
+      "name": "Две вложенные прокручиваемые области: таблица в прокручиваемом окне",
+      "applies": {"a": ["row_list", "clips"], "rel": "inside", "b": ["overlay", "clips"]},
+      "symptom": "В {b[prep]} две вертикальные полосы прокрутки — у {b[gen]} и у {a[gen]}: колесо крутит то одну, то другую, а закреплённая шапка {a[gen]} уезжает вместе с содержимым {b[gen]}.",
+      "fixes": ["single_scroll_area"],
+      "mitigates": ["overscroll_contain"],
+      "confusable_with": ["scroll_chaining"]
+    },
+    {
+      "id": "filter_hides_selection",
+      "scope": "link",
+      "category": "state",
+      "name": "Отметки остаются на строках, скрытых фильтром, и попадают в массовое действие",
+      "applies": {"a": ["filter_source"], "rel": "filters", "b": ["selectable"]},
+      "symptom": "Пользователь отметил 12 записей в {b[prep]}, затем сузил список через {a[acc]} и запустил массовое действие над отмеченными. Оно применилось ко всем 12 записям, хотя на экране отмеченных было три — остальные скрыл фильтр.",
+      "fixes": ["clear_selection_on_filter", "hidden_selection_counter"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "filter_keeps_page",
+      "scope": "link",
+      "category": "state",
+      "name": "Смена фильтра не сбрасывает номер страницы",
+      "applies": {"a": ["filter_source"], "rel": "filters", "b": ["paged"]},
+      "symptom": "Пользователь на седьмой странице {b[gen]} {a[change]} — и видит «Ничего не найдено», хотя тот же фильтр, заданный сразу после открытия раздела, находит 30 записей.",
+      "fixes": ["reset_page_on_filter"],
+      "mitigates": [],
+      "confusable_with": ["filter_page_race"]
+    },
+    {
+      "id": "filter_page_race",
+      "scope": "link",
+      "category": "network",
+      "name": "Догруженная порция по старому фильтру приклеивается к выдаче по новому",
+      "applies": {"a": ["filter_source"], "rel": "filters", "b": ["loads_pages"]},
+      "symptom": "Пока {b[name]} подгружает следующую порцию записей, пользователь {a[change]} — и к результатам по новому фильтру приклеиваются записи, которые ему не подходят. После обновления страницы список правильный.",
+      "fixes": ["abort_previous", "request_sequence"],
+      "mitigates": [],
+      "confusable_with": ["filter_keeps_page", "stale_response"]
+    },
+    {
+      "id": "filter_not_in_url",
+      "scope": "link",
+      "category": "state",
+      "name": "Фильтры живут только в памяти компонента, а не в адресе",
+      "applies": {"a": ["filter_source"], "rel": "filters", "b": ["row_list"]},
+      "when": {"no_ancestor_trait": "overlay"},
+      "symptom": "Пользователь {a[change]}, открывает запись из {b[gen]} и нажимает в браузере «Назад» — фильтр сброшен. Ссылка, которую он отправил коллеге, открывает список без фильтра.",
+      "fixes": ["url_state"],
+      "mitigates": ["global_store"],
+      "confusable_with": ["scroll_restoration"]
+    },
+    {
+      "id": "modal_stale_after_save",
+      "scope": "link",
+      "category": "state",
+      "name": "Список не узнаёт об изменении, сохранённом в окне",
+      "applies": {"a": ["row_list"], "rel": "opens", "b": ["overlay"]},
+      "when": {"tags_none": ["realtime"]},
+      "symptom": "Пользователь открывает запись из {a[gen]} в {b[prep]}, меняет значение поля и сохраняет. {b[Name]} закрывается без ошибок, а в {a[prep]} остаётся старое значение; новое видно только после обновления страницы.",
+      "fixes": ["cache_invalidation", "callback_refetch", "optimistic_update", "global_store", "full_reload"],
+      "mitigates": ["frequent_polling"],
+      "confusable_with": ["realtime_wrong_record"]
+    },
+    {
+      "id": "realtime_wrong_record",
+      "scope": "link",
+      "category": "state",
+      "name": "Окно ссылается на запись по номеру строки, а строки переставляются обновлениями",
+      "applies": {"a": ["row_list"], "rel": "opens", "b": ["overlay"]},
+      "when": {"tags_any": ["realtime"]},
+      "symptom": "Записи в {a[prep]} обновляются каждые несколько секунд. Пользователь открыл пятую строку в {b[prep]} и сохранил правку — изменения сохранились в другой записи — той, что к этому моменту оказалась на пятом месте.",
+      "fixes": ["reference_by_id"],
+      "mitigates": ["pause_updates_while_editing"],
+      "confusable_with": ["modal_stale_after_save"]
+    },
+    {
+      "id": "toast_under_overlay",
+      "scope": "link",
+      "category": "layout",
+      "name": "Уведомление показывается под затемнением окна",
+      "applies": {"a": ["overlay"], "rel": "notifies", "b": ["notifies"]},
+      "symptom": "Когда сохранение в {a[prep]} не удаётся, пользователь не видит сообщения и жмёт «Сохранить» снова и снова: уведомление об ошибке появляется под затемнением и становится видно только после закрытия {a[gen]}.",
+      "fixes": ["layer_scale", "toast_top_layer"],
+      "mitigates": [],
+      "confusable_with": []
+    },
+    {
+      "id": "portal_vs_focus_trap",
+      "scope": "side_effect",
+      "category": "focus",
+      "name": "Слой вынесен из окна за пределы его ловушки фокуса",
+      "description": "Слой вынесен за пределы окна: ловушка фокуса не пускает в него с клавиатуры, а обработчик «щелчок снаружи» считает щелчок по пункту щелчком мимо окна и закрывает окно.",
+      "fixes": ["popup_in_modal_root", "trap_allowlist"],
+      "mitigates": []
+    },
+    {
+      "id": "portal_detached",
+      "scope": "side_effect",
+      "category": "layout",
+      "name": "Вынесенный слой не следует за полем при прокрутке",
+      "description": "Слой, вынесенный из прокручиваемого контейнера, остаётся на месте, когда контейнер прокручивают: поле уезжает, а список висит там, где был.",
+      "fixes": ["floating_reposition"],
+      "mitigates": ["close_layers_on_scroll"]
+    },
+    {
+      "id": "portal_outside_modal_layer",
+      "scope": "side_effect",
+      "category": "layout",
+      "name": "Вынесенный слой оказывается под окном в top layer или в инертной зоне",
+      "description": "Окно выведено в top layer или фон помечен inert, а слой вынесен в <body>: он оказывается под окном или в инертной части страницы — его не видно или по нему нельзя щёлкнуть, z-index не помогает.",
+      "fixes": ["popup_in_modal_root"],
+      "mitigates": []
+    },
+    {
+      "id": "abort_error_toast",
+      "scope": "side_effect",
+      "category": "network",
+      "name": "Отменённые запросы показываются как ошибки",
+      "description": "Отмена завершает fetch исключением AbortError, и общий обработчик ошибок показывает на каждое нажатие клавиши уведомление «Ошибка сети».",
+      "fixes": ["ignore_abort_error"],
+      "mitigates": []
+    },
+    {
+      "id": "debounce_stale_enter",
+      "scope": "side_effect",
+      "category": "network",
+      "name": "Enter срабатывает по устаревшему запросу",
+      "description": "Пользователь набирает запрос и сразу жмёт Enter — открывается результат по недонабранной строке: отложенный запрос ещё не ушёл.",
+      "fixes": ["flush_on_submit"],
+      "mitigates": []
+    },
+    {
+      "id": "scrollbar_shift",
+      "scope": "side_effect",
+      "category": "layout",
+      "name": "Страница прыгает вбок при открытии и закрытии окна",
+      "description": "Когда у страницы пропадает полоса прокрутки, контент сдвигается на её ширину при каждом открытии и закрытии окна.",
+      "fixes": ["scrollbar_gutter"],
+      "mitigates": []
+    },
+    {
+      "id": "nested_lock_release",
+      "scope": "side_effect",
+      "category": "layout",
+      "name": "Закрытие вложенного окна возвращает прокрутку страницы",
+      "description": "Окно, открытое из другого окна, при закрытии снимает блокировку прокрутки, хотя внешнее окно ещё открыто: страница под ним снова прокручивается.",
+      "fixes": ["refcount_scroll_lock"],
+      "mitigates": []
+    },
+    {
+      "id": "ctrl_f_broken",
+      "scope": "side_effect",
+      "category": "a11y",
+      "name": "Поиск по странице не находит неотрисованные строки",
+      "description": "Ctrl+F находит только отрисованные строки: пользователи, привыкшие искать по странице, решают, что записи нет.",
+      "fixes": ["own_search"],
+      "mitigates": []
+    },
+    {
+      "id": "virtual_focus_lost",
+      "scope": "side_effect",
+      "category": "focus",
+      "name": "Фокус теряется при прокрутке виртуального списка",
+      "description": "Строка с фокусом размонтируется, когда уходит за экран: фокус падает на <body>, клавиатурная навигация начинается сначала, скринридер называет неверное число строк.",
+      "fixes": ["virtual_focus_keep"],
+      "mitigates": []
+    },
+    {
+      "id": "virtual_popup_orphaned",
+      "scope": "side_effect",
+      "category": "layout",
+      "name": "Слои, открытые из строк, теряются при прокрутке виртуального списка",
+      "description": "Открытое в строке меню или выпадающий список при прокрутке висит без строки или исчезает вместе с ней, незавершённый ввод в ячейке теряется.",
+      "fixes": ["close_layers_on_scroll"],
+      "mitigates": []
+    },
+    {
+      "id": "store_rerenders_table",
+      "scope": "side_effect",
+      "category": "rendering",
+      "name": "Любое изменение в сторе перерисовывает всю таблицу",
+      "description": "Компоненты подписаны на весь стор: любое изменение, даже ввод в поле окна, перерисовывает все строки таблицы.",
+      "fixes": ["granular_selectors", "memo_rows"],
+      "mitigates": []
+    },
+    {
+      "id": "container_lost_scroll",
+      "scope": "side_effect",
+      "category": "layout",
+      "name": "Контейнер перестаёт прокручиваться",
+      "description": "Без overflow широкая таблица растягивает страницу вбок, а длинное окно уходит за нижний край экрана.",
+      "fixes": [],
+      "mitigates": []
+    },
+    {
+      "id": "reload_loses_state",
+      "scope": "side_effect",
+      "category": "state",
+      "name": "Перезагрузка сбрасывает состояние экрана",
+      "description": "После перезагрузки пропадают фильтры, прокрутка, раскрытые строки и отметки, а на медленной сети пользователь несколько секунд видит пустой экран.",
+      "fixes": [],
+      "mitigates": ["url_state"]
+    },
+    {
+      "id": "toast_hidden_by_top_layer",
+      "scope": "side_effect",
+      "category": "layout",
+      "name": "Уведомления оказываются под окном в top layer",
+      "description": "Окно, открытое через showModal(), находится в top layer: уведомления из <body> оказываются под затемнением и в инертной части страницы, пока окно открыто.",
+      "fixes": ["toast_top_layer"],
+      "mitigates": []
+    }
+  ]
+}

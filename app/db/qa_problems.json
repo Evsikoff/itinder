@@ -1,0 +1,1778 @@
+{
+  "tags": [
+    {"id": "money", "name": "Ошибка стоит клиентам реальных денег"},
+    {"id": "personal_data", "name": "Персональные данные клиентов (152-ФЗ)"},
+    {"id": "medical", "name": "Врачебная тайна"},
+    {"id": "mobile", "name": "Мобильные приложения для iOS и Android"},
+    {"id": "web", "name": "Веб-версия в браузере"},
+    {"id": "microservices", "name": "Микросервисы, у каждого — своя команда"},
+    {"id": "async", "name": "Асинхронная обработка через очереди"},
+    {"id": "hardware", "name": "Устройства с прошивкой дома у клиентов"},
+    {"id": "peaks", "name": "Пики нагрузки в отдельные дни"}
+  ],
+  "systems": [
+    {
+      "id": "fintech_transfers",
+      "name": "Мобильный банк «Ладья»",
+      "description": "Приложение и интернет-банк для переводов между клиентами и по номеру телефона в другие банки. Около 40 микросервисов; перевод обрабатывается асинхронно: процессинг подтверждает его через очередь.",
+      "tags": ["money", "personal_data", "mobile", "web", "microservices", "async", "peaks"],
+      "vars": {
+        "app": "мобильный банк «Ладья»",
+        "svc": "transfers-service",
+        "repo": "ladya-transfers",
+        "prefix": "LAD",
+        "rules_topic": "лимитов и комиссий",
+        "tests": [
+          "tests/api/test_transfers.py::test_create_transfer_ok",
+          "tests/api/test_transfers.py::test_transfer_to_phone_ok",
+          "tests/api/test_limits.py::test_daily_limit_shown",
+          "tests/api/test_history.py::test_history_paging",
+          "tests/api/test_cards.py::test_card_list",
+          "tests/api/test_auth.py::test_refresh_token"
+        ],
+        "range": {
+          "field": "Сумма перевода",
+          "screen": "Перевод по номеру телефона",
+          "story_title": "Перевод по номеру телефона",
+          "story": "Как клиент, я хочу перевести деньги по номеру телефона, чтобы не вводить реквизиты.",
+          "rule": "Сумма перевода — от 10 до 600 000 ₽ включительно, с копейками.",
+          "unit": "₽",
+          "min": "10", "max": "600 000", "below": "9,99", "above": "600 000,01",
+          "mid_a": "5 000", "mid_b": "150 000", "far_low": "1", "far_high": "1 000 000",
+          "garbage": "«пятьсот»",
+          "ok": "перевод создан",
+          "error": "«Сумма должна быть от 10 до 600 000 ₽»",
+          "reject": "кнопка «Перевести» неактивна",
+          "boundary_incident": "клиенты жалуются: перевод ровно на 600 000 ₽ отклоняется с ошибкой «Сумма должна быть от 10 до 600 000 ₽»",
+          "invalid_incident": "Служба безопасности нашла: если вставить в поле суммы «-500», перевод проходит, а 500 ₽ списываются со счёта получателя"
+        },
+        "flow": {
+          "client": "Android 14, Samsung Galaxy A54, приложение 7.12.0",
+          "complaint": "Вчера около 21:40 хотела перевести 12 500 ₽ по номеру телефона в другой банк. Нажимаю «Перевести» — крутится загрузка, через минуту пишет «Что-то пошло не так». Пробовала три раза. Внутри «Ладьи» по номеру переводит нормально.",
+          "attachments": "скриншот ошибки",
+          "bad_title": "Не работает перевод!!!",
+          "bad_text": "Переводы не работают, клиенты жалуются. Надо срочно починить."
+        },
+        "loc": {
+          "screen": "Подтверждение перевода",
+          "label": "Комиссия",
+          "shown": "150 ₽",
+          "expected": "0 ₽",
+          "client": "iOS 17.6, приложение 7.12.0",
+          "rule": "Переводы по номеру телефона до 100 000 ₽ в месяц — без комиссии, а клиент в этом месяце перевёл 12 000 ₽.",
+          "steps": "1. Войти клиентом qa-client-17 (переводов в этом месяце — на 12 000 ₽).\n2. Платежи → Перевод по номеру телефона → +7 900 000-12-34, банк «Восход».\n3. Сумма 5 000 ₽ → «Продолжить».",
+          "request": "POST /api/v2/transfers/preview",
+          "payload": "{\"amount\": 5000, \"phone\": \"+79000001234\", \"bank\": \"voskhod\"}",
+          "response_be": "{\n  \"amount\": 5000,\n  \"fee\": 150,\n  \"free_limit_left\": 88000,\n  \"currency\": \"RUB\"\n}",
+          "response_fe": "{\n  \"amount\": 5000,\n  \"fee\": 0,\n  \"fee_over_limit\": 150,\n  \"free_limit_left\": 88000,\n  \"currency\": \"RUB\"\n}"
+        },
+        "triage": {
+          "cosmetic": "Опечатка в подсказке: «Перевод по номеру телфона»",
+          "serious": "При двойном нажатии «Перевести» комиссия за перевод в другой банк списывается дважды",
+          "normal": "История операций не сортируется по сумме",
+          "trivial": "Иконка банка получателя размыта на iPad",
+          "harm": "у клиентов дважды списывается комиссия"
+        },
+        "states": {
+          "title": "Статусы перевода",
+          "diagram": "CREATED → PROCESSING → COMPLETED\nCREATED → CANCELLED\nPROCESSING → CANCELLED\nPROCESSING → FAILED",
+          "rules": "Отменить можно только перевод в статусах CREATED и PROCESSING. Исполненный перевод (COMPLETED) не отменяется — возможен только возврат по заявлению получателя.",
+          "case_1": "Создать перевод → CREATED, затем PROCESSING",
+          "case_2": "Процессинг подтвердил перевод → COMPLETED, деньги у получателя",
+          "case_3": "Отменить перевод в статусе CREATED → CANCELLED, деньги не списаны",
+          "case_4": "Отменить перевод в статусе PROCESSING → CANCELLED, деньги вернулись",
+          "incident": "клиент отменил уже исполненный перевод кнопкой «Отменить» в истории: деньги вернулись ему, а получатель их тоже получил"
+        },
+        "combo": {
+          "title": "Комиссия за перевод по номеру телефона",
+          "rules": "1. Переводы по номеру телефона до 100 000 ₽ в месяц — без комиссии, сверх лимита — 1%.\n2. Премиум-клиенты переводят без комиссии и без лимита.\n3. Переводы с кредитной карты — комиссия 3,9%, льготы не действуют.",
+          "case_1": "Обычный клиент, дебетовая карта, 120 000 ₽ за месяц → комиссия 1% с суммы сверх лимита",
+          "case_2": "Премиум-клиент, дебетовая карта, 300 000 ₽ за месяц → без комиссии",
+          "case_3": "Обычный клиент, кредитная карта, 10 000 ₽ → комиссия 3,9%",
+          "incident": "премиум-клиент, уже переводивший в этом месяце больше 100 000 ₽, перевёл 50 000 ₽ с кредитной карты — и комиссию 3,9% с него не взяли"
+        },
+        "ambig": {
+          "title": "Комиссия за перевод сверх лимита",
+          "topic": "комиссию сверх лимита",
+          "phrase": "Комиссия 1% округляется до целых рублей",
+          "case": "Перевод 1 270 ₽ сверх лимита → комиссия 12,70 ₽ округляется до 13 ₽ (по правилам математики)",
+          "incident": "клиенты пишут жалобы: комиссия больше 1%, за 1 270 ₽ сверх лимита списано 13 ₽",
+          "owner": "Округлять всегда вниз, в пользу клиента, — так написано в тарифах. Я думал, это очевидно."
+        },
+        "shared": {
+          "file_a": "test_balance.py",
+          "test_a": "test_topup_increases_balance",
+          "file_b": "test_transfers.py",
+          "test_b": "test_transfer_between_own_accounts",
+          "fixture_line": "api = <ApiClient stage>, qa_account = '40817810099910004321'",
+          "conftest": "QA_ACCOUNT = \"40817810099910004321\"  # общий счёт QA на stage\n\n@pytest.fixture\ndef qa_account():\n    return QA_ACCOUNT",
+          "code_a": "    def test_topup_increases_balance(api, qa_account):\n        before = api.get(f\"/api/v2/accounts/{qa_account}\").json()[\"balance\"]\n        api.post(f\"/api/v2/accounts/{qa_account}/topup\", json={\"amount\": 1000})\n        after = api.get(f\"/api/v2/accounts/{qa_account}\").json()[\"balance\"]\n>       assert after == before + 1000",
+          "error": "AssertionError: assert Decimal('48250.00') == (Decimal('47750.00') + 1000)",
+          "code_b": "def test_transfer_between_own_accounts(api, qa_account, savings_account):\n    r = api.post(\"/api/v2/transfers\", json={\"from\": qa_account, \"to\": savings_account, \"amount\": 500})\n    assert r.status_code == 201"
+        },
+        "async": {
+          "file": "test_transfers_async.py",
+          "test": "test_transfer_completes",
+          "worker": "transfers-worker",
+          "item": "перевод tr-58e1 (700 ₽)",
+          "code_head": "def test_transfer_completes(api, qa_client):\n    transfer = api.post(\"/api/v2/transfers\", json=new_transfer(qa_client, amount=700)).json()",
+          "code_tail": "    status = api.get(f\"/api/v2/transfers/{transfer['id']}\").json()[\"status\"]\n    assert status == \"COMPLETED\"",
+          "error": "AssertionError: assert 'PROCESSING' == 'COMPLETED'",
+          "log_done": "перевод tr-58e1 PROCESSING → COMPLETED: ответ процессинга получен",
+          "code_201": "def test_create_transfer(api, qa_client):\n    r = api.post(\"/api/v2/transfers\", json=new_transfer(qa_client, amount=700))\n    assert r.status_code == 201\n    assert r.json()[\"status\"] == \"CREATED\"",
+          "log_error": "KeyError: 'recipient_bank_bic' при обработке перевода tr-91c4 (перевод в другой банк)",
+          "dlq": "transfers.dlq",
+          "lost_incident": "Часть переводов в другие банки «теряется»: API ответил 201 Created, клиенту пришло уведомление «Перевод создан», а в истории операций его нет и деньги не списаны"
+        },
+        "time": {
+          "file": "tests/unit/test_daily_limits.py",
+          "test": "test_spent_today_counts_new_transfer",
+          "code": "def test_spent_today_counts_new_transfer():\n    limits = DailyLimits(storage=InMemoryStorage())\n    limits.spend(client_id=1, amount=150_000)\n    assert limits.spent(client_id=1, day=date.today()) == 150_000",
+          "source_file": "transfers/limits.py",
+          "source": "class DailyLimits:\n    def spend(self, client_id, amount):\n        # лимит считается по московскому дню\n        day = datetime.now(ZoneInfo(\"Europe/Moscow\")).date()\n        self.storage.add(client_id, day, amount)",
+          "error": "AssertionError: assert 0 == 150000"
+        },
+        "ui": {
+          "file": "transfer-by-phone.spec.ts",
+          "title": "перевод по номеру телефона › успешный перевод",
+          "action": "fill",
+          "xpath": "xpath=/html/body/div[2]/div/main/div[3]/form/div[1]/input",
+          "code": "test('успешный перевод', async ({ page }) => {\n  await page.goto('/payments/phone');\n  await page.locator('xpath=/html/body/div[2]/div/main/div[3]/form/div[1]/input').fill('+79000001234');\n  await page.locator('xpath=/html/body/div[2]/div/main/div[3]/form/div[2]/input').fill('5000');\n  await page.locator('xpath=/html/body/div[2]/div/main/div[3]/form/div[4]/button[2]').click();\n  await expect(page.locator('xpath=/html/body/div[2]/div/main/div[3]/div/h2')).toHaveText('Перевод отправлен');\n});",
+          "change": "feat(payments): баннер о повышенном кешбэке над формой перевода"
+        },
+        "api_check": {
+          "file": "test_accounts.py",
+          "endpoint": "GET /api/v2/accounts/{id}/balance",
+          "incident": "у клиентов в приложении баланс стал в сто раз больше: 152 050 ₽ вместо 1 520,50 ₽",
+          "code": "@pytest.mark.parametrize(\"account\", QA_ACCOUNTS)\ndef test_get_balance(api, account):\n    r = api.get(f\"/api/v2/accounts/{account}/balance\")\n    assert r.status_code == 200",
+          "request": "GET /api/v2/accounts/40817810099910004321/balance",
+          "response": "{\n  \"account\": \"40817810099910004321\",\n  \"balance\": 152050,\n  \"currency\": \"RUB\"\n}"
+        },
+        "env": {
+          "incident": "переводы в другие банки, созданные с полуночи до трёх часов ночи по Москве, отклоняются с ошибкой «Неверная дата операции»",
+          "rows": "transfers-service         2.41.0                 2.41.0\nPostgreSQL                15.4                   15.4\nKafka                     3.6                    3.6\nЧасовой пояс контейнеров  Europe/Moscow          UTC\nФлаг instant_transfers    вкл.                   вкл.\nТестовых клиентов         1 200                  —",
+          "how": "stage — вручную по инструкции из вики (2024 г.), обновляется по заявкам; prod — Helm-чарты из репозитория ladya-infra"
+        },
+        "stage": {
+          "other_svc": "antifraud-service",
+          "other_team": "Антифрод",
+          "branch": "feature/new-scoring-model",
+          "error": "requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://stage.ladya.example/api/v2/antifraud/check"
+        },
+        "ext": {
+          "name": "песочница платёжной системы «Мост»",
+          "host": "sandbox.most-pay.example",
+          "path": "/v1/transfers",
+          "step": "перевод уходит в другой банк",
+          "limits": "Песочница общая для всех банков — участников системы: не больше 100 запросов в минуту на ключ, сверх лимита — ответ 429. По понедельникам с 10:00 до 12:00 — плановые работы. В последнюю неделю месяца банки-участники проводят в песочнице нагрузочные испытания."
+        },
+        "unique": {
+          "what_gen": "клиентов",
+          "file": "test_clients.py",
+          "test": "test_register_client",
+          "code": "def test_register_client(api):\n    r = api.post(\"/api/v2/clients\", json={\"phone\": \"+79990000001\", \"name\": \"Тест Тестов\"})\n    assert r.status_code == 201",
+          "error": "AssertionError: assert 409 == 201  (409 Conflict: client with phone +79990000001 already exists)"
+        },
+        "contract": {
+          "provider": "accounts-service",
+          "consumer": "transfers-service",
+          "effect": "каждый перевод",
+          "change": "в ответе GET /accounts/{id} поле balance переименовано в available_balance, старое поле удалено"
+        },
+        "prod": {
+          "incident": "переводы с карт других банков перестали проходить у клиентов на Android",
+          "metric": "Доля успешных переводов с карт других банков на Android упала с 97% до 58% — на дашборд никто не смотрел, алерта на эту метрику нет"
+        },
+        "pd": {
+          "data": "ФИО, паспортные данные, номера счетов и история операций",
+          "db": "transfers"
+        },
+        "peak": {
+          "event": "день выплаты зарплат",
+          "event_name": "день выплаты зарплат, 5-е число",
+          "incident": "переводы выполнялись по 40 секунд, а часть клиентов получила «Сервис временно недоступен»",
+          "rps_normal": "350",
+          "rps_peak": "4 200",
+          "bottleneck": "пул соединений к PostgreSQL исчерпан (max 200), запросы ждут соединения до 30 с"
+        }
+      }
+    },
+    {
+      "id": "ecommerce_checkout",
+      "name": "Интернет-магазин «Полка»",
+      "description": "Сайт и приложение магазина товаров для дома: каталог, корзина, промокоды, бонусы, оплата и доставка. Заказ резервируется на складе асинхронно, через очередь.",
+      "tags": ["money", "personal_data", "web", "mobile", "microservices", "async", "peaks"],
+      "vars": {
+        "app": "интернет-магазин «Полка»",
+        "svc": "checkout-service",
+        "repo": "polka-checkout",
+        "prefix": "PLK",
+        "rules_topic": "скидок и доставки",
+        "tests": [
+          "tests/api/test_cart.py::test_add_item_ok",
+          "tests/api/test_cart.py::test_remove_item_ok",
+          "tests/api/test_catalog.py::test_search_by_name",
+          "tests/api/test_orders.py::test_order_history",
+          "tests/api/test_delivery.py::test_pickup_points_list",
+          "tests/api/test_auth.py::test_login_by_code"
+        ],
+        "range": {
+          "field": "Количество товара",
+          "screen": "Корзина",
+          "story_title": "Количество товара в корзине",
+          "story": "Как покупатель, я хочу указать, сколько штук товара купить.",
+          "rule": "Количество одного товара в корзине — от 1 до 99 шт., только целое число.",
+          "unit": "шт.",
+          "min": "1", "max": "99", "below": "0", "above": "100",
+          "mid_a": "3", "mid_b": "50", "far_low": "-5", "far_high": "500",
+          "garbage": "«2,5»",
+          "ok": "количество обновлено, сумма пересчитана",
+          "error": "«Можно заказать от 1 до 99 шт.»",
+          "reject": "количество не меняется",
+          "boundary_incident": "оптовые покупатели жалуются: 99 штук товара в корзину не добавить — появляется «Можно заказать от 1 до 99 шт.»",
+          "invalid_incident": "Покупатель ввёл в поле количества «-3»: итог корзины стал отрицательным, и при оплате бонусами магазин вернул ему деньги на карту"
+        },
+        "flow": {
+          "client": "Safari 17, macOS 14, покупатель авторизован",
+          "complaint": "Пытаюсь оплатить заказ на 7 830 ₽ картой «Мир» с промокодом AUTUMN10. После ввода кода из SMS окно банка закрывается, и снова открывается корзина, заказ не создаётся. Без промокода оплата проходит.",
+          "attachments": "скриншот корзины",
+          "bad_title": "Оплата сломалась",
+          "bad_text": "Не получается оплатить заказ, выкидывает в корзину. Посмотрите срочно."
+        },
+        "loc": {
+          "screen": "Корзина",
+          "label": "Итого",
+          "shown": "4 000 ₽",
+          "expected": "3 600 ₽",
+          "client": "Chrome 129, Windows 11",
+          "rule": "Промокод AUTUMN10 даёт скидку 10% на всю корзину.",
+          "steps": "1. Войти покупателем qa-buyer-3.\n2. Добавить в корзину чайник за 4 000 ₽.\n3. Ввести промокод AUTUMN10 → «Применить».",
+          "request": "POST /api/cart/promo",
+          "payload": "{\"code\": \"AUTUMN10\"}",
+          "response_be": "{\n  \"subtotal\": 4000,\n  \"discount\": 0,\n  \"total\": 4000,\n  \"promo\": {\"code\": \"AUTUMN10\", \"status\": \"applied\"}\n}",
+          "response_fe": "{\n  \"subtotal\": 4000,\n  \"discount\": 400,\n  \"total\": 3600,\n  \"promo\": {\"code\": \"AUTUMN10\", \"status\": \"applied\"}\n}"
+        },
+        "triage": {
+          "cosmetic": "В подвале сайта опечатка: «Политика конфидециальности»",
+          "serious": "Повторное открытие ссылки на оплату уже оплаченного заказа списывает деньги ещё раз",
+          "normal": "Фильтр по бренду не сбрасывается кнопкой «Очистить»",
+          "trivial": "Баннер акции сдвинут на 2 px вправо в Firefox",
+          "harm": "покупатели платят за один заказ дважды"
+        },
+        "states": {
+          "title": "Статусы заказа",
+          "diagram": "NEW → PAID → ASSEMBLING → SHIPPED → DELIVERED\nNEW → CANCELLED\nPAID → CANCELLED (с возвратом денег)\nASSEMBLING → CANCELLED (с возвратом денег)",
+          "rules": "Отменить заказ можно до передачи в доставку — в статусах NEW, PAID и ASSEMBLING. Отправленный и вручённый заказ не отменяется — только возврат товара по заявлению.",
+          "case_1": "Оформить заказ → NEW, оплатить → PAID",
+          "case_2": "Склад собрал и отправил заказ → ASSEMBLING, затем SHIPPED; курьер вручил → DELIVERED",
+          "case_3": "Отменить заказ в статусе NEW → CANCELLED",
+          "case_4": "Отменить заказ в статусе PAID → CANCELLED, деньги вернулись",
+          "incident": "покупатель отменил уже вручённый заказ кнопкой в личном кабинете: деньги вернулись, а товар остался у него"
+        },
+        "combo": {
+          "title": "Скидки и оплата бонусами",
+          "rules": "1. Промокод даёт скидку 20% на заказ.\n2. Товары по акции «2 по цене 1» в промокодах не участвуют.\n3. Бонусами можно оплатить до 30% суммы после всех скидок.",
+          "case_1": "Промокод на заказ без акционных товаров → скидка 20%",
+          "case_2": "Два акционных товара «2 по цене 1» → оплачивается один",
+          "case_3": "Оплата бонусами заказа на 10 000 ₽ → списано не больше 3 000 бонусов",
+          "incident": "покупатель применил промокод к товарам по акции «2 по цене 1» и оплатил остаток бонусами — итог заказа стал 0 ₽"
+        },
+        "ambig": {
+          "title": "Бесплатная доставка",
+          "topic": "бесплатную доставку",
+          "phrase": "Доставка бесплатная для заказов от 3 000 ₽",
+          "case": "Корзина на 3 200 ₽, промокод на 500 ₽ → доставка бесплатная (порог считаем по сумме товаров)",
+          "incident": "магазин за неделю оплатил доставку 4 300 заказов, которые после скидок стоили меньше 3 000 ₽",
+          "owner": "Порог — по сумме, которую покупатель платит, то есть после всех скидок. Иначе доставка съедает всю маржу."
+        },
+        "shared": {
+          "file_a": "test_cart.py",
+          "test_a": "test_add_item_updates_total",
+          "file_b": "test_promo.py",
+          "test_b": "test_promo_applies_to_cart",
+          "fixture_line": "buyer = <ApiClient qa-buyer@polka.example>",
+          "conftest": "QA_BUYER_TOKEN = os.environ[\"QA_BUYER_TOKEN\"]  # общий покупатель qa-buyer на stage\n\n@pytest.fixture\ndef buyer(api):\n    return api.as_user(QA_BUYER_TOKEN)",
+          "code_a": "    def test_add_item_updates_total(buyer):\n        buyer.delete(\"/api/cart\")\n        buyer.post(\"/api/cart/items\", json={\"sku\": \"KETTLE-1\", \"qty\": 1})\n        cart = buyer.get(\"/api/cart\").json()\n>       assert cart[\"total\"] == 4000",
+          "error": "AssertionError: assert 3200 == 4000",
+          "code_b": "def test_promo_applies_to_cart(buyer):\n    buyer.post(\"/api/cart/items\", json={\"sku\": \"KETTLE-1\", \"qty\": 1})\n    buyer.post(\"/api/cart/promo\", json={\"code\": \"AUTUMN20\"})\n    assert buyer.get(\"/api/cart\").json()[\"discount\"] > 0"
+        },
+        "async": {
+          "file": "test_orders_async.py",
+          "test": "test_order_reserved_on_warehouse",
+          "worker": "warehouse-reserver",
+          "item": "заказ ord-7731 (чайник KETTLE-1)",
+          "code_head": "def test_order_reserved_on_warehouse(buyer):\n    order = buyer.post(\"/api/orders\", json=new_order(sku=\"KETTLE-1\")).json()",
+          "code_tail": "    order = buyer.get(f\"/api/orders/{order['id']}\").json()\n    assert order[\"status\"] == \"RESERVED\"",
+          "error": "AssertionError: assert 'RESERVING' == 'RESERVED'",
+          "log_done": "заказ ord-7731 RESERVING → RESERVED: склад подтвердил резерв",
+          "code_201": "def test_create_order(buyer):\n    r = buyer.post(\"/api/orders\", json=new_order(sku=\"KETTLE-1\"))\n    assert r.status_code == 201\n    assert r.json()[\"status\"] == \"RESERVING\"",
+          "log_error": "ValueError: unknown warehouse code 'MSK-7' при обработке заказа ord-9120",
+          "dlq": "orders.reserve.dlq",
+          "lost_incident": "Часть заказов «теряется»: покупатель получает письмо «Заказ оформлен», а на складе товар не зарезервирован, и заказ никто не собирает"
+        },
+        "time": {
+          "file": "tests/unit/test_delivery_dates.py",
+          "test": "test_courier_delivery_is_tomorrow",
+          "code": "def test_courier_delivery_is_tomorrow():\n    planner = DeliveryPlanner()\n    assert planner.delivery_date() == date.today() + timedelta(days=1)",
+          "source_file": "checkout/delivery.py",
+          "source": "class DeliveryPlanner:\n    def delivery_date(self):\n        # курьерская доставка — на следующий день по Москве\n        now = datetime.now(ZoneInfo(\"Europe/Moscow\"))\n        return (now + timedelta(days=1)).date()",
+          "error": "AssertionError: assert datetime.date(2026, 9, 23) == datetime.date(2026, 9, 22)"
+        },
+        "ui": {
+          "file": "checkout.spec.ts",
+          "title": "оформление заказа › самовывоз",
+          "action": "click",
+          "xpath": "xpath=/html/body/div[1]/div/div[2]/section[2]/div/button",
+          "code": "test('самовывоз', async ({ page }) => {\n  await page.goto('/cart');\n  await page.locator('xpath=/html/body/div[1]/div/div[2]/section[2]/div/button').click();\n  await page.locator('xpath=/html/body/div[1]/div/div[2]/form/div[2]/label[1]/input').check();\n  await page.locator('xpath=/html/body/div[1]/div/div[2]/form/button').click();\n  await expect(page.locator('xpath=/html/body/div[1]/div/div[2]/h1')).toHaveText('Заказ оформлен');\n});",
+          "change": "feat(cart): блок «С этим товаром покупают» над кнопкой оформления"
+        },
+        "api_check": {
+          "file": "test_catalog.py",
+          "endpoint": "GET /api/catalog/products/{sku}",
+          "incident": "у части товаров в каталоге цена 0 ₽, и их успели купить 312 раз",
+          "code": "@pytest.mark.parametrize(\"sku\", QA_SKUS)\ndef test_get_product(api, sku):\n    r = api.get(f\"/api/catalog/products/{sku}\")\n    assert r.status_code == 200",
+          "request": "GET /api/catalog/products/KETTLE-1",
+          "response": "{\n  \"sku\": \"KETTLE-1\",\n  \"name\": \"Чайник электрический, 1,7 л\",\n  \"price\": 0,\n  \"old_price\": 4000,\n  \"in_stock\": true\n}"
+        },
+        "env": {
+          "incident": "поиск по каталогу на проде отвечает по 5–8 секунд, а поиск по бренду обрывается по таймауту",
+          "rows": "catalog-service           5.12.0                 5.12.0\nPostgreSQL                16.2                   16.2\nИндекс products_brand_idx есть                   нет\nТоваров в каталоге        312                    2 140 000\nФлаг new_search           вкл.                   вкл.",
+          "how": "stage — вручную по инструкции из вики, база — скрипт с тестовыми товарами; prod — Helm-чарты и миграции из репозитория polka-infra"
+        },
+        "stage": {
+          "other_svc": "pricing-service",
+          "other_team": "Ценообразование",
+          "branch": "feature/dynamic-prices",
+          "error": "requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://stage.polka.example/api/pricing/quote"
+        },
+        "ext": {
+          "name": "песочница платёжного шлюза «Касса Онлайн»",
+          "host": "sandbox.kassa-online.example",
+          "path": "/v2/payments",
+          "step": "заказ оплачивается картой",
+          "limits": "Песочница общая для всех магазинов-клиентов: не больше 60 запросов в минуту на ключ, сверх лимита — ответ 429. По понедельникам с 10:00 до 12:00 — плановые работы. В последнюю неделю месяца магазины-клиенты проводят в песочнице нагрузочные испытания."
+        },
+        "unique": {
+          "what_gen": "покупателей",
+          "file": "test_signup.py",
+          "test": "test_signup_buyer",
+          "code": "def test_signup_buyer(api):\n    r = api.post(\"/api/users\", json={\"email\": \"qa-new-buyer@polka.example\", \"password\": \"Qwerty123!\"})\n    assert r.status_code == 201",
+          "error": "AssertionError: assert 409 == 201  (409 Conflict: user with email qa-new-buyer@polka.example already exists)"
+        },
+        "contract": {
+          "provider": "pricing-service",
+          "consumer": "cart-service",
+          "effect": "каждое добавление товара в корзину",
+          "change": "в ответе GET /quotes/{sku} поле price (рубли, дробное) заменено на price_minor (копейки, целое), старое поле удалено"
+        },
+        "prod": {
+          "incident": "кнопка «Оформить заказ» перестала нажиматься в Safari на iPhone",
+          "metric": "Конверсия из корзины в заказ в Safari на iOS упала с 31% до 4% — на дашборд никто не смотрел, алерта нет"
+        },
+        "pd": {
+          "data": "ФИО, телефоны, адреса доставки и история заказов",
+          "db": "polka"
+        },
+        "peak": {
+          "event": "Чёрную пятницу",
+          "event_name": "Чёрная пятница",
+          "incident": "оформление заказа отвечало по 20 секунд, и треть корзин брошена",
+          "rps_normal": "900",
+          "rps_peak": "14 000",
+          "bottleneck": "блокировки строк остатков в PostgreSQL при резервировании популярных товаров"
+        }
+      }
+    },
+    {
+      "id": "iot_smart_home",
+      "name": "Умный дом «Очаг»",
+      "description": "Приложение, веб-кабинет и облако для термостатов, датчиков и умных кранов. Команды доходят до устройств через MQTT-брокер, устройства подтверждают их асинхронно.",
+      "tags": ["hardware", "personal_data", "mobile", "web", "microservices", "async", "peaks"],
+      "vars": {
+        "app": "умный дом «Очаг»",
+        "svc": "devices-service",
+        "repo": "ochag-devices",
+        "prefix": "OCH",
+        "rules_topic": "расписаний и режимов",
+        "tests": [
+          "tests/api/test_devices.py::test_list_devices",
+          "tests/api/test_devices.py::test_rename_device",
+          "tests/api/test_schedule.py::test_create_schedule",
+          "tests/api/test_rooms.py::test_move_device_to_room",
+          "tests/api/test_telemetry.py::test_last_temperature",
+          "tests/api/test_auth.py::test_login_by_code"
+        ],
+        "range": {
+          "field": "Целевая температура",
+          "screen": "Карточка термостата",
+          "story_title": "Целевая температура термостата",
+          "story": "Как владелец, я хочу задать температуру, которую термостат будет поддерживать.",
+          "rule": "Целевая температура — от 5 до 35 °C включительно, с шагом 0,5 °C.",
+          "unit": "°C",
+          "min": "5", "max": "35", "below": "4,5", "above": "35,5",
+          "mid_a": "21", "mid_b": "28", "far_low": "-10", "far_high": "60",
+          "garbage": "«жарко»",
+          "ok": "термостат принял команду",
+          "error": "«Допустимо от 5 до 35 °C»",
+          "reject": "команда не отправляется",
+          "boundary_incident": "владельцы загородных домов жалуются: минимальные 5 °C не выставить — приложение пишет «Допустимо от 5 до 35 °C»",
+          "invalid_incident": "Через приложение удалось отправить термостату температуру «21,25»: он не понял команду, ушёл в аварийный режим и выключил отопление на всю ночь"
+        },
+        "flow": {
+          "client": "iPhone 13, iOS 17.6, приложение 4.3.1, термостат TH-200 с прошивкой 2.8.4",
+          "complaint": "Вечером поставил расписание «Будни»: с 06:30 до 23:00 — 22 °C. Утром дома было 16 °C. В приложении расписание есть, а в карточке термостата написано «Расписание не задано». У мамы такой же термостат на прошивке 2.8.2 — у неё всё работает.",
+          "attachments": "два скриншота",
+          "bad_title": "Расписание глючит",
+          "bad_text": "Расписание не работает, пользователь ругается. Поправьте."
+        },
+        "loc": {
+          "screen": "Карточка термостата «Гостиная»",
+          "label": "Температура в комнате",
+          "shown": "71,6 °C",
+          "expected": "22 °C",
+          "client": "Android 14, приложение 4.3.1",
+          "rule": "Датчик термостата передаёт температуру в градусах Цельсия; контрольный градусник в комнате показывает 22 °C.",
+          "steps": "1. Войти владельцем qa-home-5.\n2. Открыть комнату «Гостиная» → термостат th-2291.\n3. Посмотреть «Температура в комнате».",
+          "request": "GET /api/devices/th-2291/state",
+          "payload": "— (GET-запрос без тела)",
+          "response_be": "{\n  \"device\": \"th-2291\",\n  \"temperature\": 71.6,\n  \"unit\": \"C\",\n  \"target\": 22.0,\n  \"online\": true\n}",
+          "response_fe": "{\n  \"device\": \"th-2291\",\n  \"temperature\": 22.0,\n  \"unit\": \"C\",\n  \"temperature_f\": 71.6,\n  \"target\": 22.0,\n  \"online\": true\n}"
+        },
+        "triage": {
+          "cosmetic": "В настройках опечатка: «Режим отпука»",
+          "serious": "Команда «Перекрыть воду» от датчика протечки не доходит до крана, если телефон владельца в режиме энергосбережения",
+          "normal": "График температуры за неделю не листается на планшетах",
+          "trivial": "Иконка датчика двери на 1 px ниже текста",
+          "harm": "умный кран не перекрывает воду при протечке"
+        },
+        "states": {
+          "title": "Статусы термостата",
+          "diagram": "NEW → PAIRED → ONLINE\nONLINE → OFFLINE → ONLINE\nPAIRED, ONLINE, OFFLINE → UNPAIRED",
+          "rules": "После отвязки (UNPAIRED) термостат не принимает команды от прежнего владельца; привязать его можно заново к любому дому.",
+          "case_1": "Привязать новый термостат к дому → PAIRED, затем ONLINE",
+          "case_2": "Отключить питание → OFFLINE, включить → ONLINE",
+          "case_3": "Отвязать термостат в статусе ONLINE → UNPAIRED",
+          "case_4": "Привязать отвязанный термостат к другому дому → PAIRED",
+          "incident": "бывший владелец после отвязки термостата продолжает менять температуру у нового владельца из старого приложения"
+        },
+        "combo": {
+          "title": "Управление отоплением",
+          "rules": "1. В режиме «Отпуск» термостат держит 12 °C.\n2. Если датчик показывает открытое окно, отопление выключается.\n3. При угрозе заморозки (в доме ниже 7 °C) отопление включается в любом режиме.",
+          "case_1": "Режим «Отпуск» → термостат держит 12 °C",
+          "case_2": "Открыто окно → отопление выключено",
+          "case_3": "В доме 6 °C → отопление включено",
+          "incident": "в режиме «Отпуск» при открытом окне и морозе отопление так и не включилось: в доме промёрзли трубы"
+        },
+        "ambig": {
+          "title": "Ночной эко-режим",
+          "topic": "ночной эко-режим",
+          "phrase": "Ночью термостат переходит в эко-режим (на 3 °C ниже)",
+          "case": "В 23:00 по часовому поясу дома термостат снижает температуру на 3 °C, в 07:00 возвращает (ночь — с 23:00 до 07:00)",
+          "incident": "владельцы, которые ложатся в час ночи, жалуются: в 23:00 в доме становится холодно, хотя они ещё не спят",
+          "owner": "Ночь — это время сна, которое пользователь указывает при настройке дома. Мы ради этого его и спрашиваем."
+        },
+        "shared": {
+          "file_a": "test_thermostat.py",
+          "test_a": "test_set_target_temperature",
+          "file_b": "test_modes.py",
+          "test_b": "test_vacation_mode_lowers_all",
+          "fixture_line": "api = <ApiClient stage>, home = 'home-qa-01'",
+          "conftest": "QA_HOME = \"home-qa-01\"  # общий тестовый дом на stage, в нём 3 термостата\n\n@pytest.fixture\ndef home():\n    return QA_HOME",
+          "code_a": "    def test_set_target_temperature(api, home):\n        api.post(f\"/api/homes/{home}/devices/th-qa-1/target\", json={\"value\": 22.0})\n        state = api.get(f\"/api/homes/{home}/devices/th-qa-1/state\").json()\n>       assert state[\"target\"] == 22.0",
+          "error": "AssertionError: assert 12.0 == 22.0",
+          "code_b": "def test_vacation_mode_lowers_all(api, home):\n    api.post(f\"/api/homes/{home}/mode\", json={\"mode\": \"vacation\"})\n    devices = api.get(f\"/api/homes/{home}/devices\").json()[\"devices\"]\n    assert all(d[\"target\"] == 12.0 for d in devices)"
+        },
+        "async": {
+          "file": "test_commands_async.py",
+          "test": "test_command_applied_on_device",
+          "worker": "device-gateway",
+          "item": "команда cmd-4410 для th-qa-1 (23,5 °C)",
+          "code_head": "def test_command_applied_on_device(api, home):\n    cmd = api.post(f\"/api/homes/{home}/devices/th-qa-1/target\", json={\"value\": 23.5}).json()",
+          "code_tail": "    cmd = api.get(f\"/api/commands/{cmd['id']}\").json()\n    assert cmd[\"status\"] == \"APPLIED\"",
+          "error": "AssertionError: assert 'SENT' == 'APPLIED'",
+          "log_done": "команда cmd-4410 SENT → APPLIED: термостат подтвердил по MQTT",
+          "code_201": "def test_send_command(api, home):\n    r = api.post(f\"/api/homes/{home}/devices/th-qa-1/target\", json={\"value\": 23.5})\n    assert r.status_code == 201\n    assert r.json()[\"status\"] == \"SENT\"",
+          "log_error": "UnicodeDecodeError при разборе ответа термостата th-qa-3 (прошивка 2.8.4) на команду cmd-5127",
+          "dlq": "commands.dlq",
+          "lost_incident": "Команды «теряются»: приложение показывает «Команда отправлена», а термостаты с прошивкой 2.8.4 её так и не выполняют"
+        },
+        "time": {
+          "file": "tests/unit/test_schedule.py",
+          "test": "test_today_points_follow_weekday",
+          "code": "def test_today_points_follow_weekday():\n    schedule = Schedule(home_tz=ZoneInfo(\"Europe/Moscow\"), points=WEEK_POINTS)\n    expected = [p for p in WEEK_POINTS if p.weekday == date.today().weekday()]\n    assert schedule.points_for_today() == expected",
+          "source_file": "devices/schedule.py",
+          "source": "class Schedule:\n    def points_for_today(self):\n        # день недели — по часовому поясу дома\n        today = datetime.now(self.home_tz).date()\n        return [p for p in self.points if p.weekday == today.weekday()]",
+          "error": "AssertionError: assert [Point(weekday=3, at='06:30', temp=22.0), ...] == [Point(weekday=2, at='06:30', temp=22.0), ...]"
+        },
+        "ui": {
+          "file": "thermostat.spec.ts",
+          "title": "карточка термостата › смена температуры",
+          "action": "click",
+          "xpath": "xpath=//*[@id=\"root\"]/div/div[2]/div[1]/div[3]/div/button[2]",
+          "code": "test('смена температуры', async ({ page }) => {\n  await page.goto('/homes/home-qa-01/rooms/living');\n  await page.locator('xpath=//*[@id=\"root\"]/div/div[2]/div[1]/div[3]/div/button[2]').click();\n  await expect(page.locator('xpath=//*[@id=\"root\"]/div/div[2]/div[1]/div[3]/div/span')).toHaveText('22,5 °C');\n});",
+          "change": "feat(device-card): график температуры за сутки над регулятором"
+        },
+        "api_check": {
+          "file": "test_homes.py",
+          "endpoint": "GET /api/homes/{id}/devices",
+          "incident": "у части владельцев в приложении пропали все устройства — список пуст, хотя термостаты работают",
+          "code": "@pytest.mark.parametrize(\"home\", QA_HOMES)\ndef test_list_devices(api, home):\n    r = api.get(f\"/api/homes/{home}/devices\")\n    assert r.status_code == 200",
+          "request": "GET /api/homes/home-qa-02/devices  (в доме home-qa-02 — 3 термостата)",
+          "response": "{\n  \"home\": \"home-qa-02\",\n  \"devices\": [],\n  \"total\": 0\n}"
+        },
+        "env": {
+          "incident": "новые термостаты не подключаются: после привязки висят в статусе PAIRED и не выходят в сеть",
+          "rows": "devices-service           3.8.0                  3.8.0\nMQTT-брокер               Mosquitto 1.6          EMQX 5.4\nПротокол MQTT             3.1.1                  5.0\nФлаг ota_v2               выкл.                  вкл.\nТестовых устройств        24 эмулятора           —",
+          "how": "stage — вручную по инструкции из вики (2023 г.), брокер поставлен «временно»; prod — Helm-чарты из репозитория ochag-infra"
+        },
+        "stage": {
+          "other_svc": "notifications-service",
+          "other_team": "Уведомления",
+          "branch": "feature/push-v2",
+          "error": "requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://stage.ochag.example/api/notifications/subscribe"
+        },
+        "ext": {
+          "name": "облако производителя термостатов «ТермоЛинк»",
+          "host": "sandbox.thermolink.example",
+          "path": "/api/v1/devices/register",
+          "step": "термостат регистрируется в облаке производителя",
+          "limits": "Песочница общая для всех партнёров производителя: не больше 30 регистраций в минуту на ключ, сверх лимита — ответ 429. По понедельникам с 10:00 до 12:00 — плановые работы. В последнюю неделю месяца — обновление сертификатов, песочница отвечает с задержкой до минуты."
+        },
+        "unique": {
+          "what_gen": "устройств",
+          "file": "test_pairing.py",
+          "test": "test_pair_new_thermostat",
+          "code": "def test_pair_new_thermostat(api, home):\n    r = api.post(f\"/api/homes/{home}/devices\", json={\"serial\": \"TH200-QA-000001\"})\n    assert r.status_code == 201",
+          "error": "AssertionError: assert 409 == 201  (409 Conflict: device TH200-QA-000001 is already paired)"
+        },
+        "contract": {
+          "provider": "device-registry",
+          "consumer": "mobile-bff",
+          "effect": "каждое открытие списка устройств",
+          "change": "в ответе GET /devices/{id} логическое поле online заменено на строковое status (ONLINE, OFFLINE, UPDATING), старое поле удалено"
+        },
+        "prod": {
+          "incident": "у 8% термостатов после обновления прошивки слетело расписание",
+          "metric": "Доля термостатов, которые выполняют расписание, упала с 99% до 91% — метрика есть, но алерта на неё нет"
+        },
+        "pd": {
+          "data": "адреса домов, расписания присутствия жильцов и коды доступа к умным замкам",
+          "db": "ochag"
+        },
+        "peak": {
+          "event": "первый морозный вечер сезона",
+          "event_name": "первый морозный вечер сезона",
+          "incident": "команды доходили до термостатов через 5–10 минут, а у части владельцев приложение показывало «Нет связи с домом»",
+          "rps_normal": "1 100",
+          "rps_peak": "19 000",
+          "bottleneck": "очередь команд в MQTT-брокере растёт быстрее, чем device-gateway её разбирает"
+        }
+      }
+    },
+    {
+      "id": "health_booking",
+      "name": "Сеть клиник «Здравница»",
+      "description": "Сайт и приложение для онлайн-записи к врачам в 58 клиниках по стране: расписание, запись, анкеты, оплата и напоминания. Запись передаётся в медицинскую информационную систему клиники асинхронно.",
+      "tags": ["medical", "personal_data", "web", "mobile", "microservices", "async"],
+      "vars": {
+        "app": "онлайн-запись сети клиник «Здравница»",
+        "svc": "booking-service",
+        "repo": "zdravnitsa-booking",
+        "prefix": "ZDR",
+        "rules_topic": "записи и отмены",
+        "tests": [
+          "tests/api/test_doctors.py::test_search_by_specialty",
+          "tests/api/test_slots.py::test_free_slots_list",
+          "tests/api/test_booking.py::test_book_slot_ok",
+          "tests/api/test_profile.py::test_update_phone",
+          "tests/api/test_clinics.py::test_clinic_list",
+          "tests/api/test_auth.py::test_login_by_code"
+        ],
+        "range": {
+          "field": "Вес пациента",
+          "screen": "Анкета перед приёмом",
+          "story_title": "Анкета перед приёмом: вес",
+          "story": "Как пациент, я хочу заполнить анкету до приёма, чтобы врач заранее видел мои данные.",
+          "rule": "Вес — от 0,5 до 300 кг включительно, с точностью до 0,1 кг.",
+          "unit": "кг",
+          "min": "0,5", "max": "300", "below": "0,4", "above": "300,1",
+          "mid_a": "72", "mid_b": "120", "far_low": "0", "far_high": "1 000",
+          "garbage": "«семьдесят»",
+          "ok": "анкета сохранена",
+          "error": "«Укажите вес от 0,5 до 300 кг»",
+          "reject": "анкета не сохраняется",
+          "boundary_incident": "родители не могут заполнить анкету на новорождённого весом 0,5 кг — сайт пишет «Укажите вес от 0,5 до 300 кг»",
+          "invalid_incident": "В поле веса сохранилось значение «72,5,3»: анкета ушла врачу, а расчёт дозировки в электронной карте показал вес 7 253 кг"
+        },
+        "flow": {
+          "client": "Chrome 129, Windows 11, вход по номеру телефона",
+          "complaint": "Записываю сына (6 лет) к педиатру на 14 октября. Выбираю врача и время 10:30, нажимаю «Записаться» — появляется «Ошибка 400». Себя к терапевту записала без проблем.",
+          "attachments": "нет",
+          "bad_title": "Не работает запись",
+          "bad_text": "Запись к врачу не работает, выдаёт ошибку. Срочно!"
+        },
+        "loc": {
+          "screen": "Запись к врачу — выбор времени",
+          "label": "Время приёма",
+          "shown": "07:30",
+          "expected": "11:30",
+          "client": "Safari 17, iPhone 13",
+          "rule": "Клиника в Новосибирске; время приёма показывается по местному времени клиники, в расписании врача первый приём — в 11:30.",
+          "steps": "1. Войти пациентом qa-patient-8 (город в профиле — Москва).\n2. Клиника «Здравница на Красном» (Новосибирск) → терапевт Иванова А. П. → 14 октября.\n3. Посмотреть время первого свободного приёма.",
+          "request": "GET /api/doctors/d-118/slots?date=2026-10-14",
+          "payload": "— (GET-запрос без тела)",
+          "response_be": "{\n  \"doctor\": \"d-118\",\n  \"clinic_tz\": \"Asia/Novosibirsk\",\n  \"slots\": [\n    {\"start\": \"2026-10-14T07:30:00+07:00\", \"free\": true}\n  ]\n}",
+          "response_fe": "{\n  \"doctor\": \"d-118\",\n  \"clinic_tz\": \"Asia/Novosibirsk\",\n  \"slots\": [\n    {\"start\": \"2026-10-14T11:30:00+07:00\", \"free\": true}\n  ]\n}"
+        },
+        "triage": {
+          "cosmetic": "На кнопке опечатка: «Записатся к врачу»",
+          "serious": "Пациентам с одинаковыми ФИО приходят SMS-напоминания с диагнозом друг друга",
+          "normal": "Фильтр врачей по стажу не учитывает совместителей",
+          "trivial": "Фото врача обрезается в карточке на узких экранах",
+          "harm": "пациенты получают в SMS чужие диагнозы"
+        },
+        "states": {
+          "title": "Статусы записи на приём",
+          "diagram": "BOOKED → CONFIRMED → COMPLETED\nBOOKED → CANCELLED\nCONFIRMED → CANCELLED (не позже чем за 2 часа до приёма)\nCONFIRMED → NO_SHOW (пациент не пришёл)",
+          "rules": "Отменить можно запись в статусах BOOKED и CONFIRMED — не позже чем за 2 часа до приёма; оплата при этом возвращается. Состоявшийся приём (COMPLETED) не отменяется.",
+          "case_1": "Записаться → BOOKED, клиника подтвердила → CONFIRMED",
+          "case_2": "Пациент пришёл, врач закрыл приём → COMPLETED",
+          "case_3": "Отменить запись в статусе BOOKED → CANCELLED, оплата вернулась",
+          "case_4": "Отменить запись в статусе CONFIRMED за сутки до приёма → CANCELLED, оплата вернулась",
+          "incident": "пациент отменил в личном кабинете уже состоявшийся приём, и клиника автоматически вернула ему оплату"
+        },
+        "combo": {
+          "title": "Онлайн-запись к узкому специалисту",
+          "rules": "1. К узкому специалисту онлайн можно записаться только по направлению терапевта.\n2. Пациентам по ДМС направление не требуется.\n3. Пациента младше 18 лет записывает только законный представитель.",
+          "case_1": "Пациент без ДМС, с направлением → запись создана",
+          "case_2": "Пациент по ДМС, без направления → запись создана",
+          "case_3": "Пациент 16 лет записывается сам → «Запись оформляет законный представитель»",
+          "incident": "17-летний пациент по ДМС сам записался к кардиологу — без направления и без представителя"
+        },
+        "ambig": {
+          "title": "Отмена записи",
+          "topic": "отмену записи",
+          "phrase": "Отменить запись можно не позднее чем за сутки до приёма",
+          "case": "Приём 14 октября в 09:00, отмена 13 октября в 23:50 → отмена разрешена (сутки — это предыдущий календарный день)",
+          "incident": "пациенты отменяют утренние приёмы поздно вечером накануне: врачи остаются без пациентов, а клиника возвращает деньги",
+          "owner": "Сутки — это 24 часа до начала приёма. За ночь мы не успеваем записать на освободившееся время другого пациента."
+        },
+        "shared": {
+          "file_a": "test_booking.py",
+          "test_a": "test_book_first_free_slot",
+          "file_b": "test_cancel.py",
+          "test_b": "test_cancel_frees_slot",
+          "fixture_line": "api = <ApiClient stage>, doctor = 'd-qa-7', patient = 'p-qa-3'",
+          "conftest": "QA_DOCTOR = \"d-qa-7\"  # общий тестовый врач на stage, расписание на месяц вперёд\n\n@pytest.fixture\ndef doctor():\n    return QA_DOCTOR",
+          "code_a": "    def test_book_first_free_slot(api, doctor, patient):\n        slot = api.get(f\"/api/doctors/{doctor}/slots?free=true\").json()[\"slots\"][0]\n        r = api.post(\"/api/appointments\", json={\"slot\": slot[\"id\"], \"patient\": patient})\n>       assert r.status_code == 201",
+          "error": "AssertionError: assert 409 == 201  (409 Conflict: slot sl-20261014-0900 is already booked)",
+          "code_b": "def test_cancel_frees_slot(api, doctor, patient):\n    slot = api.get(f\"/api/doctors/{doctor}/slots?free=true\").json()[\"slots\"][0]\n    appointment = api.post(\"/api/appointments\", json={\"slot\": slot[\"id\"], \"patient\": patient}).json()\n    api.delete(f\"/api/appointments/{appointment['id']}\")\n    assert api.get(f\"/api/slots/{slot['id']}\").json()[\"free\"]"
+        },
+        "async": {
+          "file": "test_booking_async.py",
+          "test": "test_booking_confirmed_by_clinic",
+          "worker": "mis-sync",
+          "item": "запись ap-3318 (терапевт, 14 октября 09:00)",
+          "code_head": "def test_booking_confirmed_by_clinic(api, patient):\n    appointment = api.post(\"/api/appointments\", json=new_booking(patient)).json()",
+          "code_tail": "    appointment = api.get(f\"/api/appointments/{appointment['id']}\").json()\n    assert appointment[\"status\"] == \"CONFIRMED\"",
+          "error": "AssertionError: assert 'BOOKED' == 'CONFIRMED'",
+          "log_done": "запись ap-3318 BOOKED → CONFIRMED: медицинская информационная система клиники подтвердила",
+          "code_201": "def test_create_booking(api, patient):\n    r = api.post(\"/api/appointments\", json=new_booking(patient))\n    assert r.status_code == 201\n    assert r.json()[\"status\"] == \"BOOKED\"",
+          "log_error": "TimeoutError при передаче записи ap-4021 в медицинскую информационную систему клиники «Здравница на Ленина»",
+          "dlq": "appointments.mis.dlq",
+          "lost_incident": "Часть записей «теряется»: пациент получает SMS «Вы записаны», а в расписании врача записи нет, и на одно время приходят двое"
+        },
+        "time": {
+          "file": "tests/unit/test_slots.py",
+          "test": "test_tomorrow_slots_are_shown",
+          "code": "def test_tomorrow_slots_are_shown():\n    calendar = SlotCalendar(clinic_tz=ZoneInfo(\"Europe/Moscow\"), slots=WEEK_SLOTS)\n    tomorrow = date.today() + timedelta(days=1)\n    assert calendar.tomorrow() == [s for s in WEEK_SLOTS if s.day == tomorrow]",
+          "source_file": "booking/slots.py",
+          "source": "class SlotCalendar:\n    def tomorrow(self):\n        # «завтра» — по часовому поясу клиники\n        today = datetime.now(self.clinic_tz).date()\n        return [s for s in self.slots if s.day == today + timedelta(days=1)]",
+          "error": "AssertionError: assert [Slot(day=datetime.date(2026, 9, 24), ...)] == [Slot(day=datetime.date(2026, 9, 23), ...)]"
+        },
+        "ui": {
+          "file": "booking.spec.ts",
+          "title": "запись к врачу › выбор времени",
+          "action": "click",
+          "xpath": "xpath=/html/body/div[1]/main/div[2]/div[2]/div[1]/button[3]",
+          "code": "test('выбор времени', async ({ page }) => {\n  await page.goto('/doctors/d-118');\n  await page.locator('xpath=/html/body/div[1]/main/div[2]/div[2]/div[1]/button[3]').click();\n  await page.locator('xpath=/html/body/div[1]/main/div[2]/div[3]/button').click();\n  await expect(page.locator('xpath=/html/body/div[1]/main/div[2]/h2')).toHaveText('Вы записаны');\n});",
+          "change": "feat(booking): плашка «Ближайшее свободное время» над календарём"
+        },
+        "api_check": {
+          "file": "test_appointments.py",
+          "endpoint": "GET /api/patients/{id}/appointments",
+          "incident": "в личном кабинете у записей вместо врача написано «null», и пациенты не понимают, к кому идти",
+          "code": "@pytest.mark.parametrize(\"patient\", QA_PATIENTS)\ndef test_list_appointments(api, patient):\n    r = api.get(f\"/api/patients/{patient}/appointments\")\n    assert r.status_code == 200",
+          "request": "GET /api/patients/p-qa-12/appointments",
+          "response": "{\n  \"patient\": \"p-qa-12\",\n  \"appointments\": [\n    {\"id\": \"ap-3318\", \"doctor\": null, \"start\": \"2026-10-14T09:00:00+03:00\"}\n  ]\n}"
+        },
+        "env": {
+          "incident": "пациентам перестали приходить SMS-напоминания о приёме",
+          "rows": "booking-service           4.2.0                  4.2.0\nPostgreSQL                14.9                   14.9\nФлаг sms_reminders_v2     вкл.                   выкл.\nSMS-провайдер             заглушка               «СМС-Хаб»\nКлиник в справочнике      3                      58",
+          "how": "stage — вручную по инструкции из вики, флаги включают по просьбе тестировщиков; prod — Helm-чарты и конфигурация флагов из репозитория zdravnitsa-infra"
+        },
+        "stage": {
+          "other_svc": "mis-adapter",
+          "other_team": "Интеграции с клиниками",
+          "branch": "feature/mis-v3",
+          "error": "requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://stage.zdravnitsa.example/api/mis/schedule"
+        },
+        "ext": {
+          "name": "песочница SMS-провайдера «СМС-Хаб»",
+          "host": "sandbox.sms-hub.example",
+          "path": "/v3/messages",
+          "step": "пациенту отправляется SMS с кодом подтверждения",
+          "limits": "Песочница общая для всех клиентов провайдера: не больше 20 сообщений в минуту на ключ, сверх лимита — ответ 429. По понедельникам с 10:00 до 12:00 — плановые работы. В последнюю неделю месяца — сверка и перезапуск шлюзов."
+        },
+        "unique": {
+          "what_gen": "пациентов",
+          "file": "test_patients.py",
+          "test": "test_register_patient",
+          "code": "def test_register_patient(api):\n    r = api.post(\"/api/patients\", json={\"oms_policy\": \"0000000000000001\", \"name\": \"Тестова Анна\"})\n    assert r.status_code == 201",
+          "error": "AssertionError: assert 409 == 201  (409 Conflict: patient with OMS policy 0000000000000001 already exists)"
+        },
+        "contract": {
+          "provider": "schedule-service",
+          "consumer": "booking-service",
+          "effect": "каждую попытку записи",
+          "change": "в ответе GET /slots поле start (местное время без часового пояса) заменено на starts_at (ISO 8601 с часовым поясом), старое поле удалено"
+        },
+        "prod": {
+          "incident": "онлайн-запись перестала показывать свободное время в клиниках Новосибирска",
+          "metric": "Число записей в клиники Новосибирска упало с 900 до 40 в час — метрика на дашборде есть, алерта на неё нет"
+        },
+        "pd": {
+          "data": "ФИО, полисы ОМС и диагнозы — сведения, составляющие врачебную тайну",
+          "db": "zdravnitsa"
+        }
+      }
+    }
+  ],
+  "artifacts": [
+    {"id": "requirement", "name": "Требование", "format": "text"},
+    {"id": "test_cases", "name": "Тест-кейсы", "format": "text"},
+    {"id": "bug_report", "name": "Баг-репорт", "format": "text"},
+    {"id": "bug_list", "name": "Список багов", "format": "text"},
+    {"id": "support_ticket", "name": "Обращение в поддержку", "format": "text"},
+    {"id": "chat", "name": "Переписка", "format": "text"},
+    {"id": "changelog", "name": "Изменения в релизе", "format": "text"},
+    {"id": "vendor_doc", "name": "Документация партнёра", "format": "text"},
+    {"id": "postmortem", "name": "Разбор инцидента", "format": "text"},
+    {"id": "quality_report", "name": "Отчёт о качестве", "format": "text"},
+    {"id": "release_process", "name": "Релизный процесс", "format": "text"},
+    {"id": "network", "name": "Запрос в DevTools", "format": "code"},
+    {"id": "test_code", "name": "Код автотеста", "format": "code"},
+    {"id": "source_code", "name": "Код сервиса", "format": "code"},
+    {"id": "ci_log", "name": "Лог CI", "format": "code"},
+    {"id": "service_log", "name": "Лог сервиса", "format": "code"},
+    {"id": "test_history", "name": "История прогонов", "format": "code"},
+    {"id": "env_diff", "name": "Сравнение окружений", "format": "code"},
+    {"id": "deploy_log", "name": "Журнал выкладок", "format": "code"},
+    {"id": "pipeline_config", "name": "Конфигурация пайплайна", "format": "code"},
+    {"id": "metrics", "name": "Метрики", "format": "code"},
+    {"id": "script", "name": "Скрипт", "format": "code"}
+  ],
+  "solutions": [
+    {"id": "boundary_value_analysis", "name": "Анализ граничных значений", "description": "Проверить значения на каждой границе диапазона и рядом с ней: минимум и максимум, на шаг ниже минимума и на шаг выше максимума."},
+    {"id": "equivalence_partitioning", "name": "Классы эквивалентности, включая недопустимые", "description": "Разбить входные данные на классы — допустимые и недопустимые (отрицательные, дробные не по шагу, нечисловые, пустые, с лишними знаками) — и проверить по представителю каждого класса."},
+    {"id": "test_reported_case_only", "name": "Регрессионный тест ровно на случай из обращения", "description": "Повторить в тесте те же данные и шаги, что в обращении или инциденте, и добавить его в регресс."},
+    {"id": "random_values", "name": "Больше случайных значений", "description": "Добавить в набор ещё десяток случайных значений из допустимого диапазона.", "distracts": ["bva_missing_boundaries", "invalid_classes_missing"]},
+    {"id": "automate_test_cases", "name": "Автоматизировать существующие тест-кейсы", "description": "Перенести набор тест-кейсов в автотесты, чтобы прогонять его на каждой сборке.", "distracts": ["bva_missing_boundaries", "invalid_classes_missing", "state_transitions_untested", "decision_table_missing"]},
+    {"id": "input_mask_only", "name": "Маска ввода в поле", "description": "Попросить фронтенд добавить в поле маску, чтобы ввести можно было только цифры."},
+    {"id": "rewrite_bug_report", "name": "Переписать баг-репорт по шаблону", "description": "Окружение и версии, точные шаги с данными, ожидаемый и фактический результат, вложения: скриншот, лог, время и идентификатор запроса."},
+    {"id": "call_developer_demo", "name": "Показать баг разработчику на своём устройстве", "description": "Созвониться с разработчиком и воспроизвести ошибку при нём."},
+    {"id": "attach_screen_recording", "name": "Приложить видео экрана", "description": "Записать видео, как ошибка воспроизводится, и приложить к багу."},
+    {"id": "raise_priority", "name": "Поднять приоритет и серьёзность", "description": "Повысить приоритет и серьёзность бага, чтобы его взяли в работу раньше."},
+    {"id": "assign_backend_with_api", "name": "Передать баг бэкенду с запросом и ответом API", "description": "Приложить к багу запрос и ответ из DevTools (HAR) и назначить его на команду бэкенда."},
+    {"id": "assign_frontend_with_api", "name": "Передать баг фронтенду с запросом и ответом API", "description": "Приложить к багу запрос и ответ из DevTools (HAR) и назначить его на команду фронтенда."},
+    {"id": "assign_both_teams", "name": "Назначить баг на обе команды", "description": "Поставить исполнителями и фронтенд, и бэкенд: пусть разберутся вместе."},
+    {"id": "repeat_request_directly", "name": "Повторить запрос к API напрямую", "description": "Отправить тот же запрос из Postman или curl и сравнить ответ с тем, что на экране."},
+    {"id": "triage_by_impact", "name": "Пересмотреть серьёзность и приоритет по влиянию", "description": "Серьёзность — по ущербу пользователю и бизнесу (деньги, данные, безопасность, блокировка сценария), приоритет — по срочности исправления; пересмотреть все баги релиза."},
+    {"id": "hold_release_until_all_fixed", "name": "Не выпускать релиз, пока не исправлены все баги", "description": "Перенести релиз, пока все открытые баги из списка не будут закрыты."},
+    {"id": "smoke_after_deploy", "name": "Смоук-тесты после каждой выкладки", "description": "Прогонять короткий набор проверок основных сценариев сразу после выкладки.", "distracts": ["severity_priority_mixup", "ambiguous_requirement", "bug_report_unreproducible"]},
+    {"id": "state_transition_testing", "name": "Тестирование переходов состояний", "description": "Нарисовать диаграмму состояний и проверить каждый переход, в том числе запрещённые: система должна их отклонять."},
+    {"id": "decision_table", "name": "Таблица принятия решений", "description": "Свести условия и их сочетания в таблицу и проверить каждое сочетание, значимое по рискам."},
+    {"id": "pairwise_testing", "name": "Попарное тестирование (pairwise)", "description": "Подобрать минимальный набор тестов, в котором встречается каждая пара значений условий."},
+    {"id": "clarify_requirement", "name": "Уточнять требование до написания тестов", "description": "Задать вопрос аналитику или владельцу продукта и зафиксировать ответ в критериях приёмки с примерами, прежде чем писать тест-кейсы."},
+    {"id": "fix_test_case_to_owner", "name": "Исправить тест-кейс по ответу владельца продукта", "description": "Поменять ожидаемый результат в тест-кейсе так, как сказал владелец продукта."},
+    {"id": "accept_current_behaviour", "name": "Считать ожидаемым текущее поведение системы", "description": "Записать в ожидаемый результат то, как система ведёт себя на стенде сейчас."},
+
+    {"id": "isolated_test_data", "name": "Свои тестовые данные у каждого теста", "description": "Каждый тест создаёт нужные сущности сам — через API или фабрики — и удаляет их после себя; общих тестовых записей нет."},
+    {"id": "serial_run", "name": "Запускать тесты в один поток", "description": "Отключить параллельный запуск: тесты идут по одному, в фиксированном порядке."},
+    {"id": "retry_failed_tests", "name": "Перезапуск упавших тестов", "description": "Включить автоматический перезапуск упавшего теста, до трёх раз (rerunfailures, retries)."},
+    {"id": "explicit_wait_condition", "name": "Ожидание по условию", "description": "Опрашивать статус с коротким интервалом до общего таймаута или ждать событие о завершении — вместо фиксированной паузы."},
+    {"id": "increase_sleep", "name": "Увеличить паузу в тесте", "description": "Поднять time.sleep в тесте с нескольких секунд до 10."},
+    {"id": "fake_clock", "name": "Подменённое время в тестах", "description": "Передавать «часы» в код как зависимость и в тесте фиксировать нужный момент (Clock, freezegun), а не брать текущее время."},
+    {"id": "runners_same_timezone", "name": "Часовой пояс раннеров как у сервиса", "description": "Выставить раннерам CI тот же часовой пояс, в котором сервис считает даты."},
+    {"id": "move_nightly_run", "name": "Перенести ночную сборку", "description": "Запускать ночной регресс не около полуночи, а в 04:00."},
+    {"id": "stable_test_ids", "name": "Устойчивые локаторы", "description": "Искать элементы по data-testid или по роли и доступному имени, а не по пути в вёрстке; договориться с фронтендом, что эти атрибуты стабильны."},
+    {"id": "page_object", "name": "Page Object", "description": "Собрать локаторы и действия страницы в одном классе; тесты обращаются к его методам."},
+    {"id": "increase_timeout", "name": "Увеличить таймауты", "description": "Поднять таймауты ожидания элементов и запросов в тестах до 60 секунд."},
+    {"id": "rerecord_tests", "name": "Перезаписывать тесты рекордером", "description": "После каждого релиза фронтенда заново записывать упавшие сценарии в рекордере (Playwright codegen)."},
+    {"id": "body_assertions", "name": "Проверки тела ответа", "description": "Проверять схему ответа (JSON Schema, модели) и значения ключевых полей по известным тестовым данным, а не только код ответа."},
+    {"id": "verify_side_effects", "name": "Проверка результата обработки", "description": "После ответа API дождаться и проверить, что изменилось на самом деле: запись в БД или через API чтения, событие в очереди."},
+    {"id": "dlq_alert", "name": "Алерт на очередь недоставленных сообщений", "description": "Включить мониторинг и алерт, когда в очереди недоставленных сообщений (DLQ) что-то появляется."},
+    {"id": "manual_db_check", "name": "Ручная проверка БД перед релизом", "description": "Перед релизом выборочно просматривать таблицы стенда вручную."},
+    {"id": "env_as_code", "name": "Окружение из кода", "description": "Описать стенд кодом (Docker Compose, Helm, Terraform) с теми же версиями, флагами и настройками, что в проде, и пересоздавать его из этого описания."},
+    {"id": "env_checklist", "name": "Сверка стенда с продом по чек-листу", "description": "Перед релизом вручную сверять версии, флаги и настройки стенда и прода."},
+    {"id": "regress_on_prod", "name": "Регресс на проде после релиза", "description": "Сразу после выкладки прогонять полный регресс на продакшене."},
+    {"id": "ephemeral_envs", "name": "Временные окружения на ветку", "description": "Поднимать для прогона отдельное окружение: сервисы команды — из ветки, соседние — фиксированных версий; после прогона окружение удаляется."},
+    {"id": "stub_neighbours", "name": "Заглушки соседних сервисов", "description": "Заменить в интеграционных тестах сервисы других команд заглушками с записанными ответами."},
+    {"id": "deploy_queue", "name": "Выкладка на stage по расписанию", "description": "Договориться, что команды выкладываются на общий стенд по очереди, в отведённые часы."},
+    {"id": "service_virtualization", "name": "Виртуализация внешнего сервиса", "description": "Поднять в тестах эмулятор внешнего API (WireMock, MockServer) со сценариями ответов, а настоящую песочницу проверять отдельным редким набором."},
+    {"id": "unique_data_cleanup", "name": "Уникальные данные и уборка за собой", "description": "Генерировать уникальные значения на каждый прогон (суффиксы, генераторы) и удалять созданное: teardown или транзакция с откатом."},
+    {"id": "reset_stage_db", "name": "Пересоздавать базу стенда перед прогоном", "description": "Перед каждым прогоном сбрасывать базу stage к эталонному дампу."},
+    {"id": "faster_ci_runners", "name": "Более мощные раннеры CI", "description": "Перевести прогоны на машины с большим числом ядер и памяти.", "distracts": ["flaky_shared_data", "flaky_fixed_sleep", "external_sandbox"]},
+    {"id": "code_coverage_gate", "name": "Порог покрытия кода 80%", "description": "Блокировать мерж, если покрытие кода тестами ниже 80%.", "distracts": ["api_asserts_status_only", "async_effect_unchecked"]},
+    {"id": "more_e2e_coverage", "name": "Добавить e2e-тесты на сценарий", "description": "Покрыть сценарий дополнительными сквозными тестами через интерфейс.", "distracts": ["api_asserts_status_only", "async_effect_unchecked", "brittle_locators"]},
+
+    {"id": "rebalance_pyramid", "name": "Перестроить пирамиду тестирования", "description": "Перенести проверки логики в unit- и API-тесты, через интерфейс оставить несколько ключевых сквозных сценариев."},
+    {"id": "parallelize_e2e", "name": "Распараллелить e2e на несколько машин", "description": "Разбить e2e-набор на части и прогонять их одновременно на 10–20 раннерах."},
+    {"id": "weekly_regression", "name": "Полный регресс раз в неделю", "description": "Запускать полный набор тестов раз в неделю, перед релизом, а не каждый день."},
+    {"id": "consumer_driven_contracts", "name": "Контрактные тесты (consumer-driven)", "description": "Потребители описывают свои ожидания от API провайдера в контрактах (Pact), провайдер проверяет их в своём CI до релиза."},
+    {"id": "api_versioning", "name": "Версионирование API", "description": "Выпускать несовместимые изменения новой версией API и поддерживать старую, пока у неё есть потребители."},
+    {"id": "full_e2e_before_release", "name": "Общий e2e-регресс всех сервисов перед релизом", "description": "Поднимать все сервисы вместе и прогонять сквозной регресс перед каждым релизом любого из них."},
+    {"id": "api_review_call", "name": "Созвон команд перед релизом", "description": "Перед каждым релизом команды созваниваются и сверяют изменения API."},
+    {"id": "shift_left", "name": "Shift-Left: QA с начала работы над задачей", "description": "Тестировщик участвует в груминге и ревью требований; критерии приёмки и примеры (Three Amigos, BDD) готовы до начала разработки."},
+    {"id": "test_phase_freeze", "name": "Отдельная фаза тестирования в конце спринта", "description": "Выделить последнюю неделю спринта под тестирование: новые задачи не берутся, код заморожен."},
+    {"id": "quality_gates", "name": "Quality gates в пайплайне", "description": "Мерж и выкладка блокируются, если упал обязательный набор тестов или не пройдены проверки качества; исключения — только явные и с владельцем."},
+    {"id": "manual_report_review", "name": "Ручной просмотр отчёта перед выкладкой", "description": "Дежурный перед выкладкой открывает отчёт о тестах и решает, можно ли выкладывать."},
+    {"id": "flaky_quarantine", "name": "Карантин флаки-тестов", "description": "Нестабильный тест выводится из обязательного набора, на него заводится задача с владельцем и сроком; флакость измеряется и видна на дашборде."},
+    {"id": "auto_retry_pipeline", "name": "Автоперезапуск пайплайна", "description": "Автоматически перезапускать упавший пайплайн, до трёх раз, пока он не станет зелёным."},
+    {"id": "skip_unstable_tests", "name": "Отключить нестабильные тесты", "description": "Пометить все нестабильные тесты как skip и больше их не запускать."},
+    {"id": "staged_pipeline", "name": "Стадии пайплайна и выбор тестов", "description": "На каждый PR — быстрые unit- и API-тесты и тесты, затронутые изменением (test impact analysis); полный регресс — после мержа и ночью."},
+    {"id": "urgent_label_skip", "name": "Мерж без тестов по метке «срочно»", "description": "Разрешить мержить PR с меткой «срочно», не дожидаясь окончания пайплайна."},
+    {"id": "canary_synthetics", "name": "Канареечный релиз и синтетические проверки", "description": "Новая версия сначала получает малую долю трафика; ключевые метрики и синтетические сценарии в проде сравниваются со старой версией, при отклонении — автоматический откат."},
+    {"id": "feature_flags", "name": "Фича-флаги", "description": "Выпускать изменения выключенными за флагом и включать постепенно, с возможностью мгновенно выключить."},
+    {"id": "double_manual_regression", "name": "Удвоить ручной регресс перед релизом", "description": "Перед каждым релизом проходить ручной регресс дважды, разными тестировщиками."},
+    {"id": "synthetic_test_data", "name": "Синтетические и обезличенные данные", "description": "Наполнять стенды сгенерированными данными (фабрики, генераторы); если нужна копия прода — только после обезличивания."},
+    {"id": "restrict_stage_access", "name": "Закрыть доступ к стенду", "description": "Убрать доступ к stage у подрядчиков и сократить список сотрудников с доступом."},
+    {"id": "load_testing", "name": "Нагрузочное тестирование по профилю трафика", "description": "Перед релизами и пиковыми событиями прогонять нагрузочные тесты (k6, Gatling, JMeter) по профилю реального трафика с целевыми показателями (SLO)."},
+    {"id": "overprovision", "name": "Втрое больше серверов перед пиком", "description": "Перед ожидаемым пиком заранее увеличить число серверов в три раза."},
+    {"id": "risk_based_automation", "name": "Автоматизация регресса по рискам", "description": "Автоматизировать регресс, начиная с самых критичных и частых сценариев, в основном на уровне API; ручное время — на исследовательское тестирование нового."},
+    {"id": "trim_regression_scope", "name": "Сократить ручной регресс по рискам", "description": "Оставить в ручном регрессе только кейсы с высоким риском, остальные проходить выборочно."},
+    {"id": "hire_manual_testers", "name": "Нанять ещё тестировщиков на регресс", "description": "Расширить команду ручного тестирования, чтобы регресс проходил быстрее."}
+  ],
+  "problems": [
+    {
+      "id": "bva_missing_boundaries",
+      "level": "Junior",
+      "area": "test_design",
+      "name": "Тест-кейсы проверяют значения из середины диапазона и далеко за ним, а сами границы и соседние с ними значения — нет: не применён анализ граничных значений",
+      "params": {"tc": {"int": [1100, 4800]}, "run": {"int": [210, 980]}, "us": {"int": [120, 940]}},
+      "observation": "После релиза {s[range][boundary_incident]}. Перед релизом все тест-кейсы на поле «{s[range][field]}» прошли.",
+      "evidence": [[
+        {"artifact": "requirement", "title": "US-{us} · {s[range][story_title]}", "lines": [
+          "US-{us}. {s[range][story]}",
+          "",
+          "Критерии приёмки:",
+          "1. {s[range][rule]}",
+          "2. Значение вне диапазона не принимается: ошибка {s[range][error]}.",
+          "3. Пустое или нечисловое значение не принимается: {s[range][reject]}."
+        ]},
+        {"artifact": "test_cases", "title": "{s[range][field]} · прогон R-{run}", "lines": [
+          "Набор «{s[range][field]}», экран «{s[range][screen]}», стенд stage, прогон R-{run}",
+          "",
+          "TC-{tc}.1   {s[range][mid_a]} {s[range][unit]} → {s[range][ok]} — Passed",
+          "TC-{tc}.2   {s[range][mid_b]} {s[range][unit]} → {s[range][ok]} — Passed",
+          "TC-{tc}.3   {s[range][far_low]} {s[range][unit]} → ошибка {s[range][error]} — Passed",
+          "TC-{tc}.4   {s[range][far_high]} {s[range][unit]} → ошибка {s[range][error]} — Passed",
+          "TC-{tc}.5   {s[range][garbage]} → {s[range][reject]} — Passed",
+          "TC-{tc}.6   Пустое поле → {s[range][reject]} — Passed"
+        ]}
+      ]],
+      "fixes": ["boundary_value_analysis"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "test_reported_case_only", "why": "тест закроет одно значение из обращения, а другая граница и значения рядом с границами так и останутся непроверенными"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "invalid_classes_missing",
+      "level": "Junior",
+      "area": "test_design",
+      "name": "Проверены допустимые значения и границы диапазона, а классы недопустимых данных (отрицательные, дробные не по шагу, нечисловые, с лишними знаками) — нет: не применено разбиение на классы эквивалентности",
+      "params": {"tc": {"int": [1100, 4800]}, "run": {"int": [210, 980]}, "us": {"int": [120, 940]}},
+      "observation": "{s[range][invalid_incident]}. Перед релизом все тест-кейсы на поле «{s[range][field]}» прошли.",
+      "evidence": [[
+        {"artifact": "requirement", "title": "US-{us} · {s[range][story_title]}", "lines": [
+          "US-{us}. {s[range][story]}",
+          "",
+          "Критерии приёмки:",
+          "1. {s[range][rule]}",
+          "2. Значение вне диапазона не принимается: ошибка {s[range][error]}."
+        ]},
+        {"artifact": "test_cases", "title": "{s[range][field]} · прогон R-{run}", "lines": [
+          "Набор «{s[range][field]}», экран «{s[range][screen]}», стенд stage, прогон R-{run}",
+          "",
+          "TC-{tc}.1   {s[range][min]} {s[range][unit]} → {s[range][ok]} — Passed",
+          "TC-{tc}.2   {s[range][max]} {s[range][unit]} → {s[range][ok]} — Passed",
+          "TC-{tc}.3   {s[range][below]} {s[range][unit]} → ошибка {s[range][error]} — Passed",
+          "TC-{tc}.4   {s[range][above]} {s[range][unit]} → ошибка {s[range][error]} — Passed",
+          "TC-{tc}.5   {s[range][mid_a]} {s[range][unit]} → {s[range][ok]} — Passed"
+        ]}
+      ]],
+      "fixes": ["equivalence_partitioning"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "input_mask_only", "why": "маска спрячет такой ввод в интерфейсе, но API по-прежнему примет его из другого клиента или скрипта, а тестов на недопустимые классы так и не будет"},
+        {"solution": "test_reported_case_only", "why": "тест закроет одно значение из обращения, а другие классы недопустимых данных останутся непроверенными"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "bug_report_unreproducible",
+      "level": "Junior",
+      "area": "bugs",
+      "name": "Баг-репорт без окружения, шагов, данных и ожидаемого результата: разработчик не может воспроизвести ошибку, хотя в обращении клиента всё это было",
+      "params": {"bug": {"int": [1200, 8800]}, "ticket": {"int": [40200, 98700]}},
+      "observation": "Разработчик вернул баг {s[prefix]}-{bug} со статусом «Cannot Reproduce» и комментарием «у меня всё работает». Обращения клиентов с той же жалобой продолжают приходить.",
+      "evidence": [[
+        {"artifact": "bug_report", "title": "{s[prefix]}-{bug} · {s[flow][bad_title]}", "lines": [
+          "{s[prefix]}-{bug}: {s[flow][bad_title]}",
+          "Статус: Cannot Reproduce · Серьёзность: Critical · Приоритет: High",
+          "",
+          "Описание:",
+          "{s[flow][bad_text]}",
+          "",
+          "Вложения: нет",
+          "Связанные обращения: №{ticket}",
+          "",
+          "Комментарий разработчика: «Проверил на stage — у меня всё работает. Не воспроизводится.»"
+        ]},
+        {"artifact": "support_ticket", "title": "№{ticket} · чат поддержки", "lines": [
+          "Обращение №{ticket} · канал: чат поддержки",
+          "Клиент: {s[flow][client]}",
+          "",
+          "«{s[flow][complaint]}»",
+          "",
+          "Приложено клиентом: {s[flow][attachments]}"
+        ]}
+      ]],
+      "fixes": ["rewrite_bug_report"],
+      "mitigates": ["call_developer_demo", "attach_screen_recording"],
+      "crutches": [
+        {"solution": "raise_priority", "why": "громкость тикета не делает его воспроизводимым: разработчику по-прежнему не хватает окружения, шагов и данных"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "localize_backend",
+      "level": "Junior",
+      "area": "bugs",
+      "name": "Баг не локализован: неверное значение приходит уже в ответе API — дефект на бэкенде, а баг кочует между командами",
+      "params": {"bug": {"int": [1200, 8800]}},
+      "observation": "Баг {s[prefix]}-{bug} про «{s[loc][label]}» на экране «{s[loc][screen]}» уже третий раз переходит от фронтенда к бэкенду и обратно: каждая команда считает, что ошибка у другой.",
+      "evidence": [[
+        {"artifact": "bug_report", "title": "{s[prefix]}-{bug} · {s[loc][label]}: {s[loc][shown]} вместо {s[loc][expected]}", "lines": [
+          "{s[prefix]}-{bug}: «{s[loc][label]}» — {s[loc][shown]} вместо {s[loc][expected]}",
+          "Окружение: stage, {s[loc][client]}",
+          "",
+          "Шаги:",
+          "{s[loc][steps]}",
+          "",
+          "Ожидаемый результат: «{s[loc][label]}» — {s[loc][expected]}. {s[loc][rule]}",
+          "Фактический результат: «{s[loc][label]}» — {s[loc][shown]}.",
+          "",
+          "История: Frontend → Backend («у нас всё считается правильно») → Frontend («мы показываем то, что пришло») → Backend"
+        ]},
+        {"artifact": "network", "title": "{s[loc][request]}", "lines": [
+          "{s[loc][request]}",
+          "Status: 200 OK",
+          "",
+          "Request payload: {s[loc][payload]}",
+          "",
+          "Response:",
+          "{s[loc][response_be]}"
+        ]}
+      ]],
+      "fixes": ["assign_backend_with_api"],
+      "mitigates": ["repeat_request_directly"],
+      "crutches": [
+        {"solution": "assign_both_teams", "why": "без локализации обе команды снова будут искать ошибку друг у друга"}
+      ],
+      "wrong": [
+        {"solution": "assign_frontend_with_api", "why": "в ответе API значение уже неверное — фронтенд показывает ровно то, что получил"}
+      ],
+      "confusable_with": ["localize_frontend"]
+    },
+    {
+      "id": "localize_frontend",
+      "level": "Junior",
+      "area": "bugs",
+      "name": "Баг не локализован: API отдаёт верное значение, а экран показывает другое — дефект на фронтенде, а баг кочует между командами",
+      "params": {"bug": {"int": [1200, 8800]}},
+      "observation": "Баг {s[prefix]}-{bug} про «{s[loc][label]}» на экране «{s[loc][screen]}» уже третий раз переходит от фронтенда к бэкенду и обратно: каждая команда считает, что ошибка у другой.",
+      "evidence": [[
+        {"artifact": "bug_report", "title": "{s[prefix]}-{bug} · {s[loc][label]}: {s[loc][shown]} вместо {s[loc][expected]}", "lines": [
+          "{s[prefix]}-{bug}: «{s[loc][label]}» — {s[loc][shown]} вместо {s[loc][expected]}",
+          "Окружение: stage, {s[loc][client]}",
+          "",
+          "Шаги:",
+          "{s[loc][steps]}",
+          "",
+          "Ожидаемый результат: «{s[loc][label]}» — {s[loc][expected]}. {s[loc][rule]}",
+          "Фактический результат: «{s[loc][label]}» — {s[loc][shown]}.",
+          "",
+          "История: Frontend → Backend («у нас всё считается правильно») → Frontend («мы показываем то, что пришло») → Backend"
+        ]},
+        {"artifact": "network", "title": "{s[loc][request]}", "lines": [
+          "{s[loc][request]}",
+          "Status: 200 OK",
+          "",
+          "Request payload: {s[loc][payload]}",
+          "",
+          "Response:",
+          "{s[loc][response_fe]}"
+        ]}
+      ]],
+      "fixes": ["assign_frontend_with_api"],
+      "mitigates": ["repeat_request_directly"],
+      "crutches": [
+        {"solution": "assign_both_teams", "why": "без локализации обе команды снова будут искать ошибку друг у друга"}
+      ],
+      "wrong": [
+        {"solution": "assign_backend_with_api", "why": "в ответе API значение верное — ошибка в том, как экран его показывает"}
+      ],
+      "confusable_with": ["localize_backend"]
+    },
+    {
+      "id": "severity_priority_mixup",
+      "level": "Junior",
+      "area": "bugs",
+      "name": "Серьёзность и приоритет перепутаны: косметика помечена Blocker и держит релиз, а баг с реальным ущербом пользователям — Minor",
+      "params": {"ver": {"int": [12, 48]}, "b": {"int": [3010, 3890]}},
+      "observation": "Релиз 2.{ver} задержали на два дня из-за «блокирующего» бага, а баг, из-за которого {s[triage][harm]}, всё это время лежал в бэклоге как минорный.",
+      "evidence": [[
+        {"artifact": "bug_list", "title": "Релиз 2.{ver}, открытые", "lines": [
+          "Фильтр: релиз 2.{ver}, не закрыты — 4 бага",
+          "",
+          "{s[prefix]}-{b}1 · Blocker / Highest · {s[triage][cosmetic]}",
+          "{s[prefix]}-{b}2 · Minor / Low · {s[triage][serious]}",
+          "{s[prefix]}-{b}3 · Major / Medium · {s[triage][normal]}",
+          "{s[prefix]}-{b}4 · Trivial / Low · {s[triage][trivial]}",
+          "",
+          "Правило команды: пока есть открытые баги Blocker, релиз не выпускается."
+        ]}
+      ]],
+      "fixes": ["triage_by_impact"],
+      "mitigates": ["raise_priority"],
+      "crutches": [
+        {"solution": "hold_release_until_all_fixed", "why": "без оценки влияния релиз по-прежнему держит опечатка, а баг, который бьёт по пользователям, ждёт в общей очереди"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "state_transitions_untested",
+      "level": "Junior",
+      "area": "test_design",
+      "name": "Тест-кейсы проверяют только разрешённые переходы статусов, запрещённые не проверены: не применено тестирование переходов состояний",
+      "params": {"tc": {"int": [1100, 4800]}, "us": {"int": [120, 940]}},
+      "observation": "После релиза {s[states][incident]}. Все тест-кейсы на статусы перед релизом прошли.",
+      "evidence": [[
+        {"artifact": "requirement", "title": "US-{us} · {s[states][title]}", "lines": [
+          "US-{us}. {s[states][title]}.",
+          "",
+          "Переходы:",
+          "{s[states][diagram]}",
+          "",
+          "{s[states][rules]}"
+        ]},
+        {"artifact": "test_cases", "title": "{s[states][title]}", "lines": [
+          "TC-{tc}.1   {s[states][case_1]} — Passed",
+          "TC-{tc}.2   {s[states][case_2]} — Passed",
+          "TC-{tc}.3   {s[states][case_3]} — Passed",
+          "TC-{tc}.4   {s[states][case_4]} — Passed"
+        ]}
+      ]],
+      "fixes": ["state_transition_testing"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "test_reported_case_only", "why": "тест закроет один запрещённый переход из обращения, а остальные так и останутся непроверенными"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "decision_table_missing",
+      "level": "Junior",
+      "area": "test_design",
+      "name": "Каждое правило проверено отдельно, а их сочетания — нет: не составлена таблица принятия решений",
+      "params": {"tc": {"int": [1100, 4800]}, "us": {"int": [120, 940]}},
+      "observation": "После релиза {s[combo][incident]}. Каждое правило по отдельности проверено тест-кейсами, все они прошли.",
+      "evidence": [[
+        {"artifact": "requirement", "title": "US-{us} · {s[combo][title]}", "lines": [
+          "US-{us}. {s[combo][title]}.",
+          "",
+          "Правила:",
+          "{s[combo][rules]}"
+        ]},
+        {"artifact": "test_cases", "title": "{s[combo][title]}", "lines": [
+          "TC-{tc}.1   {s[combo][case_1]} — Passed",
+          "TC-{tc}.2   {s[combo][case_2]} — Passed",
+          "TC-{tc}.3   {s[combo][case_3]} — Passed"
+        ]}
+      ]],
+      "fixes": ["decision_table"],
+      "mitigates": ["pairwise_testing"],
+      "crutches": [
+        {"solution": "test_reported_case_only", "why": "тест закроет одно сочетание из обращения, а остальные сочетания правил так и останутся непроверенными"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "ambiguous_requirement",
+      "level": "Junior",
+      "area": "requirements",
+      "name": "Требование допускает два толкования; тестировщик выбрал одно сам, не уточнив, и тест проверяет не то, что нужно бизнесу",
+      "params": {"tc": {"int": [1100, 4800]}, "us": {"int": [120, 940]}},
+      "observation": "Тест-кейс на {s[ambig][topic]} прошёл, но после релиза {s[ambig][incident]}.",
+      "evidence": [[
+        {"artifact": "requirement", "title": "US-{us} · {s[ambig][title]}", "lines": [
+          "US-{us}. {s[ambig][title]}.",
+          "",
+          "Критерий приёмки: {s[ambig][phrase]}."
+        ]},
+        {"artifact": "test_cases", "title": "{s[ambig][title]}", "lines": [
+          "TC-{tc}.1   {s[ambig][case]} — Passed"
+        ]},
+        {"artifact": "chat", "title": "Владелец продукта, после релиза", "lines": [
+          "Владелец продукта:",
+          "«{s[ambig][owner]}»"
+        ]}
+      ]],
+      "fixes": ["clarify_requirement"],
+      "mitigates": ["fix_test_case_to_owner"],
+      "crutches": [
+        {"solution": "accept_current_behaviour", "why": "тест закрепит то, как сделал разработчик, вместе с ошибкой: он будет проверять код, а не то, что нужно бизнесу"}
+      ],
+      "confusable_with": []
+    },
+
+    {
+      "id": "flaky_shared_data",
+      "level": "Middle",
+      "area": "flaky",
+      "name": "Автотесты делят общие тестовые данные: при параллельном прогоне один тест меняет то, что проверяет другой",
+      "params": {
+        "build": {"int": [4100, 9800]}, "runs": {"pick": [20, 30, 40]}, "fails": {"int": [3, 7]},
+        "workers": {"pick": [4, 6, 8]}, "passed": {"int": [180, 320]}, "line": {"int": [12, 40]},
+        "minutes": {"int": [3, 6]}, "noise": {"sample": "tests", "k": 3}
+      },
+      "observation": "Тест {s[shared][test_a]} «мигает»: упал в {fails} из последних {runs} прогонов, а после перезапуска проходит. Запущенный локально, по одному, не падал ни разу.",
+      "evidence": [[
+        {"artifact": "ci_log", "title": "Сборка #{build} · api-tests", "lines": [
+          "$ pytest tests/api -n {workers}",
+          "[gw0] PASSED {noise[0]}",
+          "[gw1] PASSED tests/api/{s[shared][file_b]}::{s[shared][test_b]}",
+          "[gw2] FAILED tests/api/{s[shared][file_a]}::{s[shared][test_a]}",
+          "[gw3] PASSED {noise[1]}",
+          "[gw0] PASSED {noise[2]}",
+          "",
+          "=================================== FAILURES ===================================",
+          "_____________________ {s[shared][test_a]} _____________________",
+          "[gw2] linux -- Python 3.12.4",
+          "",
+          "{s[shared][fixture_line]}",
+          "",
+          "{s[shared][code_a]}",
+          "E       {s[shared][error]}",
+          "",
+          "tests/api/{s[shared][file_a]}:{line}: AssertionError",
+          "================ 1 failed, {passed} passed in {minutes}m 12s ================"
+        ]},
+        {"artifact": "test_code", "title": "tests/conftest.py и tests/api/{s[shared][file_b]}", "lines": [
+          "# tests/conftest.py",
+          "{s[shared][conftest]}",
+          "",
+          "",
+          "# tests/api/{s[shared][file_b]}",
+          "{s[shared][code_b]}"
+        ]}
+      ]],
+      "fixes": ["isolated_test_data"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "retry_failed_tests", "why": "тест позеленеет, но гонка за общие данные останется, а за перезапуском начнут прятаться и настоящие падения"},
+        {"solution": "serial_run", "why": "зависимость тестов друг от друга никуда не денется: прогон станет в {workers} раз дольше, а результат по-прежнему будет зависеть от порядка тестов"}
+      ],
+      "confusable_with": ["data_leftovers"]
+    },
+    {
+      "id": "flaky_fixed_sleep",
+      "level": "Middle",
+      "area": "flaky",
+      "name": "Автотест ждёт асинхронную обработку фиксированной паузой (sleep): когда обработчик под нагрузкой работает дольше паузы, тест падает",
+      "params": {
+        "build": {"int": [4100, 9800]}, "rate": {"int": [4, 12]}, "line": {"int": [10, 30]},
+        "timing": {"pick": [
+          {"recv": "14:02:07.118", "fail": "14:02:10.131", "done": "14:02:11.402", "took": "4 284", "sleep": 3},
+          {"recv": "11:37:52.604", "fail": "11:37:55.617", "done": "11:37:56.930", "took": "4 326", "sleep": 3},
+          {"recv": "15:21:03.250", "fail": "15:21:05.262", "done": "15:21:07.011", "took": "3 761", "sleep": 2}
+        ]},
+        "noise": {"sample": "tests", "k": 2}
+      },
+      "observation": "Тест {s[async][test]} падает примерно в {rate}% прогонов — чаще днём, когда на стенде идут нагрузочные тесты соседней команды. Перезапуск обычно помогает.",
+      "evidence": [[
+        {"artifact": "test_code", "title": "tests/api/{s[async][file]}", "lines": [
+          "import time",
+          "",
+          "",
+          "{s[async][code_head]}",
+          "    time.sleep({timing[sleep]})  # обработка обычно занимает около секунды",
+          "{s[async][code_tail]}"
+        ]},
+        {"artifact": "ci_log", "title": "Сборка #{build} · api-tests", "lines": [
+          "[{timing[fail]}] PASSED {noise[0]}",
+          "[{timing[fail]}] FAILED tests/api/{s[async][file]}::{s[async][test]}",
+          "[{timing[fail]}] PASSED {noise[1]}",
+          "",
+          "E       {s[async][error]}",
+          "",
+          "tests/api/{s[async][file]}:{line}: AssertionError"
+        ]},
+        {"artifact": "service_log", "title": "{s[async][worker]} · stage", "lines": [
+          "{timing[recv]} INFO  получено: {s[async][item]}",
+          "{timing[recv]} WARN  в очереди на обработку 1 840 сообщений (обычно меньше 50)",
+          "{timing[done]} INFO  {s[async][log_done]}; обработка заняла {timing[took]} мс"
+        ]}
+      ]],
+      "fixes": ["explicit_wait_condition"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "increase_sleep", "why": "при следующем всплеске нагрузки не хватит и 10 секунд, а каждый прогон станет дольше на эту паузу"},
+        {"solution": "retry_failed_tests", "why": "тест позеленеет со второй попытки, но ожидание по-прежнему держится на удаче, а за перезапуском начнут прятаться настоящие падения"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "flaky_time_dependency",
+      "level": "Middle",
+      "area": "flaky",
+      "name": "Тест зависит от настоящего времени: код считает дату в московском поясе, а тест — по часам раннера в UTC, и с полуночи до трёх ночи по Москве даты расходятся",
+      "params": {"b": {"int": [480, 980]}},
+      "observation": "Сборки, запущенные ночью, несколько раз в неделю падают на тесте {s[time][test]}; утром после перезапуска он проходит.",
+      "evidence": [[
+        {"artifact": "test_history", "title": "{s[time][test]}", "lines": [
+          "Раннеры CI: Linux, TZ=UTC. Время запуска — московское.",
+          "",
+          "Запуск              Сборка    Результат",
+          "2026-09-21 23:40    #{b}01    passed",
+          "2026-09-22 00:35    #{b}02    FAILED",
+          "2026-09-22 09:12    #{b}03    passed (перезапуск)",
+          "2026-09-22 23:55    #{b}04    passed",
+          "2026-09-23 02:50    #{b}05    FAILED",
+          "2026-09-23 09:05    #{b}06    passed (перезапуск)",
+          "2026-09-24 01:15    #{b}07    FAILED",
+          "2026-09-24 03:30    #{b}08    passed",
+          "2026-09-24 14:20    #{b}09    passed",
+          "2026-09-25 00:10    #{b}10    FAILED",
+          "",
+          "Последнее падение:",
+          "E       {s[time][error]}"
+        ]},
+        {"artifact": "test_code", "title": "{s[time][file]}", "lines": [
+          "{s[time][code]}"
+        ]},
+        {"artifact": "source_code", "title": "{s[time][source_file]}", "lines": [
+          "{s[time][source]}"
+        ]}
+      ]],
+      "fixes": ["fake_clock"],
+      "mitigates": ["runners_same_timezone"],
+      "crutches": [
+        {"solution": "move_nightly_run", "why": "тест по-прежнему зависит от настоящего времени: упадёт у разработчика, который запустит его ночью, или после переезда раннеров"},
+        {"solution": "retry_failed_tests", "why": "утренний перезапуск проходит только потому, что даты снова совпали, — тест всё так же зависит от того, когда его запустили"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "brittle_locators",
+      "level": "Middle",
+      "area": "ui_automation",
+      "name": "UI-автотесты ищут элементы по абсолютным XPath от структуры вёрстки: любой новый блок на странице ломает десятки тестов",
+      "params": {"count": {"int": [18, 46]}, "total": {"int": [180, 260]}, "build": {"int": [4100, 9800]}},
+      "observation": "После каждого релиза фронтенда падают десятки e2e-тестов — в последний раз {count} из {total}, хотя вручную всё работает; тестировщики по два дня «чинят» тесты.",
+      "evidence": [[
+        {"artifact": "ci_log", "title": "Сборка #{build} · e2e", "lines": [
+          "Running {total} tests using 4 workers",
+          "",
+          "  ✘  e2e/{s[ui][file]} › {s[ui][title]} (30.0s)",
+          "",
+          "    TimeoutError: locator.{s[ui][action]}: Timeout 30000ms exceeded.",
+          "    Call log:",
+          "      - waiting for locator('{s[ui][xpath]}')",
+          "",
+          "  {count} failed"
+        ]},
+        {"artifact": "test_code", "title": "e2e/{s[ui][file]}", "lines": [
+          "{s[ui][code]}"
+        ]},
+        {"artifact": "changelog", "title": "Фронтенд, последний релиз", "lines": [
+          "{s[ui][change]}",
+          "fix: отступы в подвале на мобильных",
+          "chore: обновлены зависимости"
+        ]}
+      ]],
+      "fixes": ["stable_test_ids"],
+      "mitigates": ["page_object"],
+      "crutches": [
+        {"solution": "increase_timeout", "why": "элемента по старому пути больше нет — тест будет падать так же, только дольше"},
+        {"solution": "rerecord_tests", "why": "следующий релиз вёрстки сломает перезаписанные тесты снова, а два дня починки станут регулярными"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "api_asserts_status_only",
+      "level": "Middle",
+      "area": "api",
+      "name": "API-автотесты проверяют только код ответа: значения полей и схема ответа не проверяются",
+      "params": {"count": {"int": [12, 30]}},
+      "observation": "После релиза {s[api_check][incident]}, хотя набор API-тестов на {s[api_check][endpoint]} ({count} шт.) зелёный.",
+      "evidence": [[
+        {"artifact": "test_code", "title": "tests/api/{s[api_check][file]}", "lines": [
+          "{s[api_check][code]}"
+        ]},
+        {"artifact": "network", "title": "stage, после релиза", "lines": [
+          "{s[api_check][request]}",
+          "Status: 200 OK",
+          "",
+          "{s[api_check][response]}"
+        ]}
+      ]],
+      "fixes": ["body_assertions"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "test_reported_case_only", "why": "проверка одного поля из инцидента закроет его, а остальные поля ответа по-прежнему никто не проверяет"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "async_effect_unchecked",
+      "level": "Middle",
+      "area": "api",
+      "name": "Тест проверяет только синхронный ответ API, а не результат асинхронной обработки: запись в БД и событие в очереди не проверяются",
+      "params": {"t": {"clock": [9, 18]}, "dlq_count": {"int": [140, 2600]}},
+      "observation": "{s[async][lost_incident]}. API-тесты на этот сценарий зелёные.",
+      "evidence": [[
+        {"artifact": "test_code", "title": "tests/api/{s[async][file]}", "lines": [
+          "{s[async][code_201]}"
+        ]},
+        {"artifact": "service_log", "title": "{s[async][worker]} · stage", "lines": [
+          "{t} ERROR {s[async][log_error]}",
+          "{t} WARN  сообщение отправлено в {s[async][dlq]} после 3 попыток",
+          "",
+          "Сообщений в {s[async][dlq]}: {dlq_count}; мониторинга на эту очередь нет."
+        ]}
+      ]],
+      "fixes": ["verify_side_effects"],
+      "mitigates": ["dlq_alert"],
+      "crutches": [
+        {"solution": "manual_db_check", "why": "ручная проверка выборочная и раз в релиз, а сообщения теряются при каждой ошибке обработчика"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "env_drift",
+      "level": "Middle",
+      "area": "environment",
+      "name": "Стенд не похож на прод: его подняли вручную, и версии, настройки, флаги и объём данных разошлись — тесты на стенде не ловят баги прода",
+      "params": {},
+      "observation": "После релиза {s[env][incident]}. На stage тот же сценарий работает, регресс перед релизом был зелёным.",
+      "evidence": [[
+        {"artifact": "env_diff", "title": "stage и prod", "lines": [
+          "Параметр                  stage                  prod",
+          "{s[env][rows]}",
+          "",
+          "Как подняты окружения: {s[env][how]}."
+        ]}
+      ]],
+      "fixes": ["env_as_code"],
+      "mitigates": ["env_checklist"],
+      "crutches": [
+        {"solution": "regress_on_prod", "why": "расхождение найдётся уже на проде, у клиентов, а тестовые операции пойдут по живым данным"}
+      ],
+      "confusable_with": ["shared_stage_collisions"]
+    },
+    {
+      "id": "shared_stage_collisions",
+      "level": "Middle",
+      "area": "environment",
+      "name": "Все команды тестируют на одном общем стенде: чужие выкладки и данные ломают прогоны",
+      "params": {
+        "red": {"int": [4, 7]}, "build": {"int": [4100, 9800]},
+        "timing": {"pick": [
+          {"deploy": "11:02", "fail": "11:09:41"},
+          {"deploy": "14:37", "fail": "14:44:05"},
+          {"deploy": "16:15", "fail": "16:21:58"}
+        ]},
+        "noise": {"sample": "tests", "k": 2}
+      },
+      "observation": "Регресс на общем stage был красным в {red} из последних 10 дней; примерно в половине падений код команды ни при чём.",
+      "evidence": [[
+        {"artifact": "ci_log", "title": "Сборка #{build} · регресс на stage", "lines": [
+          "[{timing[fail]}] FAILED {noise[0]}",
+          "E       {s[stage][error]}",
+          "[{timing[fail]}] FAILED {noise[1]}",
+          "E       {s[stage][error]}"
+        ]},
+        {"artifact": "deploy_log", "title": "stage, сегодня", "lines": [
+          "09:40  {s[svc]} · ветка main · команда: ваша",
+          "{timing[deploy]}  {s[stage][other_svc]} · ветка {s[stage][branch]} · команда: {s[stage][other_team]}",
+          "",
+          "Стенд stage общий для 9 команд; выкладываться можно в любое время, без предупреждения."
+        ]}
+      ]],
+      "fixes": ["ephemeral_envs"],
+      "mitigates": ["stub_neighbours"],
+      "crutches": [
+        {"solution": "deploy_queue", "why": "очередь на стенд тормозит все команды, а чужие данные и настройки по-прежнему ломают прогоны"},
+        {"solution": "retry_failed_tests", "why": "сервис соседей, выкатившийся с ошибкой, за минуту не починится — перезапуск только скроет, что падения не ваши"}
+      ],
+      "confusable_with": ["env_drift"]
+    },
+    {
+      "id": "external_sandbox",
+      "level": "Middle",
+      "area": "environment",
+      "name": "Интеграционные тесты ходят в настоящую песочницу внешнего партнёра: её лимиты и плановые работы валят прогоны",
+      "params": {"share": {"int": [20, 35]}, "build": {"int": [4100, 9800]}, "t": {"clock": [10, 11]}, "noise": {"sample": "tests", "k": 1}},
+      "observation": "По понедельникам и в конце месяца до {share}% прогонов интеграционных тестов падают — на шагах, где {s[ext][step]}.",
+      "evidence": [[
+        {"artifact": "ci_log", "title": "Сборка #{build} · integration, понедельник", "lines": [
+          "[{t}] FAILED tests/integration/test_partner.py::test_happy_path",
+          "E       requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://{s[ext][host]}{s[ext][path]}",
+          "[{t}] FAILED tests/integration/test_partner.py::test_status_callback",
+          "E       requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='{s[ext][host]}', port=443): Read timed out. (read timeout=30)",
+          "[{t}] PASSED {noise[0]}"
+        ]},
+        {"artifact": "vendor_doc", "title": "Условия песочницы · {s[ext][name]}", "lines": [
+          "{s[ext][limits]}"
+        ]}
+      ]],
+      "fixes": ["service_virtualization"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "retry_failed_tests", "why": "лимит песочницы и плановые работы перезапуск не отменит — он только добавит запросов и времени"},
+        {"solution": "increase_timeout", "why": "во время плановых работ песочница не ответит и через минуту, а лимит запросов таймаут не снимает"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "data_leftovers",
+      "level": "Middle",
+      "area": "test_data",
+      "name": "Тесты создают данные с фиксированными уникальными значениями и не убирают за собой: повторный прогон натыкается на уже существующие записи",
+      "params": {"build": {"int": [4100, 9800]}},
+      "observation": "Первый прогон набора на только что поднятом стенде зелёный, а второй и все следующие — красные: падают тесты на создание {s[unique][what_gen]}.",
+      "evidence": [[
+        {"artifact": "ci_log", "title": "Сборка #{build} · второй прогон за день", "lines": [
+          "FAILED tests/api/{s[unique][file]}::{s[unique][test]}",
+          "E       {s[unique][error]}"
+        ]},
+        {"artifact": "test_code", "title": "tests/api/{s[unique][file]}", "lines": [
+          "{s[unique][code]}"
+        ]}
+      ]],
+      "fixes": ["unique_data_cleanup", "isolated_test_data"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "reset_stage_db", "why": "сброс базы ломает работу всем, кто сейчас на стенде, и занимает время, а тесты по-прежнему нельзя запускать повторно и параллельно"}
+      ],
+      "confusable_with": ["flaky_shared_data"]
+    },
+
+    {
+      "id": "inverted_pyramid",
+      "level": "Senior",
+      "area": "strategy",
+      "name": "Перевёрнутая пирамида тестирования: почти всё проверяется медленными и нестабильными e2e через интерфейс, unit- и API-тестов мало",
+      "params": {"unit": {"int": [60, 140]}, "api": {"int": [90, 200]}, "e2e": {"int": [1100, 1700]}, "hours": {"pick": [3, 4, 5]}, "flaky": {"int": [6, 14]}},
+      "observation": "Полный регресс идёт {hours} ч, поэтому его запускают раз в сутки; разработчики узнают о своих поломках на следующее утро, а e2e-тесты часто падают «сами по себе».",
+      "evidence": [[
+        {"artifact": "metrics", "title": "Тесты {s[repo]} · 30 дней", "lines": [
+          "Уровень     Тестов   Прогон     Падений не из-за кода",
+          "Unit        {unit:>6}   1 мин      0",
+          "API         {api:>6}   6 мин      2",
+          "E2E (UI)    {e2e:>6}   {hours} ч        {flaky}% прогонов",
+          "",
+          "Проверки правил {s[rules_topic]}: 87% — в e2e через интерфейс, 9% — в API, 4% — в unit.",
+          "Полный регресс — раз в сутки, в 02:00; на PR запускаются только линтеры."
+        ]}
+      ]],
+      "fixes": ["rebalance_pyramid"],
+      "mitigates": ["parallelize_e2e"],
+      "crutches": [
+        {"solution": "weekly_regression", "why": "ошибки будут находиться ещё позже, а исправлять их станет дороже"}
+      ],
+      "confusable_with": ["slow_pr_pipeline"]
+    },
+    {
+      "id": "no_contract_tests",
+      "level": "Senior",
+      "area": "contracts",
+      "name": "Нет контрактных тестов между сервисами: провайдер меняет API, потребитель тестируется на устаревших заглушках и ломается уже на проде",
+      "params": {"q": {"pick": [3, 4]}, "ver": {"int": [10, 70]}},
+      "observation": "За квартал {q} инцидента: после релиза {s[contract][provider]} на проде ломался {s[contract][consumer]}. Интеграционные тесты обеих команд перед релизами были зелёными.",
+      "evidence": [[
+        {"artifact": "postmortem", "title": "Выкладка {s[contract][provider]} 3.{ver}", "lines": [
+          "Что случилось: после выкладки {s[contract][provider]} 3.{ver} сервис {s[contract][consumer]} начал отвечать ошибкой 500 на {s[contract][effect]}. Откатились через 40 минут.",
+          "Причина: {s[contract][change]}.",
+          "",
+          "Почему не поймали тесты:",
+          "— тесты {s[contract][provider]} проверяют новый формат ответа, и он верный;",
+          "— тесты {s[contract][consumer]} ходят в заглушку {s[contract][provider]}, написанную вручную по старой документации;",
+          "— изменение формата обсуждали в чате команды провайдера, потребителей в этом чате нет.",
+          "",
+          "Действие по итогам: «быть внимательнее при изменении API»."
+        ]}
+      ]],
+      "fixes": ["consumer_driven_contracts"],
+      "mitigates": ["api_versioning"],
+      "crutches": [
+        {"solution": "full_e2e_before_release", "why": "общий e2e-регресс медленный и хрупкий: несовместимость ловится поздно, и непонятно, какой контракт нарушен"},
+        {"solution": "api_review_call", "why": "всё держится на памяти людей: изменение, которое никто не счёл важным, снова уедет незамеченным"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "late_qa_no_shift_left",
+      "level": "Senior",
+      "area": "process",
+      "name": "QA подключается в конце: тестировщик впервые видит задачу готовой, и ошибки в требованиях находятся только после разработки (нет Shift-Left)",
+      "params": {"split": {"pick": [[42, 41, 17], [38, 45, 17], [46, 39, 15]]}, "days": {"pick": ["1,5", "2"]}, "returned": {"int": [28, 44]}},
+      "observation": "{split[0]}% багов за квартал заведены с причиной «ошибка или пробел в требованиях»; задачи доходят до тестирования в последние дни спринта и возвращаются на доработку.",
+      "evidence": [[
+        {"artifact": "quality_report", "title": "{s[repo]} · III квартал", "lines": [
+          "Дефекты по причинам:",
+          "— ошибка или пробел в требованиях — {split[0]}%;",
+          "— ошибка в коде — {split[1]}%;",
+          "— окружение и конфигурация — {split[2]}%.",
+          "",
+          "Как задача идёт по доске: аналитик пишет описание → разработка → «Ready for QA» → тестирование.",
+          "Тестировщик впервые видит задачу в колонке «Ready for QA» — в среднем за {days} рабочих дня до конца спринта.",
+          "После тестирования на доработку возвращается {returned}% задач."
+        ]}
+      ]],
+      "fixes": ["shift_left"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "test_phase_freeze", "why": "ошибки в требованиях всё равно находятся после разработки, а релизы становятся реже"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "no_quality_gates",
+      "level": "Senior",
+      "area": "ci_cd",
+      "name": "В пайплайне нет quality gates: упавшие тесты помечены allow_failure, выкладка от них не зависит",
+      "params": {"build": {"int": [4100, 9800]}},
+      "observation": "Дважды за месяц на прод уехала сборка с упавшими тестами — в пайплайне она светилась жёлтым «passed with warnings».",
+      "evidence": [[
+        {"artifact": "pipeline_config", "title": ".gitlab-ci.yml · {s[repo]}", "lines": [
+          "stages: [build, test, deploy]",
+          "",
+          "build:",
+          "  stage: build",
+          "  script: make build",
+          "",
+          "api-tests:",
+          "  stage: test",
+          "  script: pytest tests/api --junitxml=report.xml",
+          "  allow_failure: true    # «чтобы флаки не блокировали релизы»",
+          "",
+          "e2e-tests:",
+          "  stage: test",
+          "  script: npx playwright test",
+          "  allow_failure: true",
+          "",
+          "deploy-prod:",
+          "  stage: deploy",
+          "  script: helm upgrade {s[svc]} ./chart",
+          "  needs: [build]",
+          "  when: manual",
+          "",
+          "# Пайплайн #{build}, вчера:",
+          "#   build ✔   api-tests ✘ (allowed to fail)   e2e-tests ✘ (allowed to fail)   deploy-prod ▶ запущен вручную"
+        ]}
+      ]],
+      "fixes": ["quality_gates"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "manual_report_review", "why": "человек в спешке пропустит жёлтый статус, а правило «красное не уезжает» не должно зависеть от внимательности"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "flaky_tests_ignored",
+      "level": "Senior",
+      "area": "ci_cd",
+      "name": "Флаки-тесты никто не чинит и не измеряет: красные сборки стали нормой, их перезапускают не глядя и пропускают настоящие регрессии",
+      "params": {
+        "pct": {"int": [18, 35]}, "retries": {"int": [300, 900]}, "builds": {"int": [900, 1400]},
+        "rates": {"pick": [[14, 11, 9], [17, 12, 8], [21, 13, 10]]}, "noise": {"sample": "tests", "k": 3}
+      },
+      "observation": "{pct}% сборок main красные, и команда привыкла нажимать «Retry», не открывая лог; на прошлой неделе так пропустили настоящую регрессию — её нашли клиенты.",
+      "evidence": [[
+        {"artifact": "metrics", "title": "Дашборд CI · {s[repo]} · main · 30 дней", "lines": [
+          "Сборок: {builds}   красных: {pct}%   перезапусков вручную: {retries}",
+          "От красной сборки до зелёной: медиана 1 ч 40 мин; в 83% случаев код между ними не менялся.",
+          "",
+          "Самые нестабильные тесты (доля падений · владелец · задача):",
+          "  {noise[0]}   {rates[0]}% · — · —",
+          "  {noise[1]}   {rates[1]}% · — · —",
+          "  {noise[2]}   {rates[2]}% · — · —",
+          "",
+          "Канал #ci-alerts: 2 340 непрочитанных сообщений."
+        ]}
+      ]],
+      "fixes": ["flaky_quarantine"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "auto_retry_pipeline", "why": "настоящие падения тоже начнут проходить со второй-третьей попытки, а сборки станут дольше"},
+        {"solution": "skip_unstable_tests", "why": "покрытие молча теряется: без владельца и срока отключённые тесты никто не вернёт"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "slow_pr_pipeline",
+      "level": "Senior",
+      "area": "ci_cd",
+      "name": "Каждый PR гоняет весь набор тестов, включая полный e2e: пайплайн идёт больше часа, и разработчики мержат, не дождавшись проверок",
+      "params": {"min": {"int": [70, 110]}, "pct": {"int": [25, 45]}, "prs": {"int": [140, 260]}},
+      "observation": "Пайплайн PR идёт в среднем {min} мин; в {pct}% PR мерж нажимают, не дождавшись проверок.",
+      "evidence": [[
+        {"artifact": "pipeline_config", "title": ".gitlab-ci.yml · {s[repo]}", "lines": [
+          "stages: [test]",
+          "",
+          "all-tests:",
+          "  stage: test",
+          "  rules:",
+          "    - if: $CI_PIPELINE_SOURCE == \"merge_request_event\"",
+          "  script:",
+          "    - pytest tests/unit tests/api",
+          "    - npx playwright test    # полный e2e-набор, 1 400 тестов",
+          "",
+          "# За месяц: {prs} PR, медиана пайплайна — {min} мин,",
+          "# мерж до окончания пайплайна — {pct}% PR."
+        ]}
+      ]],
+      "fixes": ["staged_pipeline"],
+      "mitigates": ["parallelize_e2e"],
+      "crutches": [
+        {"solution": "urgent_label_skip", "why": "метка станет нормой, и проверки будут пропускаться именно в спешке, когда риск выше"}
+      ],
+      "confusable_with": ["inverted_pyramid"]
+    },
+    {
+      "id": "no_shift_right",
+      "level": "Senior",
+      "area": "production",
+      "name": "Нет проверок в проде (Shift-Right): релиз выкатывается на всех сразу, ключевые метрики без алертов, о поломке узнают из жалоб клиентов",
+      "params": {
+        "ver": {"int": [10, 70]}, "share": {"int": [6, 18]},
+        "timeline": {"pick": [
+          {"gap": "3 ч", "late": "13:10", "back": "14:20", "hours": "4,5"},
+          {"gap": "4 ч", "late": "14:05", "back": "15:15", "hours": "5,5"},
+          {"gap": "2,5 ч", "late": "12:35", "back": "13:40", "hours": "4"}
+        ]}
+      },
+      "observation": "После релиза {s[prod][incident]}. Первые жалобы пришли через {timeline[gap]}, откатились ещё больше чем через час.",
+      "evidence": [[
+        {"artifact": "postmortem", "title": "Релиз {s[svc]} 5.{ver}", "lines": [
+          "10:00  Релиз выкачен сразу на всех пользователей.",
+          "10:05  Смоук-тесты на stage — зелёные.",
+          "10:10  {s[prod][metric]}.",
+          "{timeline[late]}  Первые обращения в поддержку.",
+          "{timeline[back]}  Решили откатить релиз, откат занял 25 минут.",
+          "",
+          "Итого: проблема длилась около {timeline[hours]} ч, задело примерно {share}% пользователей.",
+          "Действие по итогам: «тщательнее проводить ручной регресс перед релизом»."
+        ]}
+      ]],
+      "fixes": ["canary_synthetics"],
+      "mitigates": ["feature_flags"],
+      "crutches": [
+        {"solution": "double_manual_regression", "why": "stage не повторяет прод: часть проблем видна только на реальном трафике, устройствах и данных"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "prod_data_in_test",
+      "level": "Senior",
+      "area": "test_data",
+      "name": "Тестовые стенды каждую ночь наполняются копией продовой базы с реальными персональными данными",
+      "when": {"tags_any": ["personal_data"]},
+      "params": {"count": {"int": [120, 900]}},
+      "observation": "Аудит по 152-ФЗ нашёл на стенде stage {count} тыс. записей реальных людей: {s[pd][data]}. Доступ к стенду есть у подрядчиков по автоматизации.",
+      "evidence": [[
+        {"artifact": "script", "title": "refresh_stage.sh", "lines": [
+          "#!/bin/bash",
+          "# Каждую ночь в 03:00: «свежие данные, чтобы тесты были как в жизни»",
+          "set -e",
+          "pg_dump --host=prod-db.internal --dbname={s[pd][db]} --format=custom > /tmp/{s[pd][db]}.dump",
+          "pg_restore --host=stage-db.internal --clean --dbname={s[pd][db]} /tmp/{s[pd][db]}.dump",
+          "psql --host=stage-db.internal --dbname={s[pd][db]} -c \"UPDATE users SET password_hash = 'qa'\"",
+          "",
+          "# Доступ к stage: разработка, QA, подрядчики по автоматизации (через VPN)."
+        ]}
+      ]],
+      "fixes": ["synthetic_test_data"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "restrict_stage_access", "why": "данные людей по-прежнему лежат на стенде с защитой слабее, чем у прода, и попадают в логи, отчёты и скриншоты тестов"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "no_load_testing",
+      "level": "Senior",
+      "area": "performance",
+      "name": "Нагрузочного тестирования нет: предел системы неизвестен, и производительность впервые проверяют клиенты в пиковый день",
+      "when": {"tags_any": ["peaks"]},
+      "params": {"p95": {"int": [9, 22]}, "err": {"int": [12, 34]}},
+      "observation": "В {s[peak][event]} {s[peak][incident]}. На stage все функциональные тесты были зелёными.",
+      "evidence": [[
+        {"artifact": "metrics", "title": "Мониторинг {s[svc]} · {s[peak][event_name]}", "lines": [
+          "                       обычно      в пик",
+          "Запросов в секунду     {s[peak][rps_normal]:>6}     {s[peak][rps_peak]:>6}",
+          "p95 времени ответа     180 мс     {p95:>3} с",
+          "Ошибки 5xx             0,1%       {err:>4}%",
+          "",
+          "Из логов: {s[peak][bottleneck]}.",
+          "Нагрузочных тестов в репозитории {s[repo]}: 0.",
+          "Последняя проверка производительности — вручную, перед запуском сервиса в 2024 году."
+        ]}
+      ]],
+      "fixes": ["load_testing"],
+      "mitigates": [],
+      "crutches": [
+        {"solution": "overprovision", "why": "узкое место, которое видно в логах, от числа серверов не исчезнет, а предел системы так и останется неизвестным"}
+      ],
+      "confusable_with": []
+    },
+    {
+      "id": "manual_regression_bottleneck",
+      "level": "Senior",
+      "area": "strategy",
+      "name": "Регресс перед релизом почти полностью ручной: дни работы всей команды QA, поэтому релизы редкие, а большая часть кейсов давно ничего не находит",
+      "params": {"cases": {"int": [600, 1400], "step": 50}, "qa": {"pick": [4, 5, 6]}},
+      "observation": "Бизнес хочет выпускать релизы каждую неделю, а ручной регресс из {cases} кейсов занимает три рабочих дня у {qa} тестировщиков.",
+      "evidence": [[
+        {"artifact": "release_process", "title": "Как сейчас выпускаются релизы", "lines": [
+          "Ручной регресс: {cases} тест-кейсов, 3 рабочих дня; тестировщиков в регрессе: {qa}.",
+          "Автоматизировано: 6% кейсов — смоук из 40 проверок.",
+          "Релизы: раз в месяц; срочные исправления ждут следующего регресса.",
+          "Кейсов, которые за год ни разу не нашли дефект: 71%.",
+          "Запрос бизнеса: выпускать релизы каждую неделю."
+        ]}
+      ]],
+      "fixes": ["risk_based_automation"],
+      "mitigates": ["trim_regression_scope"],
+      "crutches": [
+        {"solution": "hire_manual_testers", "why": "стоимость регресса растёт с каждым релизом, а обратная связь по-прежнему занимает дни"}
+      ],
+      "confusable_with": []
+    }
+  ]
+}

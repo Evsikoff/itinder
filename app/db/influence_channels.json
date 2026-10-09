@@ -1,0 +1,96 @@
+[
+  {"id": "call_reliability", "name": "Надёжность и скорость вызовов", "affects_self": false,
+   "description": "Задержки, недоступность и лимиты вызываемой стороны. Доходят до того, кто вызывает, сквозь балансировщики, шлюзы и шины",
+   "transparent_types": ["load_balancer", "api_gateway", "integration_bus"],
+   "carriers": [
+     {"link_type_id": "http_sync", "direction": "backward"}, {"link_type_id": "grpc", "direction": "backward"},
+     {"link_type_id": "soap", "direction": "backward"}, {"link_type_id": "shared_db", "direction": "backward"},
+     {"link_type_id": "data_access", "direction": "backward"}, {"link_type_id": "polling", "direction": "backward"},
+     {"link_type_id": "publish", "direction": "backward"}, {"link_type_id": "consume", "direction": "forward"}]},
+
+  {"id": "call_semantics", "name": "Смысл вызова", "affects_self": false,
+   "description": "Побочные эффекты и особенности ответов: повтор создаёт дубль, ошибка приходит с кодом 200, логика спрятана в процедурах. Касаются того, кто вызывает",
+   "transparent_types": ["load_balancer", "api_gateway", "integration_bus"],
+   "carriers": [
+     {"link_type_id": "http_sync", "direction": "backward"}, {"link_type_id": "grpc", "direction": "backward"},
+     {"link_type_id": "soap", "direction": "backward"}, {"link_type_id": "shared_db", "direction": "backward"},
+     {"link_type_id": "polling", "direction": "backward"}]},
+
+  {"id": "time_windows", "name": "Окна доступности", "affects_self": false,
+   "description": "Плановая недоступность системы. Касается и тех, кто её вызывает, и тех, кто обменивается с ней файлами",
+   "transparent_types": ["load_balancer", "api_gateway", "integration_bus", "object_storage"],
+   "carriers": [
+     {"link_type_id": "http_sync", "direction": "backward"}, {"link_type_id": "grpc", "direction": "backward"},
+     {"link_type_id": "soap", "direction": "backward"}, {"link_type_id": "shared_db", "direction": "backward"},
+     {"link_type_id": "data_access", "direction": "backward"}, {"link_type_id": "polling", "direction": "backward"},
+     {"link_type_id": "file_exchange", "direction": "forward"}, {"link_type_id": "file_exchange", "direction": "backward"}]},
+
+  {"id": "delivery", "name": "Доставка сообщений", "affects_self": false,
+   "description": "Гарантии доставки: дубли, потери, повторная выдача, подлинность. Касаются получателя сообщения",
+   "transparent_types": ["queue", "broker"],
+   "carriers": [
+     {"link_type_id": "consume", "direction": "forward"}, {"link_type_id": "webhook", "direction": "forward"},
+     {"link_type_id": "cdc", "direction": "forward"}, {"link_type_id": "push", "direction": "forward"}]},
+
+  {"id": "message_contract", "name": "Контракт сообщений", "affects_self": false,
+   "description": "Порядок и размер сообщений. Касаются и отправителя, и получателя",
+   "transparent_types": ["queue", "broker"],
+   "carriers": [
+     {"link_type_id": "publish", "direction": "backward"}, {"link_type_id": "consume", "direction": "forward"}]},
+
+  {"id": "data_format", "name": "Формат данных", "affects_self": false,
+   "description": "Кодировки, форматы файлов, XML. Идут по движению данных сквозь файловые хранилища и брокеры; интеграционная шина их преобразует и дальше не пропускает",
+   "transparent_types": ["object_storage", "queue", "broker", "load_balancer", "api_gateway"],
+   "carriers": [
+     {"link_type_id": "http_sync", "direction": "backward"}, {"link_type_id": "grpc", "direction": "backward"},
+     {"link_type_id": "soap", "direction": "backward"}, {"link_type_id": "shared_db", "direction": "backward"},
+     {"link_type_id": "data_access", "direction": "backward"}, {"link_type_id": "polling", "direction": "backward"},
+     {"link_type_id": "file_exchange", "direction": "forward"}, {"link_type_id": "file_exchange", "direction": "backward"},
+     {"link_type_id": "consume", "direction": "forward"}, {"link_type_id": "publish", "direction": "backward"}]},
+
+  {"id": "staleness", "name": "Свежесть данных", "affects_self": false,
+   "description": "Данные доходят до читателей с задержкой. Проходит сквозь весь конвейер данных — брокеры, воркеры, хранилища — до первого сервиса или интерфейса, который их читает",
+   "transparent_types": ["database", "cache", "search_index", "object_storage", "queue", "broker", "worker"],
+   "carriers": [
+     {"link_type_id": "replication", "direction": "forward"}, {"link_type_id": "cdc", "direction": "forward"},
+     {"link_type_id": "publish", "direction": "forward"}, {"link_type_id": "consume", "direction": "forward"},
+     {"link_type_id": "data_access", "direction": "forward"}, {"link_type_id": "data_access", "direction": "backward"}]},
+
+  {"id": "storage_semantics", "name": "Поведение хранилища", "affects_self": false,
+   "description": "Ограничения хранилища: только добавление, вытеснение, блокировки, недописанные файлы. Касаются всех, кто с ним работает",
+   "transparent_types": ["queue", "broker"],
+   "carriers": [
+     {"link_type_id": "data_access", "direction": "backward"}, {"link_type_id": "http_sync", "direction": "backward"},
+     {"link_type_id": "file_exchange", "direction": "forward"}, {"link_type_id": "file_exchange", "direction": "backward"},
+     {"link_type_id": "cdc", "direction": "forward"}, {"link_type_id": "consume", "direction": "forward"}]},
+
+  {"id": "inbound_limits", "name": "Ограничения на входе", "affects_self": false,
+   "description": "Ограничения балансировщика и шлюза. Касаются и клиентов перед ними, и сервисов за ними",
+   "transparent_types": ["load_balancer", "api_gateway"],
+   "carriers": [
+     {"link_type_id": "http_sync", "direction": "forward"}, {"link_type_id": "http_sync", "direction": "backward"},
+     {"link_type_id": "grpc", "direction": "forward"}, {"link_type_id": "grpc", "direction": "backward"}]},
+
+  {"id": "client_behavior", "name": "Поведение клиента", "affects_self": true,
+   "description": "Как клиент присылает запросы: старые версии, обрывы сети, офлайн-пачки, повторы. Доходит до первого сервиса сквозь балансировщик и шлюз",
+   "transparent_types": ["load_balancer", "api_gateway"],
+   "carriers": [
+     {"link_type_id": "http_sync", "direction": "forward"}, {"link_type_id": "grpc", "direction": "forward"}]},
+
+  {"id": "identity", "name": "Идентификация", "affects_self": false,
+   "description": "Особенности токенов, ролей и подписи. Касаются интерфейса, который ведёт пользователя на вход, и сервисов, которые проверяют токены, в том числе за шлюзом",
+   "transparent_types": ["load_balancer", "api_gateway"],
+   "carriers": [
+     {"link_type_id": "redirect", "direction": "backward"}, {"link_type_id": "http_sync", "direction": "backward"},
+     {"link_type_id": "soap", "direction": "backward"}, {"link_type_id": "http_sync", "direction": "forward"}]},
+
+  {"id": "trigger", "name": "Запуск по расписанию", "affects_self": false,
+   "description": "Как планировщик запускает задачи. Касается запускаемого узла",
+   "transparent_types": [],
+   "carriers": [{"link_type_id": "schedule_trigger", "direction": "forward"}]},
+
+  {"id": "runtime", "name": "Среда выполнения", "affects_self": true,
+   "description": "Особенности самой платформы. Касаются только кода, написанного на ней",
+   "transparent_types": [],
+   "carriers": []}
+]

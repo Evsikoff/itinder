@@ -1,0 +1,157 @@
+/* Экран распределительной шляпы (hat.js). Цвета — из :root в index.html
+   и с кнопок страницы 5. */
+
+.hat {
+  position: fixed; inset: 0; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #0b0908; outline: none;
+  opacity: 0; transition: opacity .45s ease;
+}
+.hat.open { opacity: 1; }
+.hat[hidden] { display: none; }
+
+/* Кадр 16:9 во всё окно; субтитр — поверх низа кадра. */
+.hat-frame { position: relative; width: min(100vw, calc(100dvh * 16 / 9)); }
+.hat-stage { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #000; }
+
+.hat-video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; pointer-events: none;
+  transition: filter .6s ease, transform .6s ease;
+}
+.hat-video.front { opacity: 1; }
+.hat.judged .hat-video.front { filter: blur(10px) brightness(.42) saturate(.85); transform: scale(1.05); }
+
+.hat-subtitle {
+  position: absolute; left: 50%; bottom: 6%; z-index: 1;
+  width: max-content; max-width: min(88%, 980px); margin: 0; padding: .3em .75em;
+  transform: translateX(-50%);
+  background: rgba(10, 9, 8, .74); border-radius: 6px; color: #F6F6F6;
+  font-size: clamp(14px, 1.75vw, 26px); line-height: 1.4; text-align: center; text-wrap: balance;
+  opacity: 0; transition: opacity .15s ease; pointer-events: none;
+}
+.hat-subtitle.shown { opacity: 1; }
+.hat.judged .hat-subtitle { opacity: 0; }
+
+/* Высокое окно (телефон стоя): под кадром есть место, субтитр — там. */
+@media (max-aspect-ratio: 4 / 3) {
+  .hat-frame { width: 100vw; }
+  .hat-subtitle {
+    position: static; transform: none; width: auto; max-width: none; min-height: 4.6em;
+    margin: 12px 16px 0; background: none; font-size: clamp(15px, 4.2vw, 20px);
+  }
+}
+
+.hat-thinking {
+  position: absolute; left: 50%; bottom: 6%; z-index: 1; margin: 0; padding: .45em .9em;
+  transform: translateX(-50%);
+  background: rgba(10, 9, 8, .74); border-radius: 999px; color: #C2BCFF;
+  font-size: clamp(13px, 1.4vw, 18px); letter-spacing: .04em;
+  opacity: 0; transition: opacity .3s ease; pointer-events: none;
+}
+.hat-thinking.shown { opacity: 1; }
+.hat-dots::after { content: ""; display: inline-block; width: 1.6em; text-align: left; animation: hat-dots 1.4s steps(4) infinite; }
+@keyframes hat-dots {
+  0% { content: ""; } 25% { content: "."; } 50% { content: ".."; } 75%, 100% { content: "..."; }
+}
+
+/* Только если браузер не дал звук без жеста. */
+.hat-unmute {
+  position: absolute; left: 50%; top: 50%; z-index: 2; display: none;
+  transform: translate(-50%, -50%); padding: 14px 22px 14px 18px; border: 0; border-radius: 999px;
+  background: var(--accent); color: #F6F6F6; font: 600 16px/1 "JetBrains Mono", monospace; cursor: pointer;
+  box-shadow: 0 10px 40px rgba(64, 47, 255, .45);
+}
+.hat-unmute::before { content: "\25B6"; margin-right: 10px; }
+.hat-unmute.shown { display: block; }
+
+/* --- Вердикт --- */
+
+.hat-verdict {
+  position: absolute; inset: 0; z-index: 3; display: flex; padding: 16px; overflow-y: auto;
+  opacity: 0; pointer-events: none; transition: opacity .5s ease;
+}
+.hat-verdict.shown { opacity: 1; pointer-events: auto; }
+
+.hat-card {
+  margin: auto; width: min(100%, 880px); padding: clamp(20px, 3.2vw, 36px);
+  display: flex; align-items: center; gap: clamp(28px, 4vw, 52px);
+  background: rgba(20, 17, 15, .78); border: 1px solid rgba(237, 237, 237, .1); border-radius: 18px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .55);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.hat-card.failure { width: min(100%, 620px); }
+.hat-text { flex: 1; min-width: 0; }
+
+.hat-eyebrow { margin: 0 0 6px; color: var(--muted); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+.hat-title { margin: 0; color: #F6F6F6; font-size: clamp(26px, 3.6vw, 42px); font-weight: 600; line-height: 1.15; }
+.hat-card.failure .hat-title { color: #F15668; }
+.hat-reason {
+  margin: 18px 0 0; padding-left: 14px; border-left: 3px solid var(--accent);
+  color: #D9D8DF; font-size: 15px; line-height: 1.55;
+}
+.hat-source { margin: 10px 0 0; color: var(--muted); font-size: 12px; }
+.hat-error { margin: 14px 0 0; color: #FF8A98; font-size: 14px; }
+.hat-error:empty { display: none; }
+
+.hat-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.hat-button {
+  padding: 12px 18px; border: 1px solid rgba(237, 237, 237, .2); border-radius: 10px;
+  background: rgba(237, 237, 237, .07); color: #F6F6F6;
+  font: 600 14px/1.2 "JetBrains Mono", monospace; cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.hat-button:hover:not(:disabled) { background: rgba(237, 237, 237, .14); }
+.hat-button:active:not(:disabled) { transform: translateY(1px); }
+.hat-button.primary { border-color: var(--accent); background: var(--accent); }
+.hat-button.primary:hover:not(:disabled) { background: #5646FF; }
+.hat-button.quiet { border-color: transparent; background: none; color: var(--muted); }
+.hat-button.quiet:hover:not(:disabled) { background: none; color: #F6F6F6; }
+.hat-button:focus-visible { outline: 2px solid #C2BCFF; outline-offset: 2px; }
+.hat-button:disabled { opacity: .5; cursor: progress; }
+
+/* Фигурка специализации — как портретная карточка страницы 5; медаль грейда — на её углу. */
+.hat-figure { position: relative; flex: none; margin: 0 30px 22px 0; }
+.hat-specialization {
+  width: clamp(150px, min(22vw, 30vh), 240px); overflow: hidden;
+  background: #EDEDED; border-radius: 14px; box-shadow: 0 18px 50px rgba(0, 0, 0, .45);
+}
+.hat-picture { aspect-ratio: 9 / 16; }
+.hat-picture img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.hat-specialization span { display: block; padding: 8px 14px 12px; color: #C9192D; font-size: 17px; font-weight: 600; }
+.hat-grade {
+  position: absolute; right: -30px; bottom: -22px; width: clamp(84px, 9vw, 112px); aspect-ratio: 1;
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--grade, var(--accent)); border: 4px solid #EDEDED;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+}
+.hat-grade img { width: 58%; height: 58%; object-fit: contain; }
+.hat-grade span {
+  position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+  padding: 3px 10px; border-radius: 999px; background: #14110F; color: #F6F6F6;
+  font-size: 12px; font-weight: 600; white-space: nowrap;
+}
+
+/* Появление: карточка поднимается, фигурка за ней, медаль ставится как печать. */
+.hat-verdict.shown .hat-card { animation: hat-rise .7s cubic-bezier(.2, .8, .2, 1) both; }
+.hat-verdict.shown .hat-specialization { animation: hat-rise .8s .15s cubic-bezier(.2, .8, .2, 1) both; }
+.hat-verdict.shown .hat-grade { animation: hat-stamp .55s .8s cubic-bezier(.3, 1.6, .5, 1) both; }
+.hat-verdict.shown .hat-text > * { animation: hat-fade .6s calc(.3s + var(--i, 0) * .09s) ease both; }
+@keyframes hat-rise { from { opacity: 0; transform: translateY(28px); } }
+@keyframes hat-fade { from { opacity: 0; transform: translateY(8px); } }
+@keyframes hat-stamp { from { opacity: 0; transform: scale(2.4) rotate(-28deg); } }
+
+@media (max-width: 720px) {
+  .hat-card { flex-direction: column; text-align: center; }
+  .hat-figure { margin: 0 24px 18px 0; }
+  .hat-specialization { width: clamp(120px, 36vw, 180px); }
+  .hat-grade { right: -24px; width: 80px; }
+  .hat-reason { padding: 10px 0 0; border-left: 0; border-top: 3px solid var(--accent); text-align: left; }
+  .hat-actions { flex-direction: column; }
+  .hat-button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hat, .hat-video, .hat-verdict { transition: none; }
+  .hat-verdict.shown *, .hat-verdict.shown .hat-card, .hat-dots::after { animation: none; }
+}

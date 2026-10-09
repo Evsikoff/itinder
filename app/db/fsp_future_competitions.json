@@ -1,0 +1,100 @@
+[
+  {
+    "id": "polyarny_kod_2026", "series": "polyarny_kod", "name": "Хакатон «Полярный код» 2026",
+    "format": "hackathon", "level": "interregional", "venue": "hybrid", "city": "Мурманск",
+    "start_date": "2026-11-20", "end_date": "2026-11-22", "teams": null,
+    "minutes_after_profile_link": 2,
+    "case_partner": "Рыболовецкое объединение «Баренц-Улов»",
+    "task": "Электронный журнал улова: записи с судна без связи, синхронизация при выходе в зону покрытия, отчёты для контролирующих органов",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Приём записей журнала после синхронизации, разрешение конфликтов, выгрузка отчётов"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Офлайн-приложение капитана на планшете"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Синхронизация после нескольких суток без связи, правка одной записи с двух устройств"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Состав отчётности, правила исправления уже отправленных записей"}
+    ]},
+    "stack": {
+      "languages": ["kotlin", "dart", "go", "typescript"],
+      "databases": ["postgresql", "sqlite"],
+      "integrations": ["rest", "file_exchange"],
+      "testing": ["test_design", "testcontainers", "appium"]
+    }
+  },
+  {
+    "id": "sessiya_2026", "series": "sessiya", "name": "Студенческий хакатон «Сессия» 2026",
+    "format": "hackathon", "level": "regional", "venue": "offline", "city": "Томск",
+    "start_date": "2026-12-04", "end_date": "2026-12-06", "teams": null,
+    "minutes_after_profile_link": 5,
+    "case_partner": "Студенческое объединение «Кампус»",
+    "task": "Читальный зал университета: бронирование мест и учебников, очередь на популярные книги, напоминание вернуть книгу, вход через университетскую учётную запись",
+    "team": {"size_min": 2, "size_max": 4, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Бронирование мест и книг, очередь на книгу с передачей следующему, напоминания"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Схема читального зала со свободными местами и личный кабинет читателя"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Автотесты бронирования одного места двумя студентами и очереди на книгу"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Правила очереди: сколько держать книгу за следующим, что делать с должниками"}
+    ]},
+    "stack": {
+      "languages": ["python", "php", "javascript", "typescript"],
+      "databases": ["postgresql", "redis"],
+      "integrations": ["rest", "oidc"],
+      "testing": ["test_design", "postman", "cypress"]
+    }
+  },
+  {
+    "id": "kontrakt_2027", "series": "kontrakt", "name": "Всероссийский чемпионат по разработке API «Контракт» 2027",
+    "format": "championship", "level": "national", "venue": "online", "city": null,
+    "start_date": "2027-03-01", "end_date": "2027-03-28", "teams": null,
+    "minutes_after_profile_link": 10,
+    "case_partner": "Сеть зарядных станций «Розетка»",
+    "task": "Открытый API для операторов зарядных станций электромобилей: бронирование коннектора, старт и остановка зарядки, оплата по факту, роуминг между операторами. Интерфейса нет, жюри оценивает только API",
+    "team": {"size_min": 2, "size_max": 4, "roles": [
+      {"role_id": "backend", "min": 1, "max": 3, "task": "Реализация API: бронирование коннектора, сессия зарядки с показаниями счётчика, расчёты между операторами"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Контрактные тесты для операторов-потребителей API, нагрузочный прогон начала зарядки"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Спецификации OpenAPI и .proto, правила роуминга и тарификации прерванной зарядки"}
+    ]},
+    "stack": {
+      "languages": ["go", "java", "kotlin", "python", "rust"],
+      "databases": ["postgresql", "ydb", "redis"],
+      "integrations": ["rest", "grpc", "webhook", "oidc"],
+      "testing": ["postman", "pact", "jmeter"]
+    }
+  },
+  {
+    "id": "okhota_na_bagi_2027", "series": "okhota_na_bagi", "name": "Кубок по тестированию «Охота на баги» 2027",
+    "format": "hackathon", "level": "national", "venue": "online", "city": null,
+    "start_date": "2027-06-05", "end_date": "2027-06-06", "teams": null,
+    "minutes_after_profile_link": 20,
+    "case_partner": "Каршеринг «Мигом»",
+    "task": "Командам выдаётся каршеринг с заложенными дефектами — мобильное приложение, телеметрия машин, поминутная тарификация: найти ошибки в расчёте стоимости, при потере связи с машиной и под нагрузкой, описать влияние на клиентов",
+    "team": {"size_min": 2, "size_max": 4, "roles": [
+      {"role_id": "qa", "min": 2, "max": 3, "task": "Мобильные и API-проверки, расчёт стоимости поездки на границах тарифов, нагрузочный прогон утреннего пика"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Восстановление правил тарификации по документации, обоснование серьёзности дефектов"},
+      {"role_id": "backend", "min": 0, "max": 1, "task": "Сверка поездок и списаний в БД, разбор потока телеметрии"}
+    ]},
+    "stack": {
+      "languages": ["python", "kotlin", "typescript", "sql"],
+      "databases": ["postgresql", "clickhouse"],
+      "integrations": ["rest", "kafka", "websocket"],
+      "testing": ["test_design", "exploratory", "appium", "pytest", "playwright", "k6", "sql_checks", "allure"]
+    }
+  },
+  {
+    "id": "karavan_2027", "series": "karavan", "name": "Международный хакатон «Караван» 2027",
+    "format": "hackathon", "level": "international", "venue": "online", "city": null,
+    "start_date": "2027-07-09", "end_date": "2027-07-11", "teams": null,
+    "minutes_after_profile_link": 30,
+    "case_partner": "Логистический оператор «Евразийский коридор»",
+    "task": "Электронная накладная для перевозок через несколько стран: обмен документами между перевозчиками, электронная подпись, сверка статусов груза, выгрузка для таможни",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Обмен накладными в форматах разных стран, проверка подписи, единая история статусов груза"},
+      {"role_id": "frontend", "min": 1, "max": 1, "task": "Кабинет перевозчика: накладные, подписание, расхождения"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Заглушки систем перевозчиков и таможни, контрактные тесты обмена документами"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Сопоставление полей накладных разных стран, правила исправления подписанного документа"}
+    ]},
+    "stack": {
+      "languages": ["java", "kotlin", "csharp", "typescript"],
+      "databases": ["postgresql", "mongodb"],
+      "integrations": ["soap", "rest", "kafka", "file_exchange"],
+      "testing": ["test_design", "rest_assured", "wiremock", "pact"]
+    }
+  }
+]

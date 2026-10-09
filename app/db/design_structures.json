@@ -1,0 +1,376 @@
+[
+  {
+    "design_id": "d01_barbershop_booking",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Сайт записи и кабинет администратора филиала"},
+      {"id": "api", "instance_id": "svc_fastapi", "role": "API записи: свободные слоты, создание, перенос и отмена записей"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Филиалы, мастера, услуги, записи"}
+    ],
+    "links": [
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Получение свободных слотов, создание и отмена записи"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Чтение расписания, сохранение записей"}
+    ]
+  },
+  {
+    "design_id": "d02_electronics_catalog",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_nextjs", "role": "Витрина: каталог, карточка товара, фильтры"},
+      {"id": "api", "instance_id": "svc_spring_boot", "role": "API каталога: карточки, цены, остатки"},
+      {"id": "cache", "instance_id": "cache_redis", "role": "Кэш карточек товаров и цен"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Товары, характеристики, цены, остатки"}
+    ],
+    "links": [
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Запрос карточек и списков товаров"},
+      {"from": "api", "to": "cache", "link_type_id": "data_access", "purpose": "Чтение карточек из кэша, запись после промаха"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Чтение товаров при промахе кэша, обновление цен и остатков"}
+    ]
+  },
+  {
+    "design_id": "d03_mortgage_documents",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Кабинет заёмщика и кредитного специалиста"},
+      {"id": "api", "instance_id": "svc_go", "role": "API заявок: создание заявки, выдача ссылок на загрузку, учёт документов"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Заявки и метаданные документов"},
+      {"id": "storage", "instance_id": "storage_minio", "role": "Файлы документов"}
+    ],
+    "links": [
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Создание заявки, запрос подписанной ссылки, подтверждение загрузки"},
+      {"from": "web", "to": "storage", "link_type_id": "http_sync", "purpose": "Загрузка файла напрямую по подписанной ссылке"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Заявки и записи о загруженных документах"},
+      {"from": "api", "to": "storage", "link_type_id": "data_access", "purpose": "Проверка, что файл загружен; ссылки на просмотр"}
+    ]
+  },
+  {
+    "design_id": "d04_courier_delivery",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_vue_spa", "role": "Форма оформления заказа"},
+      {"id": "api", "instance_id": "svc_nestjs", "role": "API заказов: проверка адресов, расчёт стоимости, сохранение заказа"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Заказы и тарифы"},
+      {"id": "dadata", "instance_id": "ext_dadata", "role": "Подсказки и стандартизация адресов"}
+    ],
+    "links": [
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Подсказки адреса, расчёт стоимости, оформление заказа"},
+      {"from": "api", "to": "dadata", "link_type_id": "http_sync", "purpose": "Подсказки адреса и координаты дома"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Тарифы и заказы"}
+    ]
+  },
+  {
+    "design_id": "d05_sports_federation_cabinet",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Кабинет спортсмена и тренера"},
+      {"id": "idp", "instance_id": "idp_keycloak", "role": "Единая учётная запись федерации, роли «спортсмен» и «тренер»"},
+      {"id": "api", "instance_id": "svc_spring_boot", "role": "API кабинета: турниры, рейтинг, заявки"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Спортсмены, турниры, результаты, заявки"}
+    ],
+    "links": [
+      {"from": "web", "to": "idp", "link_type_id": "redirect", "purpose": "Вход и получение токенов"},
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Запросы с JWT"},
+      {"from": "api", "to": "idp", "link_type_id": "http_sync", "purpose": "Получение ключей для проверки подписи токена"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Турниры, результаты, заявки"}
+    ]
+  },
+  {
+    "design_id": "d06_news_portal",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_nextjs", "role": "Сайт портала и редакторская панель"},
+      {"id": "api", "instance_id": "svc_django", "role": "API статей и комментариев"},
+      {"id": "db_primary", "instance_id": "db_postgresql", "role": "Основная БД: приём записи"},
+      {"id": "db_replica", "instance_id": "db_postgresql", "role": "Реплика для чтения статей и комментариев"}
+    ],
+    "links": [
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Чтение статей, публикация, комментарии"},
+      {"from": "api", "to": "db_primary", "link_type_id": "data_access", "purpose": "Публикация статей, сохранение комментариев"},
+      {"from": "db_primary", "to": "db_replica", "link_type_id": "replication", "purpose": "Асинхронная потоковая репликация"},
+      {"from": "api", "to": "db_replica", "link_type_id": "data_access", "purpose": "Чтение статей и комментариев"}
+    ]
+  },
+  {
+    "design_id": "d07_course_certificates",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Личный кабинет ученика"},
+      {"id": "api", "instance_id": "svc_fastapi", "role": "API обучения: прогресс, завершение курса, статус сертификата"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Ученики, курсы, прогресс, сертификаты"},
+      {"id": "queue", "instance_id": "queue_rabbitmq", "role": "Задания на генерацию сертификатов"},
+      {"id": "worker", "instance_id": "worker_celery", "role": "Генерация PDF, сохранение файла, отправка письма"},
+      {"id": "storage", "instance_id": "storage_minio", "role": "PDF-файлы сертификатов"},
+      {"id": "mail", "instance_id": "ext_unisender", "role": "Отправка писем с сертификатом"}
+    ],
+    "links": [
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Прогресс, завершение курса, статус сертификата"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Прогресс и статусы сертификатов"},
+      {"from": "api", "to": "queue", "link_type_id": "publish", "purpose": "Задание: сгенерировать сертификат"},
+      {"from": "queue", "to": "worker", "link_type_id": "consume", "purpose": "Получение задания на генерацию"},
+      {"from": "worker", "to": "storage", "link_type_id": "data_access", "purpose": "Сохранение PDF"},
+      {"from": "worker", "to": "mail", "link_type_id": "http_sync", "purpose": "Отправка письма со ссылкой на сертификат"},
+      {"from": "worker", "to": "db", "link_type_id": "data_access", "purpose": "Обновление статуса сертификата"}
+    ]
+  },
+  {
+    "design_id": "d08_cinema_subscription",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Сайт кинотеатра: выбор тарифа, статус подписки"},
+      {"id": "api", "instance_id": "svc_go", "role": "API подписок: создание платежа, активация и продление подписки"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Пользователи, подписки, платежи"},
+      {"id": "pay", "instance_id": "ext_yookassa", "role": "Приём платежей"}
+    ],
+    "links": [
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Выбор тарифа, проверка статуса оплаты"},
+      {"from": "api", "to": "pay", "link_type_id": "http_sync", "purpose": "Создание платежа"},
+      {"from": "web", "to": "pay", "link_type_id": "redirect", "purpose": "Оплата на платёжной странице и возврат на сайт"},
+      {"from": "pay", "to": "api", "link_type_id": "webhook", "purpose": "Уведомление об успешной или отменённой оплате"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Платежи и статусы подписок"}
+    ]
+  },
+  {
+    "design_id": "d09_support_chat",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Окно чата у покупателя и рабочее место оператора"},
+      {"id": "lb", "instance_id": "lb_nginx", "role": "Балансировщик HTTP- и WebSocket-соединений"},
+      {"id": "chat_1", "instance_id": "svc_nestjs", "role": "Экземпляр 1 сервиса чата"},
+      {"id": "chat_2", "instance_id": "svc_nestjs", "role": "Экземпляр 2 сервиса чата"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "История диалогов"},
+      {"id": "bus", "instance_id": "broker_redis_pubsub", "role": "Рассылка новых сообщений между экземплярами"}
+    ],
+    "links": [
+      {"from": "web", "to": "lb", "link_type_id": "http_sync", "purpose": "Отправка сообщений, загрузка истории"},
+      {"from": "lb", "to": "chat_1", "link_type_id": "http_sync", "purpose": "Проксирование запросов и соединений"},
+      {"from": "lb", "to": "chat_2", "link_type_id": "http_sync", "purpose": "Проксирование запросов и соединений"},
+      {"from": "chat_1", "to": "db", "link_type_id": "data_access", "purpose": "Сохранение и чтение сообщений"},
+      {"from": "chat_2", "to": "db", "link_type_id": "data_access", "purpose": "Сохранение и чтение сообщений"},
+      {"from": "chat_1", "to": "bus", "link_type_id": "publish", "purpose": "Новое сообщение в диалоге"},
+      {"from": "chat_2", "to": "bus", "link_type_id": "publish", "purpose": "Новое сообщение в диалоге"},
+      {"from": "bus", "to": "chat_1", "link_type_id": "consume", "purpose": "Сообщения для клиентов, подключённых к экземпляру 1"},
+      {"from": "bus", "to": "chat_2", "link_type_id": "consume", "purpose": "Сообщения для клиентов, подключённых к экземпляру 2"},
+      {"from": "chat_1", "to": "web", "link_type_id": "push", "purpose": "Доставка новых сообщений по WebSocket"},
+      {"from": "chat_2", "to": "web", "link_type_id": "push", "purpose": "Доставка новых сообщений по WebSocket"}
+    ]
+  },
+  {
+    "design_id": "d10_pharmacy_export",
+    "nodes": [
+      {"id": "cron", "instance_id": "sched_crontab", "role": "Запуск выгрузки продаж в 02:00 и загрузки цен в 06:00"},
+      {"id": "api", "instance_id": "svc_laravel", "role": "Сервис учёта продаж аптек"},
+      {"id": "db", "instance_id": "db_mysql", "role": "Чеки и цены"},
+      {"id": "sftp", "instance_id": "storage_sftp", "role": "Обменная папка с бухгалтерией"},
+      {"id": "erp", "instance_id": "legacy_1c8", "role": "Бухгалтерия на 1С"}
+    ],
+    "links": [
+      {"from": "cron", "to": "api", "link_type_id": "schedule_trigger", "purpose": "Запуск выгрузки продаж и загрузки цен"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Чтение чеков за день, обновление цен"},
+      {"from": "api", "to": "sftp", "link_type_id": "file_exchange", "purpose": "CSV с продажами за день"},
+      {"from": "sftp", "to": "erp", "link_type_id": "file_exchange", "purpose": "1С забирает файл продаж"},
+      {"from": "erp", "to": "sftp", "link_type_id": "file_exchange", "purpose": "1С кладёт файл с ценами"},
+      {"from": "sftp", "to": "api", "link_type_id": "file_exchange", "purpose": "Загрузка файла с ценами"}
+    ]
+  },
+  {
+    "design_id": "d11_taxi_pricing",
+    "nodes": [
+      {"id": "app", "instance_id": "ui_android_kotlin", "role": "Приложение пассажира"},
+      {"id": "gw", "instance_id": "gw_kong", "role": "API-шлюз: авторизация, ограничение частоты запросов"},
+      {"id": "orders", "instance_id": "svc_go", "role": "Сервис заказов: собирает данные и возвращает цену"},
+      {"id": "users", "instance_id": "svc_spring_boot", "role": "Сервис пользователей: тариф, скидки"},
+      {"id": "pricing", "instance_id": "svc_go", "role": "Сервис ценообразования: коэффициент спроса"},
+      {"id": "db_orders", "instance_id": "db_postgresql", "role": "Заказы"},
+      {"id": "db_users", "instance_id": "db_postgresql", "role": "Пользователи и скидки"},
+      {"id": "cache_pricing", "instance_id": "cache_redis", "role": "Текущий коэффициент спроса по районам"}
+    ],
+    "links": [
+      {"from": "app", "to": "gw", "link_type_id": "http_sync", "purpose": "Запрос стоимости поездки"},
+      {"from": "gw", "to": "orders", "link_type_id": "http_sync", "purpose": "Проксирование запроса"},
+      {"from": "orders", "to": "users", "link_type_id": "grpc", "purpose": "Тариф и скидки пассажира"},
+      {"from": "orders", "to": "pricing", "link_type_id": "grpc", "purpose": "Коэффициент спроса"},
+      {"from": "orders", "to": "db_orders", "link_type_id": "data_access", "purpose": "Сохранение предварительного заказа"},
+      {"from": "users", "to": "db_users", "link_type_id": "data_access", "purpose": "Профиль и скидки"},
+      {"from": "pricing", "to": "cache_pricing", "link_type_id": "data_access", "purpose": "Чтение коэффициента спроса"}
+    ]
+  },
+  {
+    "design_id": "d12_food_delivery_events",
+    "nodes": [
+      {"id": "app", "instance_id": "ui_flutter", "role": "Приложение покупателя"},
+      {"id": "orders", "instance_id": "svc_spring_boot", "role": "Сервис заказов"},
+      {"id": "db_orders", "instance_id": "db_postgresql", "role": "Заказы и таблица outbox"},
+      {"id": "relay", "instance_id": "worker_go_daemon", "role": "Пересылка событий из outbox в Kafka"},
+      {"id": "kafka", "instance_id": "broker_kafka", "role": "События заказов"},
+      {"id": "inventory", "instance_id": "svc_go", "role": "Сервис остатков ресторанов"},
+      {"id": "db_inventory", "instance_id": "db_postgresql", "role": "Остатки и стоп-листы"},
+      {"id": "notify", "instance_id": "svc_nestjs", "role": "Сервис уведомлений"},
+      {"id": "sms", "instance_id": "ext_sms_ru", "role": "Отправка SMS"},
+      {"id": "analytics", "instance_id": "svc_fastapi", "role": "Сервис аналитики: запись событий в хранилище"},
+      {"id": "dwh", "instance_id": "db_clickhouse", "role": "Аналитическое хранилище"}
+    ],
+    "links": [
+      {"from": "app", "to": "orders", "link_type_id": "http_sync", "purpose": "Оформление заказа"},
+      {"from": "orders", "to": "db_orders", "link_type_id": "data_access", "purpose": "Заказ и событие outbox в одной транзакции"},
+      {"from": "relay", "to": "db_orders", "link_type_id": "data_access", "purpose": "Чтение неотправленных событий из outbox"},
+      {"from": "relay", "to": "kafka", "link_type_id": "publish", "purpose": "Событие «заказ создан»"},
+      {"from": "kafka", "to": "inventory", "link_type_id": "consume", "purpose": "Списание блюд с остатков"},
+      {"from": "inventory", "to": "db_inventory", "link_type_id": "data_access", "purpose": "Обновление остатков"},
+      {"from": "kafka", "to": "notify", "link_type_id": "consume", "purpose": "Уведомление покупателя"},
+      {"from": "notify", "to": "sms", "link_type_id": "http_sync", "purpose": "Отправка SMS"},
+      {"from": "kafka", "to": "analytics", "link_type_id": "consume", "purpose": "Учёт заказа в аналитике"},
+      {"from": "analytics", "to": "dwh", "link_type_id": "data_access", "purpose": "Пакетная вставка событий"}
+    ]
+  },
+  {
+    "design_id": "d13_car_ads_search",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_nextjs", "role": "Сайт: поиск и кабинет продавца"},
+      {"id": "write_api", "instance_id": "svc_aspnet", "role": "API объявлений: создание и редактирование"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Объявления — источник правды"},
+      {"id": "kafka", "instance_id": "broker_kafka", "role": "Поток изменений объявлений"},
+      {"id": "indexer", "instance_id": "worker_go_daemon", "role": "Обновление поискового индекса"},
+      {"id": "search_api", "instance_id": "svc_go", "role": "API поиска"},
+      {"id": "es", "instance_id": "search_elasticsearch", "role": "Поисковый индекс объявлений"}
+    ],
+    "links": [
+      {"from": "web", "to": "write_api", "link_type_id": "http_sync", "purpose": "Создание и редактирование объявлений"},
+      {"from": "write_api", "to": "db", "link_type_id": "data_access", "purpose": "Сохранение объявлений"},
+      {"from": "db", "to": "kafka", "link_type_id": "cdc", "purpose": "Изменения таблицы объявлений через Debezium"},
+      {"from": "kafka", "to": "indexer", "link_type_id": "consume", "purpose": "Получение изменений"},
+      {"from": "indexer", "to": "es", "link_type_id": "data_access", "purpose": "Обновление документов индекса"},
+      {"from": "web", "to": "search_api", "link_type_id": "http_sync", "purpose": "Поисковые запросы покупателей"},
+      {"from": "search_api", "to": "es", "link_type_id": "data_access", "purpose": "Поиск и фильтрация"}
+    ]
+  },
+  {
+    "design_id": "d14_furniture_saga",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Сайт магазина"},
+      {"id": "orders", "instance_id": "svc_spring_boot", "role": "Сервис заказов"},
+      {"id": "db_orders", "instance_id": "db_postgresql", "role": "Заказы и их статусы"},
+      {"id": "wf", "instance_id": "wf_temporal", "role": "Оркестратор процесса оформления заказа"},
+      {"id": "payment", "instance_id": "svc_go", "role": "Сервис платежей: списание и возврат"},
+      {"id": "pay", "instance_id": "ext_yookassa", "role": "Платёжный шлюз"},
+      {"id": "inventory", "instance_id": "svc_go", "role": "Сервис склада: резерв и снятие резерва"},
+      {"id": "db_inventory", "instance_id": "db_postgresql", "role": "Остатки и резервы"},
+      {"id": "delivery", "instance_id": "svc_spring_boot", "role": "Сервис доставки: назначение и отмена"},
+      {"id": "cdek", "instance_id": "ext_cdek", "role": "Служба доставки"}
+    ],
+    "links": [
+      {"from": "web", "to": "orders", "link_type_id": "http_sync", "purpose": "Оформление заказа, проверка статуса"},
+      {"from": "orders", "to": "db_orders", "link_type_id": "data_access", "purpose": "Заказы и статусы"},
+      {"from": "orders", "to": "wf", "link_type_id": "grpc", "purpose": "Запуск процесса оформления заказа"},
+      {"from": "wf", "to": "payment", "link_type_id": "grpc", "purpose": "Шаг 1: списание денег; компенсация — возврат"},
+      {"from": "payment", "to": "pay", "link_type_id": "http_sync", "purpose": "Платёж и возврат"},
+      {"from": "wf", "to": "inventory", "link_type_id": "grpc", "purpose": "Шаг 2: резерв товара; компенсация — снятие резерва"},
+      {"from": "inventory", "to": "db_inventory", "link_type_id": "data_access", "purpose": "Резервы"},
+      {"from": "wf", "to": "delivery", "link_type_id": "grpc", "purpose": "Шаг 3: назначение доставки; компенсация — отмена"},
+      {"from": "delivery", "to": "cdek", "link_type_id": "http_sync", "purpose": "Создание и отмена заявки на доставку"}
+    ]
+  },
+  {
+    "design_id": "d15_bank_legacy",
+    "nodes": [
+      {"id": "app", "instance_id": "ui_ios_swift", "role": "Мобильное приложение клиента"},
+      {"id": "api", "instance_id": "svc_spring_boot", "role": "Бэкенд мобильного банка"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Профили клиентов и копия операций"},
+      {"id": "acl", "instance_id": "svc_go", "role": "Адаптер: переводит модель АБС в модель приложения"},
+      {"id": "esb", "instance_id": "esb_ibm_iib", "role": "Корпоративная шина банка"},
+      {"id": "abs", "instance_id": "legacy_oracle9i", "role": "Автоматизированная банковская система"},
+      {"id": "sftp", "instance_id": "storage_sftp", "role": "Ночные выгрузки из АБС"},
+      {"id": "cron", "instance_id": "sched_k8s_cronjob", "role": "Запуск ночной сверки"},
+      {"id": "recon", "instance_id": "worker_go_daemon", "role": "Сверка операций с выгрузкой АБС"}
+    ],
+    "links": [
+      {"from": "app", "to": "api", "link_type_id": "http_sync", "purpose": "Остатки и история операций"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Профили и сохранённые операции"},
+      {"from": "api", "to": "acl", "link_type_id": "http_sync", "purpose": "Запрос остатков и операций"},
+      {"from": "acl", "to": "esb", "link_type_id": "soap", "purpose": "Запросы к АБС"},
+      {"from": "esb", "to": "abs", "link_type_id": "shared_db", "purpose": "Вызов PL/SQL-пакетов АБС"},
+      {"from": "abs", "to": "sftp", "link_type_id": "file_exchange", "purpose": "Ночная выгрузка операций"},
+      {"from": "cron", "to": "recon", "link_type_id": "schedule_trigger", "purpose": "Запуск сверки"},
+      {"from": "sftp", "to": "recon", "link_type_id": "file_exchange", "purpose": "Чтение выгрузки"},
+      {"from": "recon", "to": "db", "link_type_id": "data_access", "purpose": "Исправление расхождений"}
+    ]
+  },
+  {
+    "design_id": "d16_marketplace_recommendations",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Сайт маркетплейса"},
+      {"id": "api", "instance_id": "svc_go", "role": "Бэкенд витрины"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Заказы, корзины, пользователи"},
+      {"id": "kafka", "instance_id": "broker_kafka", "role": "Поток изменений и событий"},
+      {"id": "flink", "instance_id": "worker_flink", "role": "Потоковая обработка: признаки и агрегаты"},
+      {"id": "dwh", "instance_id": "db_clickhouse", "role": "Аналитическое хранилище"},
+      {"id": "features", "instance_id": "db_tarantool", "role": "Хранилище признаков пользователей"},
+      {"id": "ml", "instance_id": "svc_fastapi", "role": "Сервис рекомендаций (ML-модель)"},
+      {"id": "bi", "instance_id": "ui_datalens", "role": "Дашборд конверсии рекомендаций"}
+    ],
+    "links": [
+      {"from": "web", "to": "api", "link_type_id": "http_sync", "purpose": "Страницы витрины и корзина"},
+      {"from": "api", "to": "db", "link_type_id": "data_access", "purpose": "Заказы и корзины"},
+      {"from": "db", "to": "kafka", "link_type_id": "cdc", "purpose": "Изменения заказов и корзин"},
+      {"from": "api", "to": "kafka", "link_type_id": "publish", "purpose": "События просмотров товаров"},
+      {"from": "kafka", "to": "flink", "link_type_id": "consume", "purpose": "Поток событий для обработки"},
+      {"from": "flink", "to": "dwh", "link_type_id": "data_access", "purpose": "Агрегаты для аналитики"},
+      {"from": "flink", "to": "features", "link_type_id": "data_access", "purpose": "Обновление признаков пользователей"},
+      {"from": "api", "to": "ml", "link_type_id": "grpc", "purpose": "Запрос рекомендаций"},
+      {"from": "ml", "to": "features", "link_type_id": "data_access", "purpose": "Чтение признаков пользователя"},
+      {"from": "bi", "to": "dwh", "link_type_id": "data_access", "purpose": "Запросы для дашборда"}
+    ]
+  },
+  {
+    "design_id": "d17_warehouse_receiving",
+    "nodes": [
+      {"id": "tsd", "instance_id": "ui_tsd300", "role": "Терминалы кладовщиков"},
+      {"id": "lb", "instance_id": "lb_regulirovshik", "role": "Балансировщик перед сервисом склада"},
+      {"id": "core", "instance_id": "svc_yadro", "role": "Монолит склада: поставки, приёмка, места хранения"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Поставки, позиции, места хранения"},
+      {"id": "queue", "instance_id": "queue_konveyer", "role": "Очередь передачи принятого товара в учёт"},
+      {"id": "worker", "instance_id": "worker_batrak", "role": "Формирование DBF-файлов для учётной системы"},
+      {"id": "share", "instance_id": "storage_smb", "role": "Обменная папка с учётной системой"},
+      {"id": "asu", "instance_id": "legacy_asu_uchet97", "role": "Учётная система склада"},
+      {"id": "cron", "instance_id": "sched_budilnik", "role": "Ночной запуск сверки остатков"},
+      {"id": "carrier", "instance_id": "ext_gruztrek", "role": "Перевозчик: статусы поставок"}
+    ],
+    "links": [
+      {"from": "tsd", "to": "lb", "link_type_id": "http_sync", "purpose": "Пачка отсканированных позиций после восстановления связи"},
+      {"from": "lb", "to": "core", "link_type_id": "http_sync", "purpose": "Проксирование запросов"},
+      {"from": "core", "to": "db", "link_type_id": "data_access", "purpose": "Поставки и принятые позиции"},
+      {"from": "core", "to": "queue", "link_type_id": "publish", "purpose": "Принятая поставка"},
+      {"from": "queue", "to": "worker", "link_type_id": "consume", "purpose": "Получение принятой поставки"},
+      {"from": "worker", "to": "share", "link_type_id": "file_exchange", "purpose": "DBF-файл с приходом"},
+      {"from": "share", "to": "asu", "link_type_id": "file_exchange", "purpose": "АСУ забирает файл прихода"},
+      {"from": "asu", "to": "share", "link_type_id": "file_exchange", "purpose": "Выгрузка остатков"},
+      {"from": "cron", "to": "core", "link_type_id": "schedule_trigger", "purpose": "Запуск сверки остатков"},
+      {"from": "share", "to": "core", "link_type_id": "file_exchange", "purpose": "Чтение выгрузки остатков"},
+      {"from": "carrier", "to": "core", "link_type_id": "webhook", "purpose": "Изменение статуса поставки"},
+      {"from": "core", "to": "carrier", "link_type_id": "polling", "purpose": "Догрузка статусов, если webhook не пришёл"}
+    ]
+  },
+  {
+    "design_id": "d18_osago_online",
+    "nodes": [
+      {"id": "web", "instance_id": "ui_react_spa", "role": "Сайт оформления полиса"},
+      {"id": "sso", "instance_id": "idp_edinyvhod", "role": "Единый вход клиентов страховой"},
+      {"id": "gw", "instance_id": "gw_shlagbaum", "role": "API-шлюз"},
+      {"id": "policy", "instance_id": "svc_spring_boot", "role": "Сервис полисов: расчёт цены, оформление"},
+      {"id": "db", "instance_id": "db_postgresql", "role": "Заявки и полисы"},
+      {"id": "tariffs", "instance_id": "cache_mnemoza", "role": "Кэш тарифов и коэффициентов"},
+      {"id": "photos", "instance_id": "storage_ambar", "role": "Фото документов"},
+      {"id": "pay", "instance_id": "ext_finshluz", "role": "Платёжный шлюз"},
+      {"id": "accounting", "instance_id": "legacy_buhpro2003", "role": "Бухгалтерия страховой"},
+      {"id": "bus", "instance_id": "broker_strela", "role": "События по полисам"},
+      {"id": "notify", "instance_id": "svc_go", "role": "Сервис уведомлений"},
+      {"id": "sms", "instance_id": "ext_smsc", "role": "Отправка SMS"}
+    ],
+    "links": [
+      {"from": "web", "to": "sso", "link_type_id": "redirect", "purpose": "Вход клиента"},
+      {"from": "web", "to": "gw", "link_type_id": "http_sync", "purpose": "Расчёт цены и оформление полиса"},
+      {"from": "gw", "to": "sso", "link_type_id": "http_sync", "purpose": "Проверка токена на каждый запрос"},
+      {"from": "gw", "to": "policy", "link_type_id": "http_sync", "purpose": "Проксирование запросов"},
+      {"from": "policy", "to": "db", "link_type_id": "data_access", "purpose": "Заявки и полисы"},
+      {"from": "policy", "to": "tariffs", "link_type_id": "data_access", "purpose": "Тарифы и коэффициенты"},
+      {"from": "web", "to": "photos", "link_type_id": "http_sync", "purpose": "Загрузка фото по подписанной ссылке"},
+      {"from": "policy", "to": "photos", "link_type_id": "data_access", "purpose": "Выдача ссылок, проверка загрузки"},
+      {"from": "policy", "to": "pay", "link_type_id": "http_sync", "purpose": "Создание платежа"},
+      {"from": "policy", "to": "pay", "link_type_id": "polling", "purpose": "Проверка статуса платежа раз в 5 секунд"},
+      {"from": "policy", "to": "accounting", "link_type_id": "soap", "purpose": "Регистрация полиса"},
+      {"from": "policy", "to": "bus", "link_type_id": "publish", "purpose": "Событие «полис оформлен»"},
+      {"from": "bus", "to": "notify", "link_type_id": "consume", "purpose": "Получение события"},
+      {"from": "notify", "to": "sms", "link_type_id": "http_sync", "purpose": "SMS с номером полиса"}
+    ]
+  }
+]

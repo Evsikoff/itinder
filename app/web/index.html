@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITinder</title>
+<link rel="icon" href="data:,"><!-- иконки пока нет: без этой строки браузер просит /favicon.ico и пишет 404 в консоль -->
+<link rel="stylesheet" href="./src/hat/hat.css">
+<style>
+  :root {
+    --bg: #14110f;
+    --text: #EDEDED;
+    --muted: #9C9DA3;
+    --accent: #402FFF;
+    --danger: #EC1D35;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); color: var(--text); }
+  body { font: 14px/1.5 "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace; }
+  canvas#scene { display: block; width: 100vw; height: 100vh; touch-action: none; }
+
+  #veil {
+    position: fixed; inset: 0; display: grid; place-items: center;
+    background: var(--bg); transition: opacity 1.4s ease; z-index: 2;
+  }
+  #veil.gone { opacity: 0; pointer-events: none; }
+  #veil .bar { width: min(240px, 60vw); height: 2px; background: rgba(237, 237, 237, .12); overflow: hidden; }
+  #veil .bar::after {
+    content: ""; display: block; height: 100%; width: 40%; background: var(--accent);
+    animation: run 1.1s ease-in-out infinite;
+  }
+  @keyframes run { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+
+  /* Поля ввода 3D-объектов (src/page/textField.js): настоящие input, невидимые.
+     16px — с меньшим шрифтом iOS увеличивает страницу при фокусе. */
+  #fields input {
+    position: fixed; left: 50%; top: 50%; width: 1px; height: 1px; margin: 0; padding: 0; border: 0;
+    opacity: 0; pointer-events: none; font-size: 16px; color: transparent; caret-color: transparent;
+  }
+
+  /* Итог действия элемента (src/notice.js). Скрытое сообщение невидимо и для
+     клавиатуры: его кнопку не достать Tab'ом. */
+  #notice {
+    position: fixed; left: 50%; bottom: 16px; z-index: 3; width: max-content; max-width: calc(100vw - 32px);
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+    padding: 10px 14px; border-left: 3px solid var(--accent); background: #1B1C21; color: var(--text);
+    transform: translate(-50%, 8px); opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease, visibility 0s linear .3s;
+  }
+  #notice.shown { opacity: 1; visibility: visible; transform: translate(-50%, 0); transition-delay: 0s; }
+  #notice.error { border-left-color: var(--danger); }
+  #notice button {
+    padding: 6px 12px; border: 1px solid var(--accent); border-radius: 8px; background: var(--accent); color: #F6F6F6;
+    font-family: inherit; font-size: 13px; font-weight: 600; line-height: 1.2; cursor: pointer; pointer-events: auto;
+    transition: background .15s ease;
+  }
+  #notice button:hover { background: #5646FF; }
+  #notice button:focus-visible { outline: 2px solid #C2BCFF; outline-offset: 2px; }
+
+  #error {
+    position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 3; display: none;
+    padding: 12px 14px; border-left: 3px solid var(--danger); background: #1B1C21; color: var(--text);
+    white-space: pre-wrap;
+  }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/",
+    "rapier": "./vendor/rapier/rapier.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<canvas id="scene"></canvas>
+<div id="veil"><div class="bar"></div></div>
+<div id="notice" role="status" aria-live="polite"></div>
+<div id="error" role="alert"></div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

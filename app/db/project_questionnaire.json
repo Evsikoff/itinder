@@ -1,0 +1,690 @@
+{
+  "version": 1,
+  "id": "project_intake",
+  "title": "Анкета IT-проекта",
+  "description": "Рекрутёр заводит проект. Сначала анкета выясняет, задан ли стек: действующий код, платформа (нативное мобильное приложение, 1С, Битрикс), системы партнёров, стандарт компании, отечественное ПО. Заданный стек она уточняет вопросами о каждой его компетенции. Там, где стек не задан, анкета спрашивает о продукте простыми словами, выводит из ответов, какие компетенции нужны, и предлагает варианты, сравнивая их по числу соискателей ITinder. Из ответов собираются вакансии: позиция, грейд, число людей, задача и требования к стеку со степенью подтверждения в ФСП. Анкету считает окно «Проекты и вакансии» (portfolio-inner-site, src/projectQuestionnaire.ts), записывает и проверяет вакансии app/tools/projects.py",
+  "prelude": "До анкеты окно спрашивает название проекта и компанию: из app/db/companies или новую. Отрасль выбранной компании (industry) подставляется ответом на domain",
+
+  "references": {
+    "specializations": {"source": "hat_replicas.json", "values": ["Backend", "Frontend", "QA", "Syst. Analyst"]},
+    "grades": {"source": "hat_replicas.json", "values": ["Junior", "Middle", "Senior"]},
+    "roles": {"source": "fsp_team_roles.json", "note": "id роли ↔ специализация: backend ↔ Backend, frontend ↔ Frontend, qa ↔ QA, analyst ↔ Syst. Analyst"},
+    "stack": {"source": "fsp_stack.json", "kinds": ["languages", "databases", "integrations", "testing"]},
+    "degrees": {
+      "source": "app/tools/fsp.py, DEGREES и баллы RESULTS + LEVEL_POINTS",
+      "values": [
+        {"degree": 1, "name": "базовая", "points_from": 1, "means": "Применял хотя бы на одном соревновании ФСП с работающим решением"},
+        {"degree": 2, "name": "уверенная", "points_from": 3, "means": "Несколько соревнований или призовое место на межрегиональном уровне и выше"},
+        {"degree": 3, "name": "высокая", "points_from": 6, "means": "Стабильно призовые места, в том числе на всероссийском уровне"}
+      ]
+    }
+  },
+
+  "syntax": {
+    "question": "Общие поля вопроса: id (уникален во всей анкете), type, text, hint, required (по умолчанию false), show_if — условие показа, default, options — варианты {id, text, hint, show_if, exclusive, effects}, effects — эффекты вопроса целиком. Скрытый вопрос не имеет ответа, и его эффекты не действуют",
+    "question_types": {
+      "text": "Строка; max_length",
+      "textarea": "Многострочный текст; max_length",
+      "date": "Дата YYYY-MM-DD",
+      "single": "Один вариант из options",
+      "multi": "Несколько вариантов из options; вариант с exclusive снимает остальные",
+      "yes_no": "Да или нет; effects — {\"yes\": [...], \"no\": [...]}",
+      "stack_pick": "Компетенции из fsp_stack.json. kinds — из каких массивов; per_kind — ответ отдельно по каждому виду: компетенции, «нет» или «не знаю» (allow_unknown); multiple; roles — кому компетенция (по умолчанию все позиции проекта, которым она доступна по rules.role_scope); pick_effect — что значит выбор: fix, allow, legacy или список {when, effect}. Рядом с вариантом — его description из fsp_stack.json. pick_reason — причина у выбранных компетенций. whole_kind — ответ задаёт вид целиком, если выбор значит fix: компетенции или «нет» — kind_mode fixed, «не знаю» — kind_mode unknown и блокирующий open_question «Уточните у техлида: {вид} — {текст вопроса}»",
+      "list": "Повторяемая группа полей fields; элементы добавляет рекрутёр (min_items, max_items). Ответ — массив объектов. Ссылки: <id>.count — число элементов, внутри элемента {name} и т. п. — его поля",
+      "team_matrix": "Число людей: строки — роли (rows: \"roles\" — все четыре из fsp_team_roles.json) или позиции (rows: \"positions\"), столбцы — грейды. Пустая ячейка — 0. Ссылки: <id>.<строка>.<грейд>, <id>.<строка>.<грейд>+ — этот грейд и выше, <id>.<строка> — сумма по грейдам, <id>.*.<грейд> — сумма по строкам, <id>.total. Строка-роль в ссылке на матрицу позиций — сумма её позиций",
+      "market_choice": "Выбор из вариантов, отсортированных по рынку (раздел market). У варианта — число соискателей по грейдам, уровень и причины предпочтения. multiple: один вариант — требование, несколько — «любой из»",
+      "stack_requirements": "Таблица требований вакансии; строка — {kind, ids, match, importance, min_degree, origin, reasons}. Рекрутёр меняет importance и min_degree, добавляет строки из fsp_stack.json в пределах rules.role_scope, удаляет строки-плюсы",
+      "money_range": "Вилка {from, to} в currency; required — нужны обе границы",
+      "text_list": "Список строк: рекрутёр добавляет и удаляет поля, пустых не бывает; max_items, max_length — у каждой строки",
+      "summary": "Не вопрос: сводка перед сохранением"
+    },
+    "conditions": [
+      {"form": {"ref": "<id>", "is": "<значение>"}, "meaning": "Ответ (или вычисленное значение) равен"},
+      {"form": {"ref": "<id>", "in": ["<значение>"]}, "meaning": "Равен одному из"},
+      {"form": {"ref": "<id>", "has": "<значение>"}, "meaning": "Множественный ответ или множество содержит"},
+      {"form": {"ref": "<id>", "has_any": ["<значение>"]}, "meaning": "Содержит хотя бы одно из"},
+      {"form": {"ref": "<id>", "gte": 1}, "meaning": "Число не меньше; lt — меньше"},
+      {"form": {"ref": "<id>", "answered": true}, "meaning": "На вопрос ответили (или значение не пусто)"},
+      {"form": {"ratio": {"of": ["<id>", "<id>"], "per": "<id>", "gt": 4}}, "meaning": "Сумма of больше gt, умноженного на per"},
+      {"form": {"all": []}, "meaning": "Все условия"},
+      {"form": {"any": []}, "meaning": "Хотя бы одно"},
+      {"form": {"not": {}}, "meaning": "Отрицание"}
+    ],
+    "refs": "ref — id вопроса, id вычисленного значения (derived) или путь в нём через точку (kind_mode.databases). В шаблоне: id вопроса того же блока, $item.<поле> — поле элемента повтора; в recommendations с for_each: \"role\" — $role",
+    "effects": [
+      {"form": {"role": "<role_id>", "reason": "…"}, "meaning": "Роль нужна проекту: попадает в roles_needed с причиной"},
+      {"form": {"fix": {"kind": "…", "ids": ["…"]}, "roles": ["…"], "reason": "…"}, "meaning": "Компетенция задана: попадает в fixed_stack, о ней спросит блок fixed_details. Вместо ids — variant из rules.mobile_variants: берутся компетенции платформ, выбранных в clients"},
+      {"form": {"allow": {"kind": "…", "ids": ["…"]}, "reason": "…"}, "meaning": "Разрешены только эти компетенции вида: кандидаты потребностей сужаются до них. Разрешённая одна — она становится заданной (fix)"},
+      {"form": {"legacy": {"kind": "…", "ids": ["…"]}, "roles": ["…"], "reason": "…"}, "meaning": "Компетенция старой системы: в вакансиях — плюс"},
+      {"form": {"need": {"kind": "…", "ids": ["…"]}, "roles": ["…"], "reason": "…"}, "meaning": "Нужна компетенция вида kind, конкретную выбирают по рынку. Кандидаты: ids; или where — записи вида, у которых поле равно значению (значение-список — одному из; у поля-массива — содержит), минус except; или variants — варианты из rules.mobile_variants"},
+      {"form": {"prefer": {"kind": "…", "ids": ["…"]}, "roles": ["…"], "weight": 1, "reason": "…"}, "meaning": "Поднять варианты в выборе: weight входит в score (раздел market), reason показывается рядом с вариантом"},
+      {"form": {"suggest": {"role": "…", "grade": "…", "min": 1}, "reason": "…"}, "meaning": "Совет в team_plan: не меньше min людей роли (или позиции); без grade — всего по роли"},
+      {"form": {"grade_floor": {"role": "…|*", "grade": "…"}, "reason": "…"}, "meaning": "Ячейки team_plan ниже этого грейда — с предупреждением"},
+      {"form": {"open_question": {"text": "…", "blocking": true}}, "meaning": "Вопрос техлиду или заказчику; blocking — пока нет ответа, вакансии остаются черновиками"}
+    ],
+    "effects_common": "Любой эффект может иметь when — условие, при котором он действует. roles в эффектах — id ролей (все позиции роли) или id позиций из rules.positions; позиции, которых в проекте нет, пропускаются. Без roles — все позиции, которым компетенция доступна по rules.role_scope",
+    "templates": "Раздел с repeat — шаблон: повторяется для каждого элемента вычисленного списка с этим id. item_key — ключ повтора; ответ хранится как <id раздела>[<ключ>].<id вопроса>. В текстах {поле} — подстановка поля элемента"
+  },
+
+  "rules": {
+    "kind_order": ["languages", "databases", "integrations", "testing"],
+    "kind_names": {"languages": "Язык", "databases": "СУБД", "integrations": "Интеграция", "testing": "Тестирование"},
+    "role_scope": {
+      "description": "Какие компетенции могут стоять в требованиях роли: виды, которые роль подтверждает участием в соревнованиях ФСП (ROLE_KINDS в app/tools/fsp.py); языки — только те, где роль есть в languages[].roles. Иначе требование не с чем сверить у соискателя",
+      "kinds": {
+        "backend": ["languages", "databases", "integrations"],
+        "frontend": ["languages", "integrations"],
+        "qa": ["languages", "testing"],
+        "analyst": ["languages", "databases", "integrations"]
+      },
+      "only": {"frontend": {"integrations": ["rest", "graphql", "websocket", "oidc"]}}
+    },
+    "positions": [
+      {"id": "backend_main", "role": "backend", "name": "Бэкенд-разработчик", "reason": "Серверная часть", "when": {"any": [{"ref": "clients", "has_any": ["web", "android", "ios", "bot", "api"]}, {"ref": "host_platform", "in": ["bitrix", "other"]}]}},
+      {"id": "backend_1c", "role": "backend", "name": "1С-разработчик", "reason": "Конфигурация 1С", "when": {"ref": "host_platform", "is": "onec"}},
+      {"id": "frontend_web", "role": "frontend", "name": "Фронтенд-разработчик (веб)", "reason": "Веб-интерфейс", "when": {"ref": "clients", "has": "web"}},
+      {"id": "frontend_android", "role": "frontend", "name": "Android-разработчик", "reason": "Нативное приложение для Android", "when": {"all": [{"ref": "clients", "has": "android"}, {"ref": "mobile_variant", "is": "native"}]}},
+      {"id": "frontend_ios", "role": "frontend", "name": "iOS-разработчик", "reason": "Нативное приложение для iOS", "when": {"all": [{"ref": "clients", "has": "ios"}, {"ref": "mobile_variant", "is": "native"}]}},
+      {"id": "frontend_mobile", "role": "frontend", "name": "Мобильный разработчик ({mobile_variant_name})", "reason": "Кроссплатформенное мобильное приложение", "when": {"ref": "mobile_variant", "in": ["flutter", "react_native"]}},
+      {"id": "qa", "role": "qa", "name": "Тестировщик", "when": {"ref": "roles_needed", "has": "qa"}},
+      {"id": "analyst", "role": "analyst", "name": "Системный аналитик", "when": {"ref": "roles_needed", "has": "analyst"}}
+    ],
+    "position_tasks": {
+      "description": "Чем займётся человек на позиции — текст по умолчанию в вакансии, рекрутёр уточняет его под проект",
+      "backend_main": "Серверная часть продукта: API, бизнес-логика, схема базы данных, интеграции с другими системами",
+      "backend_1c": "Доработка конфигурации 1С: документы, регистры, отчёты, обмен данными с другими системами",
+      "frontend_web": "Веб-интерфейс продукта: экраны и формы, состояния загрузки и ошибок, вход пользователя",
+      "frontend_android": "Приложение для Android: экраны, работа с сервером, уведомления, работа без сети",
+      "frontend_ios": "Приложение для iPhone и iPad: экраны, работа с сервером, уведомления, работа без сети",
+      "frontend_mobile": "Мобильное приложение для Android и iOS на одной кодовой базе: экраны, работа с сервером, уведомления",
+      "qa": "Проверка продукта: тест-дизайн по требованиям, ручные проверки и автотесты, баг-репорты",
+      "analyst": "Требования к продукту: сценарии пользователей, модель данных, контракты интеграций, согласование с заказчиком"
+    },
+    "positions_extra": "Вакансию можно добавить и на позицию, которой нет в проекте: в редакторе вакансий доступны все позиции. Причина у позиции без reason — причины её роли из roles_needed",
+    "positions_note": "Позиция — роль с направлением: вакансии и team_plan считаются по позициям. Нативные Android и iOS — разные люди, хотя оба Frontend",
+    "main_language_except": ["sql", "bsl"],
+    "default_min_degree": {
+      "required": {"Junior": 1, "Middle": 2, "Senior": 3},
+      "plus": 1,
+      "note": "Степень подтверждения в ФСП по умолчанию: для обязательного требования — по грейду вакансии, для плюса — базовая"
+    },
+    "domestic": {
+      "databases": ["postgres_pro", "ydb", "tarantool", "clickhouse"],
+      "note": "Российские СУБД из fsp_stack.json для требования отечественного ПО"
+    },
+    "adjacent": [
+      {"kind": "languages", "ids": ["java", "kotlin"], "note": "Обе на JVM: общие библиотеки и инструменты"},
+      {"kind": "languages", "ids": ["javascript", "typescript"], "note": "TypeScript — JavaScript с типами"},
+      {"kind": "databases", "ids": ["postgresql", "postgres_pro"], "note": "Postgres Pro — сборка PostgreSQL"},
+      {"kind": "databases", "ids": ["postgresql", "mysql", "mssql"], "note": "Реляционные СУБД: SQL общий, отличаются диалект и администрирование"},
+      {"kind": "integrations", "ids": ["kafka", "rabbitmq"], "note": "Брокеры сообщений: модель разная, идеи общие"},
+      {"kind": "integrations", "ids": ["rest", "graphql"], "note": "HTTP API"},
+      {"kind": "testing", "ids": ["playwright", "cypress", "selenium"], "note": "Автотесты веб-интерфейса"},
+      {"kind": "testing", "ids": ["k6", "locust", "jmeter"], "note": "Нагрузочное тестирование"}
+    ],
+    "mobile_variants": [
+      {"id": "native", "name": "нативные приложения", "platforms": {"android": ["kotlin"], "ios": ["swift"]}, "positions": {"android": "frontend_android", "ios": "frontend_ios"}, "note": "Отдельная кодовая база на каждую платформу: полный доступ к возможностям устройства, но нужен разработчик на каждую платформу"},
+      {"id": "flutter", "name": "Flutter", "platforms": {"android": ["dart"], "ios": ["dart"]}, "positions": {"android": "frontend_mobile", "ios": "frontend_mobile"}, "note": "Одна кодовая база на Android и iOS"},
+      {"id": "react_native", "name": "React Native", "platforms": {"android": ["typescript"], "ios": ["typescript"]}, "positions": {"android": "frontend_mobile", "ios": "frontend_mobile"}, "note": "Одна кодовая база на Android и iOS и тот же язык, что у веб-интерфейса. Компетенция TypeScript подтверждает язык, но не опыт мобильной разработки: соискателей с ней больше, чем мобильных разработчиков"}
+    ],
+    "sql": "SQL добавляется в требования позиций бэкендера и аналитика, если в их стеке есть СУБД с model relational или columnar: бэкендеру — плюсом, аналитику — обязательно",
+    "testing_match": "Инструмент тестирования подходит проекту, если его languages пуст или пересекается с project_languages. При ручном тестировании (qa_automation = manual) подходят только инструменты без кода — с пустым languages",
+    "qa_language": "Язык тестировщика — languages выбранных инструментов тестирования, пересечённые с project_languages (пусто — все languages инструментов). Если таких языков несколько, требование «любой из», обязательное. Нет инструментов с кодом — язык не требуется",
+    "need_merge": "Потребности одного вида с одинаковыми кандидатами сливаются: позиции объединяются, причины перечисляются. Если кандидаты одной потребности (ids, не variants) — подмножество кандидатов другой и позиции пересекаются, остаётся более узкая: её выбор закрывает и широкую",
+    "need_satisfied": "Потребность закрыта, если в fixed_stack есть компетенция того же вида из её кандидатов для тех же позиций — тогда выбора нет. Потребность вида с kind_mode fixed, которую заданный стек не закрыл, превращается в блокирующий open_question «{reason}: в заданном стеке нет подходящей компетенции ({кандидаты}) — уточните у техлида»; вида с kind_mode unknown — отбрасывается. Исключение — вид testing: новые инструменты тестирования добавляются и к заданным, поэтому его незакрытые потребности идут на выбор, как при partial",
+    "language_split": "Языки из одного ответа без roles: если среди них есть язык только для сервера (в languages[].roles есть backend, нет frontend), то язык, на котором пишет и фронтенд (TypeScript, Kotlin…), по умолчанию достаётся только фронтенд-позициям. Тестировщику язык из такого ответа не достаётся: его даёт rules.qa_language. Поправить можно в fixed_details",
+    "empty_need": "Потребность без кандидатов после allow и testing_match: вида testing — отбрасывается (её закрывают ручные проверки), другого вида — open_question «{reason}: нет разрешённых вариантов из {кандидаты до сужения}», блокирующий",
+    "single_candidate": "Потребность с одним кандидатом выбирается без вопроса"
+  },
+
+  "sections": [
+    {
+      "id": "project",
+      "title": "Проект",
+      "questions": [
+        {"id": "project_summary", "type": "textarea", "required": true, "max_length": 1000, "text": "Что делает продукт и для кого — в двух-трёх предложениях", "hint": "Пойдёт в описание вакансий: соискатель должен понять, чем будет заниматься"},
+        {"id": "domain", "type": "single", "required": true, "text": "Отрасль", "options": [
+          {"id": "finance", "text": "Финансы, банки, страхование", "effects": [
+            {"need": {"kind": "testing", "where": {"area": "security"}}, "roles": ["qa"], "reason": "Деньги и персональные данные: проверка на типовые уязвимости"}
+          ]},
+          {"id": "gov", "text": "Государство и госкомпании", "effects": [
+            {"when": {"not": {"ref": "stack_limits", "has": "domestic"}}, "open_question": {"text": "Заказчик государственный: нужно ли отечественное ПО?", "blocking": false}}
+          ]},
+          {"id": "health", "text": "Медицина", "effects": [
+            {"need": {"kind": "testing", "where": {"area": "security"}}, "roles": ["qa"], "reason": "Медицинские данные: проверка на типовые уязвимости"}
+          ]},
+          {"id": "retail", "text": "Торговля, маркетплейсы"},
+          {"id": "industry", "text": "Промышленность, энергетика, датчики и оборудование"},
+          {"id": "logistics", "text": "Логистика и транспорт"},
+          {"id": "education", "text": "Образование"},
+          {"id": "media", "text": "Медиа, развлечения, соцсети"},
+          {"id": "internal", "text": "Внутренние системы компании: учёт, документооборот"},
+          {"id": "other", "text": "Другое"}
+        ]},
+        {"id": "stage", "type": "single", "required": true, "text": "На какой стадии проект?", "options": [
+          {"id": "new", "text": "Новый: разработка с нуля"},
+          {"id": "mvp", "text": "Прототип или MVP: быстро и недорого проверить идею", "effects": [
+            {"prefer": {"kind": "languages", "ids": ["python", "typescript", "javascript", "php"]}, "roles": ["backend"], "weight": 1, "reason": "Быстрый старт: много готовых библиотек и фреймворков"}
+          ]},
+          {"id": "active", "text": "Действующий: команда продолжает разработку, нужно усиление"},
+          {"id": "support", "text": "Действующий на поддержке: доработки и исправления"},
+          {"id": "rewrite", "text": "Переписывание старой системы на новую"}
+        ]},
+        {"id": "duration", "type": "single", "required": true, "text": "Сколько продлится работа новых людей на проекте?", "options": [
+          {"id": "lt3", "text": "До 3 месяцев", "effects": [
+            {"grade_floor": {"role": "*", "grade": "Middle"}, "reason": "Джуниору нужно один-два месяца на вход: на коротком проекте он не успеет принести пользу"}
+          ]},
+          {"id": "3to6", "text": "3–6 месяцев"},
+          {"id": "6to12", "text": "6–12 месяцев"},
+          {"id": "gt12", "text": "Больше года или бессрочно"}
+        ]},
+        {"id": "start_date", "type": "date", "text": "Когда новые люди должны выйти на проект?"},
+        {"id": "work_format", "type": "single", "required": true, "text": "Формат работы", "options": [
+          {"id": "office", "text": "Офис"},
+          {"id": "hybrid", "text": "Гибрид"},
+          {"id": "remote", "text": "Удалённо"}
+        ]},
+        {"id": "city", "type": "text", "required": true, "show_if": {"ref": "work_format", "in": ["office", "hybrid"]}, "text": "Город офиса"}
+      ]
+    },
+
+    {
+      "id": "platform",
+      "title": "Клиенты и платформа",
+      "description": "Через что пользователи работают с продуктом. Отсюда — нужны ли фронтендеры и каких направлений, и привязан ли продукт к платформе, которая сама задаёт стек",
+      "questions": [
+        {"id": "clients", "type": "multi", "required": true, "text": "Как пользователи работают с продуктом?", "options": [
+          {"id": "web", "text": "Через браузер: сайт, личный кабинет, веб-приложение", "effects": [
+            {"need": {"kind": "languages", "ids": ["typescript", "javascript"]}, "roles": ["frontend_web"], "reason": "Язык веб-интерфейса"},
+            {"prefer": {"kind": "languages", "ids": ["typescript"]}, "roles": ["frontend_web"], "weight": 1, "reason": "Типы упрощают поддержку большого интерфейса"},
+            {"need": {"kind": "integrations", "ids": ["rest", "graphql"]}, "roles": ["backend_main", "frontend_web"], "reason": "Как интерфейс получает данные с сервера"},
+            {"prefer": {"kind": "integrations", "ids": ["rest"]}, "weight": 1, "reason": "Самый распространённый способ"}
+          ]},
+          {"id": "android", "text": "Приложение для Android", "effects": [
+            {"need": {"kind": "integrations", "ids": ["rest", "graphql"]}, "roles": ["backend_main", "frontend_android", "frontend_mobile"], "reason": "Как приложение получает данные с сервера"},
+            {"prefer": {"kind": "integrations", "ids": ["rest"]}, "weight": 1, "reason": "Самый распространённый способ"}
+          ]},
+          {"id": "ios", "text": "Приложение для iPhone и iPad", "effects": [
+            {"need": {"kind": "integrations", "ids": ["rest", "graphql"]}, "roles": ["backend_main", "frontend_ios", "frontend_mobile"], "reason": "Как приложение получает данные с сервера"},
+            {"prefer": {"kind": "integrations", "ids": ["rest"]}, "weight": 1, "reason": "Самый распространённый способ"}
+          ]},
+          {"id": "bot", "text": "Чат-бот в мессенджере", "effects": [
+            {"need": {"kind": "integrations", "ids": ["webhook", "polling"]}, "roles": ["backend_main"], "reason": "Как бот получает сообщения от мессенджера"},
+            {"prefer": {"kind": "integrations", "ids": ["webhook"]}, "weight": 1, "reason": "Мессенджер сам присылает сообщения, без лишних запросов"}
+          ]},
+          {"id": "host", "text": "Внутри готовой системы: продукт — модуль или доработка 1С, Битрикса, CRM"},
+          {"id": "api", "text": "Без интерфейса: сервис для других систем", "exclusive": true}
+        ]},
+        {"id": "mobile_native", "type": "single", "required": true, "show_if": {"ref": "clients", "has_any": ["android", "ios"]}, "text": "Мобильное приложение обязательно должно быть нативным?", "hint": "Нативное пишут отдельно под каждую платформу: Kotlin для Android, Swift для iOS. Кроссплатформенное — одна кодовая база на обе", "options": [
+          {"id": "native", "text": "Да: этого требует заказчик, нужны тонкие возможности устройства или нативное приложение уже есть", "effects": [
+            {"fix": {"kind": "languages", "variant": "native"}, "reason": "Нативное мобильное приложение"}
+          ]},
+          {"id": "cross", "text": "Нет, подойдёт кроссплатформенное", "effects": [
+            {"need": {"kind": "languages", "variants": ["flutter", "react_native"]}, "reason": "Кроссплатформенное мобильное приложение"}
+          ]},
+          {"id": "any", "text": "Неважно: выбрать то, под что проще найти людей", "effects": [
+            {"need": {"kind": "languages", "variants": ["native", "flutter", "react_native"]}, "reason": "Мобильное приложение"}
+          ]}
+        ]},
+        {"id": "host_platform", "type": "single", "required": true, "show_if": {"ref": "clients", "has": "host"}, "text": "Какая это система?", "options": [
+          {"id": "onec", "text": "1С:Предприятие", "effects": [
+            {"fix": {"kind": "languages", "ids": ["bsl"]}, "roles": ["backend_1c"], "reason": "Конфигурации 1С пишут на встроенном языке"},
+            {"need": {"kind": "databases", "ids": ["mssql", "postgresql", "postgres_pro"]}, "roles": ["backend_1c"], "reason": "СУБД, на которых работает 1С"}
+          ]},
+          {"id": "bitrix", "text": "1С-Битрикс", "effects": [
+            {"fix": {"kind": "languages", "ids": ["php"]}, "roles": ["backend_main"], "reason": "Битрикс написан на PHP"},
+            {"need": {"kind": "databases", "ids": ["mysql", "postgresql"]}, "roles": ["backend_main"], "reason": "СУБД, на которых работает Битрикс"},
+            {"prefer": {"kind": "databases", "ids": ["mysql"]}, "weight": 1, "reason": "Основная СУБД Битрикса"}
+          ]},
+          {"id": "other", "text": "Другая"}
+        ]},
+        {"id": "host_platform_name", "type": "text", "required": true, "show_if": {"ref": "host_platform", "is": "other"}, "text": "Как называется система?"},
+        {"id": "host_platform_stack", "type": "stack_pick", "kinds": ["languages", "databases", "integrations"], "per_kind": true, "multiple": true, "allow_unknown": true, "show_if": {"ref": "host_platform", "is": "other"}, "pick_effect": "fix", "pick_reason": "Требование системы, которую дорабатывает проект", "text": "Какие технологии эта система требует от разработчиков?", "hint": "«Не знаю» — анкета добавит вопрос техлиду"}
+      ]
+    },
+
+    {
+      "id": "constraints",
+      "title": "Ограничения по стеку",
+      "description": "Есть ли причины, по которым стек нельзя выбрать свободно. Заданное анкета дальше уточнит, а для остального поможет выбрать варианты, под которые проще найти людей",
+      "questions": [
+        {"id": "rewrite_target", "type": "single", "required": true, "show_if": {"ref": "stage", "is": "rewrite"}, "text": "Технологии новой системы уже выбраны?", "options": [
+          {"id": "chosen", "text": "Да"},
+          {"id": "open", "text": "Нет, их можно выбрать"}
+        ]},
+        {"id": "rewrite_stack", "type": "stack_pick", "kinds": ["languages", "databases", "integrations", "testing"], "per_kind": true, "multiple": true, "allow_unknown": true, "show_if": {"ref": "rewrite_target", "is": "chosen"}, "pick_effect": "fix", "whole_kind": true, "pick_reason": "Выбрано для новой системы", "text": "Какие технологии выбраны для новой системы?"},
+        {"id": "stack_limits", "type": "multi", "required": true, "text": "Что ещё ограничивает выбор технологий?", "options": [
+          {"id": "partners", "text": "Нужно стыковаться с готовыми системами заказчика или партнёров: они диктуют, как обмениваться данными"},
+          {"id": "standard", "text": "В компании или у заказчика принят свой стек: стандарт, готовая инфраструктура, опыт остальной команды"},
+          {"id": "domestic", "text": "Требование использовать отечественное ПО", "effects": [
+            {"allow": {"kind": "databases", "ids": ["postgres_pro", "ydb", "tarantool", "clickhouse"]}, "reason": "Требование отечественного ПО"}
+          ]},
+          {"id": "none", "text": "Ничего: технологии можно выбрать под тех, кого проще найти", "exclusive": true},
+          {"id": "unknown", "text": "Не знаю", "exclusive": true, "effects": [
+            {"open_question": {"text": "Есть ли ограничения по стеку: системы партнёров, стандарт компании, отечественное ПО?", "blocking": false}}
+          ]}
+        ]}
+      ]
+    },
+
+    {
+      "id": "existing",
+      "title": "Действующая система",
+      "show_if": {"ref": "stage", "in": ["active", "support", "rewrite"]},
+      "description": "У действующего проекта стек задан кодом: новые люди будут его дорабатывать. При переписывании старый стек нужен, чтобы читать старый код и переносить данные, — в вакансиях он будет плюсом",
+      "questions": [
+        {"id": "existing_stack", "type": "stack_pick", "kinds": ["languages", "databases", "integrations"], "per_kind": true, "multiple": true, "allow_unknown": true, "text": "На чём написан проект?", "hint": "Языки, базы данных и способы обмена данными. Можно посмотреть в репозитории или спросить техлида", "whole_kind": true, "pick_reason": "Код действующей системы", "pick_effect": [
+          {"when": {"ref": "stage", "in": ["active", "support"]}, "effect": "fix"},
+          {"when": {"ref": "stage", "is": "rewrite"}, "effect": "legacy"}
+        ]},
+        {"id": "existing_tests", "type": "stack_pick", "kinds": ["testing"], "per_kind": true, "multiple": true, "allow_unknown": true, "text": "Чем проект уже тестируют?", "hint": "«Нет» — тестов нет, инструменты можно выбрать", "whole_kind": true, "pick_reason": "Тесты действующей системы", "pick_effect": [
+          {"when": {"ref": "stage", "in": ["active", "support"]}, "effect": "fix"},
+          {"when": {"ref": "stage", "is": "rewrite"}, "effect": "legacy"}
+        ]},
+        {"id": "current_team", "type": "team_matrix", "rows": "roles", "text": "Кто уже работает на проекте и останется?", "hint": "Число людей по ролям и грейдам; пусто — никого"},
+        {"id": "knowledge_holder", "type": "yes_no", "required": true, "text": "Есть ли в команде человек, который знает систему и поможет новичкам войти?", "effects": {"no": [
+          {"grade_floor": {"role": "backend", "grade": "Middle"}, "reason": "Разбираться в чужой системе без помощи — не для джуниора"},
+          {"suggest": {"role": "backend", "grade": "Senior", "min": 1}, "reason": "Кто-то должен разобраться в системе и вводить в неё остальных"}
+        ]}}
+      ]
+    },
+
+    {
+      "id": "partners",
+      "title": "Системы партнёров",
+      "show_if": {"ref": "stack_limits", "has": "partners"},
+      "questions": [
+        {"id": "partner_systems", "type": "list", "required": true, "min_items": 1, "max_items": 10, "item_name": "Система", "text": "С какими готовыми системами нужно стыковаться?",
+          "fields": [
+            {"id": "name", "type": "text", "required": true, "text": "Название", "hint": "Например: 1С:Бухгалтерия заказчика, Госуслуги, банк-эквайер, система перевозчика"},
+            {"id": "protocol", "type": "stack_pick", "kinds": ["integrations"], "multiple": true, "allow_unknown": true, "required": true, "pick_effect": "fix", "pick_reason": "Обмен с системой «{name}»", "roles": ["backend", "analyst"], "text": "Как {name} обменивается данными?", "hint": "Описание способа поможет узнать его в документации партнёра", "effects": [
+              {"when": {"ref": "protocol", "has": "unknown"}, "open_question": {"text": "Как обмениваться данными с системой «{name}»?", "blocking": false}}
+            ]},
+            {"id": "direction", "type": "single", "required": true, "text": "Кто кому передаёт данные?", "options": [
+              {"id": "to_us", "text": "{name} передаёт нам"},
+              {"id": "from_us", "text": "Мы передаём в {name}"},
+              {"id": "both", "text": "В обе стороны"}
+            ]},
+            {"id": "docs", "type": "yes_no", "required": true, "text": "Есть ли описание обмена с {name}?", "effects": {"no": [
+              {"role": "analyst", "reason": "Обмен с системой партнёра нужно выяснить и описать"},
+              {"open_question": {"text": "Получить у владельцев «{name}» описание обмена", "blocking": false}}
+            ]}}
+          ],
+          "effects": [
+            {"when": {"ref": "partner_systems.count", "gte": 2}, "role": "analyst", "reason": "Несколько систем партнёров: обмен нужно описать и согласовать"}
+          ]}
+      ]
+    },
+
+    {
+      "id": "standard",
+      "title": "Стандарт компании",
+      "show_if": {"ref": "stack_limits", "has": "standard"},
+      "description": "Стандарт — список разрешённого: из него анкета выберет то, под что проще найти людей. Разрешено что-то одно — это заданный стек",
+      "questions": [
+        {"id": "standard_kinds", "type": "multi", "required": true, "text": "Что задаёт стандарт?", "options": [
+          {"id": "languages", "text": "Языки"},
+          {"id": "databases", "text": "Базы данных"},
+          {"id": "integrations", "text": "Способы обмена данными"},
+          {"id": "testing", "text": "Инструменты тестирования"}
+        ]},
+        {"id": "standard_languages", "type": "stack_pick", "kinds": ["languages"], "multiple": true, "required": true, "show_if": {"ref": "standard_kinds", "has": "languages"}, "pick_effect": "allow", "pick_reason": "Стандарт компании", "text": "Какие языки разрешены?"},
+        {"id": "standard_databases", "type": "stack_pick", "kinds": ["databases"], "multiple": true, "required": true, "show_if": {"ref": "standard_kinds", "has": "databases"}, "pick_effect": "allow", "pick_reason": "Стандарт компании", "text": "Какие базы данных разрешены?"},
+        {"id": "standard_integrations", "type": "stack_pick", "kinds": ["integrations"], "multiple": true, "required": true, "show_if": {"ref": "standard_kinds", "has": "integrations"}, "pick_effect": "allow", "pick_reason": "Стандарт компании", "text": "Какие способы обмена данными разрешены?"},
+        {"id": "standard_testing", "type": "stack_pick", "kinds": ["testing"], "multiple": true, "required": true, "show_if": {"ref": "standard_kinds", "has": "testing"}, "pick_effect": "allow", "pick_reason": "Стандарт компании", "text": "Какие инструменты тестирования разрешены?"}
+      ]
+    },
+
+    {
+      "id": "product",
+      "title": "Что делает продукт",
+      "description": "Вопросы о продукте простыми словами. Из ответов анкета выводит, какие компетенции нужны, а конкретные технологии предложит выбрать, сравнив, сколько под них соискателей. Вопрос не показывается, если его вид стека уже задан целиком",
+      "notices": [
+        {"when": {"ref": "stack_mode", "is": "fixed"}, "text": "Стек проекта задан — здесь только вопросы, от которых зависят состав команды и тестирование"},
+        {"when": {"ref": "stack_mode", "is": "free"}, "text": "Стек не задан — по этим ответам анкета предложит технологии, под которые проще найти людей"},
+        {"when": {"ref": "stack_mode", "is": "mixed"}, "text": "Часть стека задана — вопросы ниже помогут выбрать остальное"}
+      ],
+      "questions": [
+        {"id": "data_kinds", "type": "multi", "required": true, "show_if": {"ref": "open_kinds", "has": "databases"}, "text": "Какие данные хранит продукт?", "options": [
+          {"id": "records", "text": "Учёт и операции: заказы, платежи, заявки, документы, связанные между собой", "effects": [
+            {"need": {"kind": "databases", "where": {"model": "relational"}, "except": ["sqlite"]}, "roles": ["backend_main", "analyst"], "reason": "Основная база данных"}
+          ]},
+          {"id": "flexible", "text": "Карточки и анкеты с разным набором полей: каталог товаров, профили", "effects": [
+            {"need": {"kind": "databases", "ids": ["mongodb", "postgresql"]}, "roles": ["backend_main", "analyst"], "reason": "Данные с гибкой структурой"},
+            {"prefer": {"kind": "databases", "ids": ["mongodb"]}, "weight": 1, "reason": "Хранит документы с разной структурой без схемы"}
+          ]},
+          {"id": "events", "text": "Поток событий, логов или показаний датчиков для отчётов и аналитики", "effects": [
+            {"need": {"kind": "databases", "where": {"model": "columnar"}}, "roles": ["backend_main", "analyst"], "reason": "Аналитика по большому потоку событий"}
+          ]},
+          {"id": "search", "text": "Поиск по тексту: каталог, документы, объявления", "effects": [
+            {"need": {"kind": "databases", "where": {"model": "search"}}, "roles": ["backend_main"], "reason": "Полнотекстовый поиск"}
+          ]},
+          {"id": "graph", "text": "Сложные связи между объектами: соцсеть, рекомендации, маршруты", "effects": [
+            {"need": {"kind": "databases", "ids": ["neo4j", "postgresql"]}, "roles": ["backend_main", "analyst"], "reason": "Связи между объектами"},
+            {"prefer": {"kind": "databases", "ids": ["neo4j"]}, "weight": 1, "reason": "Графовая СУБД проще обходит связи"}
+          ]},
+          {"id": "fast", "text": "Данные, которые нужно отдавать мгновенно: сессии, счётчики, корзины, кэш", "effects": [
+            {"need": {"kind": "databases", "where": {"model": ["key_value", "in_memory"]}}, "roles": ["backend_main"], "reason": "Быстрый доступ к горячим данным"}
+          ]},
+          {"id": "huge", "text": "Огромный объём записей на многих серверах или в нескольких дата-центрах", "effects": [
+            {"need": {"kind": "databases", "ids": ["cassandra", "ydb"]}, "roles": ["backend_main"], "reason": "Распределённое хранение"}
+          ]},
+          {"id": "unknown", "text": "Не знаю", "exclusive": true, "effects": [
+            {"need": {"kind": "databases", "where": {"model": "relational"}, "except": ["sqlite"]}, "roles": ["backend_main", "analyst"], "reason": "Основная база данных (по умолчанию)"},
+            {"open_question": {"text": "Какие данные хранит продукт и сколько их?", "blocking": false}}
+          ]}
+        ]},
+        {"id": "load", "type": "single", "required": true, "text": "Какая нагрузка ожидается?", "options": [
+          {"id": "small", "text": "Небольшая: до нескольких тысяч пользователей в день"},
+          {"id": "medium", "text": "Заметная: десятки тысяч в день, бывают пики"},
+          {"id": "high", "text": "Высокая: сотни тысяч одновременно, жёсткие требования к скорости ответа", "effects": [
+            {"prefer": {"kind": "languages", "ids": ["go", "java", "kotlin", "csharp", "rust", "cpp"]}, "roles": ["backend_main"], "weight": 1, "reason": "Компилируемые языки и зрелые серверные платформы держат нагрузку"},
+            {"need": {"kind": "testing", "where": {"area": "load"}}, "roles": ["qa"], "reason": "Проверка под нагрузкой"},
+            {"suggest": {"role": "backend", "grade": "Senior", "min": 1}, "reason": "Систему под высокую нагрузку проектирует опытный разработчик"}
+          ]},
+          {"id": "unknown", "text": "Не знаю", "effects": [
+            {"open_question": {"text": "Сколько пользователей и запросов ожидается в пике?", "blocking": false}}
+          ]}
+        ]},
+        {"id": "realtime", "type": "yes_no", "required": true, "show_if": {"all": [{"ref": "open_kinds", "has": "integrations"}, {"ref": "clients", "has_any": ["web", "android", "ios"]}]}, "text": "Должен ли экран обновляться сам, без действий пользователя: статусы, чат, карта, котировки?", "effects": {"yes": [
+          {"need": {"kind": "integrations", "ids": ["websocket"]}, "roles": ["backend_main", "frontend"], "reason": "Сервер сам присылает обновления в интерфейс"}
+        ]}},
+        {"id": "background_jobs", "type": "yes_no", "required": true, "show_if": {"ref": "open_kinds", "has": "integrations"}, "text": "Есть ли долгие операции, которые не должны задерживать пользователя: рассылки, расчёты, обработка файлов, отчёты?", "effects": {"yes": [
+          {"need": {"kind": "integrations", "ids": ["rabbitmq", "kafka"]}, "roles": ["backend_main"], "reason": "Очередь фоновых задач"},
+          {"prefer": {"kind": "integrations", "ids": ["rabbitmq"]}, "weight": 1, "reason": "Очередь задач с подтверждением обработки — как раз для фоновых операций"}
+        ]}},
+        {"id": "events_fanout", "type": "yes_no", "required": true, "show_if": {"ref": "open_kinds", "has": "integrations"}, "text": "Должны ли разные части системы реагировать на одни и те же события? Например, заказ создан — и склад, и доставка, и аналитика узнают об этом", "effects": {"yes": [
+          {"need": {"kind": "integrations", "ids": ["rabbitmq", "kafka"]}, "roles": ["backend_main"], "reason": "Рассылка событий между частями системы"},
+          {"prefer": {"kind": "integrations", "ids": ["kafka"]}, "weight": 2, "reason": "Поток событий, который читают несколько получателей, в том числе повторно"}
+        ]}},
+        {"id": "auth", "type": "single", "required": true, "show_if": {"all": [{"ref": "open_kinds", "has": "integrations"}, {"not": {"ref": "clients", "has": "api"}}]}, "text": "Как пользователи входят в продукт?", "options": [
+          {"id": "own", "text": "По своему логину и паролю или коду из СМС"},
+          {"id": "sso", "text": "Через корпоративную учётную запись: единый вход компании", "effects": [
+            {"need": {"kind": "integrations", "ids": ["oidc"]}, "roles": ["backend_main", "frontend"], "reason": "Вход через внешний провайдер"}
+          ]},
+          {"id": "gosuslugi", "text": "Через Госуслуги", "effects": [
+            {"need": {"kind": "integrations", "ids": ["oidc"]}, "roles": ["backend_main", "frontend"], "reason": "Вход через Госуслуги"},
+            {"role": "analyst", "reason": "Подключение к Госуслугам требует согласований и описания"}
+          ]},
+          {"id": "none", "text": "Без входа"}
+        ]},
+        {"id": "third_party_api", "type": "yes_no", "required": true, "text": "Будут ли к продукту подключаться чужие системы и приложения через его API?", "effects": {"yes": [
+          {"when": {"ref": "open_kinds", "has": "integrations"}, "need": {"kind": "integrations", "ids": ["rest", "graphql", "grpc"]}, "roles": ["backend_main", "analyst"], "reason": "Открытый API для чужих систем"},
+          {"prefer": {"kind": "integrations", "ids": ["rest"]}, "weight": 2, "reason": "Внешним разработчикам привычнее всего REST с описанием в OpenAPI"},
+          {"need": {"kind": "testing", "where": {"area": "contract"}}, "roles": ["qa"], "reason": "API не должен ломаться у тех, кто к нему подключён"},
+          {"role": "analyst", "reason": "Контракт открытого API нужно описать и согласовать"}
+        ]}},
+        {"id": "scheduled_files", "type": "yes_no", "required": true, "show_if": {"ref": "open_kinds", "has": "integrations"}, "text": "Нужно ли по расписанию выгружать или загружать файлы: бухгалтерия, банк, таможня?", "effects": {"yes": [
+          {"need": {"kind": "integrations", "ids": ["file_exchange"]}, "roles": ["backend", "analyst"], "reason": "Обмен файлами по расписанию"}
+        ]}},
+        {"id": "migration", "type": "yes_no", "required": true, "show_if": {"ref": "stage", "is": "rewrite"}, "text": "Старая система продолжит работать, пока данные переносятся в новую?", "effects": {"yes": [
+          {"when": {"ref": "open_kinds", "has": "integrations"}, "need": {"kind": "integrations", "ids": ["cdc", "file_exchange"]}, "roles": ["backend_main", "analyst"], "reason": "Перенос данных из работающей старой системы"},
+          {"prefer": {"kind": "integrations", "ids": ["cdc"]}, "weight": 1, "reason": "Изменения подхватываются сразу, старую систему не останавливают"},
+          {"need": {"kind": "testing", "where": {"area": "data"}}, "roles": ["qa"], "reason": "Сверка перенесённых данных"}
+        ]}},
+        {"id": "ml_features", "type": "yes_no", "required": true, "show_if": {"ref": "open_kinds", "has": "languages"}, "text": "Есть ли в продукте машинное обучение, анализ данных или работа с нейросетями?", "effects": {"yes": [
+          {"prefer": {"kind": "languages", "ids": ["python"]}, "roles": ["backend_main"], "weight": 2, "reason": "Библиотеки машинного обучения и анализа данных — на Python"}
+        ]}},
+        {"id": "one_language", "type": "yes_no", "required": true, "show_if": {"all": [{"ref": "open_kinds", "has": "languages"}, {"ref": "clients", "has": "web"}]}, "text": "Важно ли, чтобы сервер и веб-интерфейс писались на одном языке? Небольшой команде так проще: люди подменяют друг друга", "effects": {"yes": [
+          {"prefer": {"kind": "languages", "ids": ["typescript", "javascript"]}, "roles": ["backend_main"], "weight": 2, "reason": "Один язык с веб-интерфейсом"}
+        ]}}
+      ]
+    },
+
+    {
+      "id": "quality",
+      "title": "Тестирование",
+      "questions": [
+        {"id": "qa_mode", "type": "single", "required": true, "text": "Кто будет проверять качество?", "options": [
+          {"id": "own_qa", "text": "Тестировщик в команде проекта", "effects": [
+            {"role": "qa", "reason": "Тестировщик в команде"},
+            {"need": {"kind": "testing", "ids": ["test_design"]}, "roles": ["qa"], "reason": "Проверки по требованиям"},
+            {"need": {"kind": "testing", "ids": ["exploratory"]}, "roles": ["qa"], "reason": "Поиск дефектов и баг-репорты"}
+          ]},
+          {"id": "devs", "text": "Сами разработчики"},
+          {"id": "external", "text": "Отдельная команда тестирования заказчика или подрядчика"}
+        ]},
+        {"id": "qa_automation", "type": "single", "required": true, "show_if": {"ref": "qa_mode", "is": "own_qa"}, "text": "Нужны ли автотесты?", "options": [
+          {"id": "manual", "text": "Нет, достаточно ручных проверок"},
+          {"id": "auto", "text": "Да, проверки должны запускаться автоматически при каждом изменении"}
+        ]},
+        {"id": "qa_focus", "type": "multi", "required": true, "show_if": {"ref": "qa_mode", "is": "own_qa"}, "text": "Что особенно важно проверять?", "options": [
+          {"id": "logic", "text": "Бизнес-логику: расчёты, статусы, права доступа", "effects": [
+            {"need": {"kind": "testing", "where": {"area": "api"}}, "roles": ["qa"], "reason": "Проверка бизнес-логики через API"}
+          ]},
+          {"id": "web_ui", "text": "Веб-интерфейс в разных браузерах", "show_if": {"ref": "clients", "has": "web"}, "effects": [
+            {"need": {"kind": "testing", "where": {"area": "ui"}}, "roles": ["qa"], "reason": "Проверка веб-интерфейса"}
+          ]},
+          {"id": "mobile", "text": "Мобильные приложения на разных устройствах", "show_if": {"ref": "clients", "has_any": ["android", "ios"]}, "effects": [
+            {"need": {"kind": "testing", "where": {"area": "mobile"}}, "roles": ["qa"], "reason": "Проверка мобильных приложений"}
+          ]},
+          {"id": "load", "text": "Работу под нагрузкой и в пиковые часы", "effects": [
+            {"need": {"kind": "testing", "where": {"area": "load"}}, "roles": ["qa"], "reason": "Проверка под нагрузкой"}
+          ]},
+          {"id": "security", "text": "Защиту данных и устойчивость к взлому", "effects": [
+            {"need": {"kind": "testing", "where": {"area": "security"}}, "roles": ["qa"], "reason": "Проверка на типовые уязвимости"}
+          ]},
+          {"id": "partners", "text": "Обмен с системами партнёров", "show_if": {"ref": "stack_limits", "has": "partners"}, "effects": [
+            {"need": {"kind": "testing", "where": {"area": "integration"}}, "roles": ["qa"], "reason": "Системы партнёров в тестах подменяются заглушками"}
+          ]},
+          {"id": "data", "text": "Правильность данных: ничего не теряется и не дублируется", "effects": [
+            {"need": {"kind": "testing", "where": {"area": "data"}}, "roles": ["qa"], "reason": "Сверка данных"}
+          ]},
+          {"id": "reports", "text": "Отчёты о тестировании для заказчика", "effects": [
+            {"need": {"kind": "testing", "where": {"area": ["reporting", "test_management"]}}, "roles": ["qa"], "reason": "Отчётность о тестировании"}
+          ]}
+        ]}
+      ]
+    },
+
+    {
+      "id": "analysis",
+      "title": "Требования",
+      "questions": [
+        {"id": "requirements_state", "type": "single", "required": true, "text": "Насколько описаны требования к продукту?", "options": [
+          {"id": "ready", "text": "Есть подробное ТЗ или постановки задач, их ведёт заказчик или продакт"},
+          {"id": "partial", "text": "Есть общее описание, детали надо выяснять", "effects": [
+            {"role": "analyst", "reason": "Требования нужно уточнять"}
+          ]},
+          {"id": "idea", "text": "Есть только идея", "effects": [
+            {"role": "analyst", "reason": "Требования нужно собрать с нуля"}
+          ]}
+        ]}
+      ]
+    },
+
+    {
+      "id": "fixed_details",
+      "title": "Заданный стек: {name}",
+      "repeat": "fixed_stack",
+      "item_key": "{kind}:{id}",
+      "description": "Блок для каждой компетенции, которую задали ответы выше: действующий код, платформа, системы партнёров, выбранный стек новой системы, стандарт с одной разрешённой компетенцией",
+      "questions": [
+        {"id": "positions", "type": "multi", "required": true, "options_from": "$item.scope", "default": "$item.positions", "text": "Кому в команде нужно знать {name}?", "hint": "Предложены позиции, которым эта компетенция доступна"},
+        {"id": "importance", "type": "single", "required": true, "default": "required", "text": "{name} — обязательное требование или плюс?", "options": [
+          {"id": "required", "text": "Обязательно: без этого человек не сможет работать с первого дня"},
+          {"id": "plus", "text": "Плюс: можно освоить на проекте"}
+        ]},
+        {"id": "depth", "type": "single", "required": true, "default": "by_grade", "show_if": {"ref": "importance", "is": "required"}, "text": "Насколько глубоко нужно знать {name}?", "hint": "Степень подтверждения компетенции в ФСП, которую увидит поиск", "options": [
+          {"id": "by_grade", "text": "По грейду: Junior — базовая, Middle — уверенная, Senior — высокая"},
+          {"id": "degree_1", "degree": 1, "text": "Не ниже базовой: справится с типовыми задачами по образцу"},
+          {"id": "degree_2", "degree": 2, "text": "Не ниже уверенной: самостоятельно делает задачи проекта"},
+          {"id": "degree_3", "degree": 3, "text": "Высокая: проектирует, разбирает сложные сбои, учит других"}
+        ]},
+        {"id": "note", "type": "text", "max_length": 200, "text": "Что важно уточнить про {name}: версия, особенности использования"}
+      ]
+    },
+
+    {
+      "id": "market_choices",
+      "title": "{kind_name}: {reasons}",
+      "repeat": "market_choices",
+      "item_key": "{kind}:{candidate_ids}",
+      "description": "Блок для каждой потребности, которую не закрыл заданный стек и у которой больше одного кандидата. Варианты отсортированы по score (раздел market)",
+      "questions": [
+        {"id": "choice", "type": "market_choice", "required": true, "multiple": true, "options_from": "$item.candidates", "default": "$item.recommended", "text": "{reasons}. Какой вариант взять?", "hint": "Числа у варианта — соискатели ITinder нужной роли с этой компетенцией, подтверждённой в ФСП, по грейдам. Несколько отмеченных — в вакансии подойдёт любой из них", "option_text": "{name} — {supply_by_grade} · {level_name}", "option_hint": "{note}{prefer_reasons}", "extra_options": [
+          {"id": "unknown", "text": "Не могу решить — спросить техлида", "exclusive": true, "effects": [
+            {"open_question": {"text": "Выбрать: {kind_name} для «{reasons}». Варианты: {candidate_names}", "blocking": true}}
+          ]}
+        ]}
+      ]
+    },
+
+    {
+      "id": "team",
+      "title": "Команда",
+      "questions": [
+        {"id": "team_plan", "type": "team_matrix", "rows": "positions", "required": true, "text": "Кого нужно нанять?", "hint": "Число людей по позициям и грейдам. У позиции — почему анкета считает её нужной, ниже — советы по составу. Ненужную позицию оставьте пустой", "validate": [
+          {"rule": {"ref": "team_plan.total", "gte": 1}, "message": "Нужен хотя бы один человек"}
+        ]}
+      ],
+      "recommendations_note": "Советы показываются у team_plan вместе с эффектами suggest и grade_floor из ответов. Совет — подсказка: рекрутёр может не согласиться",
+      "recommendations": [
+        {"id": "architect", "when": {"all": [{"ref": "stage", "in": ["new", "mvp", "rewrite"]}, {"ref": "current_team.backend.Senior", "lt": 1}]}, "suggest": {"role": "backend", "grade": "Senior", "min": 1}, "text": "Новой системе нужен опытный бэкендер: он выберет архитектуру и будет проверять код остальных"},
+        {"id": "mentor", "for_each": "role", "when": {"all": [{"ref": "staff.$role.Junior", "gte": 1}, {"ref": "staff.$role.Middle+", "lt": 1}]}, "suggest": {"role": "$role", "grade": "Middle", "min": 1}, "text": "Джуниору нужен наставник той же роли: добавьте Middle или Senior"},
+        {"id": "native_pair", "when": {"all": [{"ref": "mobile_variant", "is": "native"}, {"ref": "clients", "has": "android"}, {"ref": "clients", "has": "ios"}]}, "text": "Нативные приложения — две кодовые базы: нужен хотя бы один Android- и один iOS-разработчик", "suggest_positions": [{"position": "frontend_android", "min": 1}, {"position": "frontend_ios", "min": 1}]},
+        {"id": "qa_present", "when": {"all": [{"ref": "roles_needed", "has": "qa"}, {"ref": "staff.qa", "lt": 1}]}, "suggest": {"role": "qa", "grade": "Middle", "min": 1}, "text": "Вы выбрали тестировщика в команде, но в плане его нет"},
+        {"id": "qa_ratio", "when": {"all": [{"ref": "roles_needed", "has": "qa"}, {"ratio": {"of": ["staff.backend", "staff.frontend"], "per": "staff.qa", "gt": 4}}]}, "text": "Обычно один тестировщик успевает за четырьмя-пятью разработчиками"},
+        {"id": "analyst_present", "when": {"all": [{"ref": "roles_needed", "has": "analyst"}, {"ref": "staff.analyst", "lt": 1}]}, "suggest": {"role": "analyst", "grade": "Middle", "min": 1}, "text": "По ответам нужен аналитик ({analyst_reasons}), а в плане его нет"}
+      ]
+    },
+
+    {
+      "id": "scarcity",
+      "title": "Мало кандидатов: {name}",
+      "repeat": "scarce_items",
+      "item_key": "{kind}:{id}:{position}:{grade}",
+      "description": "Блок для обязательной заданной компетенции, под которую на рынке дефицит. Выбор из рынка (market_choices) сюда не попадает: там дефицит видно сразу",
+      "questions": [
+        {"id": "action", "type": "single", "required": true, "default": "keep", "text": "Соискателей на позицию «{position_name}» ({grade} и выше) с {name} не ниже степени «{degree_name}»: {supply}. Ещё {unconfirmed} не связали профиль с ФСП — их стек неизвестен. Как поступить?", "options": [
+          {"id": "keep", "text": "Оставить требование: поиск будет дольше"},
+          {"id": "lower_degree", "text": "Снизить степень до «{lower_degree_name}» — подходит {supply_lower}", "show_if": {"ref": "$item.min_degree", "gte": 2}},
+          {"id": "adjacent", "text": "Принять и близкую компетенцию: {adjacent_names} — подходит {supply_adjacent}", "show_if": {"ref": "$item.adjacent", "answered": true}},
+          {"id": "plus", "text": "Сделать плюсом: искать по позиции и грейду — подходит {supply_any}"}
+        ]}
+      ]
+    },
+
+    {
+      "id": "vacancies",
+      "title": "Вакансия: {position_name} ({grade}) × {count}",
+      "repeat": "vacancy_cells",
+      "item_key": "{position}:{grade}",
+      "questions": [
+        {"id": "title", "type": "text", "required": true, "max_length": 120, "default": "{position_name} ({grade})", "text": "Название вакансии"},
+        {"id": "task", "type": "textarea", "required": true, "max_length": 1000, "default": "$rules.position_tasks", "text": "Чем {position_name} займётся на проекте?", "hint": "Конкретно про этот проект, как задача роли в соревнованиях ФСП: «Приём потока телеметрии, агрегаты по цехам и сменам, правила оповещений». Предложено общее описание позиции из rules.position_tasks"},
+        {"id": "requirements", "type": "stack_requirements", "required": true, "rows_from": "$item.stack", "text": "Требования к стеку", "hint": "Обязательные требования отсеивают соискателей, плюсы поднимают их в выдаче. Степень — подтверждение компетенции в ФСП"},
+        {"id": "assignments", "type": "text_list", "max_items": 20, "max_length": 4000, "item_name": "Задание", "text": "Задания", "hint": "Каждое задание — отдельным полем: опишите его суть. Можно не добавлять ни одного"},
+        {"id": "salary", "type": "money_range", "required": true, "currency": "RUB", "text": "Зарплатная вилка, ₽ в месяц до вычета налога", "hint": "Без вилки вакансии не утвердить: обе границы, «от» не больше «до»"},
+        {"id": "notes", "type": "textarea", "max_length": 1000, "text": "Что ещё важно сказать соискателю?"}
+      ]
+    },
+
+    {
+      "id": "summary",
+      "title": "Проверка",
+      "questions": [
+        {"id": "review", "type": "summary", "text": "Проверьте вакансии и открытые вопросы", "shows": ["stack_mode", "vacancy_cells", "open_questions"]}
+      ]
+    }
+  ],
+
+  "derived": [
+    {"id": "fixed_stack", "description": "Компетенции, заданные эффектами fix и pick_effect fix, а также единственные разрешённые allow: [{kind, id, name, positions, scope, reasons, origin}]. positions — из roles эффекта (по умолчанию все позиции проекта в scope); scope — позиции проекта, которым компетенция доступна по rules.role_scope; origin — id вопроса. Одна компетенция из разных вопросов — один элемент: позиции, причины и origin объединяются. Порядок — rules.kind_order, внутри — порядок fsp_stack.json"},
+    {"id": "legacy_stack", "description": "Компетенции из эффектов legacy: [{kind, id, positions}] — в вакансиях плюсом"},
+    {"id": "allowed_stack", "description": "{kind: [id]} — пересечение всех allow одного вида (стандарт и отечественное ПО)"},
+    {"id": "kind_mode", "description": "{kind: режим}. fixed — вид задан целиком: в existing_stack (стадия active или support), existing_tests или rewrite_stack на него ответили компетенциями или «нет»; unknown — там же «не знаю»; partial — есть fix этого вида из других вопросов (платформа, партнёры, стандарт); restricted — есть только allow; free — ничего"},
+    {"id": "open_kinds", "description": "Виды с kind_mode free, partial или restricted: по ним ещё задаются вопросы о продукте"},
+    {"id": "stack_mode", "description": "fixed — open_kinds пуст; free — fixed_stack пуст; иначе mixed. Для подсказок и поля stack_origin вакансии"},
+    {"id": "roles_needed", "description": "Роли с причинами: backend и frontend — если есть их позиции по rules.positions, остальные — из эффектов role. Плюс роли, у которых есть люди в current_team"},
+    {"id": "mobile_variant", "description": "Вариант мобильного приложения из rules.mobile_variants: native, если mobile_native = native; иначе — выбранный в market_choices для потребности с variants. {mobile_variant_name} — его name. Выбранный вариант даёт позициям из его positions языки из platforms — как выбор из рынка"},
+    {"id": "positions", "description": "Позиции проекта: элементы rules.positions, у которых выполнено when, с причинами роли из roles_needed. Строки team_plan"},
+    {"id": "base_needs", "description": "Потребность любого проекта: основной язык бэкендера — {\"need\": {\"kind\": \"languages\", \"where\": {\"roles\": \"backend\"}, \"except\": rules.main_language_except}, \"roles\": [\"backend_main\"], \"reason\": \"Основной язык серверной части\"}"},
+    {"id": "needs", "description": "Эффекты need из ответов и base_needs. Позиции, которых в проекте нет, отбрасываются, потребность без позиций — тоже. Кандидаты сужаются allowed_stack и rules.role_scope, у вида testing — ещё rules.testing_match; дальше — rules.need_satisfied, rules.need_merge, rules.empty_need. Потребности вида testing — только если в roles_needed есть qa"},
+    {"id": "project_languages", "description": "Языки позиций backend и frontend: из fixed_stack и выбранных в market_choices. Нужны rules.testing_match и rules.qa_language, поэтому market_choices вида testing строятся после ответов на выбор языков"},
+    {"id": "market_choices", "description": "Потребности из needs, у которых больше одного кандидата: [{kind, kind_name, positions, reasons, candidate_ids, candidate_names, candidates: [{ids, name, note, supply_by_grade, supply, unconfirmed, level, level_name, score, prefer_reasons}], recommended}]. Кандидат-вариант (variants) несёт ids всех своих платформ. Порядок — rules.kind_order"},
+    {"id": "staff", "description": "team_plan + current_team по ролям и грейдам — для рекомендаций по составу. Ссылки те же, что у team_matrix"},
+    {"id": "scarce_items", "description": "Обязательные компетенции fixed_stack по каждой их позиции и каждому грейду этой позиции в team_plan, где supply в уровне scarce (раздел market): [{kind, id, name, position, position_name, grade, min_degree, degree_name, lower_degree_name, supply, supply_lower, unconfirmed, adjacent, adjacent_names, supply_adjacent, supply_any}]. adjacent — компетенции из групп rules.adjacent с этой; supply_any — соискатели позиции и грейда без требования"},
+    {"id": "vacancy_cells", "description": "Непустые ячейки team_plan: [{position, position_name, role, grade, count, stack}]. stack — строки требований (формат vacancy.requirements) в пределах rules.role_scope: из fixed_stack — importance и depth из fixed_details, с поправками scarcity; выбранное в market_choices — обязательно (несколько выбранных — одна строка match any); legacy_stack — плюсом; SQL по rules.sql; язык тестировщика по rules.qa_language. min_degree — из depth, а при by_grade и для выбранного из рынка — rules.default_min_degree по грейду ячейки"},
+    {"id": "open_questions", "description": "Эффекты open_question из ответов и из rules.need_satisfied и rules.empty_need: [{text, blocking, origin}]. Попадают в вакансии; хоть один блокирующий — вакансии сохраняются черновиками"}
+  ],
+
+  "market": {
+    "description": "Рынок — соискатели ITinder. Анкета смотрит на него дважды: при выборе из вариантов (market_choices) и когда проверяет, хватит ли людей под заданный стек (scarce_items)",
+    "applicants": "Пользователи из users/, у которых есть запись user_specializations со специализацией не Recruiter, кроме тех, у кого есть user_blocks/<id>.json",
+    "role": "Роль соискателя — по последней записи user_specializations не Recruiter, как fsp.user_role",
+    "grade": "Подтверждённый грейд — высший пройденный тест этой специализации (profile в app/tools/grade_tests.py); нет — грейд из той же записи user_specializations",
+    "competencies": "user_fsp/<user_id>.json, competencies[]: kind, id, degree",
+    "supply_by_grade": "Для компетенции и позиции: по каждому грейду — соискатели роли позиции с этим грейдом и этой компетенцией со степенью не ниже rules.default_min_degree.required для их грейда",
+    "supply": "Для выбора — сумма supply_by_grade. Для заданной компетенции на вакансию — соискатели с грейдом не ниже грейда вакансии и степенью не ниже min_degree требования",
+    "variant_supply": "Кандидат из нескольких компетенций (нативные Android и iOS) — наименьшее из чисел: узкое место. Потребность нескольких позиций — наименьшее по позициям",
+    "unconfirmed": "Соискатели нужной роли и грейда без файла user_fsp: их стек неизвестен. Показываются отдельно и в supply не входят",
+    "levels": [
+      {"id": "scarce", "name": "дефицит", "below": 3},
+      {"id": "few", "name": "мало", "below": 10},
+      {"id": "enough", "name": "достаточно"}
+    ],
+    "score": "supply × (1 + 0,5 × сумма weight эффектов prefer, которые относятся к кандидату и пересекаются с позициями потребности). recommended — кандидат с наибольшим score; при равенстве — первый по порядку fsp_stack.json"
+  },
+
+  "vacancy": {
+    "description": "Что получается из анкеты: одна вакансия на непустую ячейку team_plan — позиция × грейд. Формат для будущего кода",
+    "fields": {
+      "id": "UUID v4; совпадает с именем файла в app/db/projects_jobopenings",
+      "project_id": "Ссылка на app/db/user_project_company/<id>.json",
+      "user_id": "Рекрутёр, который завёл проект",
+      "company": "{id, name} — из app/db/companies",
+      "title": "vacancies[…].title",
+      "position": "id позиции из rules.positions",
+      "position_name": "Название позиции (у кроссплатформенной — с вариантом: «Мобильный разработчик (Flutter)»)",
+      "role_id": "Роль из fsp_team_roles.json",
+      "specialization": "fsp_team_roles[role_id].specialization: Backend, Frontend, QA или Syst. Analyst — как в user_specializations",
+      "grade": "Junior, Middle или Senior",
+      "count": "Сколько людей",
+      "task": "vacancies[…].task",
+      "project": "{name, summary, domain, stage, duration, start_date, work_format, city} — из раздела project",
+      "assignments": "Задания: [строка] — суть каждого задания текстом рекрутёра, может быть пусто",
+      "requirements": "[{kind, ids, match, importance, min_degree, origin, reasons}]. kind и ids — массив и записи fsp_stack.json; match — all (нужны все ids) или any (любая); importance — required или plus; min_degree — 1–3, степень подтверждения в ФСП; origin — fixed, market, legacy или rule (rules.sql, rules.qa_language)",
+      "stack_origin": "stack_mode проекта: fixed, free или mixed",
+      "salary": "{from, to, currency}: обязательна, from ≤ to",
+      "notes": "vacancies[…].notes",
+      "open_questions": "Нерешённые открытые вопросы проекта: {text, blocking, origin, resolved}",
+      "status": "draft — есть нерешённые блокирующие открытые вопросы, ready — можно публиковать",
+      "approved_at": "Когда рекрутёр утвердил список вакансий",
+      "created_at": "ISO 8601 в UTC",
+      "updated_at": "ISO 8601 в UTC"
+    },
+    "matching": "Как искать соискателей — app/tools/ranking.py, by_vacancy: жёсткий отбор только по специализации (у соискателя есть запись user_specializations с этой specialization, другие его специализации не мешают; таких записей несколько — с высшим грейдом), дальше релевантность 0–100 из совпадения грейда (подтверждённый тестом весит больше заявленного) и закрытия требований компетенциями user_fsp: балл зависит от степени подтверждения, неполное совпадение (степень ниже min_degree, близкая компетенция) даёт часть балла, required весит больше plus. Выполнено ли каждое требование как написано (компетенция из ids со степенью не ниже min_degree), показывается отдельно. Соискатели без связки с ФСП — отдельной группой «стек не подтверждён»",
+    "example": {
+      "id": "6f1c2a7e-3b9d-4c51-9a0e-2d7b8f4c1e90",
+      "project_id": "0c9e8d7f-1a2b-4c3d-8e5f-6a7b8c9d0e1f",
+      "user_id": "5b2d9c1e-7f3a-4e8b-9c0d-1a2b3c4d5e6f",
+      "company": {"id": "3c1d8a52-6b0e-4f7a-9d2c-5e8f1a7b4c90", "name": "Логистический оператор «Евразийский коридор»"},
+      "title": "Android-разработчик (Middle)",
+      "position": "frontend_android",
+      "position_name": "Android-разработчик",
+      "role_id": "frontend",
+      "specialization": "Frontend",
+      "grade": "Middle",
+      "count": 1,
+      "task": "Приложение курьера: список заказов, карта маршрута, работа без сети, статусы доставки в реальном времени",
+      "project": {"name": "Курьер", "summary": "Сервис доставки для сети аптек: заказы, маршруты и статусы для курьеров и диспетчеров", "domain": "logistics", "stage": "new", "duration": "6to12", "start_date": "2026-11-16", "work_format": "remote", "city": null},
+      "requirements": [
+        {"kind": "languages", "ids": ["kotlin"], "match": "all", "importance": "required", "min_degree": 2, "origin": "fixed", "reasons": ["Нативное мобильное приложение"]},
+        {"kind": "integrations", "ids": ["rest"], "match": "all", "importance": "required", "min_degree": 2, "origin": "market", "reasons": ["Как приложение получает данные с сервера"]},
+        {"kind": "integrations", "ids": ["websocket"], "match": "all", "importance": "plus", "min_degree": 1, "origin": "market", "reasons": ["Сервер сам присылает обновления в интерфейс"]}
+      ],
+      "assignments": ["Экран списка заказов курьера с фильтром по статусу и работой без сети: заказы сохраняются на устройстве и досылаются, когда сеть появится"],
+      "stack_origin": "mixed",
+      "salary": {"from": 180000, "to": 240000, "currency": "RUB"},
+      "notes": null,
+      "open_questions": [],
+      "status": "ready",
+      "approved_at": "2026-10-09T12:00:00+00:00",
+      "created_at": "2026-10-09T12:00:00+00:00",
+      "updated_at": "2026-10-09T12:00:00+00:00"
+    }
+  },
+
+  "storage": "Проект — app/db/user_project_company/<id>.json: ответы анкеты с её версией, сводка и черновики вакансий до утверждения; answers — {id вопроса: ответ, \"<раздел>[<ключ>].<вопрос>\": ответ шаблона}. Утверждённые вакансии — app/db/projects_jobopenings/<id>.json в формате vacancy. Подробно — app/db/README.md"
+}

@@ -1,0 +1,341 @@
+[
+  {
+    "id": "kod_urala_2023", "series": "kod_urala", "name": "Чемпионат «Код Урала» 2023",
+    "format": "championship", "level": "interregional", "venue": "hybrid", "city": "Екатеринбург",
+    "start_date": "2023-10-02", "end_date": "2023-11-11", "teams": 118,
+    "case_partner": "Комбинат «Каменный пояс»",
+    "task": "Мониторинг энергопотребления цехов: телеметрия со счётчиков раз в секунду, дашборд, оповещения о превышении лимита, прогноз на смену",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Приём потока телеметрии, агрегаты по цехам и сменам, правила оповещений"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Дашборд энергетика с графиками в реальном времени"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Нагрузочный прогон потока телеметрии, проверка агрегатов при пропусках данных"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Лимиты по цехам и сценарии реакции на превышение"}
+    ]},
+    "stack": {
+      "languages": ["go", "python", "cpp", "typescript"],
+      "databases": ["clickhouse", "postgresql", "tarantool"],
+      "integrations": ["kafka", "websocket", "rest"],
+      "testing": ["locust", "testcontainers"]
+    }
+  },
+  {
+    "id": "polyarny_kod_2023", "series": "polyarny_kod", "name": "Хакатон «Полярный код» 2023",
+    "format": "hackathon", "level": "regional", "venue": "hybrid", "city": "Мурманск",
+    "start_date": "2023-11-24", "end_date": "2023-11-26", "teams": 31,
+    "case_partner": "Морской терминал «Кольский причал»",
+    "task": "Очередь судов на разгрузку: план причалов на сутки, приём суточной выгрузки из портовой системы, оповещение агентов судов об изменениях плана",
+    "team": {"size_min": 3, "size_max": 4, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Импорт суточных XML-выгрузок портовой системы, расчёт плана причалов, SOAP-сервис для агентов судов"},
+      {"role_id": "frontend", "min": 1, "max": 1, "task": "Диаграмма занятости причалов для диспетчера"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Проверка импорта битых и повторных выгрузок, заглушка портовой системы"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Правила приоритета судов, разбор формата выгрузки"}
+    ]},
+    "stack": {
+      "languages": ["java", "kotlin", "typescript", "sql"],
+      "databases": ["postgresql"],
+      "integrations": ["rest", "soap", "file_exchange"],
+      "testing": ["rest_assured", "wiremock"]
+    }
+  },
+  {
+    "id": "tsifrovoy_reglament_2024", "series": "tsifrovoy_reglament", "name": "Хакатон «Цифровой регламент» 2024",
+    "format": "hackathon", "level": "regional", "venue": "offline", "city": "Казань",
+    "start_date": "2024-03-22", "end_date": "2024-03-24", "teams": 26,
+    "case_partner": "Муниципальный центр услуг «Одно окно»",
+    "task": "Электронная подача заявления на разрешение земляных работ: проверка комплектности, межведомственные запросы, сроки рассмотрения по регламенту, статус для заявителя",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Маршрут заявления по регламенту, межведомственные SOAP-запросы, контроль сроков"},
+      {"role_id": "frontend", "min": 1, "max": 1, "task": "Форма заявления с проверкой комплектности и личный кабинет заявителя"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Проверка сроков рассмотрения с праздниками и приостановками, отказ смежной системы"},
+      {"role_id": "analyst", "min": 1, "max": 2, "task": "Перевод регламента в процесс: этапы, сроки, основания для отказа, состав межведомственных запросов"}
+    ]},
+    "stack": {
+      "languages": ["csharp", "java", "typescript", "sql"],
+      "databases": ["postgres_pro"],
+      "integrations": ["soap", "rest", "file_exchange", "oidc"],
+      "testing": ["test_design", "selenium", "jmeter"]
+    }
+  },
+  {
+    "id": "strezhen_2024", "series": "strezhen", "name": "Волжский хакатон «Стрежень» 2024",
+    "format": "hackathon", "level": "interregional", "venue": "offline", "city": "Самара",
+    "start_date": "2024-04-12", "end_date": "2024-04-14", "teams": 64,
+    "case_partner": "Речная компания «Волготрам»",
+    "task": "Продажа билетов на речные трамваи: расписание рейсов, онлайн-оплата, посадка по QR-коду, возврат при отмене рейса из-за погоды",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "API рейсов и билетов, удержание места на время оплаты, обработка уведомлений платёжного сервиса"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Витрина рейсов и мобильная страница билета с QR-кодом для контролёра"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Покупка последнего места двумя покупателями одновременно, возврат при отмене рейса"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Правила возврата и переноса билетов, сценарий отмены рейса по погоде"}
+    ]},
+    "stack": {
+      "languages": ["python", "go", "typescript", "javascript"],
+      "databases": ["postgresql", "redis"],
+      "integrations": ["rest", "webhook"],
+      "testing": ["test_design", "postman", "pytest"]
+    }
+  },
+  {
+    "id": "okhota_na_bagi_2024", "series": "okhota_na_bagi", "name": "Кубок по тестированию «Охота на баги» 2024",
+    "format": "hackathon", "level": "national", "venue": "online", "city": null,
+    "start_date": "2024-06-01", "end_date": "2024-06-02", "teams": 95,
+    "case_partner": "Сервис доставки еды «Горячая полка»",
+    "task": "Командам выдаётся работающий сервис доставки с заложенными дефектами: найти и описать как можно больше, покрыть критичные сценарии автотестами; очки за подтверждённые дефекты с учётом серьёзности",
+    "team": {"size_min": 2, "size_max": 4, "roles": [
+      {"role_id": "qa", "min": 2, "max": 3, "task": "Исследование сервиса, баг-репорты, автотесты API и интерфейса для критичных сценариев"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Восстановление требований по поведению сервиса и документации, обоснование серьёзности дефектов"},
+      {"role_id": "backend", "min": 0, "max": 1, "task": "Тестовые данные и окружение, чтение логов и событий для локализации дефектов"}
+    ]},
+    "stack": {
+      "languages": ["python", "typescript", "sql"],
+      "databases": ["postgresql", "mongodb"],
+      "integrations": ["rest", "kafka"],
+      "testing": ["test_design", "exploratory", "postman", "pytest", "playwright", "sql_checks", "allure"]
+    }
+  },
+  {
+    "id": "kubok_sibiri_2024", "series": "kubok_sibiri", "name": "Кубок Сибири по продуктовому программированию 2024",
+    "format": "championship", "level": "interregional", "venue": "hybrid", "city": "Новосибирск",
+    "start_date": "2024-09-02", "end_date": "2024-10-12", "teams": 140,
+    "case_partner": "Союз фермерских кооперативов «Сибирская нива»",
+    "task": "Платформа кооператива: приём заказов от магазинов, распределение по фермерским хозяйствам, сборка на общем складе и доставка",
+    "team": {"size_min": 4, "size_max": 6, "roles": [
+      {"role_id": "backend", "min": 2, "max": 3, "task": "Сервисы заказов, распределения по хозяйствам и склада, обмен событиями между ними"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Кабинет магазина и кабинет фермера с остатками"},
+      {"role_id": "qa", "min": 1, "max": 1, "task": "Автотесты API и интерфейса, интеграционные тесты сервисов с настоящими БД и брокером"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Правила распределения заказа, когда урожая не хватает"}
+    ]},
+    "stack": {
+      "languages": ["java", "kotlin", "go", "typescript", "sql"],
+      "databases": ["postgresql", "mongodb"],
+      "integrations": ["rest", "grpc", "rabbitmq"],
+      "testing": ["rest_assured", "playwright", "testcontainers", "allure"]
+    }
+  },
+  {
+    "id": "kod_urala_2024", "series": "kod_urala", "name": "Чемпионат «Код Урала» 2024",
+    "format": "championship", "level": "interregional", "venue": "hybrid", "city": "Екатеринбург",
+    "start_date": "2024-10-07", "end_date": "2024-11-16", "teams": 151,
+    "case_partner": "Сеть автосервисов «Уральский гараж»",
+    "task": "Склад запчастей сети автосервисов: резерв под заказ-наряд, перемещения между сервисами, поиск аналогов по каталогу, инвентаризация с терминала сбора данных",
+    "team": {"size_min": 4, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Остатки и резервы, перемещения между складами, поиск аналогов, события из учётной системы"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Интерфейс кладовщика для терминала сбора данных и кабинет мастера-приёмщика"},
+      {"role_id": "qa", "min": 1, "max": 1, "task": "Резерв последней детали двумя сервисами одновременно, автотесты инвентаризации"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Учёт резервов и перемещений, правила подбора аналогов"}
+    ]},
+    "stack": {
+      "languages": ["java", "kotlin", "typescript", "sql"],
+      "databases": ["postgresql", "elasticsearch", "redis"],
+      "integrations": ["rest", "rabbitmq", "cdc"],
+      "testing": ["test_design", "rest_assured", "cypress", "testcontainers", "allure"]
+    }
+  },
+  {
+    "id": "uchet_bez_bumagi_2024", "series": "uchet_bez_bumagi", "name": "Хакатон «Учёт без бумаги» 2024",
+    "format": "hackathon", "level": "regional", "venue": "offline", "city": "Нижний Новгород",
+    "start_date": "2024-11-15", "end_date": "2024-11-17", "teams": 22,
+    "case_partner": "Завод металлоконструкций «Стальной профиль»",
+    "task": "Учёт выработки в цеху: мастер отмечает выполненные операции с планшета, данные уходят в учётную систему на 1С для расчёта сдельной оплаты",
+    "team": {"size_min": 3, "size_max": 4, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Сервис операций, обмен с 1С через HTTP-сервисы и XML-выгрузки, доработка конфигурации 1С"},
+      {"role_id": "frontend", "min": 1, "max": 1, "task": "Интерфейс мастера на планшете: крупные элементы, работа при обрыве Wi-Fi"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Сверка выработки в сервисе и в 1С, повторная отправка одной и той же операции"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Справочник операций и норм, правила исправления ошибочных отметок"}
+    ]},
+    "stack": {
+      "languages": ["bsl", "python", "typescript", "sql"],
+      "databases": ["postgresql", "mssql"],
+      "integrations": ["rest", "file_exchange"],
+      "testing": ["test_design", "pytest", "sql_checks"]
+    }
+  },
+  {
+    "id": "tikhookeansky_sprint_2025", "series": "tikhookeansky_sprint", "name": "Марафон «Тихоокеанский спринт» 2025",
+    "format": "marathon", "level": "interregional", "venue": "online", "city": null,
+    "start_date": "2025-02-03", "end_date": "2025-03-28", "teams": 58,
+    "case_partner": "Ассоциация туроператоров «Край вулканов»",
+    "task": "Маршрутизатор по Камчатке: бронирование экскурсий у местных операторов, перенос из-за погоды, мобильное приложение с офлайн-картой маршрута",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Каталог экскурсий, бронирование с подтверждением оператором, перенос и возврат при нелётной погоде"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Мобильное приложение туриста с офлайн-картой и кабинет оператора"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Офлайн-режим приложения и сценарии переноса брони"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Правила подтверждения, переноса и возврата брони у разных операторов"}
+    ]},
+    "stack": {
+      "languages": ["kotlin", "swift", "dart", "python", "typescript"],
+      "databases": ["postgresql", "sqlite"],
+      "integrations": ["rest", "graphql", "webhook"],
+      "testing": ["test_design", "pytest", "appium"]
+    }
+  },
+  {
+    "id": "kontrakt_2025", "series": "kontrakt", "name": "Всероссийский чемпионат по разработке API «Контракт» 2025",
+    "format": "championship", "level": "national", "venue": "online", "city": null,
+    "start_date": "2025-03-03", "end_date": "2025-03-30", "teams": 210,
+    "case_partner": "Агрегатор такси «Попутно»",
+    "task": "Открытый API для партнёрских таксопарков: приём заказов, назначение водителя, статусы поездки, расчёты с парками. Интерфейса нет, жюри оценивает только API",
+    "team": {"size_min": 2, "size_max": 4, "roles": [
+      {"role_id": "backend", "min": 1, "max": 3, "task": "Реализация API: идемпотентный приём заказов, статусы поездки, уведомления таксопарков"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Контрактные тесты для потребителей API, нагрузочный прогон приёма заказов"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Спецификации OpenAPI и .proto до начала разработки, правила версионирования API"}
+    ]},
+    "stack": {
+      "languages": ["go", "java", "kotlin", "python", "csharp", "rust"],
+      "databases": ["postgresql", "ydb", "redis"],
+      "integrations": ["rest", "grpc", "webhook", "oidc"],
+      "testing": ["postman", "pact", "locust"]
+    }
+  },
+  {
+    "id": "strezhen_2025", "series": "strezhen", "name": "Волжский хакатон «Стрежень» 2025",
+    "format": "hackathon", "level": "interregional", "venue": "offline", "city": "Самара",
+    "start_date": "2025-04-18", "end_date": "2025-04-20", "teams": 88,
+    "case_partner": "Сеть клиник «Семейный доктор Поволжья»",
+    "task": "Запись к врачу с листом ожидания: освободившийся слот предлагается следующему в очереди, напоминания и подтверждение визита через Telegram-бота",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Расписание врачей, лист ожидания с предложением слота по очереди, Telegram-бот на webhook"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Запись пациента и рабочее место регистратора с расписанием на день"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Одновременные отказ и запись на один слот, повторные сообщения бота"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Правила листа ожидания: сколько ждать ответа пациента и кому слот достаётся дальше; согласие на обработку медицинских данных"}
+    ]},
+    "stack": {
+      "languages": ["python", "kotlin", "typescript"],
+      "databases": ["postgresql", "redis"],
+      "integrations": ["rest", "webhook", "oidc"],
+      "testing": ["test_design", "pytest", "playwright"]
+    }
+  },
+  {
+    "id": "karavan_2025", "series": "karavan", "name": "Международный хакатон «Караван» 2025",
+    "format": "hackathon", "level": "international", "venue": "online", "city": null,
+    "start_date": "2025-07-11", "end_date": "2025-07-13", "teams": 74,
+    "case_partner": "Логистический оператор «Евразийский коридор»",
+    "task": "Отслеживание контейнера на маршруте через несколько стран: события от железной дороги, портов и таможни в разных форматах, прогноз прибытия, уведомления грузовладельца",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Приём событий в разных форматах, единая шкала статусов контейнера, граф маршрута и прогноз прибытия"},
+      {"role_id": "frontend", "min": 1, "max": 1, "task": "Кабинет грузовладельца с картой маршрута"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Заглушки систем-источников: опоздавшие, повторные и противоречивые события"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Сопоставление статусов разных систем, словарь событий маршрута"}
+    ]},
+    "stack": {
+      "languages": ["java", "kotlin", "go", "typescript"],
+      "databases": ["postgresql", "mongodb", "neo4j"],
+      "integrations": ["kafka", "soap", "file_exchange", "webhook", "rest"],
+      "testing": ["test_design", "rest_assured", "wiremock"]
+    }
+  },
+  {
+    "id": "kubok_sibiri_2025", "series": "kubok_sibiri", "name": "Кубок Сибири по продуктовому программированию 2025",
+    "format": "championship", "level": "interregional", "venue": "hybrid", "city": "Новосибирск",
+    "start_date": "2025-09-01", "end_date": "2025-10-11", "teams": 176,
+    "case_partner": "Управляющая компания «Обской квартал»",
+    "task": "Диспетчерская ЖКХ: заявки жителей из приложения и по телефону, назначение бригад, сроки устранения, оценка работы жителем",
+    "team": {"size_min": 5, "size_max": 6, "roles": [
+      {"role_id": "backend", "min": 2, "max": 3, "task": "Заявки и бригады, контроль сроков, история изменений заявки, полнотекстовый поиск по заявкам"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Приложение жителя и пульт диспетчера с обновлением статусов в реальном времени"},
+      {"role_id": "qa", "min": 1, "max": 1, "task": "Тест-план по жизненному циклу заявки, автотесты API, проверка просроченных заявок"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Жизненный цикл заявки, нормативные сроки по видам работ, отчёты для управляющей компании"}
+    ]},
+    "stack": {
+      "languages": ["java", "kotlin", "python", "typescript", "sql"],
+      "databases": ["postgresql", "elasticsearch", "redis"],
+      "integrations": ["rest", "websocket", "kafka", "oidc"],
+      "testing": ["test_design", "pytest", "playwright", "sql_checks", "test_it"]
+    }
+  },
+  {
+    "id": "polyarny_kod_2025", "series": "polyarny_kod", "name": "Хакатон «Полярный код» 2025",
+    "format": "hackathon", "level": "interregional", "venue": "hybrid", "city": "Мурманск",
+    "start_date": "2025-11-21", "end_date": "2025-11-23", "teams": 47,
+    "case_partner": "Транспортная компания «Северный завоз»",
+    "task": "Бронирование окон выгрузки для грузовиков на складе в полярную ночь и пургу: перенос окон при закрытии трассы, статус машины в пути",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Окна выгрузки, автоматический перенос при закрытии трассы, опрос API дорожной службы"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Мобильное приложение водителя, работающее без связи, и экран кладовщика"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Потеря связи у водителя, массовый перенос окон"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Правила переноса окон и приоритет скоропортящихся грузов"}
+    ]},
+    "stack": {
+      "languages": ["kotlin", "dart", "python", "typescript"],
+      "databases": ["postgresql", "sqlite"],
+      "integrations": ["rest", "polling", "websocket"],
+      "testing": ["test_design", "pytest", "appium"]
+    }
+  },
+  {
+    "id": "sessiya_2025", "series": "sessiya", "name": "Студенческий хакатон «Сессия» 2025",
+    "format": "hackathon", "level": "regional", "venue": "offline", "city": "Томск",
+    "start_date": "2025-12-05", "end_date": "2025-12-07", "teams": 40,
+    "case_partner": "Студенческое объединение «Кампус»",
+    "task": "Помощник студента: расписание с переносами пар, обмен конспектами, напоминания о дедлайнах, вход через университетскую учётную запись",
+    "team": {"size_min": 2, "size_max": 4, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Расписание и его изменения, хранение конспектов, напоминания"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Веб-интерфейс расписания и ленты конспектов"},
+      {"role_id": "qa", "min": 0, "max": 1, "task": "Чек-лист по переносам пар и правам доступа к конспектам"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Сценарии студента и старосты"}
+    ]},
+    "stack": {
+      "languages": ["python", "php", "javascript", "typescript"],
+      "databases": ["mysql", "sqlite"],
+      "integrations": ["rest", "oidc"],
+      "testing": ["test_design", "postman"]
+    }
+  },
+  {
+    "id": "strezhen_2026", "series": "strezhen", "name": "Волжский хакатон «Стрежень» 2026",
+    "format": "hackathon", "level": "interregional", "venue": "offline", "city": "Самара",
+    "start_date": "2026-04-17", "end_date": "2026-04-19", "teams": 102,
+    "case_partner": "Волонтёрский центр «Рука помощи»",
+    "task": "Координация волонтёров на городском фестивале: смены и точки, отметка прихода, перераспределение людей в реальном времени, отчёт по часам для волонтёрских книжек",
+    "team": {"size_min": 3, "size_max": 5, "roles": [
+      {"role_id": "backend", "min": 1, "max": 2, "task": "Смены и точки, отметка прихода по геопозиции, поток событий для перераспределения"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Карта точек для координатора с обновлением в реальном времени, мобильная страница волонтёра"},
+      {"role_id": "qa", "min": 1, "max": 1, "task": "Нагрузочный сценарий пикового часа фестиваля, автотесты отметки прихода и смены точки"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Правила перераспределения волонтёров и учёт часов"}
+    ]},
+    "stack": {
+      "languages": ["go", "python", "typescript"],
+      "databases": ["postgresql", "clickhouse"],
+      "integrations": ["rest", "websocket", "kafka"],
+      "testing": ["playwright", "k6", "allure"]
+    }
+  },
+  {
+    "id": "okhota_na_bagi_2026", "series": "okhota_na_bagi", "name": "Кубок по тестированию «Охота на баги» 2026",
+    "format": "hackathon", "level": "national", "venue": "online", "city": null,
+    "start_date": "2026-06-06", "end_date": "2026-06-07", "teams": 132,
+    "case_partner": "Необанк «Монетка»",
+    "task": "Командам выдаётся мобильный и веб-банк с заложенными дефектами, среди них уязвимости и деградация под нагрузкой: найти, описать, показать влияние на клиентов и деньги",
+    "team": {"size_min": 2, "size_max": 4, "roles": [
+      {"role_id": "qa", "min": 2, "max": 3, "task": "Функциональные и мобильные проверки, поиск уязвимостей, нагрузочный прогон переводов"},
+      {"role_id": "analyst", "min": 0, "max": 1, "task": "Оценка влияния дефектов на клиентов и деньги, приоритизация отчёта"},
+      {"role_id": "backend", "min": 0, "max": 1, "task": "Сверка данных в БД после переводов, разбор логов"}
+    ]},
+    "stack": {
+      "languages": ["python", "kotlin", "javascript", "sql"],
+      "databases": ["postgresql", "redis"],
+      "integrations": ["rest", "websocket"],
+      "testing": ["test_design", "exploratory", "appium", "owasp_zap", "k6", "locust", "sql_checks", "test_it"]
+    }
+  },
+  {
+    "id": "kubok_sibiri_2026", "series": "kubok_sibiri", "name": "Кубок Сибири по продуктовому программированию 2026",
+    "format": "championship", "level": "interregional", "venue": "hybrid", "city": "Новосибирск",
+    "start_date": "2026-09-07", "end_date": "2026-10-17", "teams": 198,
+    "case_partner": "Горнолыжный курорт «Кедровая гряда»",
+    "task": "Единый ски-пасс: продажа и пополнение, проход через турникеты подъёмников, загрузка подъёмников в реальном времени, прокат снаряжения",
+    "team": {"size_min": 5, "size_max": 6, "roles": [
+      {"role_id": "backend", "min": 2, "max": 3, "task": "Продажа и баланс ски-пассов, проходы через турникеты с малой задержкой, статистика загрузки"},
+      {"role_id": "frontend", "min": 1, "max": 2, "task": "Приложение гостя с картой загрузки подъёмников и экран кассира проката"},
+      {"role_id": "qa", "min": 1, "max": 1, "task": "Нагрузочный сценарий утреннего пика у турникетов, контрактные тесты между сервисами"},
+      {"role_id": "analyst", "min": 1, "max": 1, "task": "Тарифы, возврат неиспользованных дней, поведение турникета при потере связи с сервером"}
+    ]},
+    "stack": {
+      "languages": ["go", "java", "kotlin", "swift", "typescript"],
+      "databases": ["postgresql", "tarantool", "clickhouse"],
+      "integrations": ["rest", "grpc", "kafka", "webhook"],
+      "testing": ["pact", "k6", "playwright", "allure"]
+    }
+  }
+]

@@ -1,0 +1,243 @@
+/* Окно «Достижения в ФСП» (FspAchievements.tsx) и диаграмма последовательности
+   (FspSequence.tsx). Общие элементы Windows 95 — вкладки, рамки групп, кнопки,
+   окна сообщений — из GradeTasks.css; здесь только своё. */
+
+.fsp-small {
+    font-size: 14px !important;
+}
+
+.fsp-mono,
+.grade-tasks .fsp-mono {
+    font-family: 'Courier New', Consolas, monospace !important;
+}
+
+/* Экран ввода ФСП ID — форма: flex в App.css задан только у div. */
+.fsp-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Поле ФСП ID: моноширинное, как маска под ним. */
+.grade-tasks input.fsp-input {
+    width: 220px;
+    flex-shrink: 0;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+.grade-tasks input.fsp-input::placeholder {
+    color: #86898d;
+    text-transform: none;
+}
+
+/* Полоса ожидания без известного конца: блоки бегут слева направо. */
+.fsp-busy {
+    overflow: hidden;
+}
+
+.fsp-busy .gt-progress-fill {
+    width: 40%;
+    transition: none;
+    animation: fsp-busy 1.4s linear infinite;
+}
+
+@keyframes fsp-busy {
+    from {
+        margin-left: -40%;
+    }
+    to {
+        margin-left: 100%;
+    }
+}
+
+/* Карточка соревнования. */
+.fsp-card {
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 8px 6px 10px;
+    border-bottom: 1px dotted #86898d;
+}
+
+.fsp-card:last-child {
+    border-bottom: none;
+}
+
+.fsp-card p {
+    margin-top: 3px;
+}
+
+.fsp-card-title {
+    flex-wrap: wrap;
+    row-gap: 4px;
+    justify-content: space-between;
+}
+
+.fsp-card-title b {
+    margin-right: 10px;
+}
+
+.grade-tasks .fsp-result {
+    margin-right: 0;
+}
+
+.fsp-result-solution {
+    background: #e9e9e9;
+}
+
+.fsp-result-prize {
+    background: #fff4b0;
+}
+
+.fsp-result-win {
+    background: #c8f0c8;
+}
+
+/* Технологии, которые подтвердило соревнование. */
+.fsp-chips {
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    margin-top: 6px;
+}
+
+.grade-tasks .fsp-chip {
+    padding: 0 6px;
+    background: #fff;
+    border: 1px solid #86898d;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Строка компетенции: название, деления степени, степень, баллы. */
+.fsp-kind {
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.fsp-kind + .fsp-kind {
+    margin-top: 10px;
+}
+
+.grade-tasks .fsp-kind-title {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.fsp-line {
+    align-items: center;
+    flex-shrink: 0;
+    padding: 3px 4px;
+    border-bottom: 1px dotted #c3c6ca;
+}
+
+.fsp-line:last-child {
+    border-bottom: none;
+}
+
+.fsp-line-name {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.fsp-line-points {
+    width: 190px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.fsp-degree-name {
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.fsp-meter {
+    display: inline-flex;
+    flex-shrink: 0;
+    margin: 0 10px;
+    padding: 2px;
+    background: #fff;
+    box-shadow: var(--border-field);
+}
+
+.fsp-meter-cell {
+    display: inline-block;
+    width: 12px;
+    height: 10px;
+    margin-right: 2px;
+}
+
+.fsp-meter-cell:last-child {
+    margin-right: 0;
+}
+
+.fsp-meter-on {
+    background: #0000a3;
+}
+
+.grade-tasks .fsp-change {
+    margin-right: 0;
+    flex-shrink: 0;
+    min-width: 190px;
+    text-align: center;
+}
+
+.fsp-change-new {
+    background: #c8f0c8;
+}
+
+.fsp-change-up {
+    background: #dfe3ff;
+}
+
+.fsp-change-same {
+    background: #e9e9e9;
+}
+
+/* Диаграмма последовательности: белый лист, сверху участники, ниже линии
+   жизни и стрелки. Полосы прокрутки нет — схема едет за последней стрелкой
+   сама, колесо мыши тоже прокручивает. */
+.fsp-diagram {
+    flex-direction: column;
+    min-height: 160px;
+    padding: 3px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.fsp-participants {
+    flex-shrink: 0;
+    border-bottom: 1px solid #c3c6ca;
+}
+
+.fsp-diagram-body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.fsp-diagram-body::-webkit-scrollbar {
+    display: none;
+}
+
+.fsp-diagram svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.fsp-diagram text {
+    font-family: MSSerif, Arial, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.fsp-diagram text.fsp-mono {
+    font-family: 'Courier New', Consolas, monospace !important;
+}

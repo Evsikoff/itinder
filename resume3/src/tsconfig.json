@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "moduleResolution": "node",
+        "strict": true,
+        "paths": {
+            "three/examples/jsm/libs/dat.gui.module": ["../node_modules/@types/dat.gui"]
+        },
+        "strictPropertyInitialization": false,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        // Only types of imported packages: the global @types/node pulled in
+        // by webpack-dev-server needs a newer TypeScript than 4.6.
+        // It also used to bring Object.entries, hence ES2017 lib
+        "types": [],
+        "lib": ["ES2017", "DOM", "DOM.Iterable"],
+    },
+    
+    "include": ["Application/*", "./*"],
+}

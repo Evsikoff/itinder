@@ -1,0 +1,88 @@
+{
+  "participants": [
+    {"id": "user", "name": "Кандидат", "note": "браузер"},
+    {"id": "itinder", "name": "ITinder", "note": "сервер"},
+    {"id": "keycloak", "name": "ФСП ID", "note": "Keycloak"},
+    {"id": "registry", "name": "Реестр ФСП", "note": "API результатов"}
+  ],
+  "scenes": [
+    {
+      "number": 1,
+      "title": "Вход через ФСП ID",
+      "speaker_text": "Кандидат вводит свой ФСП ID и нажимает «Связать». Дальше ITinder ничего не спрашивает сам: он отправляет браузер на страницу входа ФСП ID — это Keycloak Федерации. Логин и пароль от ФСП кандидат вводит только там, ITinder их никогда не видит. Это обычный вход по OpenID Connect: код авторизации с защитой PKCE.",
+      "audio": {"name": "01-vhod-fsp-id.mp3", "url": "/app/assets/presentation/fsp_link/01-vhod-fsp-id.mp3"},
+      "messages": [
+        {"from": "user", "to": "itinder", "kind": "call", "label": "Связать профиль", "detail": "{fsp_id}"},
+        {"from": "itinder", "to": "user", "kind": "reply", "label": "302 → вход в ФСП ID", "detail": "client_id=itinder, PKCE"},
+        {"from": "user", "to": "keycloak", "kind": "call", "label": "Логин, пароль ФСП, код 2FA"}
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Согласие и токены",
+      "speaker_text": "Keycloak показывает экран согласия: ITinder просит читать результаты соревнований — и ничего больше. Это согласие на обработку данных по 152-ФЗ. Кандидат соглашается, и Keycloak возвращает браузер в ITinder с одноразовым кодом. Сервер ITinder меняет код на токены. В id_token есть главное — sub, идентификатор участника ФСП. С этого момента профили связаны.",
+      "audio": {"name": "02-soglasie-tokeny.mp3", "url": "/app/assets/presentation/fsp_link/02-soglasie-tokeny.mp3"},
+      "messages": [
+        {"from": "keycloak", "to": "user", "kind": "reply", "label": "Согласие: доступ к результатам", "detail": "scope=fsp.results"},
+        {"from": "user", "to": "keycloak", "kind": "call", "label": "Разрешить"},
+        {"from": "keycloak", "to": "user", "kind": "reply", "label": "302 → ITinder /callback", "detail": "code=…"},
+        {"from": "user", "to": "itinder", "kind": "call", "label": "/callback?code=…"},
+        {"from": "itinder", "to": "keycloak", "kind": "call", "label": "POST /token", "detail": "code + code_verifier"},
+        {"from": "keycloak", "to": "itinder", "kind": "reply", "label": "id_token, access, refresh", "detail": "sub = {fsp_id}"}
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Забираем достижения",
+      "speaker_text": "С токеном доступа ITinder идёт в реестр ФСП и забирает историю участника: соревнования, роль в команде, итог и стек кейса. Дальше работает сопоставление. Роль в команде становится специализацией, стек кейса — компетенциями, а итог и уровень соревнования — степенью их подтверждения. Кандидат видит найденное и сам решает, добавлять ли это в профиль. Нет истории в ФСП — профиль просто остаётся без достижений.",
+      "audio": {"name": "03-dostizheniya.mp3", "url": "/app/assets/presentation/fsp_link/03-dostizheniya.mp3"},
+      "messages": [
+        {"from": "itinder", "to": "registry", "kind": "call", "label": "GET /participants/{fsp_id}/results", "detail": "Bearer access_token"},
+        {"from": "registry", "to": "itinder", "kind": "reply", "label": "Соревнования, роль, итог, стек"},
+        {"from": "itinder", "to": "itinder", "kind": "call", "label": "Роль → специализация", "detail": "стек → компетенции, итог → степень"},
+        {"from": "itinder", "to": "user", "kind": "reply", "label": "Найдено: дополнить профиль?"},
+        {"from": "user", "to": "itinder", "kind": "call", "label": "Да, дополнить"}
+      ]
+    },
+    {
+      "number": 4,
+      "title": "ФСП сам сообщает о новых итогах",
+      "speaker_text": "Самое интересное начинается потом. Кандидат съездил на новый хакатон — и ему не нужно ничего обновлять руками. Когда жюри утверждает итоги, реестр ФСП сам отправляет ITinder вебхук: итоги соревнования опубликованы. ITinder сразу отвечает «принято» и проверяет подпись. А уже в фоне получает в Keycloak сервисный токен и забирает итоги — только по участникам, которые связали профиль с ITinder.",
+      "audio": {"name": "04-webhook.mp3", "url": "/app/assets/presentation/fsp_link/04-webhook.mp3"},
+      "messages": [
+        {"note": "Жюри утвердило итоги", "over": ["registry"]},
+        {"from": "registry", "to": "itinder", "kind": "event", "label": "Webhook results.published", "detail": "competition_id, подпись HMAC"},
+        {"from": "itinder", "to": "registry", "kind": "reply", "label": "202 Accepted"},
+        {"from": "itinder", "to": "keycloak", "kind": "call", "label": "POST /token", "detail": "client_credentials"},
+        {"from": "keycloak", "to": "itinder", "kind": "reply", "label": "Токен сервиса ITinder"},
+        {"from": "itinder", "to": "registry", "kind": "call", "label": "GET /competitions/{id}/results", "detail": "только связанные профили"},
+        {"from": "registry", "to": "itinder", "kind": "reply", "label": "Участия и итоги"}
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Если вебхук потерялся",
+      "speaker_text": "Сеть ненадёжна, и вебхук может не дойти. Поэтому раз в сутки ITinder сверяется с реестром сам и просит всё, что изменилось с прошлой сверки. Новые участия превращаются в новые компетенции или поднимают степень старых. У значка ФСП на рабочем столе загорается восклицательный знак — а решение, обновлять ли профиль, снова за кандидатом.",
+      "audio": {"name": "05-sverka.mp3", "url": "/app/assets/presentation/fsp_link/05-sverka.mp3"},
+      "messages": [
+        {"note": "Раз в сутки", "over": ["itinder"]},
+        {"from": "itinder", "to": "registry", "kind": "call", "label": "GET /results", "detail": "updated_since=прошлая сверка"},
+        {"from": "registry", "to": "itinder", "kind": "reply", "label": "Изменения за сутки"},
+        {"from": "itinder", "to": "itinder", "kind": "call", "label": "Новые компетенции", "detail": "и рост степени старых"},
+        {"from": "itinder", "to": "user", "kind": "event", "label": "«!» у значка ФСП"},
+        {"from": "user", "to": "itinder", "kind": "call", "label": "Добавить в профиль"}
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Согласие можно отозвать",
+      "speaker_text": "И последнее: данные принадлежат кандидату. Отозвать доступ можно прямо в ФСП ID — Keycloak сообщит об этом ITinder, и тот перестанет запрашивать реестр. В нашем прототипе настоящего ФСП ID пока нет: мы проверяем только формат идентификатора, а реестр имитируем. Но цепочка уже готова к настоящему Keycloak Федерации.",
+      "audio": {"name": "06-otzyv.mp3", "url": "/app/assets/presentation/fsp_link/06-otzyv.mp3"},
+      "messages": [
+        {"from": "user", "to": "keycloak", "kind": "call", "label": "Отозвать доступ ITinder"},
+        {"from": "keycloak", "to": "itinder", "kind": "event", "label": "Отзыв согласия", "detail": "back-channel logout"},
+        {"from": "itinder", "to": "itinder", "kind": "call", "label": "Удалить токены", "detail": "реестр больше не запрашивать"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "parameters": {
+    "width": 3.3,
+    "height": 1.065,
+    "depth": 0.16,
+    "corner_radius": 0.18,
+    "frame_border": 0.064,
+    "suspension_length": 0.35,
+    "suspension_spacing": 2.08,
+    "logo_width": 3.18,
+    "arc_segments": 32
+  },
+  "logo": "C:\\Users\\user\\Documents\\ittinder\\assets\\branding\\itinder-logo.png",
+  "render": "Procedural Blender geometry with unchanged original logo texture",
+  "export": "Sign, two suspension rods, mounting plates; station setting omitted",
+  "units": "metres",
+  "axis": "glTF Y-up (converted from Blender Z-up)"
+}
