@@ -110,6 +110,9 @@ API (только с этой же страницы). Ошибка — код 4x
     GET /api/applicants/profile?user_id=<id>&applicant_id=<id> — профиль кандидата:
         все специализации/грейды, сохранённый ФСП, история тестов и заданий
         своих вакансий. Контакт — после собственного принятого приглашения/отклика.
+    GET /api/applicants/profile/pdf?user_id=<id>&applicant_id=<id> — PDF этого профиля,
+        attachment; та же вёрстка и те же права, что у окна «PDF-профиль»
+        (app/tools/profile_pdf.py): только сданные тесты, без заданий вакансий.
     GET /api/applicants/overview?user_id=<id> — проекты, в которых можно искать
         (вакансии утверждены, набор не завершён), их вакансии и справочники.
     GET /api/applicants/team?user_id=<id>&project_id=<id> — граф команды: к каждой
@@ -127,7 +130,8 @@ API (только с этой же страницы). Ошибка — код 4x
     GET /api/applicant/profile?user_id=<id> — собственный профиль: тот же формат,
         свой контакт и задания из всех собственных приглашений/откликов.
     GET /api/applicant/profile/pdf?user_id=<id> — PDF этого профиля, attachment;
-        ReportLab и Consolas (Windows) или DejaVu Sans Mono (Linux).
+        ReportLab и Consolas (Windows) или DejaVu Sans Mono (Linux). В PDF идут
+        только сданные тесты на грейд; задания вакансий в него не попадают.
     GET /api/applicant/visibility?user_id=<id> — скрыт ли профиль от рекрутёров:
         {"hidden", "hidden_at"} (app/tools/profile_visibility.py).
     POST /api/applicant/visibility {"user_id", "hidden"} — тумблер окна «PDF-профиль»:
@@ -397,6 +401,11 @@ def api_candidate_profile(query):
     return 200, result, "Профиль кандидата"
 
 
+def api_candidate_profile_pdf(query):
+    import profile_pdf
+    return 200, profile_pdf.export_candidate(query.get("user_id"), query.get("applicant_id")), "PDF профиля кандидата"
+
+
 def api_self_profile(query):
     return 200, candidate_profile.self_profile(query.get("user_id")), "Собственный профиль соискателя"
 
@@ -599,6 +608,7 @@ GET_API = {
     "/api/project": api_project,
     "/api/projects/feedback": api_project_feedback,
     "/api/applicants/profile": api_candidate_profile,
+    "/api/applicants/profile/pdf": api_candidate_profile_pdf,
     "/api/applicant/profile": api_self_profile,
     "/api/applicant/profile/pdf": api_self_profile_pdf,
     "/api/applicant/visibility": api_profile_visibility,

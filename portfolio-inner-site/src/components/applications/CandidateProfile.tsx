@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ApiError } from '../../api';
-import { CandidateProfileData, downloadSelfProfile, fetchCandidateProfile, fetchSelfProfile } from '../../candidateProfile';
+import { CandidateProfileData, downloadCandidateProfile, downloadSelfProfile, fetchCandidateProfile, fetchSelfProfile } from '../../candidateProfile';
 import { formatDate, plural } from './projectWidgets';
 import './CandidateProfile.css';
 
@@ -50,7 +50,7 @@ const CandidateProfile: React.FC<Props> = ({ userId, applicantId, onClose, self 
     const exportPdf = async () => {
         if (downloading.current) return;
         downloading.current = true; setExporting(true); setExportProblem('');
-        try { await downloadSelfProfile(userId); }
+        try { await (self ? downloadSelfProfile(userId) : downloadCandidateProfile(userId, applicantId, data?.name ?? null)); }
         catch (failure) { if (mounted.current) setExportProblem(failure instanceof ApiError ? failure.message : 'Не удалось скачать PDF'); }
         finally { downloading.current = false; if (mounted.current) setExporting(false); }
     };
@@ -188,7 +188,7 @@ const CandidateProfile: React.FC<Props> = ({ userId, applicantId, onClose, self 
             {exportProblem && <p className="cp-export-error" role="alert">{exportProblem}</p>}
             <div className="cp-footer"><span className="gt-muted cp-small">{data?.fsp.linked && `ФСП связан ${date(data.fsp.linked_at)}`}</span>
                 <div className="cp-actions">
-                    {self && <button className="site-button" disabled={!data || loading || exporting} onClick={exportPdf}>{exporting ? 'Формируем PDF…' : 'Скачать PDF'}</button>}
+                    <button className="site-button" disabled={!data || loading || exporting} onClick={exportPdf}>{exporting ? 'Формируем PDF…' : 'Скачать PDF'}</button>
                     {onInvitations && <button className="site-button" onClick={onInvitations}>Приглашения и отклики</button>}
                     <button className="site-button" onClick={onClose}>{self ? 'Закрыть профиль' : 'Вернуться к кандидату'}</button>
                 </div></div>
