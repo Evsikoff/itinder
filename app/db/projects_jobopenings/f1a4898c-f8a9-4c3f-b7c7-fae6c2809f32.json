@@ -1,0 +1,120 @@
+{
+  "id": "f1a4898c-f8a9-4c3f-b7c7-fae6c2809f32",
+  "title": "Python-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать серверную часть модулей «Обращения собственников» и «График ремонта дома»: API, бизнес-логика, схема Postgres Pro, интеграции с другими системами.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgres_pro"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 150000,
+    "to": 240000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+  "project_id": "9e04d6b0-1b76-48cd-9667-e9299ddad14f",
+  "user_id": "2188933e-8721-4f91-bfff-b6aab77ffc64",
+  "company": {
+    "id": "4746d4bb-13a8-4751-a78c-8a19258027c5",
+    "name": "Региональный фонд капитального ремонта"
+  },
+  "project": {
+    "name": "Личный кабинет собственника",
+    "summary": "Начисления и оплата взносов, график ремонта своего дома и обращения в фонд.",
+    "domain": "gov",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-26",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-28T01:17:07.641336+00:00",
+  "created_at": "2026-08-28T01:17:07.641336+00:00",
+  "updated_at": "2026-08-28T01:17:07.641336+00:00"
+}

@@ -1,0 +1,110 @@
+{
+  "id": "b5c3f689-f0d3-4c8b-9a97-9007dea35cb3",
+  "title": "Python-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Спроектировать архитектуру модулей «Абонементы» и «Расписание тренировок»: границы сервисов, контракты REST API (HTTP + JSON), надёжность и производительность под нагрузкой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "webhook"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Спроектируйте API модуля «Запись к тренеру»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+    "Опишите таблицы PostgreSQL для модуля «Абонементы» и индексы для трёх самых частых запросов."
+  ],
+  "salary": {
+    "from": 290000,
+    "to": 405000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "cbd739bb-e230-4ce8-abdc-57d6788ba337",
+  "user_id": "296b0e8a-f222-4cda-8132-3505e7d9f2bf",
+  "company": {
+    "id": "3d3e6652-f713-4711-ad78-78f6e7971620",
+    "name": "Фитнес-сеть «Пульс»"
+  },
+  "project": {
+    "name": "Приложение фитнес-клуба",
+    "summary": "Расписание тренировок, запись к тренеру и продление абонемента в приложении.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-09",
+    "work_format": "hybrid",
+    "city": "Казань"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T03:51:43.378515+00:00",
+  "created_at": "2026-09-03T03:51:43.378515+00:00",
+  "updated_at": "2026-09-03T03:51:43.378515+00:00"
+}

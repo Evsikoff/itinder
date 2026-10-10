@@ -1,0 +1,912 @@
+{
+  "id": "963af3ca-60b1-459e-ae3c-37f16ee033cf",
+  "user_id": "255c62c5-adc5-455a-ab80-7c95bf1b3154",
+  "company_id": "e19a4eb4-2d7e-441a-838a-eb2a5c6ddfab",
+  "name": "Приложение курьера",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Маршрутный лист курьера, подтверждение доставки фото и кодом, приём оплаты.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-11-08",
+    "work_format": "remote",
+    "clients": [
+      "android",
+      "ios"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "go",
+        "kotlin",
+        "swift"
+      ],
+      "databases": [
+        "postgresql"
+      ],
+      "integrations": [
+        "rest",
+        "kafka",
+        "websocket"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "postman",
+        "appium",
+        "jmeter",
+        "exploratory",
+        "testcontainers"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 3
+      },
+      "backend": {
+        "Middle": 3
+      },
+      "frontend": {
+        "Senior": 3
+      },
+      "qa": {
+        "Middle": 2
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "high",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "mobile",
+      "logic"
+    ],
+    "requirements_state": "ready",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_android": {
+        "Middle": 1
+      },
+      "frontend_ios": {
+        "Junior": 1
+      },
+      "qa": {
+        "Senior": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "mobile_native": "native",
+    "fixed_details[languages:go].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:go].importance": "required",
+    "fixed_details[languages:go].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_android",
+      "frontend_ios",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:kafka].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:kafka].importance": "required",
+    "fixed_details[integrations:kafka].depth": "by_grade",
+    "fixed_details[integrations:websocket].positions": [
+      "backend_main",
+      "frontend_android",
+      "frontend_ios",
+      "analyst"
+    ],
+    "fixed_details[integrations:websocket].importance": "required",
+    "fixed_details[integrations:websocket].depth": "by_grade",
+    "fixed_details[languages:kotlin].positions": [
+      "frontend_android"
+    ],
+    "fixed_details[languages:kotlin].importance": "required",
+    "fixed_details[languages:kotlin].depth": "by_grade",
+    "fixed_details[languages:swift].positions": [
+      "frontend_ios"
+    ],
+    "fixed_details[languages:swift].importance": "required",
+    "fixed_details[languages:swift].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:postman].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:postman].importance": "required",
+    "fixed_details[testing:postman].depth": "by_grade",
+    "fixed_details[testing:appium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:appium].importance": "required",
+    "fixed_details[testing:appium].depth": "by_grade",
+    "fixed_details[testing:jmeter].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:jmeter].importance": "required",
+    "fixed_details[testing:jmeter].depth": "by_grade",
+    "fixed_details[testing:exploratory].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:exploratory].importance": "required",
+    "fixed_details[testing:exploratory].depth": "by_grade",
+    "fixed_details[testing:testcontainers].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:testcontainers].importance": "required",
+    "fixed_details[testing:testcontainers].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "Go-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Исправлять ошибки и добавлять небольшие функции в модулях «Приём оплаты» и «Подтверждение доставки», писать миграции PostgreSQL и тесты.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "go"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [
+      "Спроектируйте API модуля «Маршрутный лист»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+      "Опишите таблицы PostgreSQL для модуля «Приём оплаты» и индексы для трёх самых частых запросов."
+    ],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 90000,
+      "to": 135000
+    },
+    "vacancies[backend_main:Junior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[backend_main:Middle].title": "Go-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Маршрутный лист» и «Приём оплаты»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "go"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 180000,
+      "to": 275000
+    },
+    "vacancies[backend_main:Middle].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_android:Middle].title": "Android-разработчик (Middle)",
+    "vacancies[frontend_android:Middle].task": "Разрабатывать функции «Маршрутный лист» и «Приём оплаты» Android-приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+    "vacancies[frontend_android:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_android:Middle].assignments": [
+      "Как вы сделаете офлайн-режим экрана «Приём оплаты»: что кэшировать и как синхронизировать изменения?"
+    ],
+    "vacancies[frontend_android:Middle].salary": {
+      "from": 155000,
+      "to": 230000
+    },
+    "vacancies[frontend_android:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_ios:Junior].title": "iOS-разработчик (Junior)",
+    "vacancies[frontend_ios:Junior].task": "Делать экраны «Маршрутный лист» и «Подтверждение доставки» iOS-приложения, подключать их к API и исправлять ошибки.",
+    "vacancies[frontend_ios:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "swift"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_ios:Junior].assignments": [],
+    "vacancies[frontend_ios:Junior].salary": {
+      "from": 80000,
+      "to": 120000
+    },
+    "vacancies[frontend_ios:Junior].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год. Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Senior].title": "QA-инженер по автоматизации (Senior)",
+    "vacancies[qa:Senior].task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на Appium и Testcontainers, метрики качества, наставничество для тестировщиков.",
+    "vacancies[qa:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "postman"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "appium"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "jmeter"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "testcontainers"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Senior].assignments": [],
+    "vacancies[qa:Senior].salary": {
+      "from": 195000,
+      "to": 280000
+    },
+    "vacancies[qa:Senior].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Junior].title": "Системный аналитик (Junior)",
+    "vacancies[analyst:Junior].task": "Собирать и описывать требования к модулю «Маршрутный лист», готовить пользовательские сценарии под руководством ведущего аналитика.",
+    "vacancies[analyst:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Junior].assignments": [
+      "Опишите сценарий «Приём оплаты»: участники, основной поток, альтернативы и исключения."
+    ],
+    "vacancies[analyst:Junior].salary": {
+      "from": 75000,
+      "to": 110000
+    },
+    "vacancies[analyst:Junior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Приём оплаты» и «Маршрутный лист», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [],
+    "vacancies[analyst:Middle].salary": {
+      "from": 165000,
+      "to": 250000
+    },
+    "vacancies[analyst:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "native",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_android",
+        "role": "frontend",
+        "name": "Android-разработчик"
+      },
+      {
+        "id": "frontend_ios",
+        "role": "frontend",
+        "name": "iOS-разработчик"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "go",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_android",
+          "frontend_ios",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "kafka",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "websocket",
+        "positions": [
+          "backend_main",
+          "frontend_android",
+          "frontend_ios",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "kotlin",
+        "positions": [
+          "frontend_android"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "swift",
+        "positions": [
+          "frontend_ios"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "postman",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "appium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "jmeter",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "exploratory",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "testcontainers",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_android": {
+        "Middle": 1
+      },
+      "frontend_ios": {
+        "Junior": 1
+      },
+      "qa": {
+        "Senior": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "5397790f-db25-42fb-9e8b-7f96905cb8ea",
+    "aa693713-22f7-4d52-bea5-5dfaad033924",
+    "94521566-98b6-4ba9-90e8-96dc59b434fa",
+    "c075e64c-ff51-4d75-8899-73eeecf2188b",
+    "56865245-259d-4f5c-be09-b982157bc2bd",
+    "2ec8cb68-6c9d-435b-b526-e9a385df7402",
+    "3c5e51c3-d29b-48d7-9d38-b5f4df330f56"
+  ],
+  "approved_at": "2026-09-30T21:46:11.297992+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-29T04:29:24.775733+00:00",
+  "updated_at": "2026-09-30T21:46:11.297992+00:00"
+}

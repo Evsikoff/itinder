@@ -1,0 +1,68 @@
+{
+  "id": "fd5779ae-adc2-4067-8f89-f69ab4fbd93f",
+  "title": "Фронтенд-разработчик (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать веб-интерфейс модулей «Отзывы путешественников» и «Поиск туров»: компоненты, состояние, работа с REST API (HTTP + JSON), адаптивность и доступность.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "javascript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 150000,
+    "to": 220000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+  "project_id": "932c4c99-4265-4e34-af76-2fcde2e94194",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company": {
+    "id": "a5d72ca2-2525-4c8f-9b92-b6b12bacdd02",
+    "name": "Туристический сервис «Маршрут»"
+  },
+  "project": {
+    "name": "Бронирование туров и отелей",
+    "summary": "Поиск туров и отелей у сотни поставщиков, бронирование и отзывы путешественников.",
+    "domain": "other",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-17",
+    "work_format": "hybrid",
+    "city": "Сочи"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-01T19:09:38.408687+00:00",
+  "created_at": "2026-09-01T19:09:38.408687+00:00",
+  "updated_at": "2026-09-01T19:09:38.408687+00:00"
+}

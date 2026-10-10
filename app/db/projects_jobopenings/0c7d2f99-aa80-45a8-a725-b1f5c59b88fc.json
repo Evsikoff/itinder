@@ -1,0 +1,81 @@
+{
+  "id": "0c7d2f99-aa80-45a8-a725-b1f5c59b88fc",
+  "title": "Фронтенд-разработчик (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 2,
+  "task": "Разрабатывать веб-интерфейс модулей «Отчёты по убыткам» и «Гарантийные письма»: компоненты, состояние, работа с REST API (HTTP + JSON), адаптивность и доступность.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 200000,
+    "to": 305000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "a27c4620-b679-429e-aa24-74cd0f7bda35",
+  "user_id": "6ad706f8-8fd0-4ff4-b0c6-59a8635b979b",
+  "company": {
+    "id": "d244412e-9f9b-4895-ab2c-296eeaae1f01",
+    "name": "Страховая компания «Опора»"
+  },
+  "project": {
+    "name": "Кабинет корпоративного клиента ДМС",
+    "summary": "Кабинет отдела кадров компании-клиента: списки застрахованных, гарантийные письма, отчёты.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-30",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-29T05:16:29.122571+00:00",
+  "created_at": "2026-08-29T05:16:29.122571+00:00",
+  "updated_at": "2026-08-29T05:16:29.122571+00:00"
+}

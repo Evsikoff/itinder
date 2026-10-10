@@ -1,0 +1,109 @@
+{
+  "id": "d3052108-062c-40b5-8e00-2242b3a464cf",
+  "title": "Системный аналитик (Senior)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в PostgreSQL, приоритизация требований вместе с заказчиком.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите модель данных модуля «Таймшиты»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 260000,
+    "to": 355000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "645d20da-d5a2-4b5e-9f44-ecfb27e99fda",
+  "user_id": "108fabb8-029e-484b-a671-cdc188b5ced1",
+  "company": {
+    "id": "3be6145c-87c0-4edc-9c62-a1ada3c4d432",
+    "name": "IT-интегратор «Кодовые решения»"
+  },
+  "project": {
+    "name": "Учёт рабочего времени и проектов",
+    "summary": "Таймшиты, загрузка сотрудников по проектам и отчёты для заказчиков.",
+    "domain": "internal",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-10-14",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-18T17:02:53.124670+00:00",
+  "created_at": "2026-08-18T17:02:53.124670+00:00",
+  "updated_at": "2026-08-18T17:02:53.124670+00:00"
+}

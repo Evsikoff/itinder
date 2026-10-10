@@ -1,0 +1,107 @@
+{
+  "id": "a165ac00-52f2-4d03-86c3-160762ebd5e7",
+  "title": "Системный аналитик (Junior)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Собирать и описывать требования к модулю «Бронирование и старт аренды», готовить пользовательские сценарии под руководством ведущего аналитика.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "grpc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 85000,
+    "to": 125000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+  "project_id": "6d4b7385-e874-49c4-bdd7-5b2a53ebd557",
+  "user_id": "933b5dd7-43e2-40b4-9935-62d59bb5f518",
+  "company": {
+    "id": "4c815be1-ded6-40f7-a8f0-84ccbe362d49",
+    "name": "Каршеринг «Поехали»"
+  },
+  "project": {
+    "name": "Приложение каршеринга",
+    "summary": "Карта свободных машин, бронирование, старт аренды с телефона, штрафы и оплата.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-12",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T03:54:38.162140+00:00",
+  "created_at": "2026-09-03T03:54:38.162140+00:00",
+  "updated_at": "2026-09-03T03:54:38.162140+00:00"
+}

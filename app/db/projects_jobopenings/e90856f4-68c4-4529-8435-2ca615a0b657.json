@@ -1,0 +1,70 @@
+{
+  "id": "e90856f4-68c4-4529-8435-2ca615a0b657",
+  "title": "iOS-разработчик (Middle)",
+  "position": "frontend_ios",
+  "position_name": "iOS-разработчик",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать функции «Рекомендации треков» и «Плейлисты» iOS-приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "swift"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Как вы сделаете офлайн-режим экрана «Офлайн-прослушивание»: что кэшировать и как синхронизировать изменения?"
+  ],
+  "salary": {
+    "from": 190000,
+    "to": 295000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+  "project_id": "28825d89-0010-4df8-9035-a88c505e872c",
+  "user_id": "a7ea939b-7ff8-47fc-bdda-f5db4d6c186f",
+  "company": {
+    "id": "8ad2d3dc-3ef8-427e-af6e-ba24e6be12fe",
+    "name": "Стриминговый сервис «Волна»"
+  },
+  "project": {
+    "name": "Музыкальный стриминг",
+    "summary": "Плейлисты, рекомендации треков и офлайн-прослушивание для двух миллионов подписчиков.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "6to12",
+    "start_date": "2026-12-01",
+    "work_format": "hybrid",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-04T15:43:47.046349+00:00",
+  "created_at": "2026-10-04T15:43:47.046349+00:00",
+  "updated_at": "2026-10-04T15:43:47.046349+00:00"
+}

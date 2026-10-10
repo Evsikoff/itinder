@@ -1,0 +1,135 @@
+{
+  "id": "1bf75c32-7409-4c29-8b7f-31986eaaee0b",
+  "title": "Go-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 2,
+  "task": "Отвечать за модуль «Корзина и оплата» целиком: от проектирования API до мониторинга в продакшене; оптимизировать запросы к PostgreSQL.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "go"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rabbitmq"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите таблицы PostgreSQL для модуля «Трекинг курьера» и индексы для трёх самых частых запросов."
+  ],
+  "salary": {
+    "from": 165000,
+    "to": 240000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+  "project_id": "af67a533-2694-4b20-b630-d6996f48c012",
+  "user_id": "aae53130-48c5-43e1-bd09-2a79d65fa17d",
+  "company": {
+    "id": "a2cc2697-3491-43b3-9e4f-cd96cd82ce53",
+    "name": "Сервис доставки еды «Вкусно рядом»"
+  },
+  "project": {
+    "name": "Приложение доставки еды",
+    "summary": "Выбор ресторана, корзина, оплата и отслеживание курьера на карте.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-11-13",
+    "work_format": "hybrid",
+    "city": "Новосибирск"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-29T04:39:10.603103+00:00",
+  "created_at": "2026-09-29T04:39:10.603103+00:00",
+  "updated_at": "2026-09-29T04:39:10.603103+00:00"
+}

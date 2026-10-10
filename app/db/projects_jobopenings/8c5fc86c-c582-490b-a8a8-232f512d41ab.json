@@ -1,0 +1,133 @@
+{
+  "id": "8c5fc86c-c582-490b-a8a8-232f512d41ab",
+  "title": "Java-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать серверную часть модулей «Электронная подпись» и «Маршруты согласования»: API, бизнес-логика, схема Postgres Pro, интеграции с другими системами.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgres_pro"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "elasticsearch"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "soap"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 140000,
+    "to": 205000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "556eacc3-8f97-429d-b56c-ee80ce4a544e",
+  "user_id": "da85473a-ee0a-410d-af50-58dbf8632aa1",
+  "company": {
+    "id": "3ddb8743-6c4d-4872-977f-86d3738379c2",
+    "name": "Региональный центр цифровых услуг"
+  },
+  "project": {
+    "name": "Электронный документооборот ведомств",
+    "summary": "Согласование и подписание документов между министерствами и подведомственными учреждениями.",
+    "domain": "gov",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-19",
+    "work_format": "hybrid",
+    "city": "Казань"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-01T18:20:45.856752+00:00",
+  "created_at": "2026-10-01T18:20:45.856752+00:00",
+  "updated_at": "2026-10-01T18:20:45.856752+00:00"
+}

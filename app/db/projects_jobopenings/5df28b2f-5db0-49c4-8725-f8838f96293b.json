@@ -1,0 +1,84 @@
+{
+  "id": "5df28b2f-5db0-49c4-8725-f8838f96293b",
+  "title": "Тестировщик (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Писать тест-кейсы и проводить регресс модулей «Электронная медкарта» и «Результаты анализов», исследовательское тестирование новых функций.",
+  "requirements": [
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "postman"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Составьте 7–10 проверок функции «Видеоконсультации», включая граничные и негативные случаи.",
+    "Напишите баг-репорт: в разделе «Электронная медкарта» кнопка «Сохранить» иногда не реагирует на нажатие."
+  ],
+  "salary": {
+    "from": 110000,
+    "to": 160000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+  "project_id": "20b5e786-0210-47ee-8963-405009d1075b",
+  "user_id": "21e1cc34-c185-4a27-8294-b14f81ba66f5",
+  "company": {
+    "id": "5035ef51-c3c6-4cff-af20-16b6b79e3026",
+    "name": "Сеть клиник «Семейный доктор Поволжья»"
+  },
+  "project": {
+    "name": "Телемедицина и онлайн-запись",
+    "summary": "Запись к врачу, видеоконсультации и электронная медкарта пациента в одном приложении.",
+    "domain": "health",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-11-27",
+    "work_format": "hybrid",
+    "city": "Самара"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-03T02:43:27.480874+00:00",
+  "created_at": "2026-10-03T02:43:27.480874+00:00",
+  "updated_at": "2026-10-03T02:43:27.480874+00:00"
+}

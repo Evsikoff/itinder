@@ -1,0 +1,924 @@
+{
+  "id": "c7cd2516-8ccd-4d25-891a-982ab4a2a924",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company_id": "283fb0af-4972-4e0c-9f40-03fd981d5f9f",
+  "name": "Видеоплатформа телеканала",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Прямые эфиры, архив передач и подписки на сайте и в приложениях.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-16",
+    "work_format": "remote",
+    "clients": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "java",
+        "typescript",
+        "kotlin",
+        "swift"
+      ],
+      "databases": [
+        "postgresql",
+        "clickhouse"
+      ],
+      "integrations": [
+        "rest",
+        "rabbitmq",
+        "websocket"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "rest_assured",
+        "playwright",
+        "appium",
+        "k6",
+        "allure"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 1
+      },
+      "backend": {
+        "Middle": 2
+      },
+      "frontend": {
+        "Middle": 3
+      },
+      "qa": {
+        "Middle": 1
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "high",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "web_ui",
+      "mobile",
+      "load"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1
+      },
+      "frontend_android": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_ios": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Senior": 1
+      }
+    },
+    "mobile_native": "native",
+    "fixed_details[languages:java].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:java].importance": "required",
+    "fixed_details[languages:java].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[databases:clickhouse].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:clickhouse].importance": "required",
+    "fixed_details[databases:clickhouse].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_android",
+      "frontend_ios",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:rabbitmq].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:rabbitmq].importance": "required",
+    "fixed_details[integrations:rabbitmq].depth": "by_grade",
+    "fixed_details[integrations:websocket].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_android",
+      "frontend_ios",
+      "analyst"
+    ],
+    "fixed_details[integrations:websocket].importance": "required",
+    "fixed_details[integrations:websocket].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[languages:kotlin].positions": [
+      "frontend_android"
+    ],
+    "fixed_details[languages:kotlin].importance": "required",
+    "fixed_details[languages:kotlin].depth": "by_grade",
+    "fixed_details[languages:swift].positions": [
+      "frontend_ios"
+    ],
+    "fixed_details[languages:swift].importance": "required",
+    "fixed_details[languages:swift].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:rest_assured].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:rest_assured].importance": "required",
+    "fixed_details[testing:rest_assured].depth": "by_grade",
+    "fixed_details[testing:playwright].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:playwright].importance": "required",
+    "fixed_details[testing:playwright].depth": "by_grade",
+    "fixed_details[testing:appium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:appium].importance": "required",
+    "fixed_details[testing:appium].depth": "by_grade",
+    "fixed_details[testing:k6].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:k6].importance": "required",
+    "fixed_details[testing:k6].depth": "by_grade",
+    "fixed_details[testing:allure].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:allure].importance": "required",
+    "fixed_details[testing:allure].depth": "by_grade",
+    "vacancies[backend_main:Middle].title": "Java-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Отвечать за модуль «Подписки» целиком: от проектирования API до мониторинга в продакшене; оптимизировать запросы к PostgreSQL.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 175000,
+      "to": 280000
+    },
+    "vacancies[backend_main:Middle].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «Подписки» и «Прямые эфиры» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 80000,
+      "to": 120000
+    },
+    "vacancies[frontend_web:Junior].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_android:Junior].title": "Android-разработчик (Junior)",
+    "vacancies[frontend_android:Junior].task": "Делать экраны «Прямые эфиры» и «Видео по запросу» Android-приложения, подключать их к API и исправлять ошибки.",
+    "vacancies[frontend_android:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_android:Junior].assignments": [
+      "Как вы сделаете офлайн-режим экрана «Подписки»: что кэшировать и как синхронизировать изменения?"
+    ],
+    "vacancies[frontend_android:Junior].salary": {
+      "from": 75000,
+      "to": 125000
+    },
+    "vacancies[frontend_android:Junior].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_android:Senior].title": "Android-разработчик (Senior)",
+    "vacancies[frontend_android:Senior].task": "Отвечать за архитектуру Android-приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «Прямые эфиры».",
+    "vacancies[frontend_android:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_android:Senior].assignments": [],
+    "vacancies[frontend_android:Senior].salary": {
+      "from": 280000,
+      "to": 405000
+    },
+    "vacancies[frontend_android:Senior].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_ios:Middle].title": "iOS-разработчик (Middle)",
+    "vacancies[frontend_ios:Middle].task": "Разрабатывать функции «Прямые эфиры» и «Видео по запросу» iOS-приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+    "vacancies[frontend_ios:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "swift"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_ios:Middle].assignments": [
+      "Как вы сделаете офлайн-режим экрана «Прямые эфиры»: что кэшировать и как синхронизировать изменения?"
+    ],
+    "vacancies[frontend_ios:Middle].salary": {
+      "from": 165000,
+      "to": 260000
+    },
+    "vacancies[frontend_ios:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Прямые эфиры» и «Видео по запросу»: тест-дизайн, автотесты на REST Assured + JUnit 5 и Playwright, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java",
+          "kotlin",
+          "typescript"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "rest_assured"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "appium"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "k6"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "allure"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 120000,
+      "to": 185000
+    },
+    "vacancies[qa:Middle].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Senior].title": "Системный аналитик (Senior)",
+    "vacancies[analyst:Senior].task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в PostgreSQL, приоритизация требований вместе с заказчиком.",
+    "vacancies[analyst:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Senior].assignments": [
+      "Опишите сценарий «Видео по запросу»: участники, основной поток, альтернативы и исключения.",
+      "Опишите модель данных модуля «Подписки»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Senior].salary": {
+      "from": 230000,
+      "to": 325000
+    },
+    "vacancies[analyst:Senior].notes": "Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "native",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_android",
+        "role": "frontend",
+        "name": "Android-разработчик"
+      },
+      {
+        "id": "frontend_ios",
+        "role": "frontend",
+        "name": "iOS-разработчик"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "java",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "clickhouse",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_android",
+          "frontend_ios",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rabbitmq",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "websocket",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_android",
+          "frontend_ios",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "kotlin",
+        "positions": [
+          "frontend_android"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "swift",
+        "positions": [
+          "frontend_ios"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "rest_assured",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "playwright",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "appium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "k6",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "allure",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1
+      },
+      "frontend_android": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_ios": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Senior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "61032774-a6f7-44ad-a74f-adc7e2ad0e1c",
+    "4d43e19b-a69a-4490-bc83-b0a70057bf4f",
+    "d251112c-196e-4ea3-945b-6db788ef2ed2",
+    "17df3035-29bd-42d9-9cff-2fa4186c356b",
+    "4e342dd2-874f-4222-b97d-5690a4253264",
+    "c313273e-b02b-4206-8996-8832fb4b3fcd",
+    "2ca09665-a7fb-4a85-84fc-cfffa64f7dff"
+  ],
+  "approved_at": "2026-08-23T12:09:42.968874+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-08-21T18:52:56.823134+00:00",
+  "updated_at": "2026-08-23T12:09:42.968874+00:00"
+}

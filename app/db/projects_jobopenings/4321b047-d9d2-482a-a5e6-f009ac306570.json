@@ -1,0 +1,81 @@
+{
+  "id": "4321b047-d9d2-482a-a5e6-f009ac306570",
+  "title": "Фронтенд-разработчик (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Переводить раздел «Учебные планы» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 125000,
+    "to": 180000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития.",
+  "project_id": "d5b80522-f50c-48cd-816e-c9cdae5fa8b6",
+  "user_id": "bb03ca09-3b6e-411d-9123-30fbe1fdba55",
+  "company": {
+    "id": "d59cd9c4-7c43-47cb-bdab-69f269d95fbd",
+    "name": "Университет «Политех Сибири»"
+  },
+  "project": {
+    "name": "Электронный деканат",
+    "summary": "Учебные планы, ведомости и приказы о студентах вместо бумажного документооборота.",
+    "domain": "education",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-29",
+    "work_format": "hybrid",
+    "city": "Томск"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-30T07:58:46.487337+00:00",
+  "created_at": "2026-08-30T07:58:46.487337+00:00",
+  "updated_at": "2026-08-30T07:58:46.487337+00:00"
+}

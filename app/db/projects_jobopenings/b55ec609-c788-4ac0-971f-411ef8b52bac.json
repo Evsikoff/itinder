@@ -1,0 +1,97 @@
+{
+  "id": "b55ec609-c788-4ac0-971f-411ef8b52bac",
+  "title": "Системный аналитик (Middle)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Описывать требования и модель данных модулей «Элеваторы и склады» и «Приёмка урожая», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите сценарий «Приёмка урожая»: участники, основной поток, альтернативы и исключения.",
+    "Опишите модель данных модуля «Сдельная оплата»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 140000,
+    "to": 195000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "e5885701-f89c-4262-b39b-298c9eac6865",
+  "user_id": "255c62c5-adc5-455a-ab80-7c95bf1b3154",
+  "company": {
+    "id": "489eedda-0164-4359-918e-be4286905656",
+    "name": "Агрохолдинг «Зелёная долина»"
+  },
+  "project": {
+    "name": "Учёт урожая и складов в 1С",
+    "summary": "Конфигурация 1С для приёмки урожая, учёта на элеваторах и сдельной оплаты.",
+    "domain": "industry",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-21",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-05T08:06:08.419208+00:00",
+  "created_at": "2026-10-05T08:06:08.419208+00:00",
+  "updated_at": "2026-10-05T08:06:08.419208+00:00"
+}

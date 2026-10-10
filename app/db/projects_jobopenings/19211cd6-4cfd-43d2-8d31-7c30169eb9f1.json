@@ -1,0 +1,107 @@
+{
+  "id": "19211cd6-4cfd-43d2-8d31-7c30169eb9f1",
+  "title": "QA-инженер по автоматизации (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Строить тестирование модулей «Заявки в IT-поддержку» и «Отпуска и больничные»: тест-дизайн, автотесты на Cypress и Testcontainers, проверка API и регресса перед релизом.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "postman"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "cypress"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "testcontainers"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 115000,
+    "to": 175000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+  "project_id": "25cf3e1d-6eda-4b11-9e3d-c19ddce8d110",
+  "user_id": "c2a04164-548d-4fe3-a530-0f5b13628048",
+  "company": {
+    "id": "3be6145c-87c0-4edc-9c62-a1ada3c4d432",
+    "name": "IT-интегратор «Кодовые решения»"
+  },
+  "project": {
+    "name": "Внутренний портал сотрудников",
+    "summary": "Отпуска и больничные, база знаний и заявки в IT-поддержку для тысячи сотрудников.",
+    "domain": "internal",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-22",
+    "work_format": "hybrid",
+    "city": "Иннополис"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-30T01:46:23.457636+00:00",
+  "created_at": "2026-09-30T01:46:23.457636+00:00",
+  "updated_at": "2026-09-30T01:46:23.457636+00:00"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "5ddcb48b-b70f-4eea-9864-9c21988bfadb",
+  "title": "Kotlin-разработчик (Junior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Дорабатывать API модуля «Документы для банка»: новые методы, проверка входных данных, юнит-тесты на Kotlin. Код-ревью и помощь — от старших коллег.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "mongodb"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 105000,
+    "to": 160000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+  "project_id": "a508def1-ea9c-4239-b096-62b923e910b0",
+  "user_id": "af64e4c4-042b-48c2-8752-0c180698924d",
+  "company": {
+    "id": "6d29aab1-aca8-4292-b08a-b648388afc4c",
+    "name": "Банк «Северная гавань»"
+  },
+  "project": {
+    "name": "Интернет-банк для малого бизнеса",
+    "summary": "Веб- и мобильный кабинет предпринимателя: счета, платежи, зарплатный проект и валютный контроль.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-10-26",
+    "work_format": "hybrid",
+    "city": "Санкт-Петербург"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-27T17:12:07.916470+00:00",
+  "created_at": "2026-09-27T17:12:07.916470+00:00",
+  "updated_at": "2026-09-27T17:12:07.916470+00:00"
+}

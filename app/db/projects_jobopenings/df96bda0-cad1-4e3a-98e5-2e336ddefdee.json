@@ -1,0 +1,70 @@
+{
+  "id": "df96bda0-cad1-4e3a-98e5-2e336ddefdee",
+  "title": "Flutter-разработчик (Middle)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (Flutter)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать функции «Пропуска для гостей» и «Оплата коммунальных услуг» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "dart"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Как вы сделаете офлайн-режим экрана «Пропуска для гостей»: что кэшировать и как синхронизировать изменения?"
+  ],
+  "salary": {
+    "from": 160000,
+    "to": 235000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+  "project_id": "6b8c0ab7-b556-456b-84d6-ef759f538de9",
+  "user_id": "4bd46022-f45e-429f-9c44-6231a26c53b6",
+  "company": {
+    "id": "320fb3eb-8b7c-48af-91c4-7970e2c17548",
+    "name": "Девелопер «Новые кварталы»"
+  },
+  "project": {
+    "name": "Приложение жителя ЖК",
+    "summary": "Заявки в управляющую компанию, пропуска для гостей и оплата коммунальных услуг.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-12",
+    "work_format": "hybrid",
+    "city": "Тюмень"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-28T21:32:24.029185+00:00",
+  "created_at": "2026-08-28T21:32:24.029185+00:00",
+  "updated_at": "2026-08-28T21:32:24.029185+00:00"
+}

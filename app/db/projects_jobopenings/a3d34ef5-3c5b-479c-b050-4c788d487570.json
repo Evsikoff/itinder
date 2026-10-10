@@ -1,0 +1,81 @@
+{
+  "id": "a3d34ef5-3c5b-479c-b050-4c788d487570",
+  "title": "Тестировщик (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Писать тест-кейсы и проводить регресс модулей «Правила блокировки» и «Скоринг операций», исследовательское тестирование новых функций.",
+  "requirements": [
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "postman"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 155000,
+    "to": 225000,
+    "currency": "RUB"
+  },
+  "notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год. Полностью удалённая работа из любого города России.",
+  "project_id": "05ca7388-4211-4a89-bc9d-8ace89bd591a",
+  "user_id": "dd4a5cf8-88b4-4fa2-854f-aa06dfa08b1c",
+  "company": {
+    "id": "6d29aab1-aca8-4292-b08a-b648388afc4c",
+    "name": "Банк «Северная гавань»"
+  },
+  "project": {
+    "name": "Антифрод-платформа",
+    "summary": "Проверка операций клиентов в реальном времени: правила, скоринг и разбор подозрительных операций.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-07T22:54:58.613367+00:00",
+  "created_at": "2026-09-07T22:54:58.613367+00:00",
+  "updated_at": "2026-09-07T22:54:58.613367+00:00"
+}

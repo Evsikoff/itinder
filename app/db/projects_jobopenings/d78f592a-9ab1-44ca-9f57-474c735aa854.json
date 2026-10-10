@@ -1,0 +1,125 @@
+{
+  "id": "d78f592a-9ab1-44ca-9f57-474c735aa854",
+  "title": "QA-инженер по автоматизации (Senior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на pytest + httpx и Selenium WebDriver, метрики качества, наставничество для тестировщиков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python",
+        "java",
+        "kotlin",
+        "csharp"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "selenium"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Напишите баг-репорт: в разделе «Заявки на перевозку» кнопка «Сохранить» иногда не реагирует на нажатие."
+  ],
+  "salary": {
+    "from": 215000,
+    "to": 320000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+  "project_id": "fccae2eb-a7f9-4b9f-a4db-018fb7ed778c",
+  "user_id": "bb03ca09-3b6e-411d-9123-30fbe1fdba55",
+  "company": {
+    "id": "6774a5f8-e71d-4cda-8288-71e465844afd",
+    "name": "Транспортная компания «ГрузТранзит»"
+  },
+  "project": {
+    "name": "Биржа грузоперевозок",
+    "summary": "Заявки на перевозку, подбор перевозчика и электронные транспортные документы.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-07",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-26T23:40:57.447475+00:00",
+  "created_at": "2026-08-26T23:40:57.447475+00:00",
+  "updated_at": "2026-08-26T23:40:57.447475+00:00"
+}

@@ -1,0 +1,123 @@
+{
+  "id": "2f40e5ef-45f2-4611-a7c9-78c7ebcf1f13",
+  "title": "QA-инженер по автоматизации (Senior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на pytest + httpx и Playwright, метрики качества, наставничество для тестировщиков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python",
+        "kotlin",
+        "typescript",
+        "sql"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "sql_checks"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 180000,
+    "to": 250000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+  "project_id": "397d30fb-13b4-4399-a0f4-08dd55f841d5",
+  "user_id": "d21597fc-6467-40fc-ac19-287f146b66ac",
+  "company": {
+    "id": "489eedda-0164-4359-918e-be4286905656",
+    "name": "Агрохолдинг «Зелёная долина»"
+  },
+  "project": {
+    "name": "Агромониторинг полей",
+    "summary": "Карты полей, спутниковые снимки посевов и задания агрономам в мобильном приложении.",
+    "domain": "industry",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-28",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-09T22:59:18.429602+00:00",
+  "created_at": "2026-10-09T22:59:18.429602+00:00",
+  "updated_at": "2026-10-09T22:59:18.429602+00:00"
+}

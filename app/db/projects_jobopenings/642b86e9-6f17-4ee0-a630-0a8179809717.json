@@ -1,0 +1,135 @@
+{
+  "id": "642b86e9-6f17-4ee0-a630-0a8179809717",
+  "title": "Тестировщик (Junior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Тестировать новые функции модуля «Плейлисты» по чек-листам, заводить понятные баг-репорты, постепенно подключаться к автотестам.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin",
+        "typescript",
+        "sql"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "postman"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "k6"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "sql_checks"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 75000,
+    "to": 120000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "28825d89-0010-4df8-9035-a88c505e872c",
+  "user_id": "a7ea939b-7ff8-47fc-bdda-f5db4d6c186f",
+  "company": {
+    "id": "8ad2d3dc-3ef8-427e-af6e-ba24e6be12fe",
+    "name": "Стриминговый сервис «Волна»"
+  },
+  "project": {
+    "name": "Музыкальный стриминг",
+    "summary": "Плейлисты, рекомендации треков и офлайн-прослушивание для двух миллионов подписчиков.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "6to12",
+    "start_date": "2026-12-01",
+    "work_format": "hybrid",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-04T15:43:47.046349+00:00",
+  "created_at": "2026-10-04T15:43:47.046349+00:00",
+  "updated_at": "2026-10-04T15:43:47.046349+00:00"
+}

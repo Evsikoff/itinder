@@ -1,0 +1,68 @@
+{
+  "id": "1f0dff36-8b30-4cdf-8a51-fd134193155e",
+  "title": "Фронтенд-разработчик (Senior)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Персональные рекомендации» и ревьюить код команды.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 330000,
+    "to": 450000,
+    "currency": "RUB"
+  },
+  "notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+  "project_id": "b1f602e7-8a72-4b12-bfef-2d1e0d0e0e46",
+  "user_id": "ad0e0086-4118-456d-b410-9e7cac3b7b6d",
+  "company": {
+    "id": "ac038605-b47f-4a88-99a0-0c9ac4c8e39c",
+    "name": "Маркетплейс «Ярмарка»"
+  },
+  "project": {
+    "name": "Поиск и рекомендации товаров",
+    "summary": "Поисковая выдача и персональные рекомендации на сайте и в приложении маркетплейса.",
+    "domain": "retail",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-20",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-02T06:10:27.257913+00:00",
+  "created_at": "2026-09-02T06:10:27.257913+00:00",
+  "updated_at": "2026-09-02T06:10:27.257913+00:00"
+}

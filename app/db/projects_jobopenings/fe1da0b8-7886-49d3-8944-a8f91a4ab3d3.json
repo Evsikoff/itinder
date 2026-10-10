@@ -1,0 +1,107 @@
+{
+  "id": "fe1da0b8-7886-49d3-8944-a8f91a4ab3d3",
+  "title": "Системный аналитик (Middle)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Описывать требования и модель данных модулей «Поисковая выдача» и «Персональные рекомендации», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "mysql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "clickhouse"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 170000,
+    "to": 255000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития.",
+  "project_id": "b1f602e7-8a72-4b12-bfef-2d1e0d0e0e46",
+  "user_id": "ad0e0086-4118-456d-b410-9e7cac3b7b6d",
+  "company": {
+    "id": "ac038605-b47f-4a88-99a0-0c9ac4c8e39c",
+    "name": "Маркетплейс «Ярмарка»"
+  },
+  "project": {
+    "name": "Поиск и рекомендации товаров",
+    "summary": "Поисковая выдача и персональные рекомендации на сайте и в приложении маркетплейса.",
+    "domain": "retail",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-20",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-02T06:10:27.257913+00:00",
+  "created_at": "2026-09-02T06:10:27.257913+00:00",
+  "updated_at": "2026-09-02T06:10:27.257913+00:00"
+}

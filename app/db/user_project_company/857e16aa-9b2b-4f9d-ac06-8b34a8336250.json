@@ -1,0 +1,655 @@
+{
+  "id": "857e16aa-9b2b-4f9d-ac06-8b34a8336250",
+  "user_id": "eed72f75-7bcb-409f-a1f4-33520b763d62",
+  "company_id": "e01c2eba-11a0-4c96-95d0-6ec57e335b61",
+  "name": "Предзаказ кофе и бонусы",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Заказ напитка заранее, оплата в приложении и бонусная программа гостя.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-19",
+    "work_format": "office",
+    "clients": [
+      "android",
+      "ios"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "python",
+        "dart"
+      ],
+      "databases": [
+        "postgresql"
+      ],
+      "integrations": [
+        "rest",
+        "webhook"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "exploratory"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 2
+      },
+      "backend": {
+        "Middle": 2
+      },
+      "frontend": {
+        "Junior": 2
+      },
+      "qa": {
+        "Junior": 2
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "medium",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "manual",
+    "qa_focus": [
+      "mobile",
+      "logic"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1
+      },
+      "qa": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "city": "Санкт-Петербург",
+    "mobile_native": "cross",
+    "fixed_details[languages:python].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:python].importance": "required",
+    "fixed_details[languages:python].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:webhook].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:webhook].importance": "required",
+    "fixed_details[integrations:webhook].depth": "by_grade",
+    "fixed_details[languages:dart].positions": [
+      "frontend_mobile"
+    ],
+    "fixed_details[languages:dart].importance": "required",
+    "fixed_details[languages:dart].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:exploratory].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:exploratory].importance": "required",
+    "fixed_details[testing:exploratory].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "Python-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Исправлять ошибки и добавлять небольшие функции в модулях «Меню и предзаказ» и «Бонусы гостя», писать миграции PostgreSQL и тесты.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 90000,
+      "to": 135000
+    },
+    "vacancies[backend_main:Junior].notes": "Наставник на первые три месяца и понятный план развития.",
+    "vacancies[backend_main:Senior].title": "Python-разработчик (Senior)",
+    "vacancies[backend_main:Senior].task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по PostgreSQL и интеграциям, онбординг новичков.",
+    "vacancies[backend_main:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Senior].assignments": [],
+    "vacancies[backend_main:Senior].salary": {
+      "from": 330000,
+      "to": 485000
+    },
+    "vacancies[backend_main:Senior].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+    "vacancies[frontend_mobile:Middle].title": "Flutter-разработчик (Middle)",
+    "vacancies[frontend_mobile:Middle].task": "Разрабатывать функции «Бонусы гостя» и «Подарочные карты» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+    "vacancies[frontend_mobile:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "dart"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Middle].assignments": [],
+    "vacancies[frontend_mobile:Middle].salary": {
+      "from": 185000,
+      "to": 270000
+    },
+    "vacancies[frontend_mobile:Middle].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[qa:Junior].title": "Тестировщик (Junior)",
+    "vacancies[qa:Junior].task": "Проверять функции «Бонусы гостя» и «Подарочные карты» по тест-кейсам, заводить баг-репорты и проверять исправления.",
+    "vacancies[qa:Junior].requirements": [
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Junior].assignments": [],
+    "vacancies[qa:Junior].salary": {
+      "from": 70000,
+      "to": 110000
+    },
+    "vacancies[qa:Junior].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[qa:Middle].title": "Тестировщик (Middle)",
+    "vacancies[qa:Middle].task": "Писать тест-кейсы и проводить регресс модулей «Бонусы гостя» и «Подарочные карты», исследовательское тестирование новых функций.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 140000,
+      "to": 200000
+    },
+    "vacancies[qa:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+    "vacancies[analyst:Junior].title": "Системный аналитик (Junior)",
+    "vacancies[analyst:Junior].task": "Собирать и описывать требования к модулю «Подарочные карты», готовить пользовательские сценарии под руководством ведущего аналитика.",
+    "vacancies[analyst:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Junior].assignments": [
+      "Опишите сценарий «Подарочные карты»: участники, основной поток, альтернативы и исключения.",
+      "Опишите модель данных модуля «Подарочные карты»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Junior].salary": {
+      "from": 80000,
+      "to": 115000
+    },
+    "vacancies[analyst:Junior].notes": null,
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Подарочные карты» и «Меню и предзаказ», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [
+      "Опишите модель данных модуля «Меню и предзаказ»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Middle].salary": {
+      "from": 165000,
+      "to": 255000
+    },
+    "vacancies[analyst:Middle].notes": null
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "flutter",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_mobile",
+        "role": "frontend",
+        "name": "Мобильный разработчик (Flutter)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "python",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "webhook",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "dart",
+        "positions": [
+          "frontend_mobile"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "exploratory",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1
+      },
+      "qa": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "9ee1c45b-dc65-4546-bfed-0fb6e85450c4",
+    "08f32aac-6fc9-4cc1-ae38-2d67891494b5",
+    "ac9b3e53-0f82-4d44-bb37-0a81f3d40930",
+    "2dd74ca5-bfb7-4d08-b395-5b36500ac4e1",
+    "a07cd597-f391-401a-a269-3e9633354c75",
+    "b5e1069d-f8ec-46ec-bca3-54dc63930e3e",
+    "c99a39b2-fe61-4ba9-968c-59400e958062"
+  ],
+  "approved_at": "2026-08-30T09:51:37.329325+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-08-29T13:58:08.201743+00:00",
+  "updated_at": "2026-08-30T09:51:37.329325+00:00"
+}

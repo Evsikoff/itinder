@@ -1,0 +1,133 @@
+{
+  "id": "44cf84cc-baea-4f6b-a14a-67465926876f",
+  "title": "Kotlin-разработчик (Junior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Исправлять ошибки и добавлять небольшие функции в модулях «Бонусный счёт» и «Электронный чек», писать миграции MongoDB и тесты.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "mongodb"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "clickhouse"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 95000,
+    "to": 145000,
+    "currency": "RUB"
+  },
+  "notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год. Полностью удалённая работа из любого города России.",
+  "project_id": "4b0cfb4f-2cb1-405f-b982-2ea8e51d7392",
+  "user_id": "d21597fc-6467-40fc-ac19-287f146b66ac",
+  "company": {
+    "id": "f13d81f3-a2e3-4af1-bf71-83f464f4be39",
+    "name": "Сеть супермаркетов «Свежий квартал»"
+  },
+  "project": {
+    "name": "Программа лояльности",
+    "summary": "Бонусная карта в телефоне, персональные предложения и электронные чеки покупателя.",
+    "domain": "retail",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-10-22",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-07T03:55:42.503697+00:00",
+  "created_at": "2026-10-07T03:55:42.503697+00:00",
+  "updated_at": "2026-10-07T03:55:42.503697+00:00"
+}

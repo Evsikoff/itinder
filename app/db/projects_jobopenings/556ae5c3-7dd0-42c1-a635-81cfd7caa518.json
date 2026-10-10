@@ -1,0 +1,123 @@
+{
+  "id": "556ae5c3-7dd0-42c1-a635-81cfd7caa518",
+  "title": "Java-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по PostgreSQL и интеграциям, онбординг новичков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "graphql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "soap"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите таблицы PostgreSQL для модуля «Декларации» и индексы для трёх самых частых запросов.",
+    "Спроектируйте API модуля «Расчёт платежей»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+  ],
+  "salary": {
+    "from": 300000,
+    "to": 430000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+  "project_id": "6a3e9e23-4a92-4a05-b146-5bc4bf009411",
+  "user_id": "1db99444-1c9a-4fd9-b25c-607d5519677e",
+  "company": {
+    "id": "3c1d8a52-6b0e-4f7a-9d2c-5e8f1a7b4c90",
+    "name": "Логистический оператор «Евразийский коридор»"
+  },
+  "project": {
+    "name": "Таможенное оформление онлайн",
+    "summary": "Подготовка деклараций, обмен с таможенным брокером и расчёт таможенных платежей.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-04",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-09T05:13:30.182911+00:00",
+  "created_at": "2026-09-09T05:13:30.182911+00:00",
+  "updated_at": "2026-09-09T05:13:30.182911+00:00"
+}

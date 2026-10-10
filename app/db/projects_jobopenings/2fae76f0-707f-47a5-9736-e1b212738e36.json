@@ -1,0 +1,83 @@
+{
+  "id": "2fae76f0-707f-47a5-9736-e1b212738e36",
+  "title": "Android-разработчик (Senior)",
+  "position": "frontend_android",
+  "position_name": "Android-разработчик",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру Android-приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «Выписки и платежи».",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Как вы сделаете офлайн-режим экрана «Валютный контроль»: что кэшировать и как синхронизировать изменения?"
+  ],
+  "salary": {
+    "from": 330000,
+    "to": 450000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+  "project_id": "a508def1-ea9c-4239-b096-62b923e910b0",
+  "user_id": "af64e4c4-042b-48c2-8752-0c180698924d",
+  "company": {
+    "id": "6d29aab1-aca8-4292-b08a-b648388afc4c",
+    "name": "Банк «Северная гавань»"
+  },
+  "project": {
+    "name": "Интернет-банк для малого бизнеса",
+    "summary": "Веб- и мобильный кабинет предпринимателя: счета, платежи, зарплатный проект и валютный контроль.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-10-26",
+    "work_format": "hybrid",
+    "city": "Санкт-Петербург"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-27T17:12:07.916470+00:00",
+  "created_at": "2026-09-27T17:12:07.916470+00:00",
+  "updated_at": "2026-09-27T17:12:07.916470+00:00"
+}

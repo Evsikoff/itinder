@@ -1,0 +1,97 @@
+{
+  "id": "28298115-0162-4cd7-832a-0ab151738588",
+  "title": "QA-инженер по автоматизации (Senior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на pytest + httpx и Playwright, метрики качества, наставничество для тестировщиков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Напишите баг-репорт: в разделе «Гарантийные письма» кнопка «Сохранить» иногда не реагирует на нажатие.",
+    "Составьте 7–10 проверок функции «Отчёты по убыткам», включая граничные и негативные случаи."
+  ],
+  "salary": {
+    "from": 225000,
+    "to": 345000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+  "project_id": "a27c4620-b679-429e-aa24-74cd0f7bda35",
+  "user_id": "6ad706f8-8fd0-4ff4-b0c6-59a8635b979b",
+  "company": {
+    "id": "d244412e-9f9b-4895-ab2c-296eeaae1f01",
+    "name": "Страховая компания «Опора»"
+  },
+  "project": {
+    "name": "Кабинет корпоративного клиента ДМС",
+    "summary": "Кабинет отдела кадров компании-клиента: списки застрахованных, гарантийные письма, отчёты.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-30",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-29T05:16:29.122571+00:00",
+  "created_at": "2026-08-29T05:16:29.122571+00:00",
+  "updated_at": "2026-08-29T05:16:29.122571+00:00"
+}

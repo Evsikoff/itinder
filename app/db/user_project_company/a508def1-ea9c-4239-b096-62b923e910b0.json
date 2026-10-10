@@ -1,0 +1,607 @@
+{
+  "id": "a508def1-ea9c-4239-b096-62b923e910b0",
+  "user_id": "af64e4c4-042b-48c2-8752-0c180698924d",
+  "company_id": "6d29aab1-aca8-4292-b08a-b648388afc4c",
+  "name": "Интернет-банк для малого бизнеса",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Веб- и мобильный кабинет предпринимателя: счета, платежи, зарплатный проект и валютный контроль.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-10-26",
+    "work_format": "hybrid",
+    "clients": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "kotlin",
+        "javascript",
+        "swift"
+      ],
+      "databases": [
+        "mongodb",
+        "redis"
+      ],
+      "integrations": [
+        "rest",
+        "kafka",
+        "oidc"
+      ]
+    },
+    "existing_tests": {
+      "testing": []
+    },
+    "current_team": {
+      "backend": {
+        "Middle": 2
+      },
+      "frontend": {
+        "Middle": 2
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "high",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "web_ui",
+      "mobile",
+      "security"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 1
+      },
+      "frontend_android": {
+        "Senior": 1
+      },
+      "frontend_ios": {
+        "Middle": 1
+      }
+    },
+    "city": "Санкт-Петербург",
+    "mobile_native": "native",
+    "fixed_details[languages:kotlin].positions": [
+      "backend_main",
+      "frontend_android"
+    ],
+    "fixed_details[languages:kotlin].importance": "required",
+    "fixed_details[languages:kotlin].depth": "by_grade",
+    "fixed_details[databases:mongodb].positions": [
+      "backend_main"
+    ],
+    "fixed_details[databases:mongodb].importance": "required",
+    "fixed_details[databases:mongodb].depth": "by_grade",
+    "fixed_details[databases:redis].positions": [
+      "backend_main"
+    ],
+    "fixed_details[databases:redis].importance": "required",
+    "fixed_details[databases:redis].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_android",
+      "frontend_ios"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:kafka].positions": [
+      "backend_main"
+    ],
+    "fixed_details[integrations:kafka].importance": "required",
+    "fixed_details[integrations:kafka].depth": "by_grade",
+    "fixed_details[integrations:oidc].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_android",
+      "frontend_ios"
+    ],
+    "fixed_details[integrations:oidc].importance": "required",
+    "fixed_details[integrations:oidc].depth": "by_grade",
+    "fixed_details[languages:javascript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:javascript].importance": "required",
+    "fixed_details[languages:javascript].depth": "by_grade",
+    "fixed_details[languages:swift].positions": [
+      "frontend_ios"
+    ],
+    "fixed_details[languages:swift].importance": "required",
+    "fixed_details[languages:swift].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "Kotlin-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Дорабатывать API модуля «Документы для банка»: новые методы, проверка входных данных, юнит-тесты на Kotlin. Код-ревью и помощь — от старших коллег.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mongodb"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 105000,
+      "to": 160000
+    },
+    "vacancies[backend_main:Junior].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[backend_main:Middle].title": "Kotlin-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Документы для банка» и «Выписки и платежи»: API, бизнес-логика, схема MongoDB, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mongodb"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [
+      "Спроектируйте API модуля «Валютный контроль»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+    ],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 205000,
+      "to": 330000
+    },
+    "vacancies[backend_main:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Переводить раздел «Выписки и платежи» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "javascript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 210000,
+      "to": 305000
+    },
+    "vacancies[frontend_web:Middle].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[frontend_android:Senior].title": "Android-разработчик (Senior)",
+    "vacancies[frontend_android:Senior].task": "Отвечать за архитектуру Android-приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «Выписки и платежи».",
+    "vacancies[frontend_android:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_android:Senior].assignments": [
+      "Как вы сделаете офлайн-режим экрана «Валютный контроль»: что кэшировать и как синхронизировать изменения?"
+    ],
+    "vacancies[frontend_android:Senior].salary": {
+      "from": 330000,
+      "to": 450000
+    },
+    "vacancies[frontend_android:Senior].notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+    "vacancies[frontend_ios:Middle].title": "iOS-разработчик (Middle)",
+    "vacancies[frontend_ios:Middle].task": "Разрабатывать функции «Документы для банка» и «Выписки и платежи» iOS-приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+    "vacancies[frontend_ios:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "swift"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_ios:Middle].assignments": [],
+    "vacancies[frontend_ios:Middle].salary": {
+      "from": 215000,
+      "to": 325000
+    },
+    "vacancies[frontend_ios:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "native",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_android",
+        "role": "frontend",
+        "name": "Android-разработчик"
+      },
+      {
+        "id": "frontend_ios",
+        "role": "frontend",
+        "name": "iOS-разработчик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "kotlin",
+        "positions": [
+          "backend_main",
+          "frontend_android"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "mongodb",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "redis",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_android",
+          "frontend_ios"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "kafka",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "oidc",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_android",
+          "frontend_ios"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "javascript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "swift",
+        "positions": [
+          "frontend_ios"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 1
+      },
+      "frontend_android": {
+        "Senior": 1
+      },
+      "frontend_ios": {
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "5ddcb48b-b70f-4eea-9864-9c21988bfadb",
+    "dcf7f8e7-cd95-4fe7-8b4e-37b6e5e8b437",
+    "8f523fe1-3c14-49b8-8cfe-246ee00a8580",
+    "2fae76f0-707f-47a5-9736-e1b212738e36",
+    "d0590345-146b-4c51-8727-2764937c9b39"
+  ],
+  "approved_at": "2026-09-27T17:12:07.916470+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-25T12:40:00.352983+00:00",
+  "updated_at": "2026-09-27T17:12:07.916470+00:00"
+}

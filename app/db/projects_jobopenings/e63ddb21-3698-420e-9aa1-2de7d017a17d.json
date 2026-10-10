@@ -1,0 +1,71 @@
+{
+  "id": "e63ddb21-3698-420e-9aa1-2de7d017a17d",
+  "title": "Фронтенд-разработчик (Junior)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Верстать и подключать к API экраны «Доставка заказов» и «Бронирование в аптеке» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Страница «Бронирование в аптеке» открывается шесть секунд. С чего вы начнёте ускорение?",
+    "Опишите структуру компонентов экрана «Доставка заказов»: что хранится в состоянии, как показываются загрузка и ошибки."
+  ],
+  "salary": {
+    "from": 70000,
+    "to": 105000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "cb3fdcb5-5dec-4cff-8963-136c4ef6bd89",
+  "user_id": "26f29af6-b1eb-4abf-a663-a8ac350e57c3",
+  "company": {
+    "id": "1abafb5a-b272-445b-a998-d1749d22d2d0",
+    "name": "Аптечная сеть «Аптека у дома»"
+  },
+  "project": {
+    "name": "Бронирование и доставка лекарств",
+    "summary": "Поиск лекарства по наличию в ближайших аптеках, бронирование и доставка до двери.",
+    "domain": "health",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-10-12",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-14T02:29:38.518713+00:00",
+  "created_at": "2026-09-14T02:29:38.518713+00:00",
+  "updated_at": "2026-09-14T02:29:38.518713+00:00"
+}

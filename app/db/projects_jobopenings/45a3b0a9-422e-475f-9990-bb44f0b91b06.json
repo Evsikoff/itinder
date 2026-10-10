@@ -1,0 +1,124 @@
+{
+  "id": "45a3b0a9-422e-475f-9990-bb44f0b91b06",
+  "title": "Тестировщик (Junior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Тестировать новые функции модуля «Корзина и оплата» по чек-листам, заводить понятные баг-репорты, постепенно подключаться к автотестам.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "javascript",
+        "typescript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "k6"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Напишите баг-репорт: в разделе «Корзина и оплата» кнопка «Сохранить» иногда не реагирует на нажатие.",
+    "Составьте 7–10 проверок функции «Каталог ресторанов», включая граничные и негативные случаи."
+  ],
+  "salary": {
+    "from": 65000,
+    "to": 100000,
+    "currency": "RUB"
+  },
+  "notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+  "project_id": "af67a533-2694-4b20-b630-d6996f48c012",
+  "user_id": "aae53130-48c5-43e1-bd09-2a79d65fa17d",
+  "company": {
+    "id": "a2cc2697-3491-43b3-9e4f-cd96cd82ce53",
+    "name": "Сервис доставки еды «Вкусно рядом»"
+  },
+  "project": {
+    "name": "Приложение доставки еды",
+    "summary": "Выбор ресторана, корзина, оплата и отслеживание курьера на карте.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-11-13",
+    "work_format": "hybrid",
+    "city": "Новосибирск"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-29T04:39:10.603103+00:00",
+  "created_at": "2026-09-29T04:39:10.603103+00:00",
+  "updated_at": "2026-09-29T04:39:10.603103+00:00"
+}

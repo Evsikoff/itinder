@@ -1,0 +1,97 @@
+{
+  "id": "3317695b-1833-475e-a4ad-5ea244be82b5",
+  "title": "Системный аналитик (Middle)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Описывать требования и модель данных модулей «Пропуска для гостей» и «Заявки в управляющую компанию», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "mysql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "webhook"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите сценарий «Заявки в управляющую компанию»: участники, основной поток, альтернативы и исключения.",
+    "Опишите модель данных модуля «Оплата коммунальных услуг»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 155000,
+    "to": 220000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+  "project_id": "6b8c0ab7-b556-456b-84d6-ef759f538de9",
+  "user_id": "4bd46022-f45e-429f-9c44-6231a26c53b6",
+  "company": {
+    "id": "320fb3eb-8b7c-48af-91c4-7970e2c17548",
+    "name": "Девелопер «Новые кварталы»"
+  },
+  "project": {
+    "name": "Приложение жителя ЖК",
+    "summary": "Заявки в управляющую компанию, пропуска для гостей и оплата коммунальных услуг.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-12",
+    "work_format": "hybrid",
+    "city": "Тюмень"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-28T21:32:24.029185+00:00",
+  "created_at": "2026-08-28T21:32:24.029185+00:00",
+  "updated_at": "2026-08-28T21:32:24.029185+00:00"
+}

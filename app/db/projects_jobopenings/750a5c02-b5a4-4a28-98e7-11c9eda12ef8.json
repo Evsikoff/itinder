@@ -1,0 +1,133 @@
+{
+  "id": "750a5c02-b5a4-4a28-98e7-11c9eda12ef8",
+  "title": "Java-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по Postgres Pro и интеграциям, онбординг новичков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgres_pro"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "soap"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 240000,
+    "to": 360000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "9865b2d6-be75-4f94-a2af-0bbb9ed20716",
+  "user_id": "4e100201-1da8-4abf-8817-d6493df1ff75",
+  "company": {
+    "id": "475fdd3b-0145-46f0-8039-6d5343411b31",
+    "name": "Медицинский информационно-аналитический центр области"
+  },
+  "project": {
+    "name": "Региональная медицинская информационная система",
+    "summary": "Единая МИС для поликлиник и больниц области: регистратура, направления, рецепты и отчётность.",
+    "domain": "gov",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-09-26",
+    "work_format": "office",
+    "city": "Ярославль"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-08T16:32:59.720208+00:00",
+  "created_at": "2026-09-08T16:32:59.720208+00:00",
+  "updated_at": "2026-09-08T16:32:59.720208+00:00"
+}

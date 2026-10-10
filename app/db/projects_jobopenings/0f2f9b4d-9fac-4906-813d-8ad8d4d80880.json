@@ -1,0 +1,94 @@
+{
+  "id": "0f2f9b4d-9fac-4906-813d-8ad8d4d80880",
+  "title": "Системный аналитик (Junior)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Собирать и описывать требования к модулю «Запись к тренеру», готовить пользовательские сценарии под руководством ведущего аналитика.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "webhook"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 70000,
+    "to": 110000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+  "project_id": "cbd739bb-e230-4ce8-abdc-57d6788ba337",
+  "user_id": "296b0e8a-f222-4cda-8132-3505e7d9f2bf",
+  "company": {
+    "id": "3d3e6652-f713-4711-ad78-78f6e7971620",
+    "name": "Фитнес-сеть «Пульс»"
+  },
+  "project": {
+    "name": "Приложение фитнес-клуба",
+    "summary": "Расписание тренировок, запись к тренеру и продление абонемента в приложении.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-09",
+    "work_format": "hybrid",
+    "city": "Казань"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T03:51:43.378515+00:00",
+  "created_at": "2026-09-03T03:51:43.378515+00:00",
+  "updated_at": "2026-09-03T03:51:43.378515+00:00"
+}

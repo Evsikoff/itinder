@@ -1,0 +1,110 @@
+{
+  "id": "1e74eda3-096e-4d62-bff7-d562c1c8df83",
+  "title": "Системный аналитик (Senior)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в PostgreSQL, приоритизация требований вместе с заказчиком.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "soap"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите сценарий «Учёт сырья»: участники, основной поток, альтернативы и исключения.",
+    "Опишите модель данных модуля «Производственные заказы»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 240000,
+    "to": 350000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "d8fcbd1d-6e2c-4c21-8c0c-d4c7ccb0ead8",
+  "user_id": "0033974d-45e2-47c7-9d99-5a4ff5727b3d",
+  "company": {
+    "id": "a8fe1b59-2961-41d7-91e7-a46d21802d49",
+    "name": "Металлургический комбинат «УралСталь»"
+  },
+  "project": {
+    "name": "Учёт производства в 1С",
+    "summary": "Доработка конфигурации 1С: производственные заказы, учёт сырья и отчётность.",
+    "domain": "industry",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-31",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-20T15:10:26.360290+00:00",
+  "created_at": "2026-09-20T15:10:26.360290+00:00",
+  "updated_at": "2026-09-20T15:10:26.360290+00:00"
+}

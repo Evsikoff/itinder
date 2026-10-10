@@ -1,0 +1,68 @@
+{
+  "id": "ac9b3e53-0f82-4d44-bb37-0a81f3d40930",
+  "title": "Flutter-разработчик (Middle)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (Flutter)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать функции «Бонусы гостя» и «Подарочные карты» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "dart"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 185000,
+    "to": 270000,
+    "currency": "RUB"
+  },
+  "notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+  "project_id": "857e16aa-9b2b-4f9d-ac06-8b34a8336250",
+  "user_id": "eed72f75-7bcb-409f-a1f4-33520b763d62",
+  "company": {
+    "id": "e01c2eba-11a0-4c96-95d0-6ec57e335b61",
+    "name": "Сеть кофеен «Зерно»"
+  },
+  "project": {
+    "name": "Предзаказ кофе и бонусы",
+    "summary": "Заказ напитка заранее, оплата в приложении и бонусная программа гостя.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-19",
+    "work_format": "office",
+    "city": "Санкт-Петербург"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-30T09:51:37.329325+00:00",
+  "created_at": "2026-08-30T09:51:37.329325+00:00",
+  "updated_at": "2026-08-30T09:51:37.329325+00:00"
+}

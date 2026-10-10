@@ -1,0 +1,108 @@
+{
+  "id": "d50d0bf4-2a4b-41a8-8423-f25dfeb90d82",
+  "title": "QA-инженер по автоматизации (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Строить тестирование модулей «Отчёты для заказчика» и «Загрузка сотрудников»: тест-дизайн, автотесты на REST Assured + JUnit 5 и Cypress, проверка API и регресса перед релизом.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin",
+        "typescript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "rest_assured"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "cypress"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "allure"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 130000,
+    "to": 190000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+  "project_id": "645d20da-d5a2-4b5e-9f44-ecfb27e99fda",
+  "user_id": "108fabb8-029e-484b-a671-cdc188b5ced1",
+  "company": {
+    "id": "3be6145c-87c0-4edc-9c62-a1ada3c4d432",
+    "name": "IT-интегратор «Кодовые решения»"
+  },
+  "project": {
+    "name": "Учёт рабочего времени и проектов",
+    "summary": "Таймшиты, загрузка сотрудников по проектам и отчёты для заказчиков.",
+    "domain": "internal",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-10-14",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-18T17:02:53.124670+00:00",
+  "created_at": "2026-08-18T17:02:53.124670+00:00",
+  "updated_at": "2026-08-18T17:02:53.124670+00:00"
+}
