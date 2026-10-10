@@ -1,5 +1,6 @@
 // Окно кандидата (значок 4): входящие приглашения и исходящие отклики.
 // Список не отмечает уведомления просмотренными; это отдельное действие при открытии записи.
+// Вход в окно гасит только восклицательный знак значка (dismissCandidateInvitationsAlert).
 import { request } from './api';
 import type { Flow, InvitationType, StatusChange } from './applicants';
 import type { Requirement, Salary } from './projects';
@@ -71,6 +72,22 @@ export function markCandidateInvitationRead(
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_id: userId, invitation_id: invitationId, expected_revision: expectedRevision }),
+    });
+}
+
+export interface ShownInvitation {
+    id: string;
+    revision: number;
+}
+
+export function dismissCandidateInvitationsAlert(
+    userId: string,
+    shown: ShownInvitation[]
+): Promise<{ dismissed: number; alert: string | null }> {
+    return request('Восклицательный знак приглашений', '/api/applicant/invitations/dismiss-alert', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: userId, shown }),
     });
 }
 

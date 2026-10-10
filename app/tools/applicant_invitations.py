@@ -9,6 +9,11 @@ accepted или declined. При заданиях просмотр отмеча�
 в status_history того же JSON, решения — assignment_answers. applicant_seen
 запоминает последний показанный статус (status, at, revision) и гасит уведомление
 только до следующего изменения. Чтение списка само по себе ничего не меняет.
+
+Восклицательный знак у значка гасится и раньше — входом в окно: dismiss_alert
+пишет applicant_alert_seen для показанных окном версий. Отметка «Новое» у самих
+записей остаётся до их просмотра; новое приглашение или новый статус снова
+включают знак.
 """
 
 import copy
@@ -23,6 +28,7 @@ from users import UserError
 
 MAX_ANSWER = 5000
 MAX_BODY = 512 * 1024
+MAX_ALERT_BATCH = 1000  # версий в одном запросе dismiss_alert
 DEGREE_NAMES = {1: "базовая", 2: "уверенная", 3: "высокая"}
 OUTGOING_ALIAS = "Соискатель - Рекрутёр"
 
@@ -96,6 +102,11 @@ def _seen_marker(record):
 
 def _unseen(record):
     return record.get("applicant_seen") != _seen_marker(record)
+
+
+def _alerting(record):
+    """Версия не просмотрена и не показана при входе в окно."""
+    return _unseen(record) and record.get("applicant_alert_seen") != _seen_marker(record)
 
 
 def _can_respond(record):
@@ -243,9 +254,40 @@ def respond(user_id, invitation_id, action, answers, expected_revision):
         return _view(record)
 
 
+def dismiss_alert(user_id, shown):
+    """Вход в окно: гасит восклицательный знак для показанных версий [{"id", "revision"}].
+
+    Изменившаяся после показа версия, чужая или удалённая запись пропускаются.
+    """
+    user_id = specializations.check_user(user_id)
+    if not isinstance(shown, list) or len(shown) > MAX_ALERT_BATCH:
+        raise UserError("Нет списка показанных приглашений")
+    checked = {}
+    for item in shown:
+        if not isinstance(item, dict) or not isinstance(item.get("id"), str):
+            raise UserError("Неверная отметка показа приглашения")
+        revision = item.get("revision")
+        if type(revision) is not int or revision < 1:
+            raise UserError("Неверная версия приглашения")
+        checked[item["id"]] = revision
+    dismissed = 0
+    with invitations._lock:
+        for invitation_id, revision in checked.items():
+            try:
+                path, record = _own(user_id, invitation_id)
+            except UserError:
+                continue
+            if len(record["status_history"]) == revision and _alerting(record):
+                record["applicant_alert_seen"] = _seen_marker(record)
+                invitations._write(path, record)
+                dismissed += 1
+    return {"dismissed": dismissed, "alert": alert(user_id)}
+
+
 def alert(user_id):
-    """Подпись для восклицательного знака иконки: пока есть непоказанная версия."""
+    """Подпись для восклицательного знака иконки: пока есть версия, не просмотренная
+    и не показанная при входе в окно."""
     user_id = specializations.check_user(user_id)
     with invitations._lock:
-        count = sum(_unseen(record) for record in _own_records(user_id))
+        count = sum(_alerting(record) for record in _own_records(user_id))
     return f"Новые приглашения или изменения статуса: {count}" if count else None

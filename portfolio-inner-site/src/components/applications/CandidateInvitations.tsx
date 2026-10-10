@@ -4,6 +4,7 @@ import { ApiError, currentUserId } from '../../api';
 import {
     CandidateInvitation,
     CandidateInvitationsData,
+    dismissCandidateInvitationsAlert,
     fetchCandidateInvitations,
     generateCandidateInvitations,
     markCandidateInvitationRead,
@@ -18,6 +19,7 @@ export interface CandidateInvitationsProps extends WindowAppProps {
     title: string;
     image?: string;
     onAlertsChange: () => void;
+    minimized?: boolean; // окно свёрнуто на панель задач (Desktop)
 }
 
 type Direction = 'incoming' | 'outgoing';
@@ -25,6 +27,7 @@ type Drafts = { [invitationId: string]: string[] };
 const INCOMING = 'От рекрутера кандидату';
 const NO_USER = 'Не удалось узнать, кто вы. Войдите в ITinder и откройте окно снова.';
 const MAX_ANSWER = 5000;
+const ALERT_BATCH = 1000; // как MAX_ALERT_BATCH в app/tools/applicant_invitations.py
 
 function directionOf(invitation: CandidateInvitation): Direction {
     return invitation.type === INCOMING ? 'incoming' : 'outgoing';
@@ -83,8 +86,26 @@ const CandidateInvitations: React.FC<CandidateInvitationsProps> = (props) => {
     const dataRef = useRef(data);
     const selectionRef = useRef(selectedId);
     const alertsRef = useRef(props.onAlertsChange);
+    // Вход в окно (открытие или возврат из свёрнутого): следующий загруженный список гасит «!» у значка.
+    const entered = useRef(true);
+    const minimizedRef = useRef(props.minimized);
     alertsRef.current = props.onAlertsChange;
     selectionRef.current = selectedId;
+
+    // Гасит восклицательный знак для показанных версий; «Новое» у записей остаётся до их просмотра.
+    // Новое приглашение или новый статус после показа снова включают знак.
+    const dismissAlert = useCallback(async (shown: CandidateInvitation[]) => {
+        const versions = shown.filter((item) => item.unseen).map((item) => ({ id: item.id, revision: item.revision }));
+        if (!userId || !versions.length) return;
+        try {
+            for (let start = 0; start < versions.length; start += ALERT_BATCH) {
+                await dismissCandidateInvitationsAlert(userId, versions.slice(start, start + ALERT_BATCH));
+            }
+        } catch {
+            // Знак останется до следующего входа в окно; работе с приглашениями это не мешает.
+        }
+        alertsRef.current();
+    }, [userId]);
 
     const installRecord = useCallback((record: CandidateInvitation) => {
         const current = dataRef.current;
@@ -122,6 +143,10 @@ const CandidateInvitations: React.FC<CandidateInvitationsProps> = (props) => {
                 }
                 if (selectionRef.current && !nextSelected) setSelectedId(null);
                 if (oldNotifications !== newNotifications) alertsRef.current();
+                if (entered.current) {
+                    entered.current = false;
+                    dismissAlert(next.invitations);
+                }
             } catch (failure) {
                 if (!mounted.current) return;
                 pollingFailed.current = true;
@@ -136,7 +161,7 @@ const CandidateInvitations: React.FC<CandidateInvitationsProps> = (props) => {
         loadInFlight.current = work;
         work.finally(() => { loadInFlight.current = null; });
         return work;
-    }, [userId]);
+    }, [userId, dismissAlert]);
 
     useEffect(() => {
         mounted.current = true;
@@ -149,6 +174,14 @@ const CandidateInvitations: React.FC<CandidateInvitationsProps> = (props) => {
             window.clearInterval(interval);
         };
     }, [load]);
+
+    useEffect(() => {
+        const restored = minimizedRef.current && !props.minimized;
+        minimizedRef.current = props.minimized;
+        if (!restored) return;
+        entered.current = true;
+        load(true);
+    }, [props.minimized, load]);
 
     const generate = async () => {
         if (!userId || actionInFlight.current || loading || refreshing || dialog) return;
@@ -280,7 +313,7 @@ const CandidateInvitations: React.FC<CandidateInvitationsProps> = (props) => {
     const statuses = useMemo(() => {
         if (!data) return [];
         const union = Array.from(new Set([...Object.keys(data.flows.plain), ...Object.keys(data.flows.assignment), ...data.invitations.map((item) => item.status)]));
-        return union.map((id) => ({ id, label: direction === 'incoming' && id === 'sent' ? 'Принято' : statusLabel(data, id), taskOnly: !(id in data.flows.plain) && id in data.flows.assignment }));
+        return union.map((id) => ({ id, label: direction === 'incoming' && id === 'sent' ? 'Получено' : statusLabel(data, id), taskOnly: !(id in data.flows.plain) && id in data.flows.assignment }));
     }, [data, direction]);
 
     const switchDirection = (next: Direction) => {

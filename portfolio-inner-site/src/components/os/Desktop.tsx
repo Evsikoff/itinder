@@ -58,7 +58,8 @@ type ExtendedWindowAppProps<T> = T & WindowAppProps;
 // Окна дополнительных значков: id значка в app/db/additional_desktop_icons.json →
 // приложение. Оно получает ещё подпись значка (title), его картинку (image)
 // и onAlertsChange — сказать, что у пользователя что-то записано (итог теста,
-// связка с ФСП, просмотр приглашения): значки загружаются заново.
+// связка с ФСП, просмотр приглашения, вход в окно приглашений): значки загружаются заново.
+// Каждое окно получает и minimized — свёрнуто ли оно на панель задач.
 // У остальных значков окон пока нет.
 const ADDITIONAL_APPLICATIONS: {
     [id: number]: React.FC<
@@ -348,6 +349,7 @@ const Desktop: React.FC<DesktopProps> = (props) => {
                     >
                         {React.cloneElement(element, {
                             key,
+                            minimized: windows[key].minimized,
                             onInteract: () => onWindowInteract(key),
                             onClose: () => removeWindow(key),
                         })}

@@ -261,6 +261,59 @@ class CandidateInvitations(unittest.TestCase):
         applicant_invitations.read(self.candidate, another["id"], 1)
         self.assertIsNone(applicant_invitations.alert(self.candidate))
 
+    def test_entering_window_dismisses_icon_alert_until_new_invitation_or_status(self):
+        plain = self.make()
+        task = self.make(flow="assignment")
+        shown = [{"id": row["id"], "revision": 1} for row in (plain, task)]
+        self.assertEqual(applicant_invitations.alert(self.candidate), "Новые приглашения или изменения статуса: 2")
+        result = applicant_invitations.dismiss_alert(self.candidate, shown)
+        self.assertEqual(result, {"dismissed": 2, "alert": None})
+        self.assertIsNone(applicant_invitations.alert(self.candidate))
+        # Запись остаётся «Новой» в окне, статус и история не меняются.
+        listed = applicant_invitations.list_for_user(self.candidate)["invitations"]
+        self.assertTrue(all(item["unseen"] for item in listed))
+        self.assertEqual([item["status"] for item in listed], ["sent", "sent"])
+        saved = self.saved(plain)
+        self.assertNotIn("applicant_seen", saved)
+        self.assertEqual(saved["applicant_alert_seen"], {**saved["status_history"][-1], "revision": 1})
+        with patch.object(invitations, "_write") as mocked_write:
+            self.assertEqual(applicant_invitations.dismiss_alert(self.candidate, shown)["dismissed"], 0)
+        mocked_write.assert_not_called()
+
+        external = self.saved(task)
+        external["status_history"].append({"status": "task_needs_review", "at": "2026-10-09T15:00:00+00:00"})
+        write(self.path(task), external)
+        self.assertEqual(applicant_invitations.alert(self.candidate), "Новые приглашения или изменения статуса: 1")
+        # Окно показывало прежнюю версию: новый статус знак не гасит.
+        applicant_invitations.dismiss_alert(self.candidate, shown)
+        self.assertIsNotNone(applicant_invitations.alert(self.candidate))
+        applicant_invitations.dismiss_alert(self.candidate, [{"id": task["id"], "revision": 2}])
+        self.assertIsNone(applicant_invitations.alert(self.candidate))
+
+        another = self.make()
+        self.assertIsNotNone(applicant_invitations.alert(self.candidate))
+        applicant_invitations.read(self.candidate, another["id"], 1)
+        self.assertIsNone(applicant_invitations.alert(self.candidate))
+
+    def test_dismiss_alert_skips_foreign_and_missing_records_and_validates_input(self):
+        own = self.make()
+        foreign = self.make(user_id=self.other_candidate)
+        before = self.path(foreign).read_bytes()
+        result = applicant_invitations.dismiss_alert(self.candidate, [
+            {"id": foreign["id"], "revision": 1}, {"id": str(uuid.uuid4()), "revision": 1},
+            {"id": "../users/example", "revision": 1}, {"id": own["id"], "revision": 1},
+        ])
+        self.assertEqual(result, {"dismissed": 1, "alert": None})
+        self.assertEqual(before, self.path(foreign).read_bytes())
+        self.assertIsNotNone(applicant_invitations.alert(self.other_candidate))
+        own_before = self.path(own).read_bytes()
+        for shown in (None, {}, [None], [{"id": own["id"]}], [{"id": None, "revision": 1}],
+                      [{"id": own["id"], "revision": True}], [{"id": own["id"], "revision": 0}],
+                      [{"id": own["id"], "revision": 1}] * (applicant_invitations.MAX_ALERT_BATCH + 1)):
+            self.assert_error(400, applicant_invitations.dismiss_alert, self.candidate, shown)
+        self.assert_error(404, applicant_invitations.dismiss_alert, str(uuid.uuid4()), [])
+        self.assertEqual(own_before, self.path(own).read_bytes())
+
     def test_notification_marker_matches_revision_status_and_timestamp(self):
         record = self.make(flow="assignment")
         applicant_invitations.read(self.candidate, record["id"], 1)
