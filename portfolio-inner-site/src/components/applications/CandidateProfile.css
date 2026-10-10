@@ -55,3 +55,19 @@
 .cp-export-error { flex-shrink: 0; background: #fff2ea; border: 1px solid #b26948; padding: 8px; margin: 8px 10px 0; }
 .cp-dialog button:focus-visible, .cp-history-item summary:focus-visible { outline: 2px solid #000080; outline-offset: 1px; }
 @media (max-width: 750px) { .cp-stats { display: none; } .cp-avatar { width: 40px; height: 40px; font-size: 20px; } .cp-hero { padding: 10px; } .cp-identity h1 { font-size: 20px; } .cp-grades { padding: 0 10px 10px; max-height: 110px; } .cp-tabs .gt-tab { padding-left: 8px; padding-right: 8px; } }
+/* Тумблер «Скрыть профиль от рекрутёров» над собственным профилем (ProfileVisibility.tsx). */
+.cp-visibility.gt-group { flex-shrink: 0; margin: 8px 0 10px; padding: 12px 10px 8px; }
+.cp-visibility-row { align-items: center; gap: 14px; flex-wrap: wrap; }
+.grade-tasks button.cp-switch { display: flex; align-items: center; gap: 8px; padding: 2px; border: none; background: none; cursor: pointer; flex-shrink: 0; }
+.grade-tasks button.cp-switch:disabled { cursor: default; }
+.grade-tasks button.cp-switch:disabled .cp-switch-label { color: #86898d; text-shadow: 1px 1px #fff; }
+.grade-tasks button.cp-switch:focus-visible { outline: 1px dotted #000; outline-offset: 1px; }
+.cp-switch-track { position: relative; display: block; width: 42px; height: 20px; flex-shrink: 0; background: #fff; box-shadow: var(--border-field); transition: background .12s; }
+.cp-switch-on .cp-switch-track { background: #000080; }
+.cp-switch-knob { position: absolute; top: 2px; left: 2px; display: block; width: 18px; height: 16px; background: var(--surface); box-shadow: var(--border-raised-outer), var(--border-raised-inner); transition: left .12s; }
+.cp-switch-on .cp-switch-knob { left: 22px; }
+.cp-switch-label { font-weight: bold; }
+.cp-visibility-hint { display: block; flex: 1 1 260px; min-width: 0; }
+.cp-visibility-error { align-items: center; gap: 8px; margin-top: 8px; padding: 6px 8px; background: #fff2ea; border: 1px solid #b26948; }
+.cp-visibility-error .site-button { margin-left: auto; }
+@media (prefers-reduced-motion: reduce) { .cp-switch-track, .cp-switch-knob { transition: none; } }

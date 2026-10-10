@@ -50,3 +50,22 @@ export async function downloadSelfProfile(userId: string): Promise<void> {
         throw new ApiError('Не удалось скачать PDF. Повторите попытку.', 0);
     } finally { window.clearTimeout(timer); }
 }
+
+// Видимость собственного профиля для рекрутёров (app/tools/profile_visibility.py):
+// hidden — в app/db/user_blocks есть файл пользователя, и окно «Соискатели» его не показывает.
+export interface ProfileVisibility {
+    hidden: boolean;
+    hidden_at: string | null;
+}
+
+export function fetchProfileVisibility(userId: string): Promise<ProfileVisibility> {
+    return request('Видимость профиля', `/api/applicant/visibility?user_id=${encodeURIComponent(userId)}`);
+}
+
+export function saveProfileVisibility(userId: string, hidden: boolean): Promise<ProfileVisibility> {
+    return request('Видимость профиля', '/api/applicant/visibility', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: userId, hidden }),
+    });
+}
