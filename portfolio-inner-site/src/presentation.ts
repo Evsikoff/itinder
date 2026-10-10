@@ -29,6 +29,12 @@ export const VACANCIES_PRESENTATION: PresentationSource = {
     seenKey: 'itinder.vacanciesPresentation.seen.',
 };
 
+// «Проекты и вакансии»: путь рекрутёра от анкеты проекта до найма.
+export const PROJECTS_PRESENTATION: PresentationSource = {
+    url: '/app/assets/presentation/projects_vacancies/slides.json',
+    seenKey: 'itinder.projectsPresentation.seen.',
+};
+
 export interface PresentationMedia {
     name: string;
     url: string; // адрес на сервере: /app/assets/…

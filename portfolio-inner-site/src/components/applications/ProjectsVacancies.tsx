@@ -34,7 +34,9 @@ import {
     TemplateItem,
     UNKNOWN,
 } from '../../projectQuestionnaire';
+import { markPresentationSeen, presentationSeen, PROJECTS_PRESENTATION } from '../../presentation';
 import { SignIcon } from './GradeTasks';
+import Presentation from './Presentation';
 import ProjectQuestionnaire from './ProjectQuestionnaire';
 import ProjectFeedback from './ProjectFeedback';
 import VacancyEditor, { VacancyCard } from './VacancyEditor';
@@ -44,6 +46,8 @@ import './FspAchievements.css';
 import './ProjectsVacancies.css';
 
 // «Проекты и вакансии» — окно значка id 8 на рабочем столе рекрутёра.
+// При первом запуске — презентация о пути от анкеты до найма
+// (app/assets/presentation/projects_vacancies/slides.json), потом окно.
 // Список проектов: создать, открыть, копировать, отметить «набор завершён», удалить.
 // Новый проект: название и компания (из app/db/companies или новая), потом анкета
 // (ProjectQuestionnaire, правила — app/db/project_questionnaire.json). Анкета
@@ -94,6 +98,8 @@ const ProjectsVacancies: React.FC<ProjectsVacanciesProps> = (props) => {
         width: Math.max(720, Math.min(1180, window.innerWidth - 60)),
         height: Math.max(520, Math.min(840, window.innerHeight - 50)),
     }));
+    const [presenting, setPresenting] = useState(() => !presentationSeen(PROJECTS_PRESENTATION, userId));
+    const [presentationPauses, setPresentationPauses] = useState(0);
     const [stage, setStage] = useState<Stage>('loading');
     const [busyText, setBusyText] = useState('');
     const [error, setError] = useState<{ message: string; retry: (() => void) | null }>({ message: '', retry: null });
@@ -123,6 +129,17 @@ const ProjectsVacancies: React.FC<ProjectsVacanciesProps> = (props) => {
                 : null,
         [catalog]
     );
+
+    // Отметка ставится, как только презентация открылась: «при первом запуске».
+    useEffect(() => {
+        if (presenting) markPresentationSeen(PROJECTS_PRESENTATION, userId);
+    }, [presenting, userId]);
+
+    // Свёрнутое окно не должно говорить: презентацию — на паузу.
+    const minimize = () => {
+        if (presenting) setPresentationPauses((count) => count + 1);
+        props.onMinimize();
+    };
 
     const closeDialog = useCallback(() => setDialog(null), []);
     const showDialog = useCallback((next: Dialog) => setDialog(next), []);
@@ -1032,11 +1049,15 @@ const ProjectsVacancies: React.FC<ProjectsVacanciesProps> = (props) => {
             windowBarIcon="windowExplorerIcon"
             closeWindow={props.onClose}
             onInteract={props.onInteract}
-            minimizeWindow={props.onMinimize}
-            bottomLeftText={stage === 'view' || stage === 'editor' ? project?.name ?? '' : `Проектов: ${projects.length}`}
+            minimizeWindow={minimize}
+            bottomLeftText={presenting ? 'Презентация' : stage === 'view' || stage === 'editor' ? project?.name ?? '' : `Проектов: ${projects.length}`}
         >
             <div className="grade-tasks projects-vacancies">
-                {renderStage()}
+                {presenting ? (
+                    <Presentation source={PROJECTS_PRESENTATION} onClose={() => setPresenting(false)} pauseRequest={presentationPauses} />
+                ) : (
+                    renderStage()
+                )}
                 {copyPrompt && !dialog && (
                     <DialogView dialog={copyDialog(copyPrompt)} onInput={(value) => setCopyPrompt({ ...copyPrompt, value })} />
                 )}

@@ -1,14 +1,18 @@
 import React from 'react';
-import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ApiError } from '../../api';
 import { fetchCatalog, fetchProject, fetchProjects, generateTestFeedback, markProjectNewsRead, Project, ProjectSummary } from '../../projects';
+import { PROJECTS_PRESENTATION } from '../../presentation';
 import ProjectsVacancies from './ProjectsVacancies';
 
 jest.mock('../os/Window', () => ({
     __esModule: true, default: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
 }));
 jest.mock('./GradeTasks', () => ({ SignIcon: () => null }));
+jest.mock('./Presentation', () => ({
+    __esModule: true, default: ({ onClose }: { onClose: () => void }) => <button onClick={onClose}>Закрыть презентацию</button>,
+}));
 jest.mock('./ProjectQuestionnaire', () => ({ __esModule: true, default: () => null }));
 jest.mock('./ProjectFeedback', () => ({ __esModule: true, default: () => <div>Дерево обратной связи</div> }));
 jest.mock('./VacancyEditor', () => ({ __esModule: true, default: () => null, VacancyCard: () => null }));
@@ -39,27 +43,48 @@ const summary: ProjectSummary = {
     created_at: '2026-10-09T10:00:00+00:00', updated_at: '2026-10-09T10:00:00+00:00',
     approved_at: '2026-10-09T10:00:00+00:00', completed_at: null, copied_from: null, news,
 };
+const SEEN_KEY = PROJECTS_PRESENTATION.seenKey + 'recruiter-test';
 const opened: Project = {
     ...summary, questionnaire: { id: 'test', version: 1 }, answers: {}, summary: { open_questions: [] },
     approved: true, vacancies_list: [], accepted_news: [{ id: 'invitation-test', revision: 3 }],
 };
 
-async function openList() {
+function renderWindow() {
     const alerts = jest.fn();
     render(<ProjectsVacancies title="Проекты и вакансии" onAlertsChange={alerts}
         onClose={jest.fn()} onMinimize={jest.fn()} onInteract={jest.fn()} />);
+    return alerts;
+}
+
+async function openList() {
+    const alerts = renderWindow();
     await screen.findByRole('listbox', { name: 'Проекты' });
     return alerts;
 }
 
 beforeEach(() => {
     jest.clearAllMocks();
+    // Презентацию первого запуска проверяют отдельные тесты, остальным она уже показана.
+    localStorage.setItem(SEEN_KEY, '2026-10-09T10:00:00.000Z');
     // Анкета для этих проверок не нужна; список и открытый проект работают без неё.
     catalogRequest.mockResolvedValue(null as any);
     projectsRequest.mockResolvedValue([summary, { ...summary, id: 'quiet-project', name: 'Без новостей', news: undefined }]);
     projectRequest.mockResolvedValue(opened);
     readRequest.mockResolvedValue({ project_id: summary.id, news: { ...news, accepted_invitations: 0 } });
     feedbackRequest.mockResolvedValue(feedbackResult);
+});
+
+test('при первом запуске окно показывает презентацию один раз, потом список проектов', async () => {
+    localStorage.removeItem(SEEN_KEY);
+    renderWindow();
+    expect(screen.getByRole('button', { name: 'Закрыть презентацию' })).toBeInTheDocument();
+    expect(screen.queryByRole('listbox', { name: 'Проекты' })).not.toBeInTheDocument();
+    expect(localStorage.getItem(SEEN_KEY)).not.toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: 'Закрыть презентацию' }));
+    await screen.findByRole('listbox', { name: 'Проекты' });
+    cleanup();
+    await openList();
+    expect(screen.queryByRole('button', { name: 'Закрыть презентацию' })).not.toBeInTheDocument();
 });
 
 test('колонка показывает все плашки только в строке соответствующего проекта', async () => {
