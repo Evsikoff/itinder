@@ -845,6 +845,9 @@ export class QuestionnaireEngine {
             }));
         d.fixed = itemsFrom('fix', singleAllowed);
         d.legacy = itemsFrom('legacy', []);
+        // Языки заданного стека, в том числе те, которым позиции пока нет: Dart задаёт вариант
+        // Flutter, а тот — позицию мобильного разработчика, которой Dart и нужен.
+        const fixedLanguages = d.fixed.filter((item) => item.kind === 'languages').map((item) => item.id);
         d.fixed
             .filter((item) => !item.scope.length)
             .forEach((item) =>
@@ -879,7 +882,6 @@ export class QuestionnaireEngine {
         };
         const clients: string[] = this.answerOf('clients') ?? [];
         const platforms = CLIENT_PLATFORMS.filter((platform) => clients.includes(platform));
-        const fixedLanguages = d.fixed.filter((item) => item.kind === 'languages').map((item) => item.id);
         const blocking = (text: string, origin: string) => questions.push({ text, blocking: true, origin, resolved: false });
 
         const raw: Collected[] = [
@@ -904,10 +906,15 @@ export class QuestionnaireEngine {
                 const languagesOf = (variant: MobileVariant) => unique(platforms.flatMap((p) => variant.platforms[p] ?? []));
                 if (allowed.languages) variants = variants.filter((v) => languagesOf(v).every((id) => allowed.languages.includes(id)));
                 if (d.kindMode.languages === 'fixed') {
-                    if (!variants.some((v) => languagesOf(v).every((id) => fixedLanguages.includes(id)))) {
+                    // Языки заданы целиком: вариант — тот, чьи языки в стеке есть. Один — он и выбран,
+                    // несколько — выбор между ними, по умолчанию первый по rules.mobile_variants.
+                    variants = this.schema.rules.mobile_variants.filter(
+                        (v) => variants.includes(v) && languagesOf(v).every((id) => fixedLanguages.includes(id))
+                    );
+                    if (!variants.length) {
                         blocking(`${reason}: в заданном стеке нет языков мобильной разработки — уточните у техлида`, origin);
+                        return;
                     }
-                    return;
                 }
                 if (!variants.length) {
                     blocking(`${reason}: нет разрешённых вариантов мобильного приложения`, origin);
@@ -1021,7 +1028,9 @@ export class QuestionnaireEngine {
             const order = need.candidates.slice();
             need.candidates.sort((a, b) => b.score - a.score || order.indexOf(a) - order.indexOf(b));
             const allZero = need.candidates.every((c) => c.supply === 0);
-            const best = allZero
+            // Вариант мобильного приложения при заданных языках: код уже написан, рынок не решает.
+            const fixedVariant = need.variants && d.kindMode.languages === 'fixed';
+            const best = allZero || fixedVariant
                 ? order.slice().sort((a, b) => b.weight - a.weight || order.indexOf(a) - order.indexOf(b))[0]
                 : need.candidates[0];
             need.recommended = best.key;
