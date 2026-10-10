@@ -67,6 +67,8 @@ STATUSES = tuple(dict.fromkeys(status for flow in FLOWS.values() for status in f
 REJECTED = ("declined", "solution_rejected")
 # Откуда отправлено: экраны окна «Соискатели».
 SOURCES = ("team", "vacancy", "search")
+# Откуда отправлен отклик соискателя: окно «Вакансии» (app/tools/vacancy_search.py).
+APPLICATION_SOURCE = "vacancies"
 # Поля вакансии, которые не уходят в снимок: служебные поля файла.
 VACANCY_SKIP = ("user_id", "created_at", "updated_at")
 

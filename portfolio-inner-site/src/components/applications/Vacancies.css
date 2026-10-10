@@ -1,0 +1,297 @@
+/* Окно «Вакансии» соискателя (Vacancies.tsx): список слева, карточка справа,
+   окно отклика с решениями заданий. Остальное — GradeTasks.css (gt-*),
+   ProjectsVacancies.css (pv-*) и Applicants.css (ap-*: релевантность, чипы,
+   разбор требований). В App.css у всех div display: flex. */
+
+.vacancies .vc-notice {
+    align-items: center;
+    flex-shrink: 0;
+    padding: 6px 10px;
+    margin-bottom: 4px;
+    background: #ffffe1;
+    border: 1px solid #000;
+}
+
+.vacancies .vc-notice p {
+    margin-left: 12px;
+    flex: 1;
+}
+
+.vacancies .vc-filters {
+    margin-top: 6px;
+}
+
+.vc-content {
+    align-items: stretch;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+/* --- Список ---------------------------------------------------------------------- */
+
+.vc-list {
+    width: 330px;
+    flex-shrink: 0;
+    padding: 2px;
+    outline: none;
+}
+
+.vc-list:focus-visible {
+    outline: 1px dotted #000;
+    outline-offset: -4px;
+}
+
+.vc-row {
+    flex-shrink: 0;
+    padding: 5px 6px 6px 0;
+    border-bottom: 1px solid #c3c6ca;
+    cursor: default;
+}
+
+.vc-row:hover {
+    background: #eef0ff;
+}
+
+.vc-row-active,
+.vc-row-active:hover {
+    background: #0000a3;
+}
+
+.vc-row-active span,
+.vc-row-active b {
+    color: #fff !important;
+}
+
+.vc-row-active .gt-badge {
+    color: #000 !important;
+}
+
+.vacancies .vc-row .ap-rank {
+    width: 24px;
+}
+
+.vc-row-head {
+    align-items: flex-start;
+}
+
+.vacancies .vc-row-head .ap-relevance {
+    margin-top: 1px;
+}
+
+/* Названия длинные («Фронтенд-разработчик (веб) (Junior)») — переносятся. */
+.vacancies .vc-row-title {
+    flex: 1;
+    min-width: 0;
+    margin-left: 8px;
+    overflow-wrap: anywhere;
+}
+
+.vacancies .vc-row-line {
+    display: block;
+    margin-top: 2px;
+    padding-left: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vacancies div.vc-row-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    white-space: normal;
+}
+
+.vacancies .vc-list-empty {
+    padding: 8px;
+}
+
+/* --- Карточка -------------------------------------------------------------------- */
+
+.vc-detail {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 12px 12px;
+}
+
+.vc-detail .gt-group {
+    margin-top: 16px;
+}
+
+.vc-detail .gt-group-label {
+    background: #fff;
+    font-weight: bold;
+}
+
+.vc-detail-head {
+    flex-shrink: 0;
+}
+
+.vacancies .vc-detail-title {
+    font-size: 18px;
+}
+
+.vacancies .vc-facts {
+    margin-top: 6px;
+}
+
+.vc-action {
+    margin-top: 10px;
+    padding: 8px 10px;
+    gap: 10px;
+    background: #f6f6f8;
+    border: 1px solid #86898d;
+}
+
+.vacancies .vc-action .ap-relevance {
+    margin-left: 0;
+}
+
+.vacancies .vc-action-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.vacancies .vc-action .site-button {
+    margin-left: 0;
+}
+
+/* Подхожу, подходит, очередь: имя, полоса 0…1, число, объяснение. */
+.vc-part {
+    align-items: flex-start;
+    padding: 5px 0;
+    border-top: 1px dotted #c3c6ca;
+}
+
+.vc-part:first-of-type {
+    border-top: none;
+}
+
+.vacancies .vc-part-name {
+    width: 84px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.vacancies .vc-part-bar {
+    display: flex;
+    width: 90px;
+    height: 12px;
+    margin-top: 4px;
+    padding: 2px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: var(--border-field);
+}
+
+.vacancies .vc-part-score {
+    width: 46px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.vacancies .vc-part-why {
+    flex: 1;
+    min-width: 0;
+}
+
+.vacancies .vc-formula {
+    margin-top: 6px;
+    padding: 4px 6px;
+    background: #f6f6f8;
+    font-family: 'Courier New', Consolas, monospace !important;
+}
+
+.grade-tasks ul.vc-gaps {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.grade-tasks ul.vc-gaps li {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.vacancies .vc-ok {
+    color: #008000;
+    font-weight: bold;
+}
+
+.vacancies .ap-requirements {
+    margin-left: 0;
+}
+
+.vacancies .ap-requirement-have {
+    width: 220px;
+}
+
+/* Сильные стороны: нужна вакансии, закрывает близкую, не нужна. */
+.applicants .vc-chip-used {
+    background: #dfe3ff;
+    border-color: #0000a3;
+}
+
+.applicants .vc-chip-idle {
+    background: #f6f6f8;
+}
+
+.applicants .vc-chip-idle .ap-chip-name {
+    color: #86898d;
+}
+
+.vacancies .vc-legend {
+    margin-top: 6px;
+}
+
+.vacancies .vc-key {
+    display: inline-block;
+    width: 12px;
+    height: 10px;
+    margin: 0 4px 0 10px;
+    border: 1px solid #86898d;
+    vertical-align: middle;
+}
+
+.grade-tasks ol.vc-assignments {
+    margin: 4px 0 0;
+    padding-left: 22px;
+}
+
+.vc-empty {
+    flex: 1;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* --- Отклик ---------------------------------------------------------------------- */
+
+.vc-apply {
+    width: 640px;
+}
+
+.vc-apply-body {
+    flex: 1;
+    min-width: 0;
+    margin-left: 16px;
+}
+
+.vc-apply-tasks {
+    max-height: 46vh;
+    margin-top: 8px;
+    padding-right: 4px;
+}
+
+.vc-answer {
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.grade-tasks .vc-answer textarea.gt-textarea {
+    min-height: 90px;
+    margin: 4px 0 2px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}

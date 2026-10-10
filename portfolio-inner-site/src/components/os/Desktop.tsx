@@ -14,6 +14,7 @@ import FspAchievements from '../applications/FspAchievements';
 import ProjectsVacancies from '../applications/ProjectsVacancies';
 import Applicants from '../applications/Applicants';
 import CandidateInvitations from '../applications/CandidateInvitations';
+import Vacancies from '../applications/Vacancies';
 import MyProfile from '../applications/MyProfile';
 import { IconName } from '../../assets/icons';
 import { useWindowSize } from 'usehooks-ts';
@@ -66,6 +67,7 @@ const ADDITIONAL_APPLICATIONS: {
 } = {
     1: FspAchievements, // «Достижения в ФСП»
     2: GradeTasks, // «Задачи на грейд»
+    3: Vacancies, // «Вакансии» соискателя
     4: CandidateInvitations, // «Приглашения» соискателя
     6: MyProfile, // собственный профиль и экспорт PDF
     8: ProjectsVacancies, // «Проекты и вакансии» рекрутёра
