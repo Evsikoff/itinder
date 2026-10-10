@@ -128,6 +128,11 @@ API (только с этой же страницы). Ошибка — код 4x
         свой контакт и задания из всех собственных приглашений/откликов.
     GET /api/applicant/profile/pdf?user_id=<id> — PDF этого профиля, attachment;
         ReportLab и Consolas (Windows) или DejaVu Sans Mono (Linux).
+    GET /api/applicant/visibility?user_id=<id> — скрыт ли профиль от рекрутёров:
+        {"hidden", "hidden_at"} (app/tools/profile_visibility.py).
+    POST /api/applicant/visibility {"user_id", "hidden"} — тумблер окна «PDF-профиль»:
+        true кладёт app/db/user_blocks/<id>.json, и окно «Соискатели» перестаёт
+        показывать соискателя, false удаляет файл; отвечает как GET.
     GET /api/applicant/invitations?user_id=<id> — приглашения и отклики соискателя,
         наборы статусов и справочники (app/tools/applicant_invitations.py).
     POST /api/applicant/invitations/read {"user_id", "invitation_id", "expected_revision"}
@@ -174,6 +179,7 @@ import projects
 import project_news
 import project_feedback
 import candidate_profile
+import profile_visibility
 import test_feedback
 import resume
 import specializations
@@ -400,6 +406,18 @@ def api_self_profile_pdf(query):
     return 200, profile_pdf.export(query.get("user_id")), "PDF собственного профиля соискателя"
 
 
+def api_profile_visibility(query):
+    data = profile_visibility.state(query.get("user_id"))
+    return 200, data, f"Видимость профиля {query.get('user_id')} для рекрутёров: {'скрыт' if data['hidden'] else 'виден'}"
+
+
+def api_profile_visibility_update(body):
+    data = json_body(body)
+    result = profile_visibility.update(data.get("user_id"), data.get("hidden"))
+    verdict = "скрыт от рекрутёров" if result["hidden"] else "снова виден рекрутёрам"
+    return 200, result, f"Профиль {data.get('user_id')} {verdict}"
+
+
 def api_project_feedback_review(body):
     data = json_body(body)
     result = project_feedback.review(data.get("user_id"), data.get("project_id"), data.get("invitation_id"),
@@ -561,6 +579,7 @@ API = {
     "/api/projects/complete": ("application/json", MAX_JSON, api_projects_complete),
     "/api/projects/delete": ("application/json", MAX_JSON, api_projects_delete),
     "/api/invitations": ("application/json", MAX_JSON, api_invitations),
+    "/api/applicant/visibility": ("application/json", MAX_JSON, api_profile_visibility_update),
     "/api/applicant/invitations/read": ("application/json", MAX_JSON, api_applicant_invitations_read),
     "/api/applicant/invitations/dismiss-alert": ("application/json", applicant_invitations.MAX_BODY, api_applicant_invitations_dismiss_alert),
     "/api/applicant/invitations/respond": ("application/json", applicant_invitations.MAX_BODY, api_applicant_invitations_respond),
@@ -582,6 +601,7 @@ GET_API = {
     "/api/applicants/profile": api_candidate_profile,
     "/api/applicant/profile": api_self_profile,
     "/api/applicant/profile/pdf": api_self_profile_pdf,
+    "/api/applicant/visibility": api_profile_visibility,
     "/api/applicants/overview": api_applicants_overview,
     "/api/applicants/team": api_applicants_team,
     "/api/applicants/vacancy": api_applicants_vacancy,

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { currentUserId } from '../../api';
 import Window from '../os/Window';
 import CandidateProfile from './CandidateProfile';
+import ProfileVisibility from './ProfileVisibility';
 import { CandidateInvitationsProps } from './CandidateInvitations';
 import './GradeTasks.css';
 
@@ -13,8 +14,10 @@ const MyProfile: React.FC<CandidateInvitationsProps> = props => {
         windowBarImage={props.image} windowBarIcon="windowExplorerIcon" closeWindow={props.onClose}
         onInteract={props.onInteract} minimizeWindow={props.onMinimize} bottomLeftText="Мой профиль · PDF">
         <div className="grade-tasks">
-            {userId ? <CandidateProfile self embedded userId={userId} applicantId={userId} onClose={props.onClose}
-                /> : <p role="alert">Войдите в ITinder, чтобы открыть свой профиль.</p>}
+            {userId ? <>
+                <ProfileVisibility userId={userId} />
+                <CandidateProfile self embedded userId={userId} applicantId={userId} onClose={props.onClose} />
+            </> : <p role="alert">Войдите в ITinder, чтобы открыть свой профиль.</p>}
         </div>
     </Window>;
 };
