@@ -15,3 +15,4 @@ data
 *.pdf
 portfolio-inner-site/build
 resume3/public
+**/.venv
