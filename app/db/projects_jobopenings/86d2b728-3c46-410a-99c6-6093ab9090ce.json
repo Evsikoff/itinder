@@ -1,0 +1,107 @@
+{
+  "id": "86d2b728-3c46-410a-99c6-6093ab9090ce",
+  "title": "1С-разработчик (Junior)",
+  "position": "backend_1c",
+  "position_name": "1С-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Дорабатывать отчёты и печатные формы модуля «Сдельная оплата», исправлять ошибки конфигурации под руководством ведущего разработчика.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "bsl"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 75000,
+    "to": 110000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "e5885701-f89c-4262-b39b-298c9eac6865",
+  "user_id": "255c62c5-adc5-455a-ab80-7c95bf1b3154",
+  "company": {
+    "id": "489eedda-0164-4359-918e-be4286905656",
+    "name": "Агрохолдинг «Зелёная долина»"
+  },
+  "project": {
+    "name": "Учёт урожая и складов в 1С",
+    "summary": "Конфигурация 1С для приёмки урожая, учёта на элеваторах и сдельной оплаты.",
+    "domain": "industry",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-21",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-05T08:06:08.419208+00:00",
+  "created_at": "2026-10-05T08:06:08.419208+00:00",
+  "updated_at": "2026-10-05T08:06:08.419208+00:00"
+}

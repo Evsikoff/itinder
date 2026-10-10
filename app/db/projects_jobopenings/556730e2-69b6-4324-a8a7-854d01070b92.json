@@ -1,0 +1,96 @@
+{
+  "id": "556730e2-69b6-4324-a8a7-854d01070b92",
+  "title": "Фронтенд-разработчик (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Переводить раздел «Запись к врачу» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Страница «Электронная медкарта» открывается шесть секунд. С чего вы начнёте ускорение?"
+  ],
+  "salary": {
+    "from": 150000,
+    "to": 230000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+  "project_id": "20b5e786-0210-47ee-8963-405009d1075b",
+  "user_id": "21e1cc34-c185-4a27-8294-b14f81ba66f5",
+  "company": {
+    "id": "5035ef51-c3c6-4cff-af20-16b6b79e3026",
+    "name": "Сеть клиник «Семейный доктор Поволжья»"
+  },
+  "project": {
+    "name": "Телемедицина и онлайн-запись",
+    "summary": "Запись к врачу, видеоконсультации и электронная медкарта пациента в одном приложении.",
+    "domain": "health",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-11-27",
+    "work_format": "hybrid",
+    "city": "Самара"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-03T02:43:27.480874+00:00",
+  "created_at": "2026-10-03T02:43:27.480874+00:00",
+  "updated_at": "2026-10-03T02:43:27.480874+00:00"
+}

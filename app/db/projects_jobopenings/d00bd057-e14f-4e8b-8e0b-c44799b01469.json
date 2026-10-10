@@ -1,0 +1,81 @@
+{
+  "id": "d00bd057-e14f-4e8b-8e0b-c44799b01469",
+  "title": "React Native-разработчик (Senior)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (React Native)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру мобильного приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «Трекинг курьера».",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 250000,
+    "to": 365000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "af67a533-2694-4b20-b630-d6996f48c012",
+  "user_id": "aae53130-48c5-43e1-bd09-2a79d65fa17d",
+  "company": {
+    "id": "a2cc2697-3491-43b3-9e4f-cd96cd82ce53",
+    "name": "Сервис доставки еды «Вкусно рядом»"
+  },
+  "project": {
+    "name": "Приложение доставки еды",
+    "summary": "Выбор ресторана, корзина, оплата и отслеживание курьера на карте.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-11-13",
+    "work_format": "hybrid",
+    "city": "Новосибирск"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-29T04:39:10.603103+00:00",
+  "created_at": "2026-09-29T04:39:10.603103+00:00",
+  "updated_at": "2026-09-29T04:39:10.603103+00:00"
+}

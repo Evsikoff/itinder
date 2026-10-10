@@ -1,0 +1,81 @@
+{
+  "id": "892cd274-c798-4164-807c-b6b29ceac290",
+  "title": "Тестировщик (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Писать тест-кейсы и проводить регресс модулей «Сменные задания» и «Прослеживаемость изделий», исследовательское тестирование новых функций.",
+  "requirements": [
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_it"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 110000,
+    "to": 165000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "5aaff741-4890-48a1-b0cd-9e1a8120fbde",
+  "user_id": "f8097be5-8875-47c6-a9a8-4f09777eabfe",
+  "company": {
+    "id": "88f4d47a-7a62-4f6b-b254-76db93768184",
+    "name": "Завод «Технопривод»"
+  },
+  "project": {
+    "name": "MES-система сборочного производства",
+    "summary": "Сменные задания для участков, контроль качества на постах и прослеживаемость изделий.",
+    "domain": "industry",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-11-06",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-22T08:01:01.125041+00:00",
+  "created_at": "2026-09-22T08:01:01.125041+00:00",
+  "updated_at": "2026-09-22T08:01:01.125041+00:00"
+}

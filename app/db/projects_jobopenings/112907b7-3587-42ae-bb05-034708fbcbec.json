@@ -1,0 +1,108 @@
+{
+  "id": "112907b7-3587-42ae-bb05-034708fbcbec",
+  "title": "QA-инженер по автоматизации (Senior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на pytest + httpx и Selenium WebDriver, метрики качества, наставничество для тестировщиков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "csharp",
+        "sql"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "selenium"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "sql_checks"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 205000,
+    "to": 300000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития.",
+  "project_id": "1e5d4cce-17a7-46a3-8523-de29c565e8f7",
+  "user_id": "4bd46022-f45e-429f-9c44-6231a26c53b6",
+  "company": {
+    "id": "f13d81f3-a2e3-4af1-bf71-83f464f4be39",
+    "name": "Сеть супермаркетов «Свежий квартал»"
+  },
+  "project": {
+    "name": "Учёт остатков и электронные ценники",
+    "summary": "Остатки по магазинам в реальном времени, переоценка с электронными ценниками и автозаказ.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-16",
+    "work_format": "hybrid",
+    "city": "Нижний Новгород"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T01:54:00.431956+00:00",
+  "created_at": "2026-09-03T01:54:00.431956+00:00",
+  "updated_at": "2026-09-03T01:54:00.431956+00:00"
+}

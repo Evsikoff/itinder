@@ -1,0 +1,135 @@
+{
+  "id": "3487fb87-c00e-4463-b7f0-69d13aadacaa",
+  "title": "Python-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Отвечать за модуль «Задания агрономам» целиком: от проектирования API до мониторинга в продакшене; оптимизировать запросы к PostgreSQL.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "clickhouse"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Спроектируйте API модуля «Задания агрономам»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+  ],
+  "salary": {
+    "from": 175000,
+    "to": 280000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "397d30fb-13b4-4399-a0f4-08dd55f841d5",
+  "user_id": "d21597fc-6467-40fc-ac19-287f146b66ac",
+  "company": {
+    "id": "489eedda-0164-4359-918e-be4286905656",
+    "name": "Агрохолдинг «Зелёная долина»"
+  },
+  "project": {
+    "name": "Агромониторинг полей",
+    "summary": "Карты полей, спутниковые снимки посевов и задания агрономам в мобильном приложении.",
+    "domain": "industry",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-28",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-09T22:59:18.429602+00:00",
+  "created_at": "2026-10-09T22:59:18.429602+00:00",
+  "updated_at": "2026-10-09T22:59:18.429602+00:00"
+}

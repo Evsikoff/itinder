@@ -1,0 +1,97 @@
+{
+  "id": "b260b2a8-7bfa-40f2-89b0-d59d520296b5",
+  "title": "Тестировщик (Junior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Тестировать новые функции модуля «Учебные планы» по чек-листам, заводить понятные баг-репорты, постепенно подключаться к автотестам.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java",
+        "typescript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "rest_assured"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "cypress"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Составьте 7–10 проверок функции «Приказы о студентах», включая граничные и негативные случаи."
+  ],
+  "salary": {
+    "from": 55000,
+    "to": 90000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+  "project_id": "d5b80522-f50c-48cd-816e-c9cdae5fa8b6",
+  "user_id": "bb03ca09-3b6e-411d-9123-30fbe1fdba55",
+  "company": {
+    "id": "d59cd9c4-7c43-47cb-bdab-69f269d95fbd",
+    "name": "Университет «Политех Сибири»"
+  },
+  "project": {
+    "name": "Электронный деканат",
+    "summary": "Учебные планы, ведомости и приказы о студентах вместо бумажного документооборота.",
+    "domain": "education",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-29",
+    "work_format": "hybrid",
+    "city": "Томск"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-30T07:58:46.487337+00:00",
+  "created_at": "2026-08-30T07:58:46.487337+00:00",
+  "updated_at": "2026-08-30T07:58:46.487337+00:00"
+}

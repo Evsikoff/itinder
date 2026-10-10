@@ -1,0 +1,133 @@
+{
+  "id": "f445abfc-1480-4b57-8026-5be5893b96fb",
+  "title": "PHP-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать серверную часть модулей «Бронирование номеров» и «Поиск туров»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "php"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "elasticsearch"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "webhook"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 160000,
+    "to": 250000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+  "project_id": "932c4c99-4265-4e34-af76-2fcde2e94194",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company": {
+    "id": "a5d72ca2-2525-4c8f-9b92-b6b12bacdd02",
+    "name": "Туристический сервис «Маршрут»"
+  },
+  "project": {
+    "name": "Бронирование туров и отелей",
+    "summary": "Поиск туров и отелей у сотни поставщиков, бронирование и отзывы путешественников.",
+    "domain": "other",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-17",
+    "work_format": "hybrid",
+    "city": "Сочи"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-01T19:09:38.408687+00:00",
+  "created_at": "2026-09-01T19:09:38.408687+00:00",
+  "updated_at": "2026-09-01T19:09:38.408687+00:00"
+}

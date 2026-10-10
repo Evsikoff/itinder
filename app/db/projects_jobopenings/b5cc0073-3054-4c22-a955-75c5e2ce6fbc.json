@@ -1,0 +1,120 @@
+{
+  "id": "b5cc0073-3054-4c22-a955-75c5e2ce6fbc",
+  "title": "C#-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по PostgreSQL и интеграциям, онбординг новичков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "csharp"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rabbitmq"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 280000,
+    "to": 430000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+  "project_id": "1e5d4cce-17a7-46a3-8523-de29c565e8f7",
+  "user_id": "4bd46022-f45e-429f-9c44-6231a26c53b6",
+  "company": {
+    "id": "f13d81f3-a2e3-4af1-bf71-83f464f4be39",
+    "name": "Сеть супермаркетов «Свежий квартал»"
+  },
+  "project": {
+    "name": "Учёт остатков и электронные ценники",
+    "summary": "Остатки по магазинам в реальном времени, переоценка с электронными ценниками и автозаказ.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-16",
+    "work_format": "hybrid",
+    "city": "Нижний Новгород"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T01:54:00.431956+00:00",
+  "created_at": "2026-09-03T01:54:00.431956+00:00",
+  "updated_at": "2026-09-03T01:54:00.431956+00:00"
+}

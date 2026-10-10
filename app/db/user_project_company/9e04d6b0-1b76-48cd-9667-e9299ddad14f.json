@@ -1,0 +1,787 @@
+{
+  "id": "9e04d6b0-1b76-48cd-9667-e9299ddad14f",
+  "user_id": "2188933e-8721-4f91-bfff-b6aab77ffc64",
+  "company_id": "4746d4bb-13a8-4751-a78c-8a19258027c5",
+  "name": "Личный кабинет собственника",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Начисления и оплата взносов, график ремонта своего дома и обращения в фонд.",
+    "domain": "gov",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-26",
+    "work_format": "remote",
+    "clients": [
+      "web",
+      "android"
+    ],
+    "stack_limits": [
+      "domestic"
+    ],
+    "existing_stack": {
+      "languages": [
+        "python",
+        "typescript",
+        "dart"
+      ],
+      "databases": [
+        "postgres_pro",
+        "redis"
+      ],
+      "integrations": [
+        "rest",
+        "file_exchange"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "pytest",
+        "selenium",
+        "appium"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 2
+      },
+      "backend": {
+        "Middle": 3
+      },
+      "frontend": {
+        "Senior": 1
+      },
+      "qa": {
+        "Senior": 3
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "medium",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "web_ui"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 2,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Senior": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Junior": 1
+      }
+    },
+    "mobile_native": "cross",
+    "fixed_details[languages:python].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:python].importance": "required",
+    "fixed_details[languages:python].depth": "by_grade",
+    "fixed_details[databases:postgres_pro].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgres_pro].importance": "required",
+    "fixed_details[databases:postgres_pro].depth": "by_grade",
+    "fixed_details[databases:redis].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:redis].importance": "required",
+    "fixed_details[databases:redis].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:file_exchange].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:file_exchange].importance": "required",
+    "fixed_details[integrations:file_exchange].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[languages:dart].positions": [
+      "frontend_mobile"
+    ],
+    "fixed_details[languages:dart].importance": "required",
+    "fixed_details[languages:dart].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:pytest].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:pytest].importance": "required",
+    "fixed_details[testing:pytest].depth": "by_grade",
+    "fixed_details[testing:selenium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:selenium].importance": "required",
+    "fixed_details[testing:selenium].depth": "by_grade",
+    "fixed_details[testing:appium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:appium].importance": "required",
+    "fixed_details[testing:appium].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "Python-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Дорабатывать API модуля «Обращения собственников»: новые методы, проверка входных данных, юнит-тесты на Python. Код-ревью и помощь — от старших коллег.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgres_pro"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [
+      "Спроектируйте API модуля «График ремонта дома»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+      "Опишите таблицы Postgres Pro для модуля «График ремонта дома» и индексы для трёх самых частых запросов."
+    ],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 85000,
+      "to": 125000
+    },
+    "vacancies[backend_main:Junior].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+    "vacancies[backend_main:Middle].title": "Python-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Обращения собственников» и «График ремонта дома»: API, бизнес-логика, схема Postgres Pro, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgres_pro"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 150000,
+      "to": 240000
+    },
+    "vacancies[backend_main:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Переводить раздел «Обращения собственников» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [
+      "Страница «Обращения собственников» открывается шесть секунд. С чего вы начнёте ускорение?",
+      "Опишите структуру компонентов экрана «Начисления и оплата взносов»: что хранится в состоянии, как показываются загрузка и ошибки."
+    ],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 145000,
+      "to": 220000
+    },
+    "vacancies[frontend_web:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Senior].title": "Фронтенд-разработчик (Senior)",
+    "vacancies[frontend_web:Senior].task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Обращения собственников» и ревьюить код команды.",
+    "vacancies[frontend_web:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Senior].assignments": [],
+    "vacancies[frontend_web:Senior].salary": {
+      "from": 250000,
+      "to": 355000
+    },
+    "vacancies[frontend_web:Senior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_mobile:Senior].title": "Flutter-разработчик (Senior)",
+    "vacancies[frontend_mobile:Senior].task": "Отвечать за архитектуру мобильного приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «График ремонта дома».",
+    "vacancies[frontend_mobile:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "dart"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Senior].assignments": [],
+    "vacancies[frontend_mobile:Senior].salary": {
+      "from": 235000,
+      "to": 340000
+    },
+    "vacancies[frontend_mobile:Senior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Начисления и оплата взносов» и «Обращения собственников»: тест-дизайн, автотесты на pytest + httpx и Selenium WebDriver, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "selenium"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "appium"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [
+      "Составьте 7–10 проверок функции «График ремонта дома», включая граничные и негативные случаи.",
+      "Напишите баг-репорт: в разделе «Обращения собственников» кнопка «Сохранить» иногда не реагирует на нажатие."
+    ],
+    "vacancies[qa:Middle].salary": {
+      "from": 115000,
+      "to": 170000
+    },
+    "vacancies[qa:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Junior].title": "Системный аналитик (Junior)",
+    "vacancies[analyst:Junior].task": "Собирать и описывать требования к модулю «Обращения собственников», готовить пользовательские сценарии под руководством ведущего аналитика.",
+    "vacancies[analyst:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgres_pro"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Junior].assignments": [],
+    "vacancies[analyst:Junior].salary": {
+      "from": 65000,
+      "to": 100000
+    },
+    "vacancies[analyst:Junior].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "flutter",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_mobile",
+        "role": "frontend",
+        "name": "Мобильный разработчик (Flutter)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "python",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgres_pro",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "redis",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "file_exchange",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "dart",
+        "positions": [
+          "frontend_mobile"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "pytest",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "selenium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "appium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 2,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Senior": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Junior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "3c2715f2-c5a4-450b-aad2-b1c21238bdf3",
+    "f1a4898c-f8a9-4c3f-b7c7-fae6c2809f32",
+    "386210b4-d60f-4dac-be5d-10cb6f3fee44",
+    "09fceb45-1573-43cd-8f0a-b4d7572213c1",
+    "e1fbee9a-193e-413a-adcc-55b1b5208cef",
+    "0b43ebae-8772-4d56-8f51-f0b6814e4519",
+    "b38247a3-c0d0-4063-9503-fcb408945efe"
+  ],
+  "approved_at": "2026-08-28T01:17:07.641336+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-08-25T13:33:06.803598+00:00",
+  "updated_at": "2026-08-28T01:17:07.641336+00:00"
+}

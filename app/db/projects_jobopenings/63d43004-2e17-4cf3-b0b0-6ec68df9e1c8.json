@@ -1,0 +1,68 @@
+{
+  "id": "63d43004-2e17-4cf3-b0b0-6ec68df9e1c8",
+  "title": "React Native-разработчик (Middle)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (React Native)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать функции «Поиск туров» и «Бронирование номеров» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 165000,
+    "to": 260000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+  "project_id": "932c4c99-4265-4e34-af76-2fcde2e94194",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company": {
+    "id": "a5d72ca2-2525-4c8f-9b92-b6b12bacdd02",
+    "name": "Туристический сервис «Маршрут»"
+  },
+  "project": {
+    "name": "Бронирование туров и отелей",
+    "summary": "Поиск туров и отелей у сотни поставщиков, бронирование и отзывы путешественников.",
+    "domain": "other",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-17",
+    "work_format": "hybrid",
+    "city": "Сочи"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-01T19:09:38.408687+00:00",
+  "created_at": "2026-09-01T19:09:38.408687+00:00",
+  "updated_at": "2026-09-01T19:09:38.408687+00:00"
+}

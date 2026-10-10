@@ -1,0 +1,96 @@
+{
+  "id": "c99a39b2-fe61-4ba9-968c-59400e958062",
+  "title": "Системный аналитик (Middle)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Описывать требования и модель данных модулей «Подарочные карты» и «Меню и предзаказ», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "webhook"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите модель данных модуля «Меню и предзаказ»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 165000,
+    "to": 255000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "857e16aa-9b2b-4f9d-ac06-8b34a8336250",
+  "user_id": "eed72f75-7bcb-409f-a1f4-33520b763d62",
+  "company": {
+    "id": "e01c2eba-11a0-4c96-95d0-6ec57e335b61",
+    "name": "Сеть кофеен «Зерно»"
+  },
+  "project": {
+    "name": "Предзаказ кофе и бонусы",
+    "summary": "Заказ напитка заранее, оплата в приложении и бонусная программа гостя.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-19",
+    "work_format": "office",
+    "city": "Санкт-Петербург"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-30T09:51:37.329325+00:00",
+  "created_at": "2026-08-30T09:51:37.329325+00:00",
+  "updated_at": "2026-08-30T09:51:37.329325+00:00"
+}

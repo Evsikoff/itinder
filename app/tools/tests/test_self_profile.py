@@ -57,20 +57,20 @@ class SelfProfile(unittest.TestCase):
                 candidate_profile.self_profile(uid)
             self.assertEqual(raised.exception.status, status)
 
-    def test_pdf_cyrillic_complete_history_and_long_answer_pagination(self):
-        case = self.fixture.case
-        case.record(invitations.APPLICANT_TO_RECRUITER, 'task_sent_for_review', assignment=True,
-                    applicant_id=self.uid, assignment_answers=['ОченьДлинноеСлово' * 250 + '\nПоследняя строка решения'])
+    def test_pdf_cyrillic_passed_tests_and_long_condition_pagination(self):
         self.fixture.add_result('Backend', 'Middle', True)
         own = candidate_profile.self_profile(self.uid)
         own['name'] = 'Александр Морозов'
+        own['tests'][0]['symptoms'] = ['ОченьДлинноеСлово' * 250 + '\nПоследняя строка условия']
         pdf = PdfReader(io.BytesIO(profile_pdf.render(own)))
         text = '\n'.join(page.extract_text() for page in pdf.pages)
         self.assertGreater(len(pdf.pages), 1)
-        for value in ('Александр Морозов', 'СПЕЦИАЛИЗАЦИИ И ГРЕЙДЫ', 'Подтверждён тестом: Middle',
-                      'ЗАДАНИЯ ПО ПРИГЛАШЕНИЯМ', 'Последняя строка решения', f'{self.uid}@example.invalid'):
+        for value in ('Александр Морозов', 'СПЕЦИАЛИЗАЦИИ И ГРЕЙДЫ', '■ Middle', 'ТЕСТЫ НА ГРЕЙД',
+                      'Backend / Middle', 'Последняя строка условия', f'{self.uid}@example.invalid'):
             self.assertIn(value, text)
-        self.assertEqual(''.join(text.split()).count('ОченьДлинноеСлово'), 250)
+        # Строки условия идут с отступом; заголовок окна между страницами в счёт не входит.
+        condition = ''.join(line.strip() for line in text.split('\n') if line.startswith('    '))
+        self.assertEqual(condition.count('ОченьДлинноеСлово'), 250)
         self.assertAlmostEqual(float(pdf.pages[0].mediabox.width), profile_pdf.WIDTH, places=4)
 
     def test_empty_profile_has_readable_pdf(self):

@@ -1,0 +1,109 @@
+{
+  "id": "3c7cec7f-ff86-49e2-b493-8fb6e11ece0a",
+  "title": "Системный аналитик (Senior)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в Postgres Pro, приоритизация требований вместе с заказчиком.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgres_pro"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "webhook"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите модель данных модуля «Отключения по адресу»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 240000,
+    "to": 325000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "9c8dd182-515b-4d16-bcf7-8edfdab2fabc",
+  "user_id": "691a27b0-f79e-4e13-a19a-4a771c1f9c99",
+  "company": {
+    "id": "bca59808-b963-410f-9008-648e88436fd6",
+    "name": "Энергосбытовая компания «ЭнергоСвет»"
+  },
+  "project": {
+    "name": "Личный кабинет абонента",
+    "summary": "Передача показаний, счета и оплата, уведомления об отключениях по адресу.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-10-31",
+    "work_format": "office",
+    "city": "Самара"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-22T19:21:04.171158+00:00",
+  "created_at": "2026-09-22T19:21:04.171158+00:00",
+  "updated_at": "2026-09-22T19:21:04.171158+00:00"
+}

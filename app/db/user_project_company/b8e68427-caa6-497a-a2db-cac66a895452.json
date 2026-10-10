@@ -1,0 +1,753 @@
+{
+  "id": "b8e68427-caa6-497a-a2db-cac66a895452",
+  "user_id": "da85473a-ee0a-410d-af50-58dbf8632aa1",
+  "company_id": "a2cc2697-3491-43b3-9e4f-cd96cd82ce53",
+  "name": "Кабинет ресторана-партнёра",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Ресторан управляет меню и стоп-листом, принимает заказы и смотрит выручку.",
+    "domain": "retail",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-23",
+    "work_format": "hybrid",
+    "clients": [
+      "web"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "python",
+        "typescript"
+      ],
+      "databases": [
+        "postgresql",
+        "redis"
+      ],
+      "integrations": [
+        "rest",
+        "rabbitmq",
+        "webhook"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "pytest",
+        "playwright",
+        "sql_checks",
+        "exploratory"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 3
+      },
+      "backend": {
+        "Middle": 1
+      },
+      "frontend": {
+        "Senior": 1
+      },
+      "qa": {
+        "Senior": 1
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "medium",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "web_ui",
+      "reports"
+    ],
+    "requirements_state": "ready",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Middle": 1,
+        "Senior": 1
+      }
+    },
+    "city": "Новосибирск",
+    "fixed_details[languages:python].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:python].importance": "required",
+    "fixed_details[languages:python].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[databases:redis].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:redis].importance": "required",
+    "fixed_details[databases:redis].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:rabbitmq].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:rabbitmq].importance": "required",
+    "fixed_details[integrations:rabbitmq].depth": "by_grade",
+    "fixed_details[integrations:webhook].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:webhook].importance": "required",
+    "fixed_details[integrations:webhook].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:pytest].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:pytest].importance": "required",
+    "fixed_details[testing:pytest].depth": "by_grade",
+    "fixed_details[testing:playwright].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:playwright].importance": "required",
+    "fixed_details[testing:playwright].depth": "by_grade",
+    "fixed_details[testing:sql_checks].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:sql_checks].importance": "required",
+    "fixed_details[testing:sql_checks].depth": "by_grade",
+    "fixed_details[testing:exploratory].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:exploratory].importance": "required",
+    "fixed_details[testing:exploratory].depth": "by_grade",
+    "vacancies[backend_main:Middle].title": "Python-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Меню и стоп-лист» и «Отчёты по выручке»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 160000,
+      "to": 250000
+    },
+    "vacancies[backend_main:Middle].notes": null,
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Переводить раздел «Меню и стоп-лист» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 155000,
+      "to": 225000
+    },
+    "vacancies[frontend_web:Middle].notes": "Наставник на первые три месяца и понятный план развития.",
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Меню и стоп-лист» и «Приём заказов»: тест-дизайн, автотесты на pytest + httpx и Playwright, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python",
+          "typescript",
+          "sql"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "sql_checks"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [
+      "Напишите баг-репорт: в разделе «Отчёты по выручке» кнопка «Сохранить» иногда не реагирует на нажатие.",
+      "Составьте 7–10 проверок функции «Приём заказов», включая граничные и негативные случаи."
+    ],
+    "vacancies[qa:Middle].salary": {
+      "from": 125000,
+      "to": 180000
+    },
+    "vacancies[qa:Middle].notes": null,
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Меню и стоп-лист» и «Отчёты по выручке», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [],
+    "vacancies[analyst:Middle].salary": {
+      "from": 150000,
+      "to": 220000
+    },
+    "vacancies[analyst:Middle].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[analyst:Senior].title": "Системный аналитик (Senior)",
+    "vacancies[analyst:Senior].task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в PostgreSQL, приоритизация требований вместе с заказчиком.",
+    "vacancies[analyst:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Senior].assignments": [
+      "Опишите модель данных модуля «Меню и стоп-лист»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Senior].salary": {
+      "from": 225000,
+      "to": 310000
+    },
+    "vacancies[analyst:Senior].notes": null
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "python",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "redis",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rabbitmq",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "webhook",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "pytest",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "playwright",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "sql_checks",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "exploratory",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Middle": 1,
+        "Senior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "26049235-5f87-47cb-96ac-fcc1bab0d568",
+    "5a65e27f-9701-458d-8f42-89b459f3c08e",
+    "731726b2-f71b-47ec-b9b2-b9dd709aeced",
+    "b0554a18-7374-4ec2-92b9-868953f55f43",
+    "ce4b335f-343f-4db0-bb92-0986dc47e138"
+  ],
+  "approved_at": "2026-09-27T10:53:22.522497+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-26T20:57:48.960375+00:00",
+  "updated_at": "2026-09-27T10:53:22.522497+00:00"
+}

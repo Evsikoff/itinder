@@ -1,0 +1,108 @@
+{
+  "id": "37636c98-085c-40a2-80d0-8c51b2685e97",
+  "title": "QA-инженер по автоматизации (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Строить тестирование модулей «Расчёт стоимости полиса» и «Оплата и выпуск полиса»: тест-дизайн, автотесты на REST Assured + JUnit 5 и Cypress, проверка API и регресса перед релизом.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java",
+        "typescript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "rest_assured"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "cypress"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 180000,
+    "to": 265000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+  "project_id": "8be8255e-cb31-4f57-b393-d357286581e6",
+  "user_id": "4e100201-1da8-4abf-8817-d6493df1ff75",
+  "company": {
+    "id": "d244412e-9f9b-4895-ab2c-296eeaae1f01",
+    "name": "Страховая компания «Опора»"
+  },
+  "project": {
+    "name": "Онлайн-оформление ОСАГО и КАСКО",
+    "summary": "Расчёт, покупка и продление полисов на сайте и в приложении, урегулирование убытков онлайн.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-11-03",
+    "work_format": "hybrid",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-07T08:59:47.154879+00:00",
+  "created_at": "2026-09-07T08:59:47.154879+00:00",
+  "updated_at": "2026-09-07T08:59:47.154879+00:00"
+}

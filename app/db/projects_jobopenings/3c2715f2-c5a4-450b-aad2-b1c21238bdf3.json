@@ -1,0 +1,123 @@
+{
+  "id": "3c2715f2-c5a4-450b-aad2-b1c21238bdf3",
+  "title": "Python-разработчик (Junior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Дорабатывать API модуля «Обращения собственников»: новые методы, проверка входных данных, юнит-тесты на Python. Код-ревью и помощь — от старших коллег.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgres_pro"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Спроектируйте API модуля «График ремонта дома»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+    "Опишите таблицы Postgres Pro для модуля «График ремонта дома» и индексы для трёх самых частых запросов."
+  ],
+  "salary": {
+    "from": 85000,
+    "to": 125000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+  "project_id": "9e04d6b0-1b76-48cd-9667-e9299ddad14f",
+  "user_id": "2188933e-8721-4f91-bfff-b6aab77ffc64",
+  "company": {
+    "id": "4746d4bb-13a8-4751-a78c-8a19258027c5",
+    "name": "Региональный фонд капитального ремонта"
+  },
+  "project": {
+    "name": "Личный кабинет собственника",
+    "summary": "Начисления и оплата взносов, график ремонта своего дома и обращения в фонд.",
+    "domain": "gov",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-26",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-28T01:17:07.641336+00:00",
+  "created_at": "2026-08-28T01:17:07.641336+00:00",
+  "updated_at": "2026-08-28T01:17:07.641336+00:00"
+}

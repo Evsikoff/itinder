@@ -1,0 +1,68 @@
+{
+  "id": "a07cd597-f391-401a-a269-3e9633354c75",
+  "title": "Тестировщик (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Писать тест-кейсы и проводить регресс модулей «Бонусы гостя» и «Подарочные карты», исследовательское тестирование новых функций.",
+  "requirements": [
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 140000,
+    "to": 200000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+  "project_id": "857e16aa-9b2b-4f9d-ac06-8b34a8336250",
+  "user_id": "eed72f75-7bcb-409f-a1f4-33520b763d62",
+  "company": {
+    "id": "e01c2eba-11a0-4c96-95d0-6ec57e335b61",
+    "name": "Сеть кофеен «Зерно»"
+  },
+  "project": {
+    "name": "Предзаказ кофе и бонусы",
+    "summary": "Заказ напитка заранее, оплата в приложении и бонусная программа гостя.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-19",
+    "work_format": "office",
+    "city": "Санкт-Петербург"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-30T09:51:37.329325+00:00",
+  "created_at": "2026-08-30T09:51:37.329325+00:00",
+  "updated_at": "2026-08-30T09:51:37.329325+00:00"
+}

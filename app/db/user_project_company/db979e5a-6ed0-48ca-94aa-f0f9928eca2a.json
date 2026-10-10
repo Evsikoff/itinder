@@ -1,0 +1,684 @@
+{
+  "id": "db979e5a-6ed0-48ca-94aa-f0f9928eca2a",
+  "user_id": "38d81c8e-af4c-4cbd-a8b7-abca5c4b4d1f",
+  "company_id": "a8fe1b59-2961-41d7-91e7-a46d21802d49",
+  "name": "Мониторинг оборудования цехов",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Телеметрия прокатных станов, учёт простоев и планирование ремонтов оборудования.",
+    "domain": "industry",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-21",
+    "work_format": "remote",
+    "clients": [
+      "web",
+      "api"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "go",
+        "javascript"
+      ],
+      "databases": [
+        "mysql",
+        "redis",
+        "clickhouse"
+      ],
+      "integrations": [
+        "graphql",
+        "rabbitmq",
+        "websocket"
+      ]
+    },
+    "existing_tests": {
+      "testing": []
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 2
+      },
+      "backend": {
+        "Junior": 1
+      },
+      "frontend": {
+        "Junior": 1
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "high",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "data",
+      "reports"
+    ],
+    "requirements_state": "idea",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Senior": 1
+      }
+    },
+    "fixed_details[languages:go].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:go].importance": "required",
+    "fixed_details[languages:go].depth": "by_grade",
+    "fixed_details[databases:mysql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:mysql].importance": "required",
+    "fixed_details[databases:mysql].depth": "by_grade",
+    "fixed_details[databases:redis].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:redis].importance": "required",
+    "fixed_details[databases:redis].depth": "by_grade",
+    "fixed_details[databases:clickhouse].positions": [
+      "backend_main"
+    ],
+    "fixed_details[databases:clickhouse].importance": "required",
+    "fixed_details[databases:clickhouse].depth": "by_grade",
+    "fixed_details[integrations:graphql].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:graphql].importance": "required",
+    "fixed_details[integrations:graphql].depth": "by_grade",
+    "fixed_details[integrations:rabbitmq].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:rabbitmq].importance": "required",
+    "fixed_details[integrations:rabbitmq].depth": "by_grade",
+    "fixed_details[integrations:websocket].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:websocket].importance": "required",
+    "fixed_details[integrations:websocket].depth": "by_grade",
+    "fixed_details[languages:javascript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:javascript].importance": "required",
+    "fixed_details[languages:javascript].depth": "by_grade",
+    "vacancies[backend_main:Middle].title": "Go-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Телеметрия станов» и «Плановые ремонты»: API, бизнес-логика, схема MySQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "go"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 165000,
+      "to": 240000
+    },
+    "vacancies[backend_main:Middle].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[backend_main:Senior].title": "Go-разработчик (Senior)",
+    "vacancies[backend_main:Senior].task": "Спроектировать архитектуру модулей «Телеметрия станов» и «Плановые ремонты»: границы сервисов, контракты GraphQL, надёжность и производительность под нагрузкой.",
+    "vacancies[backend_main:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "go"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Senior].assignments": [],
+    "vacancies[backend_main:Senior].salary": {
+      "from": 280000,
+      "to": 425000
+    },
+    "vacancies[backend_main:Senior].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «Телеметрия станов» и «Журнал простоев» на JavaScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "javascript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 80000,
+      "to": 120000
+    },
+    "vacancies[frontend_web:Junior].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Senior].title": "Фронтенд-разработчик (Senior)",
+    "vacancies[frontend_web:Senior].task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Телеметрия станов» и ревьюить код команды.",
+    "vacancies[frontend_web:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "javascript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Senior].assignments": [],
+    "vacancies[frontend_web:Senior].salary": {
+      "from": 270000,
+      "to": 390000
+    },
+    "vacancies[frontend_web:Senior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Senior].title": "Системный аналитик (Senior)",
+    "vacancies[analyst:Senior].task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в MySQL, приоритизация требований вместе с заказчиком.",
+    "vacancies[analyst:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Senior].assignments": [],
+    "vacancies[analyst:Senior].salary": {
+      "from": 230000,
+      "to": 315000
+    },
+    "vacancies[analyst:Senior].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "go",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "mysql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "redis",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "clickhouse",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "graphql",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rabbitmq",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "websocket",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "javascript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Senior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "c3b5b706-0e7d-41b2-bec5-59bc3c757454",
+    "94a6b22a-1605-4b7e-afac-2b5e64340078",
+    "bc0c2175-1ae4-4e9d-9098-c1d91278b41c",
+    "d35a01be-c6af-4cf8-be89-5728280592f3",
+    "1d09e389-591a-4867-b1e0-e399e0af63d5"
+  ],
+  "approved_at": "2026-09-01T15:41:53.243776+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-08-30T06:00:31.521713+00:00",
+  "updated_at": "2026-09-01T15:41:53.243776+00:00"
+}

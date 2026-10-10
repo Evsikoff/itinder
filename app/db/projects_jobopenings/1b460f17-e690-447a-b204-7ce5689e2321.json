@@ -1,0 +1,146 @@
+{
+  "id": "1b460f17-e690-447a-b204-7ce5689e2321",
+  "title": "Go-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Отвечать за модуль «Правила блокировки» целиком: от проектирования API до мониторинга в продакшене; оптимизировать запросы к PostgreSQL.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "go"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "clickhouse"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "grpc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 210000,
+    "to": 315000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели. Полностью удалённая работа из любого города России.",
+  "project_id": "05ca7388-4211-4a89-bc9d-8ace89bd591a",
+  "user_id": "dd4a5cf8-88b4-4fa2-854f-aa06dfa08b1c",
+  "company": {
+    "id": "6d29aab1-aca8-4292-b08a-b648388afc4c",
+    "name": "Банк «Северная гавань»"
+  },
+  "project": {
+    "name": "Антифрод-платформа",
+    "summary": "Проверка операций клиентов в реальном времени: правила, скоринг и разбор подозрительных операций.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-07T22:54:58.613367+00:00",
+  "created_at": "2026-09-07T22:54:58.613367+00:00",
+  "updated_at": "2026-09-07T22:54:58.613367+00:00"
+}

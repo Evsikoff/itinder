@@ -1,0 +1,68 @@
+{
+  "id": "ef1a299c-711e-4983-9980-0a31ba2fe1fd",
+  "title": "React Native-разработчик (Middle)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (React Native)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать функции «Передача показаний» и «Счета и оплата» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 160000,
+    "to": 250000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "9c8dd182-515b-4d16-bcf7-8edfdab2fabc",
+  "user_id": "691a27b0-f79e-4e13-a19a-4a771c1f9c99",
+  "company": {
+    "id": "bca59808-b963-410f-9008-648e88436fd6",
+    "name": "Энергосбытовая компания «ЭнергоСвет»"
+  },
+  "project": {
+    "name": "Личный кабинет абонента",
+    "summary": "Передача показаний, счета и оплата, уведомления об отключениях по адресу.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-10-31",
+    "work_format": "office",
+    "city": "Самара"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-22T19:21:04.171158+00:00",
+  "created_at": "2026-09-22T19:21:04.171158+00:00",
+  "updated_at": "2026-09-22T19:21:04.171158+00:00"
+}

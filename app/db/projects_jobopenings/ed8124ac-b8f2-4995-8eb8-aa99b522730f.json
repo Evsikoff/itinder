@@ -1,0 +1,133 @@
+{
+  "id": "ed8124ac-b8f2-4995-8eb8-aa99b522730f",
+  "title": "QA-инженер по автоматизации (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Строить тестирование модулей «Портфель и налоги» и «Выставление заявок»: тест-дизайн, автотесты на pytest + httpx и Cypress, проверка API и регресса перед релизом.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "cypress"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "k6"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 150000,
+    "to": 225000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+  "project_id": "b70c1b4b-1a94-42ec-aacd-22148eb0d3ea",
+  "user_id": "af64e4c4-042b-48c2-8752-0c180698924d",
+  "company": {
+    "id": "8ade6deb-b80a-4fed-960c-b8abb06744ce",
+    "name": "Инвестиционная компания «Тройка Инвест»"
+  },
+  "project": {
+    "name": "Торговый терминал для частных инвесторов",
+    "summary": "Котировки, заявки и портфель в браузере и на телефоне, налоговые отчёты для инвестора.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-23T05:25:40.338424+00:00",
+  "created_at": "2026-09-23T05:25:40.338424+00:00",
+  "updated_at": "2026-09-23T05:25:40.338424+00:00"
+}

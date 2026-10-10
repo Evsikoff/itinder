@@ -1,0 +1,123 @@
+{
+  "id": "2ca09665-a7fb-4a85-84fc-cfffa64f7dff",
+  "title": "Системный аналитик (Senior)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в PostgreSQL, приоритизация требований вместе с заказчиком.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "clickhouse"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rabbitmq"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите сценарий «Видео по запросу»: участники, основной поток, альтернативы и исключения.",
+    "Опишите модель данных модуля «Подписки»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 230000,
+    "to": 325000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "c7cd2516-8ccd-4d25-891a-982ab4a2a924",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company": {
+    "id": "283fb0af-4972-4e0c-9f40-03fd981d5f9f",
+    "name": "Медиахолдинг «Город 24»"
+  },
+  "project": {
+    "name": "Видеоплатформа телеканала",
+    "summary": "Прямые эфиры, архив передач и подписки на сайте и в приложениях.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-23T12:09:42.968874+00:00",
+  "created_at": "2026-08-23T12:09:42.968874+00:00",
+  "updated_at": "2026-08-23T12:09:42.968874+00:00"
+}

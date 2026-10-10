@@ -1,0 +1,790 @@
+{
+  "id": "9c8dd182-515b-4d16-bcf7-8edfdab2fabc",
+  "user_id": "691a27b0-f79e-4e13-a19a-4a771c1f9c99",
+  "company_id": "bca59808-b963-410f-9008-648e88436fd6",
+  "name": "Личный кабинет абонента",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Передача показаний, счета и оплата, уведомления об отключениях по адресу.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-10-31",
+    "work_format": "office",
+    "clients": [
+      "web",
+      "android",
+      "ios",
+      "bot"
+    ],
+    "stack_limits": [
+      "domestic"
+    ],
+    "existing_stack": {
+      "languages": [
+        "csharp",
+        "typescript"
+      ],
+      "databases": [
+        "postgres_pro"
+      ],
+      "integrations": [
+        "rest",
+        "webhook",
+        "file_exchange"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "postman",
+        "playwright",
+        "appium",
+        "jmeter"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Senior": 2
+      },
+      "backend": {
+        "Middle": 2
+      },
+      "frontend": {
+        "Middle": 2
+      },
+      "qa": {
+        "Middle": 2
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "high",
+    "third_party_api": "yes",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "web_ui",
+      "reports"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Middle": 1,
+        "Senior": 1
+      }
+    },
+    "city": "Самара",
+    "mobile_native": "cross",
+    "fixed_details[languages:csharp].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:csharp].importance": "required",
+    "fixed_details[languages:csharp].depth": "by_grade",
+    "fixed_details[databases:postgres_pro].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgres_pro].importance": "required",
+    "fixed_details[databases:postgres_pro].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:webhook].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:webhook].importance": "required",
+    "fixed_details[integrations:webhook].depth": "by_grade",
+    "fixed_details[integrations:file_exchange].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:file_exchange].importance": "required",
+    "fixed_details[integrations:file_exchange].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web",
+      "frontend_mobile"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:postman].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:postman].importance": "required",
+    "fixed_details[testing:postman].depth": "by_grade",
+    "fixed_details[testing:playwright].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:playwright].importance": "required",
+    "fixed_details[testing:playwright].depth": "by_grade",
+    "fixed_details[testing:appium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:appium].importance": "required",
+    "fixed_details[testing:appium].depth": "by_grade",
+    "fixed_details[testing:jmeter].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:jmeter].importance": "required",
+    "fixed_details[testing:jmeter].depth": "by_grade",
+    "vacancies[backend_main:Middle].title": "C#-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Передача показаний» и «Счета и оплата»: API, бизнес-логика, схема Postgres Pro, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "csharp"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgres_pro"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [
+      "Спроектируйте API модуля «Передача показаний»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+    ],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 165000,
+      "to": 255000
+    },
+    "vacancies[backend_main:Middle].notes": null,
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «Отключения по адресу» и «Передача показаний» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [
+      "Страница «Счета и оплата» открывается шесть секунд. С чего вы начнёте ускорение?"
+    ],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 80000,
+      "to": 120000
+    },
+    "vacancies[frontend_web:Junior].notes": null,
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Переводить раздел «Счета и оплата» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 150000,
+      "to": 225000
+    },
+    "vacancies[frontend_web:Middle].notes": null,
+    "vacancies[frontend_mobile:Middle].title": "React Native-разработчик (Middle)",
+    "vacancies[frontend_mobile:Middle].task": "Разрабатывать функции «Передача показаний» и «Счета и оплата» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+    "vacancies[frontend_mobile:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Middle].assignments": [],
+    "vacancies[frontend_mobile:Middle].salary": {
+      "from": 160000,
+      "to": 250000
+    },
+    "vacancies[frontend_mobile:Middle].notes": null,
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Счета и оплата» и «Передача показаний»: тест-дизайн, автотесты на Playwright и Appium, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "postman"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "appium"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "jmeter"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 115000,
+      "to": 170000
+    },
+    "vacancies[qa:Middle].notes": null,
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Отключения по адресу» и «Передача показаний», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgres_pro"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [],
+    "vacancies[analyst:Middle].salary": {
+      "from": 140000,
+      "to": 205000
+    },
+    "vacancies[analyst:Middle].notes": null,
+    "vacancies[analyst:Senior].title": "Системный аналитик (Senior)",
+    "vacancies[analyst:Senior].task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в Postgres Pro, приоритизация требований вместе с заказчиком.",
+    "vacancies[analyst:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgres_pro"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Senior].assignments": [
+      "Опишите модель данных модуля «Отключения по адресу»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Senior].salary": {
+      "from": 240000,
+      "to": 325000
+    },
+    "vacancies[analyst:Senior].notes": null
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "react_native",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_mobile",
+        "role": "frontend",
+        "name": "Мобильный разработчик (React Native)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "csharp",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgres_pro",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "webhook",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "file_exchange",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web",
+          "frontend_mobile"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "postman",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "playwright",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "appium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "jmeter",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Middle": 1,
+        "Senior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "f4e7f30e-e328-41b0-b256-1f3fbcdce996",
+    "2de0321b-bc16-4784-b640-32144e25d48b",
+    "46329d22-bdc4-47e7-ae6c-0bcabde95682",
+    "ef1a299c-711e-4983-9980-0a31ba2fe1fd",
+    "5ff2cff0-4836-4945-9eb0-23ea91bde76c",
+    "da1004c3-65a0-47d5-94ce-0c7aaf12c336",
+    "3c7cec7f-ff86-49e2-b493-8fb6e11ece0a"
+  ],
+  "approved_at": "2026-09-22T19:21:04.171158+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-22T06:01:36.551111+00:00",
+  "updated_at": "2026-09-22T19:21:04.171158+00:00"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "e1fbee9a-193e-413a-adcc-55b1b5208cef",
+  "title": "Flutter-разработчик (Senior)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (Flutter)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру мобильного приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «График ремонта дома».",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "dart"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 235000,
+    "to": 340000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+  "project_id": "9e04d6b0-1b76-48cd-9667-e9299ddad14f",
+  "user_id": "2188933e-8721-4f91-bfff-b6aab77ffc64",
+  "company": {
+    "id": "4746d4bb-13a8-4751-a78c-8a19258027c5",
+    "name": "Региональный фонд капитального ремонта"
+  },
+  "project": {
+    "name": "Личный кабинет собственника",
+    "summary": "Начисления и оплата взносов, график ремонта своего дома и обращения в фонд.",
+    "domain": "gov",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-26",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-28T01:17:07.641336+00:00",
+  "created_at": "2026-08-28T01:17:07.641336+00:00",
+  "updated_at": "2026-08-28T01:17:07.641336+00:00"
+}

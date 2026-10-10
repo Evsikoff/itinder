@@ -1,0 +1,68 @@
+{
+  "id": "d88b8c56-168b-4982-b5e3-29b3adc6fe32",
+  "title": "Фронтенд-разработчик (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Переводить раздел «Задания агрономам» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 150000,
+    "to": 220000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+  "project_id": "397d30fb-13b4-4399-a0f4-08dd55f841d5",
+  "user_id": "d21597fc-6467-40fc-ac19-287f146b66ac",
+  "company": {
+    "id": "489eedda-0164-4359-918e-be4286905656",
+    "name": "Агрохолдинг «Зелёная долина»"
+  },
+  "project": {
+    "name": "Агромониторинг полей",
+    "summary": "Карты полей, спутниковые снимки посевов и задания агрономам в мобильном приложении.",
+    "domain": "industry",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-28",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-09T22:59:18.429602+00:00",
+  "created_at": "2026-10-09T22:59:18.429602+00:00",
+  "updated_at": "2026-10-09T22:59:18.429602+00:00"
+}

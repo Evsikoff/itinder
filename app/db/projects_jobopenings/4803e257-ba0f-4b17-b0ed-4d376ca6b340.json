@@ -1,0 +1,135 @@
+{
+  "id": "4803e257-ba0f-4b17-b0ed-4d376ca6b340",
+  "title": "Java-разработчик (Junior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Дорабатывать API модуля «Журнал исследований»: новые методы, проверка входных данных, юнит-тесты на Java. Код-ревью и помощь — от старших коллег.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите таблицы PostgreSQL для модуля «Выдача результатов» и индексы для трёх самых частых запросов."
+  ],
+  "salary": {
+    "from": 75000,
+    "to": 115000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+  "project_id": "5e2d7079-c3bd-4cc7-b9ca-bae6997adef9",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company": {
+    "id": "5035ef51-c3c6-4cff-af20-16b6b79e3026",
+    "name": "Сеть клиник «Семейный доктор Поволжья»"
+  },
+  "project": {
+    "name": "Лабораторная информационная система",
+    "summary": "Путь пробы от процедурного кабинета до результата: штрихкоды, анализаторы, выдача результатов.",
+    "domain": "health",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-10-12",
+    "work_format": "hybrid",
+    "city": "Самара"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-07T04:16:55.515169+00:00",
+  "created_at": "2026-09-07T04:16:55.515169+00:00",
+  "updated_at": "2026-09-07T04:16:55.515169+00:00"
+}

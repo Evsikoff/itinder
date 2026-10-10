@@ -1,0 +1,71 @@
+{
+  "id": "f1507bcf-0b7f-49f2-b516-8e77d460f1b8",
+  "title": "Фронтенд-разработчик (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать веб-интерфейс модулей «Проверка тестами» и «Песочница для запуска кода»: компоненты, состояние, работа с REST API (HTTP + JSON), адаптивность и доступность.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Страница «Песочница для запуска кода» открывается шесть секунд. С чего вы начнёте ускорение?",
+    "Опишите структуру компонентов экрана «Проверка тестами»: что хранится в состоянии, как показываются загрузка и ошибки."
+  ],
+  "salary": {
+    "from": 165000,
+    "to": 240000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "9a1b3215-2741-4820-a337-9457abb5e112",
+  "user_id": "ec3464cb-4c03-4d16-92fe-4086b29c99cb",
+  "company": {
+    "id": "fb903164-1211-40f2-9c62-8f7f494a89dd",
+    "name": "Онлайн-школа «Знание+»"
+  },
+  "project": {
+    "name": "Автопроверка домашних заданий",
+    "summary": "Запуск кода учеников в песочнице, проверка тестами и отчёт преподавателю.",
+    "domain": "education",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-21",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-07T11:42:06.489893+00:00",
+  "created_at": "2026-10-07T11:42:06.489893+00:00",
+  "updated_at": "2026-10-07T11:42:06.489893+00:00"
+}

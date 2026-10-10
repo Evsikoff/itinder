@@ -2,13 +2,15 @@ import React from 'react';
 import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ApiError } from '../../api';
-import { CandidateProfileData, downloadSelfProfile, fetchCandidateProfile, fetchSelfProfile } from '../../candidateProfile';
+import { CandidateProfileData, downloadCandidateProfile, downloadSelfProfile, fetchCandidateProfile, fetchSelfProfile } from '../../candidateProfile';
 import CandidateProfile from './CandidateProfile';
 
-jest.mock('../../candidateProfile', () => ({ fetchCandidateProfile: jest.fn(), fetchSelfProfile: jest.fn(), downloadSelfProfile: jest.fn() }));
+jest.mock('../../candidateProfile', () => ({ fetchCandidateProfile: jest.fn(), fetchSelfProfile: jest.fn(),
+    downloadSelfProfile: jest.fn(), downloadCandidateProfile: jest.fn() }));
 const request = fetchCandidateProfile as jest.MockedFunction<typeof fetchCandidateProfile>;
 const ownRequest = fetchSelfProfile as jest.MockedFunction<typeof fetchSelfProfile>;
 const download = downloadSelfProfile as jest.MockedFunction<typeof downloadSelfProfile>;
+const candidateDownload = downloadCandidateProfile as jest.MockedFunction<typeof downloadCandidateProfile>;
 const data: CandidateProfileData = {
     id: 'anna', name: 'Анна Разработчик', email: null,
     specializations: [
@@ -145,7 +147,15 @@ test('экспорт блокирует повторный запуск, оши�
     expect(screen.queryByRole('alert')).not.toBeInTheDocument();
 });
 
-test('экспорт собственного профиля отсутствует в представлении рекрутёра', async () => {
+test('рекрутёр скачивает PDF профиля кандидата тем же механизмом, что и окно «PDF-профиль»', async () => {
+    candidateDownload.mockResolvedValue();
     await open();
-    expect(screen.queryByRole('button', { name: 'Скачать PDF' })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Скачать PDF' }));
+    expect(screen.getByRole('button', { name: 'Формируем PDF…' })).toBeDisabled();
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Скачать PDF' })).toBeEnabled());
+    expect(candidateDownload).toHaveBeenCalledWith('recruiter', 'anna', 'Анна Разработчик');
+    expect(download).not.toHaveBeenCalled();
+    candidateDownload.mockRejectedValueOnce(new ApiError('Профиль кандидата недоступен', 404));
+    fireEvent.click(screen.getByRole('button', { name: 'Скачать PDF' }));
+    expect(await screen.findByRole('alert')).toHaveTextContent('Профиль кандидата недоступен');
 });

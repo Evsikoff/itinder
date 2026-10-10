@@ -1,0 +1,788 @@
+{
+  "id": "b1f602e7-8a72-4b12-bfef-2d1e0d0e0e46",
+  "user_id": "ad0e0086-4118-456d-b410-9e7cac3b7b6d",
+  "company_id": "ac038605-b47f-4a88-99a0-0c9ac4c8e39c",
+  "name": "Поиск и рекомендации товаров",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Поисковая выдача и персональные рекомендации на сайте и в приложении маркетплейса.",
+    "domain": "retail",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-20",
+    "work_format": "office",
+    "clients": [
+      "web",
+      "api"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "python",
+        "typescript"
+      ],
+      "databases": [
+        "mysql",
+        "clickhouse",
+        "elasticsearch"
+      ],
+      "integrations": [
+        "rest",
+        "kafka"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "pytest",
+        "playwright",
+        "k6",
+        "sql_checks",
+        "testcontainers"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Junior": 2
+      },
+      "backend": {
+        "Senior": 1
+      },
+      "frontend": {
+        "Middle": 2
+      },
+      "qa": {
+        "Middle": 3
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "high",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "data",
+      "load"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "qa": {
+        "Senior": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "city": "Москва",
+    "fixed_details[languages:python].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:python].importance": "required",
+    "fixed_details[languages:python].depth": "by_grade",
+    "fixed_details[databases:mysql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:mysql].importance": "required",
+    "fixed_details[databases:mysql].depth": "by_grade",
+    "fixed_details[databases:clickhouse].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:clickhouse].importance": "required",
+    "fixed_details[databases:clickhouse].depth": "by_grade",
+    "fixed_details[databases:elasticsearch].positions": [
+      "backend_main"
+    ],
+    "fixed_details[databases:elasticsearch].importance": "required",
+    "fixed_details[databases:elasticsearch].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:kafka].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:kafka].importance": "required",
+    "fixed_details[integrations:kafka].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:pytest].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:pytest].importance": "required",
+    "fixed_details[testing:pytest].depth": "by_grade",
+    "fixed_details[testing:playwright].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:playwright].importance": "required",
+    "fixed_details[testing:playwright].depth": "by_grade",
+    "fixed_details[testing:k6].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:k6].importance": "required",
+    "fixed_details[testing:k6].depth": "by_grade",
+    "fixed_details[testing:sql_checks].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:sql_checks].importance": "required",
+    "fixed_details[testing:sql_checks].depth": "by_grade",
+    "fixed_details[testing:testcontainers].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:testcontainers].importance": "required",
+    "fixed_details[testing:testcontainers].depth": "by_grade",
+    "vacancies[backend_main:Middle].title": "Python-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «A/B-эксперименты» и «Персональные рекомендации»: API, бизнес-логика, схема MySQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "elasticsearch"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 190000,
+      "to": 290000
+    },
+    "vacancies[backend_main:Middle].notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Переводить раздел «Персональные рекомендации» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 185000,
+      "to": 285000
+    },
+    "vacancies[frontend_web:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[frontend_web:Senior].title": "Фронтенд-разработчик (Senior)",
+    "vacancies[frontend_web:Senior].task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Персональные рекомендации» и ревьюить код команды.",
+    "vacancies[frontend_web:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Senior].assignments": [],
+    "vacancies[frontend_web:Senior].salary": {
+      "from": 330000,
+      "to": 450000
+    },
+    "vacancies[frontend_web:Senior].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[qa:Senior].title": "QA-инженер по автоматизации (Senior)",
+    "vacancies[qa:Senior].task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на pytest + httpx и Playwright, метрики качества, наставничество для тестировщиков.",
+    "vacancies[qa:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python",
+          "typescript",
+          "sql"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "k6"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "sql_checks"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "testcontainers"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Senior].assignments": [],
+    "vacancies[qa:Senior].salary": {
+      "from": 230000,
+      "to": 325000
+    },
+    "vacancies[qa:Senior].notes": "Наставник на первые три месяца и понятный план развития.",
+    "vacancies[analyst:Junior].title": "Системный аналитик (Junior)",
+    "vacancies[analyst:Junior].task": "Собирать и описывать требования к модулю «Персональные рекомендации», готовить пользовательские сценарии под руководством ведущего аналитика.",
+    "vacancies[analyst:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Junior].assignments": [],
+    "vacancies[analyst:Junior].salary": {
+      "from": 85000,
+      "to": 120000
+    },
+    "vacancies[analyst:Junior].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Поисковая выдача» и «Персональные рекомендации», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [],
+    "vacancies[analyst:Middle].salary": {
+      "from": 170000,
+      "to": 255000
+    },
+    "vacancies[analyst:Middle].notes": "Наставник на первые три месяца и понятный план развития."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "python",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "mysql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "clickhouse",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "elasticsearch",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "kafka",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "pytest",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "playwright",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "k6",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "sql_checks",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "testcontainers",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "qa": {
+        "Senior": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "fe91750f-dbdd-4db8-91c6-d0d7569cd4e7",
+    "74f341fb-f59e-4bea-a45f-b812402aac45",
+    "1f0dff36-8b30-4cdf-8a51-fd134193155e",
+    "e406be54-af30-4ed2-9a77-2f6fdc2ccce5",
+    "ba775a22-1c38-420c-9c09-0282473de143",
+    "fe1da0b8-7886-49d3-8944-a8f91a4ab3d3"
+  ],
+  "approved_at": "2026-09-02T06:10:27.257913+00:00",
+  "completed_at": "2026-09-30T09:28:55.835953+00:00",
+  "copied_from": null,
+  "created_at": "2026-09-01T01:13:50.397945+00:00",
+  "updated_at": "2026-09-30T09:28:55.835953+00:00"
+}

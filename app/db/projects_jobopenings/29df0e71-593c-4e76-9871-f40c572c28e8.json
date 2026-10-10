@@ -1,0 +1,81 @@
+{
+  "id": "29df0e71-593c-4e76-9871-f40c572c28e8",
+  "title": "Тестировщик (Senior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Организовать ручное тестирование продукта: тестовая документация, регресс перед релизами, приёмка вместе с заказчиком.",
+  "requirements": [
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "postman"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 195000,
+    "to": 290000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+  "project_id": "6a3e9e23-4a92-4a05-b146-5bc4bf009411",
+  "user_id": "1db99444-1c9a-4fd9-b25c-607d5519677e",
+  "company": {
+    "id": "3c1d8a52-6b0e-4f7a-9d2c-5e8f1a7b4c90",
+    "name": "Логистический оператор «Евразийский коридор»"
+  },
+  "project": {
+    "name": "Таможенное оформление онлайн",
+    "summary": "Подготовка деклараций, обмен с таможенным брокером и расчёт таможенных платежей.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-04",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-09T05:13:30.182911+00:00",
+  "created_at": "2026-09-09T05:13:30.182911+00:00",
+  "updated_at": "2026-09-09T05:13:30.182911+00:00"
+}

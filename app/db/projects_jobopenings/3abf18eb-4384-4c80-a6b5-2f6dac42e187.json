@@ -1,0 +1,149 @@
+{
+  "id": "3abf18eb-4384-4c80-a6b5-2f6dac42e187",
+  "title": "Go-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Спроектировать архитектуру модулей «Скоринг операций» и «Разбор инцидентов»: границы сервисов, контракты REST API (HTTP + JSON), надёжность и производительность под нагрузкой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "go"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "clickhouse"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "grpc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите таблицы PostgreSQL для модуля «Правила блокировки» и индексы для трёх самых частых запросов.",
+    "Спроектируйте API модуля «Разбор инцидентов»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+  ],
+  "salary": {
+    "from": 330000,
+    "to": 485000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+  "project_id": "05ca7388-4211-4a89-bc9d-8ace89bd591a",
+  "user_id": "dd4a5cf8-88b4-4fa2-854f-aa06dfa08b1c",
+  "company": {
+    "id": "6d29aab1-aca8-4292-b08a-b648388afc4c",
+    "name": "Банк «Северная гавань»"
+  },
+  "project": {
+    "name": "Антифрод-платформа",
+    "summary": "Проверка операций клиентов в реальном времени: правила, скоринг и разбор подозрительных операций.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-07T22:54:58.613367+00:00",
+  "created_at": "2026-09-07T22:54:58.613367+00:00",
+  "updated_at": "2026-09-07T22:54:58.613367+00:00"
+}

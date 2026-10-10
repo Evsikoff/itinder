@@ -1,0 +1,122 @@
+{
+  "id": "b7e48833-674a-4b09-9f91-3d883b6ab07b",
+  "title": "Python-разработчик (Junior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Исправлять ошибки и добавлять небольшие функции в модулях «Запись к врачу» и «Результаты анализов», писать миграции PostgreSQL и тесты.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите таблицы PostgreSQL для модуля «Электронная медкарта» и индексы для трёх самых частых запросов."
+  ],
+  "salary": {
+    "from": 75000,
+    "to": 115000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "20b5e786-0210-47ee-8963-405009d1075b",
+  "user_id": "21e1cc34-c185-4a27-8294-b14f81ba66f5",
+  "company": {
+    "id": "5035ef51-c3c6-4cff-af20-16b6b79e3026",
+    "name": "Сеть клиник «Семейный доктор Поволжья»"
+  },
+  "project": {
+    "name": "Телемедицина и онлайн-запись",
+    "summary": "Запись к врачу, видеоконсультации и электронная медкарта пациента в одном приложении.",
+    "domain": "health",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-11-27",
+    "work_format": "hybrid",
+    "city": "Самара"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-03T02:43:27.480874+00:00",
+  "created_at": "2026-10-03T02:43:27.480874+00:00",
+  "updated_at": "2026-10-03T02:43:27.480874+00:00"
+}

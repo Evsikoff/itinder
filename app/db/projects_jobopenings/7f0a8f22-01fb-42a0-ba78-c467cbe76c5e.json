@@ -1,0 +1,123 @@
+{
+  "id": "7f0a8f22-01fb-42a0-ba78-c467cbe76c5e",
+  "title": "PHP-разработчик (Junior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Дорабатывать API модуля «Электронные документы»: новые методы, проверка входных данных, юнит-тесты на PHP. Код-ревью и помощь — от старших коллег.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "php"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите таблицы PostgreSQL для модуля «Заявки на перевозку» и индексы для трёх самых частых запросов.",
+    "Спроектируйте API модуля «Заявки на перевозку»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+  ],
+  "salary": {
+    "from": 85000,
+    "to": 125000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "fccae2eb-a7f9-4b9f-a4db-018fb7ed778c",
+  "user_id": "bb03ca09-3b6e-411d-9123-30fbe1fdba55",
+  "company": {
+    "id": "6774a5f8-e71d-4cda-8288-71e465844afd",
+    "name": "Транспортная компания «ГрузТранзит»"
+  },
+  "project": {
+    "name": "Биржа грузоперевозок",
+    "summary": "Заявки на перевозку, подбор перевозчика и электронные транспортные документы.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-07",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-26T23:40:57.447475+00:00",
+  "created_at": "2026-08-26T23:40:57.447475+00:00",
+  "updated_at": "2026-08-26T23:40:57.447475+00:00"
+}

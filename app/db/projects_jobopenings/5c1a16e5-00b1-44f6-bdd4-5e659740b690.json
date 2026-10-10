@@ -1,0 +1,68 @@
+{
+  "id": "5c1a16e5-00b1-44f6-bdd4-5e659740b690",
+  "title": "Flutter-разработчик (Senior)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (Flutter)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру мобильного приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «Заявки в управляющую компанию».",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "dart"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 265000,
+    "to": 385000,
+    "currency": "RUB"
+  },
+  "notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+  "project_id": "6b8c0ab7-b556-456b-84d6-ef759f538de9",
+  "user_id": "4bd46022-f45e-429f-9c44-6231a26c53b6",
+  "company": {
+    "id": "320fb3eb-8b7c-48af-91c4-7970e2c17548",
+    "name": "Девелопер «Новые кварталы»"
+  },
+  "project": {
+    "name": "Приложение жителя ЖК",
+    "summary": "Заявки в управляющую компанию, пропуска для гостей и оплата коммунальных услуг.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-12",
+    "work_format": "hybrid",
+    "city": "Тюмень"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-28T21:32:24.029185+00:00",
+  "created_at": "2026-08-28T21:32:24.029185+00:00",
+  "updated_at": "2026-08-28T21:32:24.029185+00:00"
+}

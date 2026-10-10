@@ -1,0 +1,96 @@
+{
+  "id": "b890b3c6-4882-41db-9009-18efbb90a341",
+  "title": "Android-разработчик (Junior)",
+  "position": "frontend_android",
+  "position_name": "Android-разработчик",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Делать экраны «Электронная медкарта» и «Результаты анализов» Android-приложения, подключать их к API и исправлять ошибки.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Как вы сделаете офлайн-режим экрана «Электронная медкарта»: что кэшировать и как синхронизировать изменения?"
+  ],
+  "salary": {
+    "from": 70000,
+    "to": 105000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "20b5e786-0210-47ee-8963-405009d1075b",
+  "user_id": "21e1cc34-c185-4a27-8294-b14f81ba66f5",
+  "company": {
+    "id": "5035ef51-c3c6-4cff-af20-16b6b79e3026",
+    "name": "Сеть клиник «Семейный доктор Поволжья»"
+  },
+  "project": {
+    "name": "Телемедицина и онлайн-запись",
+    "summary": "Запись к врачу, видеоконсультации и электронная медкарта пациента в одном приложении.",
+    "domain": "health",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-11-27",
+    "work_format": "hybrid",
+    "city": "Самара"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-03T02:43:27.480874+00:00",
+  "created_at": "2026-10-03T02:43:27.480874+00:00",
+  "updated_at": "2026-10-03T02:43:27.480874+00:00"
+}

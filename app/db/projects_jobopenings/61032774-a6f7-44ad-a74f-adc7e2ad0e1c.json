@@ -1,0 +1,133 @@
+{
+  "id": "61032774-a6f7-44ad-a74f-adc7e2ad0e1c",
+  "title": "Java-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Отвечать за модуль «Подписки» целиком: от проектирования API до мониторинга в продакшене; оптимизировать запросы к PostgreSQL.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "clickhouse"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rabbitmq"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 175000,
+    "to": 280000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+  "project_id": "c7cd2516-8ccd-4d25-891a-982ab4a2a924",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company": {
+    "id": "283fb0af-4972-4e0c-9f40-03fd981d5f9f",
+    "name": "Медиахолдинг «Город 24»"
+  },
+  "project": {
+    "name": "Видеоплатформа телеканала",
+    "summary": "Прямые эфиры, архив передач и подписки на сайте и в приложениях.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-23T12:09:42.968874+00:00",
+  "created_at": "2026-08-23T12:09:42.968874+00:00",
+  "updated_at": "2026-08-23T12:09:42.968874+00:00"
+}

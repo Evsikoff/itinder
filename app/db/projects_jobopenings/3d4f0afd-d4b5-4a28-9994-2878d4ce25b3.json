@@ -1,0 +1,120 @@
+{
+  "id": "3d4f0afd-d4b5-4a28-9994-2878d4ce25b3",
+  "title": "Go-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по PostgreSQL и интеграциям, онбординг новичков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "go"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "elasticsearch"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 270000,
+    "to": 405000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "cb3fdcb5-5dec-4cff-8963-136c4ef6bd89",
+  "user_id": "26f29af6-b1eb-4abf-a663-a8ac350e57c3",
+  "company": {
+    "id": "1abafb5a-b272-445b-a998-d1749d22d2d0",
+    "name": "Аптечная сеть «Аптека у дома»"
+  },
+  "project": {
+    "name": "Бронирование и доставка лекарств",
+    "summary": "Поиск лекарства по наличию в ближайших аптеках, бронирование и доставка до двери.",
+    "domain": "health",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-10-12",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-14T02:29:38.518713+00:00",
+  "created_at": "2026-09-14T02:29:38.518713+00:00",
+  "updated_at": "2026-09-14T02:29:38.518713+00:00"
+}

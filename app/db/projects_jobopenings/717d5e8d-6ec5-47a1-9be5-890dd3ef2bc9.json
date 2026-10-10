@@ -1,0 +1,133 @@
+{
+  "id": "717d5e8d-6ec5-47a1-9be5-890dd3ef2bc9",
+  "title": "Go-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать серверную часть модулей «Карта автомобилей» и «Штрафы и оплата»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "go"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "grpc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 210000,
+    "to": 315000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "6d4b7385-e874-49c4-bdd7-5b2a53ebd557",
+  "user_id": "933b5dd7-43e2-40b4-9935-62d59bb5f518",
+  "company": {
+    "id": "4c815be1-ded6-40f7-a8f0-84ccbe362d49",
+    "name": "Каршеринг «Поехали»"
+  },
+  "project": {
+    "name": "Приложение каршеринга",
+    "summary": "Карта свободных машин, бронирование, старт аренды с телефона, штрафы и оплата.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-12",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T03:54:38.162140+00:00",
+  "created_at": "2026-09-03T03:54:38.162140+00:00",
+  "updated_at": "2026-09-03T03:54:38.162140+00:00"
+}

@@ -1,0 +1,656 @@
+{
+  "id": "42e129a9-81d1-49c6-8b22-c1ca8d42db4c",
+  "user_id": "36b442a7-97c7-4696-b2c7-92776ce2225d",
+  "company_id": "3ddb8743-6c4d-4872-977f-86d3738379c2",
+  "name": "Региональный портал госуслуг",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Региональные услуги онлайн: запись в детский сад, обращения граждан, статусы заявлений.",
+    "domain": "gov",
+    "stage": "support",
+    "duration": "6to12",
+    "start_date": "2026-10-18",
+    "work_format": "remote",
+    "clients": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "stack_limits": [
+      "domestic"
+    ],
+    "existing_stack": {
+      "languages": [
+        "java",
+        "typescript",
+        "dart"
+      ],
+      "databases": [
+        "postgres_pro",
+        "redis"
+      ],
+      "integrations": [
+        "rest",
+        "oidc",
+        "soap",
+        "file_exchange"
+      ]
+    },
+    "existing_tests": {
+      "testing": []
+    },
+    "current_team": {
+      "analyst": {
+        "Senior": 1
+      },
+      "backend": {
+        "Middle": 3
+      },
+      "frontend": {
+        "Middle": 2
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "high",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "manual",
+    "qa_focus": [
+      "logic",
+      "web_ui",
+      "security",
+      "partners"
+    ],
+    "requirements_state": "idea",
+    "team_plan": {
+      "backend_main": {
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Junior": 1
+      },
+      "analyst": {
+        "Senior": 1
+      }
+    },
+    "mobile_native": "cross",
+    "fixed_details[languages:java].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:java].importance": "required",
+    "fixed_details[languages:java].depth": "by_grade",
+    "fixed_details[databases:postgres_pro].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgres_pro].importance": "required",
+    "fixed_details[databases:postgres_pro].depth": "by_grade",
+    "fixed_details[databases:redis].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:redis].importance": "required",
+    "fixed_details[databases:redis].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:oidc].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:oidc].importance": "required",
+    "fixed_details[integrations:oidc].depth": "by_grade",
+    "fixed_details[integrations:soap].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:soap].importance": "required",
+    "fixed_details[integrations:soap].depth": "by_grade",
+    "fixed_details[integrations:file_exchange].positions": [
+      "backend_main"
+    ],
+    "fixed_details[integrations:file_exchange].importance": "required",
+    "fixed_details[integrations:file_exchange].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[languages:dart].positions": [
+      "frontend_mobile"
+    ],
+    "fixed_details[languages:dart].importance": "required",
+    "fixed_details[languages:dart].depth": "by_grade",
+    "vacancies[backend_main:Senior].title": "Java-разработчик (Senior)",
+    "vacancies[backend_main:Senior].task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по Postgres Pro и интеграциям, онбординг новичков.",
+    "vacancies[backend_main:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgres_pro"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Senior].assignments": [
+      "Спроектируйте API модуля «Уведомления о статусе»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+      "Опишите таблицы Postgres Pro для модуля «Личный кабинет заявителя» и индексы для трёх самых частых запросов."
+    ],
+    "vacancies[backend_main:Senior].salary": {
+      "from": 280000,
+      "to": 405000
+    },
+    "vacancies[backend_main:Senior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Разрабатывать веб-интерфейс модулей «Уведомления о статусе» и «Запись в детский сад»: компоненты, состояние, работа с REST API (HTTP + JSON), адаптивность и доступность.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 150000,
+      "to": 235000
+    },
+    "vacancies[frontend_web:Middle].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Senior].title": "Фронтенд-разработчик (Senior)",
+    "vacancies[frontend_web:Senior].task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Личный кабинет заявителя» и ревьюить код команды.",
+    "vacancies[frontend_web:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Senior].assignments": [],
+    "vacancies[frontend_web:Senior].salary": {
+      "from": 230000,
+      "to": 335000
+    },
+    "vacancies[frontend_web:Senior].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_mobile:Junior].title": "Flutter-разработчик (Junior)",
+    "vacancies[frontend_mobile:Junior].task": "Делать экраны «Запись в детский сад» и «Уведомления о статусе» мобильного приложения, подключать их к API и исправлять ошибки.",
+    "vacancies[frontend_mobile:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "dart"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Junior].assignments": [
+      "Как вы сделаете офлайн-режим экрана «Личный кабинет заявителя»: что кэшировать и как синхронизировать изменения?"
+    ],
+    "vacancies[frontend_mobile:Junior].salary": {
+      "from": 65000,
+      "to": 100000
+    },
+    "vacancies[frontend_mobile:Junior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Senior].title": "Системный аналитик (Senior)",
+    "vacancies[analyst:Senior].task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в Postgres Pro, приоритизация требований вместе с заказчиком.",
+    "vacancies[analyst:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgres_pro"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Senior].assignments": [],
+    "vacancies[analyst:Senior].salary": {
+      "from": 230000,
+      "to": 325000
+    },
+    "vacancies[analyst:Senior].notes": "Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "flutter",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_mobile",
+        "role": "frontend",
+        "name": "Мобильный разработчик (Flutter)"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "java",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgres_pro",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "redis",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "oidc",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "soap",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "file_exchange",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "dart",
+        "positions": [
+          "frontend_mobile"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Junior": 1
+      },
+      "analyst": {
+        "Senior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "b032c832-dab5-48a6-843f-eebab74c9127",
+    "bc480bc9-89cb-437e-bced-4e493ae26aec",
+    "a61e4940-0f23-414b-9752-0e45d12302a5",
+    "fac85880-d2bc-4a7b-8671-d7226902391c",
+    "9bb7553c-fa31-448b-850e-528f670c6dcc"
+  ],
+  "approved_at": "2026-10-02T15:25:30.246910+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-10-01T10:35:00.158493+00:00",
+  "updated_at": "2026-10-02T15:25:30.246910+00:00"
+}

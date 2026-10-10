@@ -1,0 +1,68 @@
+{
+  "id": "536f6c35-c0fa-430f-8c48-ac9d56c969a7",
+  "title": "Фронтенд-разработчик (Senior)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Декларации» и ревьюить код команды.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "graphql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 280000,
+    "to": 380000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "6a3e9e23-4a92-4a05-b146-5bc4bf009411",
+  "user_id": "1db99444-1c9a-4fd9-b25c-607d5519677e",
+  "company": {
+    "id": "3c1d8a52-6b0e-4f7a-9d2c-5e8f1a7b4c90",
+    "name": "Логистический оператор «Евразийский коридор»"
+  },
+  "project": {
+    "name": "Таможенное оформление онлайн",
+    "summary": "Подготовка деклараций, обмен с таможенным брокером и расчёт таможенных платежей.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-04",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-09T05:13:30.182911+00:00",
+  "created_at": "2026-09-09T05:13:30.182911+00:00",
+  "updated_at": "2026-09-09T05:13:30.182911+00:00"
+}

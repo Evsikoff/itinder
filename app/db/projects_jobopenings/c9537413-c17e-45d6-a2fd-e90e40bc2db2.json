@@ -1,0 +1,68 @@
+{
+  "id": "c9537413-c17e-45d6-a2fd-e90e40bc2db2",
+  "title": "Flutter-разработчик (Junior)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (Flutter)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Делать экраны «Запись к тренеру» и «Абонементы» мобильного приложения, подключать их к API и исправлять ошибки.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "dart"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 80000,
+    "to": 120000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+  "project_id": "cbd739bb-e230-4ce8-abdc-57d6788ba337",
+  "user_id": "296b0e8a-f222-4cda-8132-3505e7d9f2bf",
+  "company": {
+    "id": "3d3e6652-f713-4711-ad78-78f6e7971620",
+    "name": "Фитнес-сеть «Пульс»"
+  },
+  "project": {
+    "name": "Приложение фитнес-клуба",
+    "summary": "Расписание тренировок, запись к тренеру и продление абонемента в приложении.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-09",
+    "work_format": "hybrid",
+    "city": "Казань"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T03:51:43.378515+00:00",
+  "created_at": "2026-09-03T03:51:43.378515+00:00",
+  "updated_at": "2026-09-03T03:51:43.378515+00:00"
+}

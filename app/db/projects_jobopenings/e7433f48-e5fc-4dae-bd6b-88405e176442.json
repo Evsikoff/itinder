@@ -1,0 +1,68 @@
+{
+  "id": "e7433f48-e5fc-4dae-bd6b-88405e176442",
+  "title": "Фронтенд-разработчик (Junior)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Верстать и подключать к API экраны «Оплата и выпуск полиса» и «Урегулирование убытков» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 95000,
+    "to": 155000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "8be8255e-cb31-4f57-b393-d357286581e6",
+  "user_id": "4e100201-1da8-4abf-8817-d6493df1ff75",
+  "company": {
+    "id": "d244412e-9f9b-4895-ab2c-296eeaae1f01",
+    "name": "Страховая компания «Опора»"
+  },
+  "project": {
+    "name": "Онлайн-оформление ОСАГО и КАСКО",
+    "summary": "Расчёт, покупка и продление полисов на сайте и в приложении, урегулирование убытков онлайн.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-11-03",
+    "work_format": "hybrid",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-07T08:59:47.154879+00:00",
+  "created_at": "2026-09-07T08:59:47.154879+00:00",
+  "updated_at": "2026-09-07T08:59:47.154879+00:00"
+}

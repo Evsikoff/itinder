@@ -1,0 +1,788 @@
+{
+  "id": "a27c4620-b679-429e-aa24-74cd0f7bda35",
+  "user_id": "6ad706f8-8fd0-4ff4-b0c6-59a8635b979b",
+  "company_id": "d244412e-9f9b-4895-ab2c-296eeaae1f01",
+  "name": "Кабинет корпоративного клиента ДМС",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Кабинет отдела кадров компании-клиента: списки застрахованных, гарантийные письма, отчёты.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-30",
+    "work_format": "remote",
+    "clients": [
+      "web"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "csharp",
+        "typescript"
+      ],
+      "databases": [
+        "mssql"
+      ],
+      "integrations": [
+        "rest",
+        "oidc",
+        "file_exchange"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "pytest",
+        "playwright"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 3
+      },
+      "backend": {
+        "Middle": 3
+      },
+      "frontend": {
+        "Senior": 3
+      },
+      "qa": {
+        "Senior": 1
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "small",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "reports"
+    ],
+    "requirements_state": "idea",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Middle": 2
+      },
+      "qa": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "fixed_details[languages:csharp].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:csharp].importance": "required",
+    "fixed_details[languages:csharp].depth": "by_grade",
+    "fixed_details[databases:mssql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:mssql].importance": "required",
+    "fixed_details[databases:mssql].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:oidc].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:oidc].importance": "required",
+    "fixed_details[integrations:oidc].depth": "by_grade",
+    "fixed_details[integrations:file_exchange].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:file_exchange].importance": "required",
+    "fixed_details[integrations:file_exchange].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:pytest].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:pytest].importance": "required",
+    "fixed_details[testing:pytest].depth": "by_grade",
+    "fixed_details[testing:playwright].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:playwright].importance": "required",
+    "fixed_details[testing:playwright].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "C#-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Дорабатывать API модуля «Гарантийные письма»: новые методы, проверка входных данных, юнит-тесты на C#. Код-ревью и помощь — от старших коллег.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "csharp"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mssql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [
+      "Спроектируйте API модуля «Списки застрахованных»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+      "Опишите таблицы Microsoft SQL Server для модуля «Отчёты по убыткам» и индексы для трёх самых частых запросов."
+    ],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 105000,
+      "to": 165000
+    },
+    "vacancies[backend_main:Junior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[backend_main:Senior].title": "C#-разработчик (Senior)",
+    "vacancies[backend_main:Senior].task": "Спроектировать архитектуру модулей «Отчёты по убыткам» и «Списки застрахованных»: границы сервисов, контракты REST API (HTTP + JSON), надёжность и производительность под нагрузкой.",
+    "vacancies[backend_main:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "csharp"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mssql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Senior].assignments": [],
+    "vacancies[backend_main:Senior].salary": {
+      "from": 330000,
+      "to": 470000
+    },
+    "vacancies[backend_main:Senior].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «Гарантийные письма» и «Списки застрахованных» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [
+      "Опишите структуру компонентов экрана «Гарантийные письма»: что хранится в состоянии, как показываются загрузка и ошибки.",
+      "Страница «Списки застрахованных» открывается шесть секунд. С чего вы начнёте ускорение?"
+    ],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 85000,
+      "to": 145000
+    },
+    "vacancies[frontend_web:Junior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Разрабатывать веб-интерфейс модулей «Отчёты по убыткам» и «Гарантийные письма»: компоненты, состояние, работа с REST API (HTTP + JSON), адаптивность и доступность.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 200000,
+      "to": 305000
+    },
+    "vacancies[frontend_web:Middle].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Junior].title": "Тестировщик (Junior)",
+    "vacancies[qa:Junior].task": "Тестировать новые функции модуля «Гарантийные письма» по чек-листам, заводить понятные баг-репорты, постепенно подключаться к автотестам.",
+    "vacancies[qa:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Junior].assignments": [
+      "Напишите баг-репорт: в разделе «Отчёты по убыткам» кнопка «Сохранить» иногда не реагирует на нажатие.",
+      "Составьте 7–10 проверок функции «Отчёты по убыткам», включая граничные и негативные случаи."
+    ],
+    "vacancies[qa:Junior].salary": {
+      "from": 75000,
+      "to": 115000
+    },
+    "vacancies[qa:Junior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Senior].title": "QA-инженер по автоматизации (Senior)",
+    "vacancies[qa:Senior].task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на pytest + httpx и Playwright, метрики качества, наставничество для тестировщиков.",
+    "vacancies[qa:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Senior].assignments": [
+      "Напишите баг-репорт: в разделе «Гарантийные письма» кнопка «Сохранить» иногда не реагирует на нажатие.",
+      "Составьте 7–10 проверок функции «Отчёты по убыткам», включая граничные и негативные случаи."
+    ],
+    "vacancies[qa:Senior].salary": {
+      "from": 225000,
+      "to": 345000
+    },
+    "vacancies[qa:Senior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Отчёты по убыткам» и «Гарантийные письма», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mssql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [
+      "Опишите сценарий «Гарантийные письма»: участники, основной поток, альтернативы и исключения."
+    ],
+    "vacancies[analyst:Middle].salary": {
+      "from": 180000,
+      "to": 265000
+    },
+    "vacancies[analyst:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "csharp",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "mssql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "oidc",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "file_exchange",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "pytest",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "playwright",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Middle": 2
+      },
+      "qa": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "756d6301-c2d5-4b51-ae95-e84324beb000",
+    "e6b1c4b4-c2f8-42b9-80de-911a35c718a4",
+    "f9c0ea56-7751-44f5-93dc-3feda1add4f3",
+    "0c7d2f99-aa80-45a8-a725-b1f5c59b88fc",
+    "9acfa748-1e3a-4193-b7f2-caff26a2468b",
+    "28298115-0162-4cd7-832a-0ab151738588",
+    "fbb16888-0304-4600-983d-8c0456856a97"
+  ],
+  "approved_at": "2026-08-29T05:16:29.122571+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-08-26T08:46:34.468033+00:00",
+  "updated_at": "2026-08-29T05:16:29.122571+00:00"
+}

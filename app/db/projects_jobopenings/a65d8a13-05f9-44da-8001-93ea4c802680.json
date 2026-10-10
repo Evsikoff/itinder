@@ -1,0 +1,109 @@
+{
+  "id": "a65d8a13-05f9-44da-8001-93ea4c802680",
+  "title": "Python-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Спроектировать архитектуру модулей «Оплата коммунальных услуг» и «Заявки в управляющую компанию»: границы сервисов, контракты REST API (HTTP + JSON), надёжность и производительность под нагрузкой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "mysql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "webhook"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Спроектируйте API модуля «Заявки в управляющую компанию»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+  ],
+  "salary": {
+    "from": 265000,
+    "to": 385000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "6b8c0ab7-b556-456b-84d6-ef759f538de9",
+  "user_id": "4bd46022-f45e-429f-9c44-6231a26c53b6",
+  "company": {
+    "id": "320fb3eb-8b7c-48af-91c4-7970e2c17548",
+    "name": "Девелопер «Новые кварталы»"
+  },
+  "project": {
+    "name": "Приложение жителя ЖК",
+    "summary": "Заявки в управляющую компанию, пропуска для гостей и оплата коммунальных услуг.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-12",
+    "work_format": "hybrid",
+    "city": "Тюмень"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-28T21:32:24.029185+00:00",
+  "created_at": "2026-08-28T21:32:24.029185+00:00",
+  "updated_at": "2026-08-28T21:32:24.029185+00:00"
+}

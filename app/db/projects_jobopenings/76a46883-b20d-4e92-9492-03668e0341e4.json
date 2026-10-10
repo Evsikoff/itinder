@@ -1,0 +1,110 @@
+{
+  "id": "76a46883-b20d-4e92-9492-03668e0341e4",
+  "title": "Системный аналитик (Middle)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Описывать требования и модель данных модулей «Переоценка» и «Заказ поставщикам», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rabbitmq"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите сценарий «Заказ поставщикам»: участники, основной поток, альтернативы и исключения.",
+    "Опишите модель данных модуля «Остатки по магазинам»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 150000,
+    "to": 230000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+  "project_id": "1e5d4cce-17a7-46a3-8523-de29c565e8f7",
+  "user_id": "4bd46022-f45e-429f-9c44-6231a26c53b6",
+  "company": {
+    "id": "f13d81f3-a2e3-4af1-bf71-83f464f4be39",
+    "name": "Сеть супермаркетов «Свежий квартал»"
+  },
+  "project": {
+    "name": "Учёт остатков и электронные ценники",
+    "summary": "Остатки по магазинам в реальном времени, переоценка с электронными ценниками и автозаказ.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-16",
+    "work_format": "hybrid",
+    "city": "Нижний Новгород"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T01:54:00.431956+00:00",
+  "created_at": "2026-09-03T01:54:00.431956+00:00",
+  "updated_at": "2026-09-03T01:54:00.431956+00:00"
+}

@@ -1,0 +1,107 @@
+{
+  "id": "fc8a98c1-06dc-4847-a400-bf0b4308e74f",
+  "title": "Системный аналитик (Senior)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в PostgreSQL, приоритизация требований вместе с заказчиком.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rabbitmq"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "grpc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 235000,
+    "to": 345000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "9a1b3215-2741-4820-a337-9457abb5e112",
+  "user_id": "ec3464cb-4c03-4d16-92fe-4086b29c99cb",
+  "company": {
+    "id": "fb903164-1211-40f2-9c62-8f7f494a89dd",
+    "name": "Онлайн-школа «Знание+»"
+  },
+  "project": {
+    "name": "Автопроверка домашних заданий",
+    "summary": "Запуск кода учеников в песочнице, проверка тестами и отчёт преподавателю.",
+    "domain": "education",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-21",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-07T11:42:06.489893+00:00",
+  "created_at": "2026-10-07T11:42:06.489893+00:00",
+  "updated_at": "2026-10-07T11:42:06.489893+00:00"
+}

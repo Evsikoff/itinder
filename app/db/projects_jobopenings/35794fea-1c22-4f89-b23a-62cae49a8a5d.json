@@ -1,0 +1,68 @@
+{
+  "id": "35794fea-1c22-4f89-b23a-62cae49a8a5d",
+  "title": "Фронтенд-разработчик (Senior)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Лента новостей» и ревьюить код команды.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "javascript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 250000,
+    "to": 360000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+  "project_id": "6b53ccb2-f65b-41ba-9b3f-c376fa1aade4",
+  "user_id": "296b0e8a-f222-4cda-8132-3505e7d9f2bf",
+  "company": {
+    "id": "283fb0af-4972-4e0c-9f40-03fd981d5f9f",
+    "name": "Медиахолдинг «Город 24»"
+  },
+  "project": {
+    "name": "Новостной портал и редакционная CMS",
+    "summary": "Сайт с миллионом читателей в день и редакционная система для сорока журналистов.",
+    "domain": "media",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-10-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-11T04:34:53.912401+00:00",
+  "created_at": "2026-09-11T04:34:53.912401+00:00",
+  "updated_at": "2026-09-11T04:34:53.912401+00:00"
+}

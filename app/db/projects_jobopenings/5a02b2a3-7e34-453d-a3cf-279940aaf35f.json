@@ -1,0 +1,111 @@
+{
+  "id": "5a02b2a3-7e34-453d-a3cf-279940aaf35f",
+  "title": "Тестировщик (Junior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Тестировать новые функции модуля «Архив документов» по чек-листам, заводить понятные баг-репорты, постепенно подключаться к автотестам.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java",
+        "typescript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "rest_assured"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "testcontainers"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Составьте 7–10 проверок функции «Маршруты согласования», включая граничные и негативные случаи.",
+    "Напишите баг-репорт: в разделе «Архив документов» кнопка «Сохранить» иногда не реагирует на нажатие."
+  ],
+  "salary": {
+    "from": 55000,
+    "to": 95000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "556eacc3-8f97-429d-b56c-ee80ce4a544e",
+  "user_id": "da85473a-ee0a-410d-af50-58dbf8632aa1",
+  "company": {
+    "id": "3ddb8743-6c4d-4872-977f-86d3738379c2",
+    "name": "Региональный центр цифровых услуг"
+  },
+  "project": {
+    "name": "Электронный документооборот ведомств",
+    "summary": "Согласование и подписание документов между министерствами и подведомственными учреждениями.",
+    "domain": "gov",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-19",
+    "work_format": "hybrid",
+    "city": "Казань"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-01T18:20:45.856752+00:00",
+  "created_at": "2026-10-01T18:20:45.856752+00:00",
+  "updated_at": "2026-10-01T18:20:45.856752+00:00"
+}

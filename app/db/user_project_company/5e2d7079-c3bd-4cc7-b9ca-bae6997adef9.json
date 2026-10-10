@@ -1,0 +1,868 @@
+{
+  "id": "5e2d7079-c3bd-4cc7-b9ca-bae6997adef9",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company_id": "5035ef51-c3c6-4cff-af20-16b6b79e3026",
+  "name": "Лабораторная информационная система",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Путь пробы от процедурного кабинета до результата: штрихкоды, анализаторы, выдача результатов.",
+    "domain": "health",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-10-12",
+    "work_format": "hybrid",
+    "clients": [
+      "web",
+      "api"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "java",
+        "javascript"
+      ],
+      "databases": [
+        "postgresql",
+        "redis"
+      ],
+      "integrations": [
+        "rest",
+        "kafka",
+        "file_exchange"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "rest_assured",
+        "playwright",
+        "sql_checks"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 3
+      },
+      "backend": {
+        "Middle": 1
+      },
+      "frontend": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 3
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "medium",
+    "third_party_api": "yes",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "data",
+      "partners"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "qa": {
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1,
+        "Senior": 1
+      }
+    },
+    "city": "Самара",
+    "fixed_details[languages:java].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:java].importance": "required",
+    "fixed_details[languages:java].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[databases:redis].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:redis].importance": "required",
+    "fixed_details[databases:redis].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:kafka].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:kafka].importance": "required",
+    "fixed_details[integrations:kafka].depth": "by_grade",
+    "fixed_details[integrations:file_exchange].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:file_exchange].importance": "required",
+    "fixed_details[integrations:file_exchange].depth": "by_grade",
+    "fixed_details[languages:javascript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:javascript].importance": "required",
+    "fixed_details[languages:javascript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:rest_assured].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:rest_assured].importance": "required",
+    "fixed_details[testing:rest_assured].depth": "by_grade",
+    "fixed_details[testing:playwright].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:playwright].importance": "required",
+    "fixed_details[testing:playwright].depth": "by_grade",
+    "fixed_details[testing:sql_checks].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:sql_checks].importance": "required",
+    "fixed_details[testing:sql_checks].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "Java-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Дорабатывать API модуля «Журнал исследований»: новые методы, проверка входных данных, юнит-тесты на Java. Код-ревью и помощь — от старших коллег.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [
+      "Опишите таблицы PostgreSQL для модуля «Выдача результатов» и индексы для трёх самых частых запросов."
+    ],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 75000,
+      "to": 115000
+    },
+    "vacancies[backend_main:Junior].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+    "vacancies[backend_main:Middle].title": "Java-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Журнал исследований» и «Выдача результатов»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 150000,
+      "to": 230000
+    },
+    "vacancies[backend_main:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «Приём биоматериала» и «Выдача результатов» на JavaScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "javascript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 75000,
+      "to": 125000
+    },
+    "vacancies[frontend_web:Junior].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Переводить раздел «Выдача результатов» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "javascript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [
+      "Опишите структуру компонентов экрана «Выдача результатов»: что хранится в состоянии, как показываются загрузка и ошибки.",
+      "Страница «Приём биоматериала» открывается шесть секунд. С чего вы начнёте ускорение?"
+    ],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 145000,
+      "to": 215000
+    },
+    "vacancies[frontend_web:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[qa:Senior].title": "QA-инженер по автоматизации (Senior)",
+    "vacancies[qa:Senior].task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на REST Assured + JUnit 5 и Playwright, метрики качества, наставничество для тестировщиков.",
+    "vacancies[qa:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java",
+          "javascript",
+          "sql"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "rest_assured"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "sql_checks"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Senior].assignments": [],
+    "vacancies[qa:Senior].salary": {
+      "from": 180000,
+      "to": 255000
+    },
+    "vacancies[qa:Senior].notes": null,
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Журнал исследований» и «Выдача результатов», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [],
+    "vacancies[analyst:Middle].salary": {
+      "from": 135000,
+      "to": 205000
+    },
+    "vacancies[analyst:Middle].notes": null,
+    "vacancies[analyst:Senior].title": "Системный аналитик (Senior)",
+    "vacancies[analyst:Senior].task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в PostgreSQL, приоритизация требований вместе с заказчиком.",
+    "vacancies[analyst:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Senior].assignments": [],
+    "vacancies[analyst:Senior].salary": {
+      "from": 210000,
+      "to": 290000
+    },
+    "vacancies[analyst:Senior].notes": "ДМС после испытательного срока, компенсация обучения и конференций."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "java",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "redis",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "kafka",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "file_exchange",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "javascript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "rest_assured",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "playwright",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "sql_checks",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "qa": {
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1,
+        "Senior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "4803e257-ba0f-4b17-b0ed-4d376ca6b340",
+    "58e1b22b-2b0f-4232-9628-e796ea0c3580",
+    "7032b23c-14a5-418d-829c-19b2ae4e886b",
+    "6ba9fc49-e6b8-4979-98d8-40e830de2a3f",
+    "1d205e1a-bd54-4eae-bb79-9adefac5fdb7",
+    "abac0b98-46d1-4ea1-ad84-af39340ff088",
+    "98e2094d-44e3-4d81-a02d-c196a173f02a"
+  ],
+  "approved_at": "2026-09-07T04:16:55.515169+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-04T15:56:23.464404+00:00",
+  "updated_at": "2026-09-07T04:16:55.515169+00:00"
+}

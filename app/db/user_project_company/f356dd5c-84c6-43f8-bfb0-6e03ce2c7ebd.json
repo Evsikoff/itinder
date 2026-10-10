@@ -1,0 +1,750 @@
+{
+  "id": "f356dd5c-84c6-43f8-bfb0-6e03ce2c7ebd",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company_id": "8fa3c9f6-62fd-407d-8854-1e438ecec5a9",
+  "name": "Биллинг и личный кабинет",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Тарифы и опции, детализация расходов и автоплатёж для миллиона абонентов.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-23",
+    "work_format": "office",
+    "clients": [
+      "web",
+      "api"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "go",
+        "typescript"
+      ],
+      "databases": [
+        "mysql",
+        "clickhouse"
+      ],
+      "integrations": [
+        "rest",
+        "rabbitmq",
+        "soap"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "postman",
+        "playwright",
+        "jmeter",
+        "sql_checks"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Senior": 2
+      },
+      "backend": {
+        "Middle": 3
+      },
+      "frontend": {
+        "Middle": 3
+      },
+      "qa": {
+        "Junior": 1
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "high",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "data",
+      "load"
+    ],
+    "requirements_state": "ready",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1
+      },
+      "frontend_web": {
+        "Junior": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "city": "Уфа",
+    "fixed_details[languages:go].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:go].importance": "required",
+    "fixed_details[languages:go].depth": "by_grade",
+    "fixed_details[databases:mysql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:mysql].importance": "required",
+    "fixed_details[databases:mysql].depth": "by_grade",
+    "fixed_details[databases:clickhouse].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:clickhouse].importance": "required",
+    "fixed_details[databases:clickhouse].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:rabbitmq].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:rabbitmq].importance": "required",
+    "fixed_details[integrations:rabbitmq].depth": "by_grade",
+    "fixed_details[integrations:soap].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:soap].importance": "required",
+    "fixed_details[integrations:soap].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:postman].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:postman].importance": "required",
+    "fixed_details[testing:postman].depth": "by_grade",
+    "fixed_details[testing:playwright].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:playwright].importance": "required",
+    "fixed_details[testing:playwright].depth": "by_grade",
+    "fixed_details[testing:jmeter].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:jmeter].importance": "required",
+    "fixed_details[testing:jmeter].depth": "by_grade",
+    "fixed_details[testing:sql_checks].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:sql_checks].importance": "required",
+    "fixed_details[testing:sql_checks].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "Go-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Исправлять ошибки и добавлять небольшие функции в модулях «Автоплатёж» и «Тарифы и опции», писать миграции MySQL и тесты.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "go"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 80000,
+      "to": 125000
+    },
+    "vacancies[backend_main:Junior].notes": null,
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «Детализация расходов» и «Автоплатёж» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 70000,
+      "to": 110000
+    },
+    "vacancies[frontend_web:Junior].notes": "Наставник на первые три месяца и понятный план развития.",
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Автоплатёж» и «Детализация расходов»: тест-дизайн, автотесты на Playwright и Проверка данных SQL-запросами, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript",
+          "sql"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "postman"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "playwright"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "jmeter"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "sql_checks"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 125000,
+      "to": 180000
+    },
+    "vacancies[qa:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+    "vacancies[analyst:Junior].title": "Системный аналитик (Junior)",
+    "vacancies[analyst:Junior].task": "Собирать и описывать требования к модулю «Детализация расходов», готовить пользовательские сценарии под руководством ведущего аналитика.",
+    "vacancies[analyst:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Junior].assignments": [
+      "Опишите модель данных модуля «Тарифы и опции»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Junior].salary": {
+      "from": 70000,
+      "to": 110000
+    },
+    "vacancies[analyst:Junior].notes": null,
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Автоплатёж» и «Тарифы и опции», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "clickhouse"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rabbitmq"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [],
+    "vacancies[analyst:Middle].salary": {
+      "from": 150000,
+      "to": 215000
+    },
+    "vacancies[analyst:Middle].notes": null
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "go",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "mysql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "clickhouse",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rabbitmq",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "soap",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "postman",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "playwright",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "jmeter",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "sql_checks",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1
+      },
+      "frontend_web": {
+        "Junior": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "fe31f0a3-cbcc-4f52-b232-ac9254164999",
+    "3ae0b7c9-3a13-4ded-9090-a50496f0fe45",
+    "d10c9ad6-d7d4-419e-9dfe-9d05c9dccbc4",
+    "338428ff-ec1d-4b2d-8000-88fa4fa89291",
+    "e80b740d-32b2-4674-a6cb-5669bc1a5371"
+  ],
+  "approved_at": "2026-08-29T21:25:54.377958+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-08-27T02:59:29.831687+00:00",
+  "updated_at": "2026-08-29T21:25:54.377958+00:00"
+}

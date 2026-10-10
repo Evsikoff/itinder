@@ -1,0 +1,120 @@
+{
+  "id": "1d09e389-591a-4867-b1e0-e399e0af63d5",
+  "title": "Системный аналитик (Senior)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в MySQL, приоритизация требований вместе с заказчиком.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "mysql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "graphql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rabbitmq"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 230000,
+    "to": 315000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+  "project_id": "db979e5a-6ed0-48ca-94aa-f0f9928eca2a",
+  "user_id": "38d81c8e-af4c-4cbd-a8b7-abca5c4b4d1f",
+  "company": {
+    "id": "a8fe1b59-2961-41d7-91e7-a46d21802d49",
+    "name": "Металлургический комбинат «УралСталь»"
+  },
+  "project": {
+    "name": "Мониторинг оборудования цехов",
+    "summary": "Телеметрия прокатных станов, учёт простоев и планирование ремонтов оборудования.",
+    "domain": "industry",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-21",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-01T15:41:53.243776+00:00",
+  "created_at": "2026-09-01T15:41:53.243776+00:00",
+  "updated_at": "2026-09-01T15:41:53.243776+00:00"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "f9c0ea56-7751-44f5-93dc-3feda1add4f3",
+  "title": "Фронтенд-разработчик (Junior)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Верстать и подключать к API экраны «Гарантийные письма» и «Списки застрахованных» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите структуру компонентов экрана «Гарантийные письма»: что хранится в состоянии, как показываются загрузка и ошибки.",
+    "Страница «Списки застрахованных» открывается шесть секунд. С чего вы начнёте ускорение?"
+  ],
+  "salary": {
+    "from": 85000,
+    "to": 145000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+  "project_id": "a27c4620-b679-429e-aa24-74cd0f7bda35",
+  "user_id": "6ad706f8-8fd0-4ff4-b0c6-59a8635b979b",
+  "company": {
+    "id": "d244412e-9f9b-4895-ab2c-296eeaae1f01",
+    "name": "Страховая компания «Опора»"
+  },
+  "project": {
+    "name": "Кабинет корпоративного клиента ДМС",
+    "summary": "Кабинет отдела кадров компании-клиента: списки застрахованных, гарантийные письма, отчёты.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-30",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-29T05:16:29.122571+00:00",
+  "created_at": "2026-08-29T05:16:29.122571+00:00",
+  "updated_at": "2026-08-29T05:16:29.122571+00:00"
+}

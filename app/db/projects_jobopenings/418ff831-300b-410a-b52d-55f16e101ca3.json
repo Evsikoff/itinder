@@ -1,0 +1,96 @@
+{
+  "id": "418ff831-300b-410a-b52d-55f16e101ca3",
+  "title": "iOS-разработчик (Senior)",
+  "position": "frontend_ios",
+  "position_name": "iOS-разработчик",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру iOS-приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «Электронная медкарта».",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "swift"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Как вы сделаете офлайн-режим экрана «Результаты анализов»: что кэшировать и как синхронизировать изменения?"
+  ],
+  "salary": {
+    "from": 255000,
+    "to": 355000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+  "project_id": "20b5e786-0210-47ee-8963-405009d1075b",
+  "user_id": "21e1cc34-c185-4a27-8294-b14f81ba66f5",
+  "company": {
+    "id": "5035ef51-c3c6-4cff-af20-16b6b79e3026",
+    "name": "Сеть клиник «Семейный доктор Поволжья»"
+  },
+  "project": {
+    "name": "Телемедицина и онлайн-запись",
+    "summary": "Запись к врачу, видеоконсультации и электронная медкарта пациента в одном приложении.",
+    "domain": "health",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-11-27",
+    "work_format": "hybrid",
+    "city": "Самара"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-03T02:43:27.480874+00:00",
+  "created_at": "2026-10-03T02:43:27.480874+00:00",
+  "updated_at": "2026-10-03T02:43:27.480874+00:00"
+}

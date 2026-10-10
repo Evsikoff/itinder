@@ -1,0 +1,81 @@
+{
+  "id": "4d43e19b-a69a-4490-bc83-b0a70057bf4f",
+  "title": "Фронтенд-разработчик (Junior)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Верстать и подключать к API экраны «Подписки» и «Прямые эфиры» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 80000,
+    "to": 120000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+  "project_id": "c7cd2516-8ccd-4d25-891a-982ab4a2a924",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company": {
+    "id": "283fb0af-4972-4e0c-9f40-03fd981d5f9f",
+    "name": "Медиахолдинг «Город 24»"
+  },
+  "project": {
+    "name": "Видеоплатформа телеканала",
+    "summary": "Прямые эфиры, архив передач и подписки на сайте и в приложениях.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-23T12:09:42.968874+00:00",
+  "created_at": "2026-08-23T12:09:42.968874+00:00",
+  "updated_at": "2026-08-23T12:09:42.968874+00:00"
+}

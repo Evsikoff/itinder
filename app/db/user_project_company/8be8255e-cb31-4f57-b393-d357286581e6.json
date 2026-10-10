@@ -1,0 +1,795 @@
+{
+  "id": "8be8255e-cb31-4f57-b393-d357286581e6",
+  "user_id": "4e100201-1da8-4abf-8817-d6493df1ff75",
+  "company_id": "d244412e-9f9b-4895-ab2c-296eeaae1f01",
+  "name": "Онлайн-оформление ОСАГО и КАСКО",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Расчёт, покупка и продление полисов на сайте и в приложении, урегулирование убытков онлайн.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-11-03",
+    "work_format": "hybrid",
+    "clients": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "java",
+        "typescript"
+      ],
+      "databases": [
+        "postgresql"
+      ],
+      "integrations": [
+        "rest",
+        "soap"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "rest_assured",
+        "cypress",
+        "appium"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 1
+      },
+      "backend": {
+        "Middle": 3
+      },
+      "frontend": {
+        "Middle": 2
+      },
+      "qa": {
+        "Middle": 1
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "medium",
+    "third_party_api": "yes",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "web_ui",
+      "partners"
+    ],
+    "requirements_state": "ready",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "city": "Москва",
+    "mobile_native": "cross",
+    "fixed_details[languages:java].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:java].importance": "required",
+    "fixed_details[languages:java].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:soap].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:soap].importance": "required",
+    "fixed_details[integrations:soap].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web",
+      "frontend_mobile"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:rest_assured].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:rest_assured].importance": "required",
+    "fixed_details[testing:rest_assured].depth": "by_grade",
+    "fixed_details[testing:cypress].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:cypress].importance": "required",
+    "fixed_details[testing:cypress].depth": "by_grade",
+    "fixed_details[testing:appium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:appium].importance": "required",
+    "fixed_details[testing:appium].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "Java-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Исправлять ошибки и добавлять небольшие функции в модулях «Расчёт стоимости полиса» и «Оплата и выпуск полиса», писать миграции PostgreSQL и тесты.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 120000,
+      "to": 185000
+    },
+    "vacancies[backend_main:Junior].notes": "Наставник на первые три месяца и понятный план развития.",
+    "vacancies[backend_main:Middle].title": "Java-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Расчёт стоимости полиса» и «Урегулирование убытков»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [
+      "Опишите таблицы PostgreSQL для модуля «Урегулирование убытков» и индексы для трёх самых частых запросов."
+    ],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 225000,
+      "to": 360000
+    },
+    "vacancies[backend_main:Middle].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «Оплата и выпуск полиса» и «Урегулирование убытков» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 95000,
+      "to": 155000
+    },
+    "vacancies[frontend_web:Junior].notes": null,
+    "vacancies[frontend_web:Senior].title": "Фронтенд-разработчик (Senior)",
+    "vacancies[frontend_web:Senior].task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Оплата и выпуск полиса» и ревьюить код команды.",
+    "vacancies[frontend_web:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Senior].assignments": [],
+    "vacancies[frontend_web:Senior].salary": {
+      "from": 355000,
+      "to": 485000
+    },
+    "vacancies[frontend_web:Senior].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[frontend_mobile:Middle].title": "React Native-разработчик (Middle)",
+    "vacancies[frontend_mobile:Middle].task": "Разрабатывать функции «Расчёт стоимости полиса» и «Урегулирование убытков» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+    "vacancies[frontend_mobile:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Middle].assignments": [],
+    "vacancies[frontend_mobile:Middle].salary": {
+      "from": 215000,
+      "to": 325000
+    },
+    "vacancies[frontend_mobile:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Расчёт стоимости полиса» и «Оплата и выпуск полиса»: тест-дизайн, автотесты на REST Assured + JUnit 5 и Cypress, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java",
+          "typescript"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "rest_assured"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "cypress"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "appium"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 180000,
+      "to": 265000
+    },
+    "vacancies[qa:Middle].notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+    "vacancies[qa:Senior].title": "QA-инженер по автоматизации (Senior)",
+    "vacancies[qa:Senior].task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на REST Assured + JUnit 5 и Cypress, метрики качества, наставничество для тестировщиков.",
+    "vacancies[qa:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java",
+          "typescript"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "rest_assured"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "cypress"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "appium"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Senior].assignments": [],
+    "vacancies[qa:Senior].salary": {
+      "from": 285000,
+      "to": 395000
+    },
+    "vacancies[qa:Senior].notes": null,
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Оплата и выпуск полиса» и «Урегулирование убытков», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [
+      "Опишите сценарий «Расчёт стоимости полиса»: участники, основной поток, альтернативы и исключения.",
+      "Опишите модель данных модуля «Оплата и выпуск полиса»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Middle].salary": {
+      "from": 215000,
+      "to": 325000
+    },
+    "vacancies[analyst:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "react_native",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_mobile",
+        "role": "frontend",
+        "name": "Мобильный разработчик (React Native)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "java",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "soap",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web",
+          "frontend_mobile"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "rest_assured",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "cypress",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "appium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "44d1bdee-1d8f-454c-80b7-7c8dd15c8317",
+    "22eaff47-e6d6-4033-ba6b-f2c85908dd91",
+    "e7433f48-e5fc-4dae-bd6b-88405e176442",
+    "21199f89-26dc-414d-bb78-a0e5b4df859b",
+    "1971d435-80e1-4db0-9cb3-ee91355f4c46",
+    "37636c98-085c-40a2-80d0-8c51b2685e97",
+    "cf5afa99-d896-4d1d-92c6-1582394a98f5",
+    "39d2bee8-2a58-4acc-b807-396803f9daab"
+  ],
+  "approved_at": "2026-09-07T08:59:47.154879+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-06T11:05:40.449926+00:00",
+  "updated_at": "2026-09-07T08:59:47.154879+00:00"
+}

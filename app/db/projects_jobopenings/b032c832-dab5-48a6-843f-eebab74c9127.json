@@ -1,0 +1,149 @@
+{
+  "id": "b032c832-dab5-48a6-843f-eebab74c9127",
+  "title": "Java-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по Postgres Pro и интеграциям, онбординг новичков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "java"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgres_pro"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "oidc"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "soap"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "file_exchange"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Спроектируйте API модуля «Уведомления о статусе»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+    "Опишите таблицы Postgres Pro для модуля «Личный кабинет заявителя» и индексы для трёх самых частых запросов."
+  ],
+  "salary": {
+    "from": 280000,
+    "to": 405000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+  "project_id": "42e129a9-81d1-49c6-8b22-c1ca8d42db4c",
+  "user_id": "36b442a7-97c7-4696-b2c7-92776ce2225d",
+  "company": {
+    "id": "3ddb8743-6c4d-4872-977f-86d3738379c2",
+    "name": "Региональный центр цифровых услуг"
+  },
+  "project": {
+    "name": "Региональный портал госуслуг",
+    "summary": "Региональные услуги онлайн: запись в детский сад, обращения граждан, статусы заявлений.",
+    "domain": "gov",
+    "stage": "support",
+    "duration": "6to12",
+    "start_date": "2026-10-18",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-02T15:25:30.246910+00:00",
+  "created_at": "2026-10-02T15:25:30.246910+00:00",
+  "updated_at": "2026-10-02T15:25:30.246910+00:00"
+}

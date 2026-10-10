@@ -1,0 +1,121 @@
+{
+  "id": "ca4baa86-cdf5-4366-8dc2-b0a75e3d83ff",
+  "title": "Тестировщик (Junior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Тестировать новые функции модуля «Редактор материалов» по чек-листам, заводить понятные баг-репорты, постепенно подключаться к автотестам.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python",
+        "javascript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "cypress"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "locust"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "allure"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 60000,
+    "to": 95000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "6b53ccb2-f65b-41ba-9b3f-c376fa1aade4",
+  "user_id": "296b0e8a-f222-4cda-8132-3505e7d9f2bf",
+  "company": {
+    "id": "283fb0af-4972-4e0c-9f40-03fd981d5f9f",
+    "name": "Медиахолдинг «Город 24»"
+  },
+  "project": {
+    "name": "Новостной портал и редакционная CMS",
+    "summary": "Сайт с миллионом читателей в день и редакционная система для сорока журналистов.",
+    "domain": "media",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-10-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-11T04:34:53.912401+00:00",
+  "created_at": "2026-09-11T04:34:53.912401+00:00",
+  "updated_at": "2026-09-11T04:34:53.912401+00:00"
+}

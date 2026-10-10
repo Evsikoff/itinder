@@ -1,0 +1,729 @@
+{
+  "id": "cb3fdcb5-5dec-4cff-8963-136c4ef6bd89",
+  "user_id": "26f29af6-b1eb-4abf-a663-a8ac350e57c3",
+  "company_id": "1abafb5a-b272-445b-a998-d1749d22d2d0",
+  "name": "Бронирование и доставка лекарств",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Поиск лекарства по наличию в ближайших аптеках, бронирование и доставка до двери.",
+    "domain": "health",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-10-12",
+    "work_format": "remote",
+    "clients": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "go",
+        "typescript"
+      ],
+      "databases": [
+        "postgresql",
+        "elasticsearch"
+      ],
+      "integrations": [
+        "rest",
+        "kafka"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "exploratory",
+        "postman"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Junior": 2
+      },
+      "backend": {
+        "Senior": 2
+      },
+      "frontend": {
+        "Senior": 3
+      },
+      "qa": {
+        "Senior": 3
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "medium",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "manual",
+    "qa_focus": [
+      "logic",
+      "web_ui",
+      "mobile"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Junior": 1
+      },
+      "qa": {
+        "Junior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "mobile_native": "cross",
+    "fixed_details[languages:go].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:go].importance": "required",
+    "fixed_details[languages:go].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[databases:elasticsearch].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:elasticsearch].importance": "required",
+    "fixed_details[databases:elasticsearch].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:kafka].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:kafka].importance": "required",
+    "fixed_details[integrations:kafka].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web",
+      "frontend_mobile"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:exploratory].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:exploratory].importance": "required",
+    "fixed_details[testing:exploratory].depth": "by_grade",
+    "fixed_details[testing:postman].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:postman].importance": "required",
+    "fixed_details[testing:postman].depth": "by_grade",
+    "vacancies[backend_main:Middle].title": "Go-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Отвечать за модуль «Поиск по наличию» целиком: от проектирования API до мониторинга в продакшене; оптимизировать запросы к PostgreSQL.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "go"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "elasticsearch"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 165000,
+      "to": 240000
+    },
+    "vacancies[backend_main:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+    "vacancies[backend_main:Senior].title": "Go-разработчик (Senior)",
+    "vacancies[backend_main:Senior].task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по PostgreSQL и интеграциям, онбординг новичков.",
+    "vacancies[backend_main:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "go"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "elasticsearch"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Senior].assignments": [],
+    "vacancies[backend_main:Senior].salary": {
+      "from": 270000,
+      "to": 405000
+    },
+    "vacancies[backend_main:Senior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «Доставка заказов» и «Бронирование в аптеке» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [
+      "Страница «Бронирование в аптеке» открывается шесть секунд. С чего вы начнёте ускорение?",
+      "Опишите структуру компонентов экрана «Доставка заказов»: что хранится в состоянии, как показываются загрузка и ошибки."
+    ],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 70000,
+      "to": 105000
+    },
+    "vacancies[frontend_web:Junior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Senior].title": "Фронтенд-разработчик (Senior)",
+    "vacancies[frontend_web:Senior].task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Бронирование в аптеке» и ревьюить код команды.",
+    "vacancies[frontend_web:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Senior].assignments": [
+      "Страница «Бронирование в аптеке» открывается шесть секунд. С чего вы начнёте ускорение?"
+    ],
+    "vacancies[frontend_web:Senior].salary": {
+      "from": 250000,
+      "to": 355000
+    },
+    "vacancies[frontend_web:Senior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_mobile:Junior].title": "React Native-разработчик (Junior)",
+    "vacancies[frontend_mobile:Junior].task": "Делать экраны «Бронирование в аптеке» и «Доставка заказов» мобильного приложения, подключать их к API и исправлять ошибки.",
+    "vacancies[frontend_mobile:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Junior].assignments": [],
+    "vacancies[frontend_mobile:Junior].salary": {
+      "from": 75000,
+      "to": 120000
+    },
+    "vacancies[frontend_mobile:Junior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Junior].title": "Тестировщик (Junior)",
+    "vacancies[qa:Junior].task": "Проверять функции «Доставка заказов» и «Поиск по наличию» по тест-кейсам, заводить баг-репорты и проверять исправления.",
+    "vacancies[qa:Junior].requirements": [
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "postman"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Junior].assignments": [],
+    "vacancies[qa:Junior].salary": {
+      "from": 65000,
+      "to": 105000
+    },
+    "vacancies[qa:Junior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Бронирование в аптеке» и «Поиск по наличию», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "elasticsearch"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [],
+    "vacancies[analyst:Middle].salary": {
+      "from": 145000,
+      "to": 220000
+    },
+    "vacancies[analyst:Middle].notes": "Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "react_native",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_mobile",
+        "role": "frontend",
+        "name": "Мобильный разработчик (React Native)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "go",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "elasticsearch",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "kafka",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web",
+          "frontend_mobile"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "exploratory",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "postman",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Junior": 1,
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Junior": 1
+      },
+      "qa": {
+        "Junior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "5225696a-c25c-40a8-9906-e6f5d52f69c0",
+    "3d4f0afd-d4b5-4a28-9994-2878d4ce25b3",
+    "e63ddb21-3698-420e-9aa1-2de7d017a17d",
+    "138c0c28-0844-40df-b452-b1aaca8fa729",
+    "e0eb3670-de16-4743-88ce-7f9286b88dcd",
+    "dd527d77-a7f2-4c6d-969d-094be2b7a25a",
+    "98f5d9ee-3c96-47b2-9dbe-7a96aecb1b0f"
+  ],
+  "approved_at": "2026-09-14T02:29:38.518713+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-13T15:17:55.246565+00:00",
+  "updated_at": "2026-09-14T02:29:38.518713+00:00"
+}

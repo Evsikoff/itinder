@@ -1,0 +1,107 @@
+{
+  "id": "c58838bc-366e-466c-9241-4f527052b3d1",
+  "title": "Системный аналитик (Middle)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Описывать требования и модель данных модулей «Электронная подпись» и «Маршруты согласования», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgres_pro"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "redis"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "soap"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 135000,
+    "to": 200000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+  "project_id": "556eacc3-8f97-429d-b56c-ee80ce4a544e",
+  "user_id": "da85473a-ee0a-410d-af50-58dbf8632aa1",
+  "company": {
+    "id": "3ddb8743-6c4d-4872-977f-86d3738379c2",
+    "name": "Региональный центр цифровых услуг"
+  },
+  "project": {
+    "name": "Электронный документооборот ведомств",
+    "summary": "Согласование и подписание документов между министерствами и подведомственными учреждениями.",
+    "domain": "gov",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-19",
+    "work_format": "hybrid",
+    "city": "Казань"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-01T18:20:45.856752+00:00",
+  "created_at": "2026-10-01T18:20:45.856752+00:00",
+  "updated_at": "2026-10-01T18:20:45.856752+00:00"
+}

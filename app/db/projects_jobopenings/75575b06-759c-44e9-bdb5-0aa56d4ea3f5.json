@@ -1,0 +1,70 @@
+{
+  "id": "75575b06-759c-44e9-bdb5-0aa56d4ea3f5",
+  "title": "React Native-разработчик (Senior)",
+  "position": "frontend_mobile",
+  "position_name": "Мобильный разработчик (React Native)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру мобильного приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «Отзывы путешественников».",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Как вы сделаете офлайн-режим экрана «Отзывы путешественников»: что кэшировать и как синхронизировать изменения?"
+  ],
+  "salary": {
+    "from": 270000,
+    "to": 390000,
+    "currency": "RUB"
+  },
+  "notes": "Наставник на первые три месяца и понятный план развития.",
+  "project_id": "932c4c99-4265-4e34-af76-2fcde2e94194",
+  "user_id": "90bc707d-c7ab-44d8-8412-dcf705fcd7bb",
+  "company": {
+    "id": "a5d72ca2-2525-4c8f-9b92-b6b12bacdd02",
+    "name": "Туристический сервис «Маршрут»"
+  },
+  "project": {
+    "name": "Бронирование туров и отелей",
+    "summary": "Поиск туров и отелей у сотни поставщиков, бронирование и отзывы путешественников.",
+    "domain": "other",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-17",
+    "work_format": "hybrid",
+    "city": "Сочи"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-01T19:09:38.408687+00:00",
+  "created_at": "2026-09-01T19:09:38.408687+00:00",
+  "updated_at": "2026-09-01T19:09:38.408687+00:00"
+}

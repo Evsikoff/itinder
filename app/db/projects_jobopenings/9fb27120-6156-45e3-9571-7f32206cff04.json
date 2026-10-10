@@ -1,0 +1,68 @@
+{
+  "id": "9fb27120-6156-45e3-9571-7f32206cff04",
+  "title": "Фронтенд-разработчик (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Переводить раздел «Остатки и цены» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 175000,
+    "to": 255000,
+    "currency": "RUB"
+  },
+  "notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год. Полностью удалённая работа из любого города России.",
+  "project_id": "2d7a9098-2543-47db-b3e1-ab255baeafc6",
+  "user_id": "38d81c8e-af4c-4cbd-a8b7-abca5c4b4d1f",
+  "company": {
+    "id": "ac038605-b47f-4a88-99a0-0c9ac4c8e39c",
+    "name": "Маркетплейс «Ярмарка»"
+  },
+  "project": {
+    "name": "Кабинет продавца маркетплейса",
+    "summary": "Всё для продавца: карточки товаров, остатки и цены, аналитика продаж и выплаты.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "6to12",
+    "start_date": "2026-09-13",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-27T12:39:15.828154+00:00",
+  "created_at": "2026-08-27T12:39:15.828154+00:00",
+  "updated_at": "2026-08-27T12:39:15.828154+00:00"
+}

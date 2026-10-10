@@ -1,0 +1,121 @@
+{
+  "id": "ad50fc84-3b4f-4429-97b0-5b047e2ded36",
+  "title": "QA-инженер по автоматизации (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Строить тестирование модулей «Бронирование и старт аренды» и «Штрафы и оплата»: тест-дизайн, автотесты на pytest + httpx и Playwright, проверка API и регресса перед релизом.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin",
+        "typescript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "k6"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 155000,
+    "to": 230000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "6d4b7385-e874-49c4-bdd7-5b2a53ebd557",
+  "user_id": "933b5dd7-43e2-40b4-9935-62d59bb5f518",
+  "company": {
+    "id": "4c815be1-ded6-40f7-a8f0-84ccbe362d49",
+    "name": "Каршеринг «Поехали»"
+  },
+  "project": {
+    "name": "Приложение каршеринга",
+    "summary": "Карта свободных машин, бронирование, старт аренды с телефона, штрафы и оплата.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-12",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T03:54:38.162140+00:00",
+  "created_at": "2026-09-03T03:54:38.162140+00:00",
+  "updated_at": "2026-09-03T03:54:38.162140+00:00"
+}

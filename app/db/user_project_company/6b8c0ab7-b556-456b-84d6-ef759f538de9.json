@@ -1,0 +1,665 @@
+{
+  "id": "6b8c0ab7-b556-456b-84d6-ef759f538de9",
+  "user_id": "4bd46022-f45e-429f-9c44-6231a26c53b6",
+  "company_id": "320fb3eb-8b7c-48af-91c4-7970e2c17548",
+  "name": "Приложение жителя ЖК",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Заявки в управляющую компанию, пропуска для гостей и оплата коммунальных услуг.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-09-12",
+    "work_format": "hybrid",
+    "clients": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "python",
+        "typescript",
+        "dart"
+      ],
+      "databases": [
+        "mysql"
+      ],
+      "integrations": [
+        "rest",
+        "webhook"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "exploratory",
+        "test_it"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 1
+      },
+      "backend": {
+        "Junior": 2
+      },
+      "frontend": {
+        "Senior": 2
+      },
+      "qa": {
+        "Middle": 1
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "small",
+    "third_party_api": "yes",
+    "qa_mode": "own_qa",
+    "qa_automation": "manual",
+    "qa_focus": [
+      "logic",
+      "mobile"
+    ],
+    "requirements_state": "ready",
+    "team_plan": {
+      "backend_main": {
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "qa": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "city": "Тюмень",
+    "mobile_native": "cross",
+    "fixed_details[languages:python].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:python].importance": "required",
+    "fixed_details[languages:python].depth": "by_grade",
+    "fixed_details[databases:mysql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:mysql].importance": "required",
+    "fixed_details[databases:mysql].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:webhook].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:webhook].importance": "required",
+    "fixed_details[integrations:webhook].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[languages:dart].positions": [
+      "frontend_mobile"
+    ],
+    "fixed_details[languages:dart].importance": "required",
+    "fixed_details[languages:dart].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:exploratory].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:exploratory].importance": "required",
+    "fixed_details[testing:exploratory].depth": "by_grade",
+    "fixed_details[testing:test_it].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_it].importance": "required",
+    "fixed_details[testing:test_it].depth": "by_grade",
+    "vacancies[backend_main:Senior].title": "Python-разработчик (Senior)",
+    "vacancies[backend_main:Senior].task": "Спроектировать архитектуру модулей «Оплата коммунальных услуг» и «Заявки в управляющую компанию»: границы сервисов, контракты REST API (HTTP + JSON), надёжность и производительность под нагрузкой.",
+    "vacancies[backend_main:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Senior].assignments": [
+      "Спроектируйте API модуля «Заявки в управляющую компанию»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+    ],
+    "vacancies[backend_main:Senior].salary": {
+      "from": 265000,
+      "to": 385000
+    },
+    "vacancies[backend_main:Senior].notes": null,
+    "vacancies[frontend_web:Senior].title": "Фронтенд-разработчик (Senior)",
+    "vacancies[frontend_web:Senior].task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Оплата коммунальных услуг» и ревьюить код команды.",
+    "vacancies[frontend_web:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Senior].assignments": [],
+    "vacancies[frontend_web:Senior].salary": {
+      "from": 245000,
+      "to": 330000
+    },
+    "vacancies[frontend_web:Senior].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[frontend_mobile:Middle].title": "Flutter-разработчик (Middle)",
+    "vacancies[frontend_mobile:Middle].task": "Разрабатывать функции «Пропуска для гостей» и «Оплата коммунальных услуг» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+    "vacancies[frontend_mobile:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "dart"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Middle].assignments": [
+      "Как вы сделаете офлайн-режим экрана «Пропуска для гостей»: что кэшировать и как синхронизировать изменения?"
+    ],
+    "vacancies[frontend_mobile:Middle].salary": {
+      "from": 160000,
+      "to": 235000
+    },
+    "vacancies[frontend_mobile:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+    "vacancies[frontend_mobile:Senior].title": "Flutter-разработчик (Senior)",
+    "vacancies[frontend_mobile:Senior].task": "Отвечать за архитектуру мобильного приложения: модульность, стабильность, скорость сборки и релизный цикл; вести разработку раздела «Заявки в управляющую компанию».",
+    "vacancies[frontend_mobile:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "dart"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Senior].assignments": [],
+    "vacancies[frontend_mobile:Senior].salary": {
+      "from": 265000,
+      "to": 385000
+    },
+    "vacancies[frontend_mobile:Senior].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[qa:Middle].title": "Тестировщик (Middle)",
+    "vacancies[qa:Middle].task": "Писать тест-кейсы и проводить регресс модулей «Заявки в управляющую компанию» и «Оплата коммунальных услуг», исследовательское тестирование новых функций.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_it"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [
+      "Составьте 7–10 проверок функции «Заявки в управляющую компанию», включая граничные и негативные случаи.",
+      "Напишите баг-репорт: в разделе «Пропуска для гостей» кнопка «Сохранить» иногда не реагирует на нажатие."
+    ],
+    "vacancies[qa:Middle].salary": {
+      "from": 125000,
+      "to": 185000
+    },
+    "vacancies[qa:Middle].notes": "Наставник на первые три месяца и понятный план развития.",
+    "vacancies[qa:Senior].title": "Тестировщик (Senior)",
+    "vacancies[qa:Senior].task": "Организовать ручное тестирование продукта: тестовая документация, регресс перед релизами, приёмка вместе с заказчиком.",
+    "vacancies[qa:Senior].requirements": [
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_it"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Senior].assignments": [],
+    "vacancies[qa:Senior].salary": {
+      "from": 180000,
+      "to": 250000
+    },
+    "vacancies[qa:Senior].notes": null,
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Пропуска для гостей» и «Заявки в управляющую компанию», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [
+      "Опишите сценарий «Заявки в управляющую компанию»: участники, основной поток, альтернативы и исключения.",
+      "Опишите модель данных модуля «Оплата коммунальных услуг»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Middle].salary": {
+      "from": 155000,
+      "to": 220000
+    },
+    "vacancies[analyst:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "flutter",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_mobile",
+        "role": "frontend",
+        "name": "Мобильный разработчик (Flutter)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "python",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "mysql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "webhook",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "dart",
+        "positions": [
+          "frontend_mobile"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "exploratory",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_it",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Senior": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "qa": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "a65d8a13-05f9-44da-8001-93ea4c802680",
+    "2340dffc-4b98-4952-9ecb-039017d0a2c2",
+    "df96bda0-cad1-4e3a-98e5-2e336ddefdee",
+    "5c1a16e5-00b1-44f6-bdd4-5e659740b690",
+    "e74a0244-f928-4881-8d0d-4c2c3a2691e9",
+    "09020631-7e63-42ac-adf2-17a51ce8dfc1",
+    "3317695b-1833-475e-a4ad-5ea244be82b5"
+  ],
+  "approved_at": "2026-08-28T21:32:24.029185+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-08-26T09:33:39.559511+00:00",
+  "updated_at": "2026-08-28T21:32:24.029185+00:00"
+}

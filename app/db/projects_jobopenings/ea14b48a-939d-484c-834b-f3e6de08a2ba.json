@@ -1,0 +1,121 @@
+{
+  "id": "ea14b48a-939d-484c-834b-f3e6de08a2ba",
+  "title": "QA-инженер по автоматизации (Senior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на pytest + httpx и Playwright, метрики качества, наставничество для тестировщиков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python",
+        "typescript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "k6"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "allure"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 210000,
+    "to": 305000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+  "project_id": "9a1b3215-2741-4820-a337-9457abb5e112",
+  "user_id": "ec3464cb-4c03-4d16-92fe-4086b29c99cb",
+  "company": {
+    "id": "fb903164-1211-40f2-9c62-8f7f494a89dd",
+    "name": "Онлайн-школа «Знание+»"
+  },
+  "project": {
+    "name": "Автопроверка домашних заданий",
+    "summary": "Запуск кода учеников в песочнице, проверка тестами и отчёт преподавателю.",
+    "domain": "education",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-21",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-07T11:42:06.489893+00:00",
+  "created_at": "2026-10-07T11:42:06.489893+00:00",
+  "updated_at": "2026-10-07T11:42:06.489893+00:00"
+}

@@ -1,0 +1,121 @@
+{
+  "id": "a34c8a71-79ea-4a4d-a7bb-c10ff5e25ba3",
+  "title": "QA-инженер по автоматизации (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Строить тестирование модулей «Лента новостей» и «Редактор материалов»: тест-дизайн, автотесты на pytest + httpx и Cypress, проверка API и регресса перед релизом.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python",
+        "javascript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "cypress"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "locust"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "allure"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 120000,
+    "to": 170000,
+    "currency": "RUB"
+  },
+  "notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели. Полностью удалённая работа из любого города России.",
+  "project_id": "6b53ccb2-f65b-41ba-9b3f-c376fa1aade4",
+  "user_id": "296b0e8a-f222-4cda-8132-3505e7d9f2bf",
+  "company": {
+    "id": "283fb0af-4972-4e0c-9f40-03fd981d5f9f",
+    "name": "Медиахолдинг «Город 24»"
+  },
+  "project": {
+    "name": "Новостной портал и редакционная CMS",
+    "summary": "Сайт с миллионом читателей в день и редакционная система для сорока журналистов.",
+    "domain": "media",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-10-16",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-11T04:34:53.912401+00:00",
+  "created_at": "2026-09-11T04:34:53.912401+00:00",
+  "updated_at": "2026-09-11T04:34:53.912401+00:00"
+}

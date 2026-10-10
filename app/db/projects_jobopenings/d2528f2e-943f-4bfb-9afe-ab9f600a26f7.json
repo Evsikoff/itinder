@@ -1,0 +1,70 @@
+{
+  "id": "d2528f2e-943f-4bfb-9afe-ab9f600a26f7",
+  "title": "Тестировщик (Junior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Junior",
+  "count": 1,
+  "task": "Проверять функции «График платежей» и «Заявка на лизинг» по тест-кейсам, заводить баг-репорты и проверять исправления.",
+  "requirements": [
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Составьте 7–10 проверок функции «График платежей», включая граничные и негативные случаи."
+  ],
+  "salary": {
+    "from": 80000,
+    "to": 130000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "b733757f-2327-430e-b0f8-b30cc08970e9",
+  "user_id": "e27ae9c5-ac5b-478c-8bdd-73547fa3115d",
+  "company": {
+    "id": "3dc5d2f0-cb47-4cc7-a2b7-43d73255ff76",
+    "name": "Лизинговая компания «Драйв Лизинг»"
+  },
+  "project": {
+    "name": "Онлайн-лизинг для бизнеса",
+    "summary": "Заявка на лизинг за десять минут: проверка клиента, одобрение и электронный договор.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-27",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-04T07:55:34.314447+00:00",
+  "created_at": "2026-09-04T07:55:34.314447+00:00",
+  "updated_at": "2026-09-04T07:55:34.314447+00:00"
+}

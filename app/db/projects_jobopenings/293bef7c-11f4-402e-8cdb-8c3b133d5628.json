@@ -1,0 +1,123 @@
+{
+  "id": "293bef7c-11f4-402e-8cdb-8c3b133d5628",
+  "title": "Python-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по PostgreSQL и интеграциям, онбординг новичков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rabbitmq"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "grpc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Спроектируйте API модуля «Отчёт для преподавателя»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+    "Опишите таблицы PostgreSQL для модуля «Песочница для запуска кода» и индексы для трёх самых частых запросов."
+  ],
+  "salary": {
+    "from": 285000,
+    "to": 435000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "9a1b3215-2741-4820-a337-9457abb5e112",
+  "user_id": "ec3464cb-4c03-4d16-92fe-4086b29c99cb",
+  "company": {
+    "id": "fb903164-1211-40f2-9c62-8f7f494a89dd",
+    "name": "Онлайн-школа «Знание+»"
+  },
+  "project": {
+    "name": "Автопроверка домашних заданий",
+    "summary": "Запуск кода учеников в песочнице, проверка тестами и отчёт преподавателю.",
+    "domain": "education",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-11-21",
+    "work_format": "office",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-07T11:42:06.489893+00:00",
+  "created_at": "2026-10-07T11:42:06.489893+00:00",
+  "updated_at": "2026-10-07T11:42:06.489893+00:00"
+}

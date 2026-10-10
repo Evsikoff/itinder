@@ -1,0 +1,94 @@
+{
+  "id": "f8263bdb-13cf-4716-9af1-3cbc28559c39",
+  "title": "QA-инженер по автоматизации (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Строить тестирование модулей «Корзина и оформление заказа» и «Каталог и фильтры»: тест-дизайн, автотесты на Playwright, проверка API и регресса перед релизом.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "postman"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 125000,
+    "to": 195000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+  "project_id": "7647d400-2fd8-4d31-a443-297d786213c2",
+  "user_id": "691a27b0-f79e-4e13-a19a-4a771c1f9c99",
+  "company": {
+    "id": "2542dbeb-ac30-4bea-a3aa-6ead19a06827",
+    "name": "Магазин электроники «Вольт»"
+  },
+  "project": {
+    "name": "Интернет-магазин с самовывозом",
+    "summary": "Каталог с фильтрами, оформление заказа, самовывоз из магазина и покупка в кредит онлайн.",
+    "domain": "retail",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-20",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-22T20:20:31.238309+00:00",
+  "created_at": "2026-09-22T20:20:31.238309+00:00",
+  "updated_at": "2026-09-22T20:20:31.238309+00:00"
+}

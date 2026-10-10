@@ -1,0 +1,741 @@
+{
+  "id": "b733757f-2327-430e-b0f8-b30cc08970e9",
+  "user_id": "e27ae9c5-ac5b-478c-8bdd-73547fa3115d",
+  "company_id": "3dc5d2f0-cb47-4cc7-a2b7-43d73255ff76",
+  "name": "Онлайн-лизинг для бизнеса",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Заявка на лизинг за десять минут: проверка клиента, одобрение и электронный договор.",
+    "domain": "finance",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-27",
+    "work_format": "remote",
+    "clients": [
+      "web"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "kotlin",
+        "typescript"
+      ],
+      "databases": [
+        "mysql",
+        "redis"
+      ],
+      "integrations": [
+        "graphql",
+        "soap",
+        "file_exchange"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "exploratory"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Junior": 2
+      },
+      "backend": {
+        "Middle": 3
+      },
+      "frontend": {
+        "Middle": 3
+      },
+      "qa": {
+        "Junior": 3
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "small",
+    "third_party_api": "yes",
+    "qa_mode": "own_qa",
+    "qa_automation": "manual",
+    "qa_focus": [
+      "logic",
+      "web_ui",
+      "partners"
+    ],
+    "requirements_state": "partial",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "qa": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "analyst": {
+        "Senior": 1
+      }
+    },
+    "fixed_details[languages:kotlin].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:kotlin].importance": "required",
+    "fixed_details[languages:kotlin].depth": "by_grade",
+    "fixed_details[databases:mysql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:mysql].importance": "required",
+    "fixed_details[databases:mysql].depth": "by_grade",
+    "fixed_details[databases:redis].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:redis].importance": "required",
+    "fixed_details[databases:redis].depth": "by_grade",
+    "fixed_details[integrations:graphql].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:graphql].importance": "required",
+    "fixed_details[integrations:graphql].depth": "by_grade",
+    "fixed_details[integrations:soap].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:soap].importance": "required",
+    "fixed_details[integrations:soap].depth": "by_grade",
+    "fixed_details[integrations:file_exchange].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:file_exchange].importance": "required",
+    "fixed_details[integrations:file_exchange].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:exploratory].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:exploratory].importance": "required",
+    "fixed_details[testing:exploratory].depth": "by_grade",
+    "vacancies[backend_main:Middle].title": "Kotlin-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «График платежей» и «Заявка на лизинг»: API, бизнес-логика, схема MySQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [
+      "Спроектируйте API модуля «Скоринг клиента»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?",
+      "Опишите таблицы MySQL для модуля «Заявка на лизинг» и индексы для трёх самых частых запросов."
+    ],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 215000,
+      "to": 325000
+    },
+    "vacancies[backend_main:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+    "vacancies[backend_main:Senior].title": "Kotlin-разработчик (Senior)",
+    "vacancies[backend_main:Senior].task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по MySQL и интеграциям, онбординг новичков.",
+    "vacancies[backend_main:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "kotlin"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Senior].assignments": [],
+    "vacancies[backend_main:Senior].salary": {
+      "from": 350000,
+      "to": 525000
+    },
+    "vacancies[backend_main:Senior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Разрабатывать веб-интерфейс модулей «Электронный договор» и «График платежей»: компоненты, состояние, работа с GraphQL, адаптивность и доступность.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 190000,
+      "to": 275000
+    },
+    "vacancies[frontend_web:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Senior].title": "Фронтенд-разработчик (Senior)",
+    "vacancies[frontend_web:Senior].task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «График платежей» и ревьюить код команды.",
+    "vacancies[frontend_web:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Senior].assignments": [],
+    "vacancies[frontend_web:Senior].salary": {
+      "from": 335000,
+      "to": 495000
+    },
+    "vacancies[frontend_web:Senior].notes": "Наставник на первые три месяца и понятный план развития. Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Junior].title": "Тестировщик (Junior)",
+    "vacancies[qa:Junior].task": "Проверять функции «График платежей» и «Заявка на лизинг» по тест-кейсам, заводить баг-репорты и проверять исправления.",
+    "vacancies[qa:Junior].requirements": [
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Junior].assignments": [
+      "Составьте 7–10 проверок функции «График платежей», включая граничные и негативные случаи."
+    ],
+    "vacancies[qa:Junior].salary": {
+      "from": 80000,
+      "to": 130000
+    },
+    "vacancies[qa:Junior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Middle].title": "Тестировщик (Middle)",
+    "vacancies[qa:Middle].task": "Писать тест-кейсы и проводить регресс модулей «Электронный договор» и «График платежей», исследовательское тестирование новых функций.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 150000,
+      "to": 225000
+    },
+    "vacancies[qa:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Senior].title": "Системный аналитик (Senior)",
+    "vacancies[analyst:Senior].task": "Отвечать за системный анализ продукта: интеграции с внешними системами, модель данных в MySQL, приоритизация требований вместе с заказчиком.",
+    "vacancies[analyst:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "mysql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "redis"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "soap"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Senior].assignments": [],
+    "vacancies[analyst:Senior].salary": {
+      "from": 300000,
+      "to": 440000
+    },
+    "vacancies[analyst:Senior].notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "kotlin",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "mysql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "redis",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "graphql",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "soap",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "file_exchange",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "exploratory",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "frontend_web": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "qa": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "analyst": {
+        "Senior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "e48d4c02-e684-48a0-8dd1-44a0ae53380b",
+    "a5814e7e-05f6-44f8-99e9-4280368e1616",
+    "43fb0ef1-115e-446e-b624-e51f27c04b96",
+    "7531bec6-7082-4f8f-be01-1ffd1f42fc01",
+    "d2528f2e-943f-4bfb-9afe-ab9f600a26f7",
+    "94b00c6d-8f2f-42c5-a99d-21da4aee08d5",
+    "09eb25d9-7511-4cc3-8391-2a9676844d8e"
+  ],
+  "approved_at": "2026-09-04T07:55:34.314447+00:00",
+  "completed_at": "2026-10-01T02:59:07.219741+00:00",
+  "copied_from": null,
+  "created_at": "2026-09-02T15:51:48.456128+00:00",
+  "updated_at": "2026-10-01T02:59:07.219741+00:00"
+}

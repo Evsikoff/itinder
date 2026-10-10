@@ -1,0 +1,133 @@
+{
+  "id": "56865245-259d-4f5c-be09-b982157bc2bd",
+  "title": "QA-инженер по автоматизации (Senior)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на Appium и Testcontainers, метрики качества, наставничество для тестировщиков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "postman"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "jmeter"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "exploratory"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "testcontainers"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 195000,
+    "to": 280000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+  "project_id": "963af3ca-60b1-459e-ae3c-37f16ee033cf",
+  "user_id": "255c62c5-adc5-455a-ab80-7c95bf1b3154",
+  "company": {
+    "id": "e19a4eb4-2d7e-441a-838a-eb2a5c6ddfab",
+    "name": "Служба доставки «Быстрый курьер»"
+  },
+  "project": {
+    "name": "Приложение курьера",
+    "summary": "Маршрутный лист курьера, подтверждение доставки фото и кодом, приём оплаты.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-11-08",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-30T21:46:11.297992+00:00",
+  "created_at": "2026-09-30T21:46:11.297992+00:00",
+  "updated_at": "2026-09-30T21:46:11.297992+00:00"
+}

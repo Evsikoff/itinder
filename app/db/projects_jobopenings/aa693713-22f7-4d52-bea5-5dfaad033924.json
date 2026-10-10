@@ -1,0 +1,120 @@
+{
+  "id": "aa693713-22f7-4d52-bea5-5dfaad033924",
+  "title": "Go-разработчик (Middle)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Разрабатывать серверную часть модулей «Маршрутный лист» и «Приём оплаты»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "go"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "websocket"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 180000,
+    "to": 275000,
+    "currency": "RUB"
+  },
+  "notes": "Полностью удалённая работа из любого города России.",
+  "project_id": "963af3ca-60b1-459e-ae3c-37f16ee033cf",
+  "user_id": "255c62c5-adc5-455a-ab80-7c95bf1b3154",
+  "company": {
+    "id": "e19a4eb4-2d7e-441a-838a-eb2a5c6ddfab",
+    "name": "Служба доставки «Быстрый курьер»"
+  },
+  "project": {
+    "name": "Приложение курьера",
+    "summary": "Маршрутный лист курьера, подтверждение доставки фото и кодом, приём оплаты.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-11-08",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-30T21:46:11.297992+00:00",
+  "created_at": "2026-09-30T21:46:11.297992+00:00",
+  "updated_at": "2026-09-30T21:46:11.297992+00:00"
+}

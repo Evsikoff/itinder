@@ -1,0 +1,107 @@
+{
+  "id": "08f32aac-6fc9-4cc1-ae38-2d67891494b5",
+  "title": "Python-разработчик (Senior)",
+  "position": "backend_main",
+  "position_name": "Бэкенд-разработчик",
+  "role_id": "backend",
+  "specialization": "Backend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Вести бэкенд-команду из 3–5 человек: декомпозиция задач, код-ревью, технические решения по PostgreSQL и интеграциям, онбординг новичков.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "webhook"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 330000,
+    "to": 485000,
+    "currency": "RUB"
+  },
+  "notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+  "project_id": "857e16aa-9b2b-4f9d-ac06-8b34a8336250",
+  "user_id": "eed72f75-7bcb-409f-a1f4-33520b763d62",
+  "company": {
+    "id": "e01c2eba-11a0-4c96-95d0-6ec57e335b61",
+    "name": "Сеть кофеен «Зерно»"
+  },
+  "project": {
+    "name": "Предзаказ кофе и бонусы",
+    "summary": "Заказ напитка заранее, оплата в приложении и бонусная программа гостя.",
+    "domain": "retail",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-19",
+    "work_format": "office",
+    "city": "Санкт-Петербург"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-30T09:51:37.329325+00:00",
+  "created_at": "2026-08-30T09:51:37.329325+00:00",
+  "updated_at": "2026-08-30T09:51:37.329325+00:00"
+}

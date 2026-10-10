@@ -1,0 +1,627 @@
+{
+  "id": "25cf3e1d-6eda-4b11-9e3d-c19ddce8d110",
+  "user_id": "c2a04164-548d-4fe3-a530-0f5b13628048",
+  "company_id": "3be6145c-87c0-4edc-9c62-a1ada3c4d432",
+  "name": "Внутренний портал сотрудников",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Отпуска и больничные, база знаний и заявки в IT-поддержку для тысячи сотрудников.",
+    "domain": "internal",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-22",
+    "work_format": "hybrid",
+    "clients": [
+      "web",
+      "bot"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "typescript"
+      ],
+      "databases": [
+        "postgresql",
+        "elasticsearch"
+      ],
+      "integrations": [
+        "graphql",
+        "oidc",
+        "webhook"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "postman",
+        "cypress",
+        "testcontainers"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 3
+      },
+      "backend": {
+        "Junior": 1
+      },
+      "frontend": {
+        "Senior": 1
+      },
+      "qa": {
+        "Senior": 2
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "small",
+    "third_party_api": "no",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "web_ui"
+    ],
+    "requirements_state": "ready",
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Junior": 1
+      }
+    },
+    "city": "Иннополис",
+    "fixed_details[languages:typescript].positions": [
+      "backend_main",
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[databases:elasticsearch].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:elasticsearch].importance": "required",
+    "fixed_details[databases:elasticsearch].depth": "by_grade",
+    "fixed_details[integrations:graphql].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:graphql].importance": "required",
+    "fixed_details[integrations:graphql].depth": "by_grade",
+    "fixed_details[integrations:oidc].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:oidc].importance": "required",
+    "fixed_details[integrations:oidc].depth": "by_grade",
+    "fixed_details[integrations:webhook].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:webhook].importance": "required",
+    "fixed_details[integrations:webhook].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:postman].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:postman].importance": "required",
+    "fixed_details[testing:postman].depth": "by_grade",
+    "fixed_details[testing:cypress].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:cypress].importance": "required",
+    "fixed_details[testing:cypress].depth": "by_grade",
+    "fixed_details[testing:testcontainers].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:testcontainers].importance": "required",
+    "fixed_details[testing:testcontainers].depth": "by_grade",
+    "vacancies[backend_main:Middle].title": "Node.js-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «База знаний» и «Отпуска и больничные»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "elasticsearch"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 170000,
+      "to": 255000
+    },
+    "vacancies[backend_main:Middle].notes": null,
+    "vacancies[frontend_web:Junior].title": "Фронтенд-разработчик (Junior)",
+    "vacancies[frontend_web:Junior].task": "Верстать и подключать к API экраны «База знаний» и «Заявки в IT-поддержку» на TypeScript, исправлять ошибки интерфейса под руководством ментора.",
+    "vacancies[frontend_web:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Junior].assignments": [],
+    "vacancies[frontend_web:Junior].salary": {
+      "from": 70000,
+      "to": 110000
+    },
+    "vacancies[frontend_web:Junior].notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Заявки в IT-поддержку» и «Отпуска и больничные»: тест-дизайн, автотесты на Cypress и Testcontainers, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "postman"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "cypress"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "testcontainers"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 115000,
+      "to": 175000
+    },
+    "vacancies[qa:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+    "vacancies[analyst:Junior].title": "Системный аналитик (Junior)",
+    "vacancies[analyst:Junior].task": "Собирать и описывать требования к модулю «Отпуска и больничные», готовить пользовательские сценарии под руководством ведущего аналитика.",
+    "vacancies[analyst:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "elasticsearch"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "oidc"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "webhook"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Junior].assignments": [],
+    "vacancies[analyst:Junior].salary": {
+      "from": 70000,
+      "to": 100000
+    },
+    "vacancies[analyst:Junior].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "backend_main",
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "elasticsearch",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "graphql",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "oidc",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "webhook",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "postman",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "cypress",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "testcontainers",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Junior": 1
+      },
+      "qa": {
+        "Middle": 1
+      },
+      "analyst": {
+        "Junior": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "b013d7fe-d743-44fe-bde6-0c3f4a95b170",
+    "a5d91b46-0f9d-47d3-bafe-611dd9bc2f00",
+    "19211cd6-4cfd-43d2-8d31-7c30169eb9f1",
+    "8843ab73-cc27-4596-bd3e-a4522b8397f5"
+  ],
+  "approved_at": "2026-09-30T01:46:23.457636+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-29T12:27:01.950372+00:00",
+  "updated_at": "2026-09-30T01:46:23.457636+00:00"
+}

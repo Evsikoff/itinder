@@ -1,0 +1,68 @@
+{
+  "id": "dba75a7e-8074-493e-b1f6-1f7ab85af62c",
+  "title": "Android-разработчик (Middle)",
+  "position": "frontend_android",
+  "position_name": "Android-разработчик",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 2,
+  "task": "Разрабатывать функции «Рекомендации треков» и «Плейлисты» Android-приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "kotlin"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 190000,
+    "to": 285000,
+    "currency": "RUB"
+  },
+  "notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+  "project_id": "28825d89-0010-4df8-9035-a88c505e872c",
+  "user_id": "a7ea939b-7ff8-47fc-bdda-f5db4d6c186f",
+  "company": {
+    "id": "8ad2d3dc-3ef8-427e-af6e-ba24e6be12fe",
+    "name": "Стриминговый сервис «Волна»"
+  },
+  "project": {
+    "name": "Музыкальный стриминг",
+    "summary": "Плейлисты, рекомендации треков и офлайн-прослушивание для двух миллионов подписчиков.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "6to12",
+    "start_date": "2026-12-01",
+    "work_format": "hybrid",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-04T15:43:47.046349+00:00",
+  "created_at": "2026-10-04T15:43:47.046349+00:00",
+  "updated_at": "2026-10-04T15:43:47.046349+00:00"
+}

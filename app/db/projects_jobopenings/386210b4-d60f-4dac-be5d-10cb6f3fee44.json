@@ -1,0 +1,71 @@
+{
+  "id": "386210b4-d60f-4dac-be5d-10cb6f3fee44",
+  "title": "Фронтенд-разработчик (Middle)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Middle",
+  "count": 2,
+  "task": "Переводить раздел «Обращения собственников» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Страница «Обращения собственников» открывается шесть секунд. С чего вы начнёте ускорение?",
+    "Опишите структуру компонентов экрана «Начисления и оплата взносов»: что хранится в состоянии, как показываются загрузка и ошибки."
+  ],
+  "salary": {
+    "from": 145000,
+    "to": 220000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций. Полностью удалённая работа из любого города России.",
+  "project_id": "9e04d6b0-1b76-48cd-9667-e9299ddad14f",
+  "user_id": "2188933e-8721-4f91-bfff-b6aab77ffc64",
+  "company": {
+    "id": "4746d4bb-13a8-4751-a78c-8a19258027c5",
+    "name": "Региональный фонд капитального ремонта"
+  },
+  "project": {
+    "name": "Личный кабинет собственника",
+    "summary": "Начисления и оплата взносов, график ремонта своего дома и обращения в фонд.",
+    "domain": "gov",
+    "stage": "support",
+    "duration": "gt12",
+    "start_date": "2026-09-26",
+    "work_format": "remote",
+    "city": null
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-08-28T01:17:07.641336+00:00",
+  "created_at": "2026-08-28T01:17:07.641336+00:00",
+  "updated_at": "2026-08-28T01:17:07.641336+00:00"
+}

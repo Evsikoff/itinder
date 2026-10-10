@@ -1,0 +1,136 @@
+{
+  "id": "1ca40438-2fb9-4f4c-bf60-b387024e8535",
+  "title": "QA-инженер по автоматизации (Middle)",
+  "position": "qa",
+  "position_name": "Тестировщик",
+  "role_id": "qa",
+  "specialization": "QA",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Строить тестирование модулей «Абонементы» и «Расписание тренировок»: тест-дизайн, автотесты на pytest + httpx и Playwright, проверка API и регресса перед релизом.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "python",
+        "typescript"
+      ],
+      "match": "any",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "Язык автотестов проекта"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "test_design"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "pytest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "playwright"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "appium"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "allure"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    },
+    {
+      "kind": "testing",
+      "ids": [
+        "testcontainers"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Тесты действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Составьте 7–10 проверок функции «Запись к тренеру», включая граничные и негативные случаи."
+  ],
+  "salary": {
+    "from": 125000,
+    "to": 195000,
+    "currency": "RUB"
+  },
+  "notes": null,
+  "project_id": "cbd739bb-e230-4ce8-abdc-57d6788ba337",
+  "user_id": "296b0e8a-f222-4cda-8132-3505e7d9f2bf",
+  "company": {
+    "id": "3d3e6652-f713-4711-ad78-78f6e7971620",
+    "name": "Фитнес-сеть «Пульс»"
+  },
+  "project": {
+    "name": "Приложение фитнес-клуба",
+    "summary": "Расписание тренировок, запись к тренеру и продление абонемента в приложении.",
+    "domain": "other",
+    "stage": "active",
+    "duration": "gt12",
+    "start_date": "2026-10-09",
+    "work_format": "hybrid",
+    "city": "Казань"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-09-03T03:51:43.378515+00:00",
+  "created_at": "2026-09-03T03:51:43.378515+00:00",
+  "updated_at": "2026-09-03T03:51:43.378515+00:00"
+}

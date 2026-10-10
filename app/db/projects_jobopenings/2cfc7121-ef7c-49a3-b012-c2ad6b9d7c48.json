@@ -1,0 +1,68 @@
+{
+  "id": "2cfc7121-ef7c-49a3-b012-c2ad6b9d7c48",
+  "title": "Фронтенд-разработчик (Senior)",
+  "position": "frontend_web",
+  "position_name": "Фронтенд-разработчик (веб)",
+  "role_id": "frontend",
+  "specialization": "Frontend",
+  "grade": "Senior",
+  "count": 1,
+  "task": "Отвечать за архитектуру фронтенда: дизайн-система, производительность, разбиение на модули; вести разработку раздела «Офлайн-прослушивание» и ревьюить код команды.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "typescript"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 3,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [],
+  "salary": {
+    "from": 295000,
+    "to": 410000,
+    "currency": "RUB"
+  },
+  "notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата.",
+  "project_id": "28825d89-0010-4df8-9035-a88c505e872c",
+  "user_id": "a7ea939b-7ff8-47fc-bdda-f5db4d6c186f",
+  "company": {
+    "id": "8ad2d3dc-3ef8-427e-af6e-ba24e6be12fe",
+    "name": "Стриминговый сервис «Волна»"
+  },
+  "project": {
+    "name": "Музыкальный стриминг",
+    "summary": "Плейлисты, рекомендации треков и офлайн-прослушивание для двух миллионов подписчиков.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "6to12",
+    "start_date": "2026-12-01",
+    "work_format": "hybrid",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-04T15:43:47.046349+00:00",
+  "created_at": "2026-10-04T15:43:47.046349+00:00",
+  "updated_at": "2026-10-04T15:43:47.046349+00:00"
+}

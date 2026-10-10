@@ -1,0 +1,858 @@
+{
+  "id": "2f9ed5e3-fa85-4980-a84a-a58b1c7edc81",
+  "user_id": "da85473a-ee0a-410d-af50-58dbf8632aa1",
+  "company_id": "3c1d8a52-6b0e-4f7a-9d2c-5e8f1a7b4c90",
+  "name": "Отслеживание контейнеров",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Где контейнер прямо сейчас: карта перевозок, статусы и уведомления клиентов.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "6to12",
+    "start_date": "2026-11-14",
+    "work_format": "office",
+    "clients": [
+      "web",
+      "api"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "java",
+        "typescript"
+      ],
+      "databases": [
+        "postgresql"
+      ],
+      "integrations": [
+        "graphql",
+        "kafka",
+        "websocket"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "rest_assured",
+        "selenium",
+        "sql_checks"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Senior": 3
+      },
+      "backend": {
+        "Middle": 2
+      },
+      "frontend": {
+        "Senior": 1
+      },
+      "qa": {
+        "Senior": 1
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "medium",
+    "third_party_api": "yes",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "partners",
+      "data"
+    ],
+    "requirements_state": "ready",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 2
+      },
+      "qa": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "city": "Новосибирск",
+    "fixed_details[languages:java].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:java].importance": "required",
+    "fixed_details[languages:java].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[integrations:graphql].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:graphql].importance": "required",
+    "fixed_details[integrations:graphql].depth": "by_grade",
+    "fixed_details[integrations:kafka].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:kafka].importance": "required",
+    "fixed_details[integrations:kafka].depth": "by_grade",
+    "fixed_details[integrations:websocket].positions": [
+      "backend_main",
+      "frontend_web",
+      "analyst"
+    ],
+    "fixed_details[integrations:websocket].importance": "required",
+    "fixed_details[integrations:websocket].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:rest_assured].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:rest_assured].importance": "required",
+    "fixed_details[testing:rest_assured].depth": "by_grade",
+    "fixed_details[testing:selenium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:selenium].importance": "required",
+    "fixed_details[testing:selenium].depth": "by_grade",
+    "fixed_details[testing:sql_checks].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:sql_checks].importance": "required",
+    "fixed_details[testing:sql_checks].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "Java-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Дорабатывать API модуля «Статусы контейнеров»: новые методы, проверка входных данных, юнит-тесты на Java. Код-ревью и помощь — от старших коллег.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [
+      "Опишите таблицы PostgreSQL для модуля «Уведомления клиентов» и индексы для трёх самых частых запросов.",
+      "Спроектируйте API модуля «Статусы контейнеров»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+    ],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 80000,
+      "to": 120000
+    },
+    "vacancies[backend_main:Junior].notes": "Продуктовая команда из 6–8 человек, релизы раз в две недели.",
+    "vacancies[backend_main:Middle].title": "Java-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Разрабатывать серверную часть модулей «Карта перевозок» и «Уведомления клиентов»: API, бизнес-логика, схема PostgreSQL, интеграции с другими системами.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [
+      "Опишите таблицы PostgreSQL для модуля «Статусы контейнеров» и индексы для трёх самых частых запросов.",
+      "Спроектируйте API модуля «Карта перевозок»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+    ],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 155000,
+      "to": 250000
+    },
+    "vacancies[backend_main:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Переводить раздел «Карта перевозок» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [
+      "Опишите структуру компонентов экрана «Статусы контейнеров»: что хранится в состоянии, как показываются загрузка и ошибки.",
+      "Страница «Карта перевозок» открывается шесть секунд. С чего вы начнёте ускорение?"
+    ],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 145000,
+      "to": 215000
+    },
+    "vacancies[frontend_web:Middle].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Уведомления клиентов» и «Карта перевозок»: тест-дизайн, автотесты на REST Assured + JUnit 5 и Selenium WebDriver, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java",
+          "sql"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "rest_assured"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "selenium"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "sql_checks"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 125000,
+      "to": 200000
+    },
+    "vacancies[qa:Middle].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux.",
+    "vacancies[qa:Senior].title": "QA-инженер по автоматизации (Senior)",
+    "vacancies[qa:Senior].task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на REST Assured + JUnit 5 и Selenium WebDriver, метрики качества, наставничество для тестировщиков.",
+    "vacancies[qa:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "java",
+          "sql"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "rest_assured"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "selenium"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "sql_checks"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Senior].assignments": [
+      "Напишите баг-репорт: в разделе «Карта перевозок» кнопка «Сохранить» иногда не реагирует на нажатие."
+    ],
+    "vacancies[qa:Senior].salary": {
+      "from": 200000,
+      "to": 300000
+    },
+    "vacancies[qa:Senior].notes": "Испытательный срок — три месяца, пересмотр зарплаты дважды в год.",
+    "vacancies[analyst:Junior].title": "Системный аналитик (Junior)",
+    "vacancies[analyst:Junior].task": "Собирать и описывать требования к модулю «Карта перевозок», готовить пользовательские сценарии под руководством ведущего аналитика.",
+    "vacancies[analyst:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Junior].assignments": [],
+    "vacancies[analyst:Junior].salary": {
+      "from": 75000,
+      "to": 110000
+    },
+    "vacancies[analyst:Junior].notes": null,
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Карта перевозок» и «Уведомления клиентов», проектировать контракты GraphQL и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "graphql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "websocket"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [],
+    "vacancies[analyst:Middle].salary": {
+      "from": 135000,
+      "to": 200000
+    },
+    "vacancies[analyst:Middle].notes": "ДМС после испытательного срока, компенсация обучения и конференций."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": null,
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "java",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "graphql",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "kafka",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "websocket",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "rest_assured",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "selenium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "sql_checks",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 2
+      },
+      "qa": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Junior": 1,
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "c42ab20a-f08a-4889-b77e-c79ec0e30ff4",
+    "d56801e2-7c7b-4d14-a66e-c1f3155bf56b",
+    "6bb5e0f6-29e0-4a1b-8c19-ae8288c7fe60",
+    "921f8182-584b-4020-b762-4bf08b42dab1",
+    "0f2e1eec-afa8-4e24-abf5-96da7ae00b11",
+    "f2ffbdee-1c6d-4df4-9cc5-d9745e5b60fc",
+    "8cf36756-3506-4eb5-b567-e6ed7dbbb613"
+  ],
+  "approved_at": "2026-09-27T17:16:31.400475+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-09-26T04:36:29.928852+00:00",
+  "updated_at": "2026-09-27T17:16:31.400475+00:00"
+}

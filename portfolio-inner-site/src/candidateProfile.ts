@@ -29,11 +29,13 @@ export function fetchSelfProfile(userId: string): Promise<CandidateProfileData> 
     return request('Мой профиль', `/api/applicant/profile?user_id=${encodeURIComponent(userId)}`);
 }
 
-export async function downloadSelfProfile(userId: string): Promise<void> {
+// PDF-резюме (app/tools/profile_pdf.py): одна вёрстка для окна «PDF-профиль» и для
+// профиля кандидата у рекрутёра — только сданные тесты на грейд, без заданий вакансий.
+async function downloadProfilePdf(path: string, fileName: string): Promise<void> {
     const controller = new AbortController();
     const timer = window.setTimeout(() => controller.abort(), 30000);
     try {
-        const response = await fetch(`/api/applicant/profile/pdf?user_id=${encodeURIComponent(userId)}`, { signal: controller.signal });
+        const response = await fetch(path, { signal: controller.signal });
         if (!response.ok) {
             const data = await response.json().catch(() => ({}));
             throw new ApiError(data.error || 'Не удалось сформировать PDF', response.status);
@@ -42,13 +44,24 @@ export async function downloadSelfProfile(userId: string): Promise<void> {
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
-        link.href = url; link.download = 'itinder-profile.pdf';
+        link.href = url; link.download = fileName;
         document.body.appendChild(link); link.click(); link.remove();
         window.setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch (failure) {
         if (failure instanceof ApiError) throw failure;
         throw new ApiError('Не удалось скачать PDF. Повторите попытку.', 0);
     } finally { window.clearTimeout(timer); }
+}
+
+export function downloadSelfProfile(userId: string): Promise<void> {
+    return downloadProfilePdf(`/api/applicant/profile/pdf?user_id=${encodeURIComponent(userId)}`, 'itinder-profile.pdf');
+}
+
+// Имя кандидата в имени файла: без знаков, которые запрещает Windows.
+export function downloadCandidateProfile(userId: string, applicantId: string, name: string | null): Promise<void> {
+    const title = (name || '').replace(/[\\/:*?"<>|]+/g, ' ').trim().replace(/\s+/g, '-');
+    return downloadProfilePdf(`/api/applicants/profile/pdf?user_id=${encodeURIComponent(userId)}&applicant_id=${encodeURIComponent(applicantId)}`,
+        title ? `itinder-${title}.pdf` : 'itinder-candidate.pdf');
 }
 
 // Видимость собственного профиля для рекрутёров (app/tools/profile_visibility.py):

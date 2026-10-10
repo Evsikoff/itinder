@@ -1,0 +1,123 @@
+{
+  "id": "ef444293-9f35-466a-95a6-7efabf82c34d",
+  "title": "Системный аналитик (Middle)",
+  "position": "analyst",
+  "position_name": "Системный аналитик",
+  "role_id": "analyst",
+  "specialization": "Syst. Analyst",
+  "grade": "Middle",
+  "count": 1,
+  "task": "Описывать требования и модель данных модулей «Рекомендации треков» и «Плейлисты», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+  "requirements": [
+    {
+      "kind": "languages",
+      "ids": [
+        "sql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "rule",
+      "reasons": [
+        "В стеке реляционная или аналитическая СУБД"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "postgresql"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "databases",
+      "ids": [
+        "clickhouse"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "rest"
+      ],
+      "match": "all",
+      "importance": "required",
+      "min_degree": 2,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "kafka"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    },
+    {
+      "kind": "integrations",
+      "ids": [
+        "grpc"
+      ],
+      "match": "all",
+      "importance": "plus",
+      "min_degree": 1,
+      "origin": "fixed",
+      "reasons": [
+        "Код действующей системы"
+      ]
+    }
+  ],
+  "assignments": [
+    "Опишите сценарий «Рекомендации треков»: участники, основной поток, альтернативы и исключения.",
+    "Опишите модель данных модуля «Плейлисты»: сущности, атрибуты и связи."
+  ],
+  "salary": {
+    "from": 180000,
+    "to": 260000,
+    "currency": "RUB"
+  },
+  "notes": "ДМС после испытательного срока, компенсация обучения и конференций.",
+  "project_id": "28825d89-0010-4df8-9035-a88c505e872c",
+  "user_id": "a7ea939b-7ff8-47fc-bdda-f5db4d6c186f",
+  "company": {
+    "id": "8ad2d3dc-3ef8-427e-af6e-ba24e6be12fe",
+    "name": "Стриминговый сервис «Волна»"
+  },
+  "project": {
+    "name": "Музыкальный стриминг",
+    "summary": "Плейлисты, рекомендации треков и офлайн-прослушивание для двух миллионов подписчиков.",
+    "domain": "media",
+    "stage": "support",
+    "duration": "6to12",
+    "start_date": "2026-12-01",
+    "work_format": "hybrid",
+    "city": "Москва"
+  },
+  "stack_origin": "fixed",
+  "open_questions": [],
+  "status": "ready",
+  "approved_at": "2026-10-04T15:43:47.046349+00:00",
+  "created_at": "2026-10-04T15:43:47.046349+00:00",
+  "updated_at": "2026-10-04T15:43:47.046349+00:00"
+}

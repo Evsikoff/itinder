@@ -1,0 +1,876 @@
+{
+  "id": "fccae2eb-a7f9-4b9f-a4db-018fb7ed778c",
+  "user_id": "bb03ca09-3b6e-411d-9123-30fbe1fdba55",
+  "company_id": "6774a5f8-e71d-4cda-8288-71e465844afd",
+  "name": "Биржа грузоперевозок",
+  "questionnaire": {
+    "id": "project_intake",
+    "version": 1
+  },
+  "answers": {
+    "project_summary": "Заявки на перевозку, подбор перевозчика и электронные транспортные документы.",
+    "domain": "logistics",
+    "stage": "active",
+    "duration": "3to6",
+    "start_date": "2026-09-07",
+    "work_format": "remote",
+    "clients": [
+      "web",
+      "android"
+    ],
+    "stack_limits": [
+      "none"
+    ],
+    "existing_stack": {
+      "languages": [
+        "php",
+        "typescript",
+        "dart"
+      ],
+      "databases": [
+        "postgresql"
+      ],
+      "integrations": [
+        "rest",
+        "kafka",
+        "file_exchange"
+      ]
+    },
+    "existing_tests": {
+      "testing": [
+        "test_design",
+        "pytest",
+        "selenium",
+        "appium",
+        "exploratory"
+      ]
+    },
+    "current_team": {
+      "analyst": {
+        "Middle": 3
+      },
+      "backend": {
+        "Senior": 2
+      },
+      "frontend": {
+        "Senior": 1
+      },
+      "qa": {
+        "Middle": 3
+      }
+    },
+    "knowledge_holder": "yes",
+    "load": "medium",
+    "third_party_api": "yes",
+    "qa_mode": "own_qa",
+    "qa_automation": "auto",
+    "qa_focus": [
+      "logic",
+      "web_ui",
+      "mobile"
+    ],
+    "requirements_state": "ready",
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "mobile_native": "cross",
+    "fixed_details[languages:php].positions": [
+      "backend_main"
+    ],
+    "fixed_details[languages:php].importance": "required",
+    "fixed_details[languages:php].depth": "by_grade",
+    "fixed_details[databases:postgresql].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[databases:postgresql].importance": "required",
+    "fixed_details[databases:postgresql].depth": "by_grade",
+    "fixed_details[integrations:rest].positions": [
+      "backend_main",
+      "frontend_web",
+      "frontend_mobile",
+      "analyst"
+    ],
+    "fixed_details[integrations:rest].importance": "required",
+    "fixed_details[integrations:rest].depth": "by_grade",
+    "fixed_details[integrations:kafka].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:kafka].importance": "required",
+    "fixed_details[integrations:kafka].depth": "by_grade",
+    "fixed_details[integrations:file_exchange].positions": [
+      "backend_main",
+      "analyst"
+    ],
+    "fixed_details[integrations:file_exchange].importance": "required",
+    "fixed_details[integrations:file_exchange].depth": "by_grade",
+    "fixed_details[languages:typescript].positions": [
+      "frontend_web"
+    ],
+    "fixed_details[languages:typescript].importance": "required",
+    "fixed_details[languages:typescript].depth": "by_grade",
+    "fixed_details[languages:dart].positions": [
+      "frontend_mobile"
+    ],
+    "fixed_details[languages:dart].importance": "required",
+    "fixed_details[languages:dart].depth": "by_grade",
+    "fixed_details[testing:test_design].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:test_design].importance": "required",
+    "fixed_details[testing:test_design].depth": "by_grade",
+    "fixed_details[testing:pytest].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:pytest].importance": "required",
+    "fixed_details[testing:pytest].depth": "by_grade",
+    "fixed_details[testing:selenium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:selenium].importance": "required",
+    "fixed_details[testing:selenium].depth": "by_grade",
+    "fixed_details[testing:appium].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:appium].importance": "required",
+    "fixed_details[testing:appium].depth": "by_grade",
+    "fixed_details[testing:exploratory].positions": [
+      "qa"
+    ],
+    "fixed_details[testing:exploratory].importance": "required",
+    "fixed_details[testing:exploratory].depth": "by_grade",
+    "vacancies[backend_main:Junior].title": "PHP-разработчик (Junior)",
+    "vacancies[backend_main:Junior].task": "Дорабатывать API модуля «Электронные документы»: новые методы, проверка входных данных, юнит-тесты на PHP. Код-ревью и помощь — от старших коллег.",
+    "vacancies[backend_main:Junior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "php"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Junior].assignments": [
+      "Опишите таблицы PostgreSQL для модуля «Заявки на перевозку» и индексы для трёх самых частых запросов.",
+      "Спроектируйте API модуля «Заявки на перевозку»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+    ],
+    "vacancies[backend_main:Junior].salary": {
+      "from": 85000,
+      "to": 125000
+    },
+    "vacancies[backend_main:Junior].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[backend_main:Middle].title": "PHP-разработчик (Middle)",
+    "vacancies[backend_main:Middle].task": "Отвечать за модуль «Подбор перевозчика» целиком: от проектирования API до мониторинга в продакшене; оптимизировать запросы к PostgreSQL.",
+    "vacancies[backend_main:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "php"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[backend_main:Middle].assignments": [
+      "Опишите таблицы PostgreSQL для модуля «Подбор перевозчика» и индексы для трёх самых частых запросов.",
+      "Спроектируйте API модуля «Подбор перевозчика»: ресурсы, методы, коды ошибок. Как сделать создание записи идемпотентным?"
+    ],
+    "vacancies[backend_main:Middle].salary": {
+      "from": 175000,
+      "to": 265000
+    },
+    "vacancies[backend_main:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_web:Middle].title": "Фронтенд-разработчик (Middle)",
+    "vacancies[frontend_web:Middle].task": "Переводить раздел «Электронные документы» на новую дизайн-систему, покрывать компоненты тестами и ускорять загрузку страниц.",
+    "vacancies[frontend_web:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "typescript"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_web:Middle].assignments": [],
+    "vacancies[frontend_web:Middle].salary": {
+      "from": 160000,
+      "to": 250000
+    },
+    "vacancies[frontend_web:Middle].notes": "Аккредитованная IT-компания, оформление по ТК РФ, белая зарплата. Полностью удалённая работа из любого города России.",
+    "vacancies[frontend_mobile:Middle].title": "Flutter-разработчик (Middle)",
+    "vacancies[frontend_mobile:Middle].task": "Разрабатывать функции «Заявки на перевозку» и «Подбор перевозчика» мобильного приложения: экраны, офлайн-режим, push-уведомления, работа с API.",
+    "vacancies[frontend_mobile:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "dart"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[frontend_mobile:Middle].assignments": [],
+    "vacancies[frontend_mobile:Middle].salary": {
+      "from": 165000,
+      "to": 250000
+    },
+    "vacancies[frontend_mobile:Middle].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Middle].title": "QA-инженер по автоматизации (Middle)",
+    "vacancies[qa:Middle].task": "Строить тестирование модулей «Заявки на перевозку» и «Электронные документы»: тест-дизайн, автотесты на pytest + httpx и Selenium WebDriver, проверка API и регресса перед релизом.",
+    "vacancies[qa:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python",
+          "java",
+          "kotlin",
+          "csharp"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "selenium"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "appium"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Middle].assignments": [],
+    "vacancies[qa:Middle].salary": {
+      "from": 130000,
+      "to": 195000
+    },
+    "vacancies[qa:Middle].notes": "Полностью удалённая работа из любого города России.",
+    "vacancies[qa:Senior].title": "QA-инженер по автоматизации (Senior)",
+    "vacancies[qa:Senior].task": "Выстроить стратегию тестирования продукта: пирамида тестов, автоматизация на pytest + httpx и Selenium WebDriver, метрики качества, наставничество для тестировщиков.",
+    "vacancies[qa:Senior].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "python",
+          "java",
+          "kotlin",
+          "csharp"
+        ],
+        "match": "any",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "rule",
+        "reasons": [
+          "Язык автотестов проекта"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "test_design"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "pytest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "selenium"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 3,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "appium"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "ids": [
+          "exploratory"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "vacancies[qa:Senior].assignments": [
+      "Напишите баг-репорт: в разделе «Заявки на перевозку» кнопка «Сохранить» иногда не реагирует на нажатие."
+    ],
+    "vacancies[qa:Senior].salary": {
+      "from": 215000,
+      "to": 320000
+    },
+    "vacancies[qa:Senior].notes": "Гибкое начало рабочего дня, техника на выбор: Windows, macOS или Linux. Полностью удалённая работа из любого города России.",
+    "vacancies[analyst:Middle].title": "Системный аналитик (Middle)",
+    "vacancies[analyst:Middle].task": "Описывать требования и модель данных модулей «Заявки на перевозку» и «Электронные документы», проектировать контракты REST API (HTTP + JSON) и согласовывать их с командой.",
+    "vacancies[analyst:Middle].requirements": [
+      {
+        "kind": "languages",
+        "ids": [
+          "sql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "rule",
+        "reasons": [
+          "В стеке реляционная или аналитическая СУБД"
+        ]
+      },
+      {
+        "kind": "databases",
+        "ids": [
+          "postgresql"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "rest"
+        ],
+        "match": "all",
+        "importance": "required",
+        "min_degree": 2,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "kafka"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "ids": [
+          "file_exchange"
+        ],
+        "match": "all",
+        "importance": "plus",
+        "min_degree": 1,
+        "origin": "fixed",
+        "reasons": [
+          "Код действующей системы"
+        ]
+      }
+    ],
+    "vacancies[analyst:Middle].assignments": [
+      "Опишите модель данных модуля «Заявки на перевозку»: сущности, атрибуты и связи."
+    ],
+    "vacancies[analyst:Middle].salary": {
+      "from": 150000,
+      "to": 215000
+    },
+    "vacancies[analyst:Middle].notes": "Полностью удалённая работа из любого города России."
+  },
+  "summary": {
+    "stack_mode": "fixed",
+    "kind_mode": {
+      "languages": "fixed",
+      "databases": "fixed",
+      "integrations": "fixed",
+      "testing": "fixed"
+    },
+    "mobile_variant": "flutter",
+    "positions": [
+      {
+        "id": "backend_main",
+        "role": "backend",
+        "name": "Бэкенд-разработчик"
+      },
+      {
+        "id": "frontend_web",
+        "role": "frontend",
+        "name": "Фронтенд-разработчик (веб)"
+      },
+      {
+        "id": "frontend_mobile",
+        "role": "frontend",
+        "name": "Мобильный разработчик (Flutter)"
+      },
+      {
+        "id": "qa",
+        "role": "qa",
+        "name": "Тестировщик"
+      },
+      {
+        "id": "analyst",
+        "role": "analyst",
+        "name": "Системный аналитик"
+      }
+    ],
+    "fixed_stack": [
+      {
+        "kind": "languages",
+        "id": "php",
+        "positions": [
+          "backend_main"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "databases",
+        "id": "postgresql",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "rest",
+        "positions": [
+          "backend_main",
+          "frontend_web",
+          "frontend_mobile",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "kafka",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "integrations",
+        "id": "file_exchange",
+        "positions": [
+          "backend_main",
+          "analyst"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "typescript",
+        "positions": [
+          "frontend_web"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "languages",
+        "id": "dart",
+        "positions": [
+          "frontend_mobile"
+        ],
+        "reasons": [
+          "Код действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "test_design",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "pytest",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "selenium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "appium",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      },
+      {
+        "kind": "testing",
+        "id": "exploratory",
+        "positions": [
+          "qa"
+        ],
+        "reasons": [
+          "Тесты действующей системы"
+        ]
+      }
+    ],
+    "choices": [],
+    "team_plan": {
+      "backend_main": {
+        "Junior": 1,
+        "Middle": 1
+      },
+      "frontend_web": {
+        "Middle": 1
+      },
+      "frontend_mobile": {
+        "Middle": 1
+      },
+      "qa": {
+        "Middle": 1,
+        "Senior": 1
+      },
+      "analyst": {
+        "Middle": 1
+      }
+    },
+    "open_questions": []
+  },
+  "vacancies_draft": null,
+  "vacancy_ids": [
+    "7f0a8f22-01fb-42a0-ba78-c467cbe76c5e",
+    "9ca3084c-4363-417c-bf31-8c9687de4647",
+    "92bd3e61-4ed9-48a3-bfb0-517764006bf2",
+    "0d60019d-e556-437e-9c32-2fbb3027f335",
+    "cd0be715-f619-403b-b270-efd016a60537",
+    "d78f592a-9ab1-44ca-9f57-474c735aa854",
+    "e65b8645-7871-4980-aefa-5b0d3e522d5a"
+  ],
+  "approved_at": "2026-08-26T23:40:57.447475+00:00",
+  "completed_at": null,
+  "copied_from": null,
+  "created_at": "2026-08-25T02:35:21.239649+00:00",
+  "updated_at": "2026-08-26T23:40:57.447475+00:00"
+}

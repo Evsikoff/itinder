@@ -1,0 +1,21 @@
+{
+  "id": "05edd72b-357c-4bd8-9a78-12ba921415c5",
+  "user_id": "fff32bd4-368d-4583-a5a7-c61e91ba31ae",
+  "specialization": "Recruiter",
+  "grade": "Middle",
+  "created_at": "2026-09-26T10:55:08.383940+00:00",
+  "source": {
+    "type": "Manual",
+    "page": 6,
+    "elements": [
+      {
+        "id": 39,
+        "title": "Какого грейда ты рекрутёр?"
+      },
+      {
+        "id": 41,
+        "title": "Middle"
+      }
+    ]
+  }
+}
