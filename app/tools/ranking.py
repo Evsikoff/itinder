@@ -156,7 +156,7 @@ class Reference:
 
 # --- Соискатели -----------------------------------------------------------------
 
-def applicants(specialization=None):
+def applicants(specialization=None, also=None):
     """Соискатели специализации (None — всех специализаций, кроме Recruiter):
     [{"user_id", "name", "specialization", "declared", "source", "passed", "failed",
     "fsp"}] — у кого есть запись user_specializations с этой специализацией, другие
@@ -165,9 +165,11 @@ def applicants(specialization=None):
     source — её source.type; passed и failed — грейды пройденных и проваленных
     тестов этой специализации; fsp — None (профиль не связан с ФСП) или
     {"competencies": {(kind, id): {"degree", "points"}}, "points"} — баллы всех
-    соревнований. Порядок — по user_id и специализации."""
+    соревнований. also — user_id, который попадает, даже если спрятался
+    (user_blocks): соискатель сам смотрит вакансии (vacancy_ranking.py).
+    Порядок — по user_id и специализации."""
     users = _stems(USERS_DIR)
-    blocked = _stems(USER_BLOCKS_DIR)
+    blocked = _stems(USER_BLOCKS_DIR) - {also}
     chosen = {}  # (user_id, специализация) → запись
     for record in _read_dir(specializations.SPECIALIZATIONS_DIR):
         user_id, own = record.get("user_id"), record.get("specialization")
@@ -461,13 +463,14 @@ def by_specialization(specialization=None, grade=None, limit=None, pool=None):
     return _result(query, weights, linked, unconfirmed, limit)
 
 
-def by_vacancy(vacancy, limit=None, pool=None):
+def by_vacancy(vacancy, limit=None, pool=None, reference=None):
     """Соискатели специализации вакансии, лучшие для неё первыми. vacancy — запись
     формата projects_jobopenings; требования проверяются, как при утверждении.
-    pool — соискатели, уже прочитанные applicants(); по умолчанию читаются здесь."""
+    pool — соискатели, уже прочитанные applicants(); по умолчанию читаются здесь.
+    reference — уже прочитанные справочники (Reference): много вакансий подряд."""
     if not isinstance(vacancy, dict):
         raise UserError("Вакансия — не объект")
-    reference = Reference()
+    reference = reference or Reference()
     specialization = vacancy.get("specialization")
     role_id = _check_specialization(specialization, reference)
     grade = _check_grade(vacancy.get("grade"))

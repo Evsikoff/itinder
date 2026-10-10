@@ -23,6 +23,12 @@ export const APPLICANTS_PRESENTATION: PresentationSource = {
     seenKey: 'itinder.applicantsPresentation.seen.',
 };
 
+// «Вакансии»: как ITinder ранжирует вакансии для соискателя и как откликнуться.
+export const VACANCIES_PRESENTATION: PresentationSource = {
+    url: '/app/assets/presentation/vacancies/slides.json',
+    seenKey: 'itinder.vacanciesPresentation.seen.',
+};
+
 export interface PresentationMedia {
     name: string;
     url: string; // адрес на сервере: /app/assets/…

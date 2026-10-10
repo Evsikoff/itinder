@@ -3,10 +3,15 @@ import { Candidate, GradeView, Invitation, Overview, RequirementFit, Requirement
 import { formatDate } from './projectWidgets';
 
 // Части окна «Соискатели» (Applicants.tsx): кандидат в графе команды и в списках,
-// степень подтверждения, знак ФСП, статус приглашения. Классы — Applicants.css,
-// FspAchievements.css (fsp-meter) и GradeTasks.css (gt-*).
+// степень подтверждения, знак ФСП, статус приглашения. Названия, разбор требований
+// и статус берёт и окно «Вакансии» соискателя (Vacancies.tsx) — ему хватает
+// справочников (Names). Классы — Applicants.css, FspAchievements.css (fsp-meter)
+// и GradeTasks.css (gt-*).
 
 export const FSP_LOGO = '/app/assets/fsp.png';
+// Справочники для подписей: названия компетенций, видов стека и степеней.
+export type Names = Pick<Overview, 'stack' | 'kind_names' | 'degree_names'>;
+type StatusOf = Pick<Invitation, 'flow' | 'status' | 'status_history'> & { title?: string };
 const GRADE_SOURCES: { [basis: string]: string } = { test: 'тест сдан', LLM: 'по резюме', Manual: 'выбрал сам' };
 const STATUS_CLASSES: { [status: string]: string } = {
     sent: 'ap-status-sent',
@@ -22,11 +27,11 @@ export function candidateName(candidate: Candidate): string {
     return candidate.name ?? `Без имени · ${candidate.user_id.slice(0, 8)}`;
 }
 
-export function stackName(overview: Overview, kind: string, id: string): string {
+export function stackName(overview: Names, kind: string, id: string): string {
     return overview.stack[kind]?.[id] ?? id;
 }
 
-export function degreeName(overview: Overview, degree: number): string {
+export function degreeName(overview: Names, degree: number): string {
     return overview.degree_names[String(degree)] ?? String(degree);
 }
 
@@ -88,11 +93,11 @@ function dateTime(iso: string): string {
         : `${formatDate(iso)}, ${date.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })}`;
 }
 
-export function statusName(overview: Overview, invitation: Invitation, status = invitation.status): string {
+export function statusName(overview: Pick<Overview, 'flows'>, invitation: StatusOf, status = invitation.status): string {
     return overview.flows[invitation.flow]?.[status] ?? status;
 }
 
-export const StatusBadge: React.FC<{ overview: Overview; invitation: Invitation; withTitle?: boolean }> = ({
+export const StatusBadge: React.FC<{ overview: Pick<Overview, 'flows'>; invitation: StatusOf; withTitle?: boolean }> = ({
     overview,
     invitation,
     withTitle,
@@ -200,7 +205,7 @@ export const MatchedChips: React.FC<{ overview: Overview; candidate: Candidate; 
 };
 
 // Разбор требований вакансии у кандидата — для подробного списка.
-export const RequirementsTable: React.FC<{ overview: Overview; candidate: Candidate }> = ({ overview, candidate }) => {
+export const RequirementsTable: React.FC<{ overview: Names; candidate: Pick<Candidate, 'requirements'> }> = ({ overview, candidate }) => {
     if (!candidate.requirements) return null;
     return (
         <div className="gt-column ap-requirements">

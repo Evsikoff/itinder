@@ -137,6 +137,13 @@ API (только с этой же страницы). Ошибка — код 4x
         с заданиями accept отправляет заполненные answers на проверку.
     POST /api/applicant/invitations/test-data {"user_id"} — 20 тестовых приглашений
         и откликов с полными историями, без изменения существующих записей.
+    Окно «Вакансии» соискателя (app/tools/vacancy_search.py, ранжирование —
+    app/tools/vacancy_ranking.py); нет специализации соискателя — 403:
+    GET /api/vacancies?user_id=<id> — открытые вакансии его специализаций по
+        релевантности для него, с его откликом или приглашением на каждую.
+    POST /api/vacancies/apply {"user_id", "vacancy_id", "answers"?} — отклик
+        со снимком вакансии в app/db/invitations; у вакансии есть задания —
+        answers обязательны (решение каждого); повторный — 409.
 
 Запуск из корня проекта:
     python app/tools/serve.py          # http://127.0.0.1:8770/
@@ -173,6 +180,7 @@ import test_invitations
 import qa_tasks
 import user_names
 import ux_tasks
+import vacancy_search
 from llm import LLMError
 from users import USERS_DIR, UserError, authenticate, create_user
 from data_paths import DATA_DB, MUTABLE_NAMES, STATIC_DB, initialize_data
@@ -501,6 +509,18 @@ def api_test_invitations(body):
     return 201, result, f"Тестовые приглашения соискателя {data.get('user_id')}: {result['created_invitations']}"
 
 
+def api_vacancies(query):
+    data = vacancy_search.listing(query.get("user_id"))
+    return 200, data, f"Вакансии соискателя {query.get('user_id')}: {data['found']}"
+
+
+def api_vacancies_apply(body):
+    data = json_body(body)
+    result = vacancy_search.apply(data.get("user_id"), data.get("vacancy_id"), data.get("answers"))
+    note = f"Отклик {result['id']}: соискатель {data.get('user_id')} → вакансия {data.get('vacancy_id')}"
+    return 201, result, f"{note} ({result['status']})"
+
+
 def api_test_projects(body):
     data = json_body(body)
     result = test_projects.generate(data.get("user_id"))
@@ -537,6 +557,7 @@ API = {
     "/api/applicant/invitations/respond": ("application/json", applicant_invitations.MAX_BODY, api_applicant_invitations_respond),
     "/api/applicant/invitations/test-data": ("application/json", MAX_JSON, api_test_invitations),
     "/api/applicants/test-projects": ("application/json", MAX_JSON, api_test_projects),
+    "/api/vacancies/apply": ("application/json", applicant_invitations.MAX_BODY, api_vacancies_apply),
 }
 # GET: адрес → обработчик. Он получает параметры запроса {имя: значение},
 # отвечает так же, как обработчик POST.
@@ -557,6 +578,7 @@ GET_API = {
     "/api/applicants/vacancy": api_applicants_vacancy,
     "/api/applicants/search": api_applicants_search,
     "/api/applicant/invitations": api_applicant_invitations,
+    "/api/vacancies": api_vacancies,
 }
 
 
