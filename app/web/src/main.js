@@ -15,6 +15,7 @@ import { blurFields } from './page/textField.js';
 import { OBJECT_SOUNDS, createSounds } from './audio.js';
 import { ActionError, actionOf, hasAction } from './actions.js';
 import { notify } from './notice.js';
+import { started } from './startScreen.js';
 
 const FIRST_PAGE = 1;
 const PUSH_IMPULSE = 6; // Н·с — толчок по клику
@@ -34,9 +35,11 @@ function showError(error) {
 }
 
 async function start() {
-  // Гул станции — с самого начала, пока грузится сцена (звук включится с первым жестом).
+  // Гул станции — с нажатия «Старт», даже если сцена ещё грузится: это нажатие
+  // и включает звук. Раньше нельзя: браузер, которому сайт разрешил звук без жеста,
+  // заиграл бы гул на стартовой странице.
   const sounds = createSounds();
-  sounds.loop('rumble', true);
+  started.then(() => sounds.loop('rumble', true));
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' });
   const pixelRatio = Math.min(window.devicePixelRatio, 1.75);
@@ -286,6 +289,8 @@ async function start() {
   };
   window.itinder = { scene, camera, renderer, composer, physics, station, pages, rig, boarding, scheme, sounds, debug };
 
+  // Пролёт камеры — только после «Старт» на стартовой странице (startScreen.js).
+  await started;
   let last = null;
   renderer.setAnimationLoop((now) => {
     if (last === null) {

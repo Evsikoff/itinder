@@ -62,6 +62,48 @@
     padding: 12px 14px; border-left: 3px solid var(--danger); background: #1B1C21; color: var(--text);
     white-space: pre-wrap;
   }
+
+  /* Стартовая страница (src/startScreen.js): поверх экрана загрузки, станция грузится за ней.
+     Карточка белая: логотип ITinder прозрачный с тёмным «inder», логотип команды — на белом. */
+  @font-face { font-family: "JetBrains Mono"; src: url("./fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "JetBrains Mono"; src: url("./fonts/JetBrainsMono-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+  #start {
+    position: fixed; inset: 0; z-index: 5; display: grid; place-items: center; overflow-y: auto;
+    padding: 24px 16px; background: radial-gradient(ellipse at 50% 30%, #241f3d 0%, var(--bg) 68%);
+    transition: opacity .6s ease, visibility 0s linear .6s;
+  }
+  #start.gone { opacity: 0; visibility: hidden; pointer-events: none; }
+  #start .card {
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+    width: min(620px, 100%); padding: 40px 40px 28px; border-radius: 16px;
+    background: #FFFFFF; color: #1B1C21; text-align: center; box-shadow: 0 30px 80px rgba(0, 0, 0, .55);
+  }
+  #start h1 { margin: 0; line-height: 0; }
+  #start .logo { width: min(440px, 100%); height: auto; }
+  #start-button {
+    padding: 14px 64px; border: 0; border-radius: 10px; background: var(--accent); color: #F6F6F6;
+    font-family: inherit; font-size: 20px; font-weight: 600; line-height: 1.2; letter-spacing: .04em; cursor: pointer;
+    transition: background .15s ease, transform .1s ease;
+  }
+  #start-button:hover { background: #5646FF; }
+  #start-button:active { transform: translateY(1px); }
+  #start-button:focus-visible { outline: 3px solid #C2BCFF; outline-offset: 3px; }
+  #start .sound { margin: -8px 0 0; color: #5E6068; font-size: 13px; }
+  #start .team {
+    display: flex; align-items: center; gap: 18px; width: 100%;
+    margin-top: 4px; padding-top: 20px; border-top: 1px solid #E3E3E6; text-align: left;
+  }
+  #start .team img { width: 112px; height: auto; flex-shrink: 0; }
+  #start .team p { margin: 0; color: #3A3B42; font-size: 13px; line-height: 1.55; }
+  #start .team b { color: #1B1C21; font-weight: 600; }
+  @media (max-width: 520px) {
+    #start .card { padding: 28px 20px 22px; gap: 18px; }
+    #start .team { flex-direction: column; text-align: center; gap: 12px; }
+    #start .team img { width: 96px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #start, #start-button { transition: none; }
+  }
 </style>
 <script type="importmap">
 {
@@ -78,6 +120,17 @@
 <div id="veil"><div class="bar"></div></div>
 <div id="notice" role="status" aria-live="polite"></div>
 <div id="error" role="alert"></div>
+<section id="start" aria-labelledby="start-title">
+  <div class="card">
+    <h1 id="start-title"><img class="logo" src="../assets/itinder-logo.png" alt="ITinder" width="2172" height="724"></h1>
+    <button id="start-button" type="button" autofocus>Старт</button>
+    <p class="sound">Включите звук: станция, шляпа и комната звучат.</p>
+    <div class="team">
+      <img src="../assets/team.png" alt="Логотип команды Git-R-Done" width="901" height="811">
+      <p>Проект команды <b>«Git-R-Done»</b> в&nbsp;рамках задачи конкурса IT-решений «Цифровая платформа-агрегатор ИТ-вакансий с&nbsp;верифицированным профилем достижений участника Федерации спортивного программирования (ФСП)»</p>
+    </div>
+  </div>
+</section>
 <script type="module" src="./src/main.js"></script>
 </body>
 </html>
