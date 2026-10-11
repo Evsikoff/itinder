@@ -16,3 +16,7 @@ data
 portfolio-inner-site/build
 resume3/public
 **/.venv
+# Тесты в образ не нужны, а react-scripts 5.0.0 проверяет их типы при сборке:
+# тест с импортом из app/db/ ломал сборку portfolio-inner-site.
+**/*.test.ts
+**/*.test.tsx
